@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/main.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )

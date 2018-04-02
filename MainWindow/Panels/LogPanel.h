@@ -8,17 +8,28 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QVBoxLayout>
+#include <QLabel>
 
 class LogPanel:public QWidget {
     Q_OBJECT
 public:
     QLabel *titleLabel;
+    QVBoxLayout *main_lay;
+
 
     LogPanel();
 
 private:
-    void generic_initializer();
-    void title_initializer();
+    bool generic_initializer();
+    bool initializeLayout();
+    bool initializeTitleWidget();
+    bool initializeLogWidgets();
+
+
+protected:
+    QWidget *onGenerateTitleWidget();
+
 };
 
 

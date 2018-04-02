@@ -52,13 +52,17 @@ OBJECTS_DIR   = ./
 
 SOURCES       = main.cpp \
 		MainWindow/AlanMainWindow.cpp \
-		MainWindow/Panels/LogPanel.cpp moc_AlanMainWindow.cpp \
-		moc_LogPanel.cpp
+		MainWindow/Panels/LogPanel.cpp \
+		MainWindow/Panels/LogWidget/LogWidget.cpp moc_AlanMainWindow.cpp \
+		moc_LogPanel.cpp \
+		moc_LogWidget.cpp
 OBJECTS       = main.o \
 		AlanMainWindow.o \
 		LogPanel.o \
+		LogWidget.o \
 		moc_AlanMainWindow.o \
-		moc_LogPanel.o
+		moc_LogPanel.o \
+		moc_LogWidget.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -138,9 +142,11 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/img/AlanMainWindowImagePaths.h \
-		MainWindow/Panels/LogPanel.h main.cpp \
+		MainWindow/Panels/LogPanel.h \
+		MainWindow/Panels/LogWidget/LogWidget.h main.cpp \
 		MainWindow/AlanMainWindow.cpp \
-		MainWindow/Panels/LogPanel.cpp
+		MainWindow/Panels/LogPanel.cpp \
+		MainWindow/Panels/LogWidget/LogWidget.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -332,8 +338,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/img/AlanMainWindowImagePaths.h MainWindow/Panels/LogPanel.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/LogPanel.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/img/AlanMainWindowImagePaths.h MainWindow/Panels/LogPanel.h MainWindow/Panels/LogWidget/LogWidget.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/LogPanel.cpp MainWindow/Panels/LogWidget/LogWidget.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -365,9 +371,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -m64 -pipe -std=c++0x $(pkg-config --cflags --libs gstreamer-1.0) -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_AlanMainWindow.cpp moc_LogPanel.cpp
+compiler_moc_header_make_all: moc_AlanMainWindow.cpp moc_LogPanel.cpp moc_LogWidget.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_AlanMainWindow.cpp moc_LogPanel.cpp
+	-$(DEL_FILE) moc_AlanMainWindow.cpp moc_LogPanel.cpp moc_LogWidget.cpp
 moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
@@ -381,6 +387,11 @@ moc_LogPanel.cpp: MainWindow/Panels/LogPanel.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Panels/LogPanel.h -o moc_LogPanel.cpp
+
+moc_LogWidget.cpp: MainWindow/Panels/LogWidget/LogWidget.h \
+		moc_predefs.h \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Panels/LogWidget/LogWidget.h -o moc_LogWidget.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -407,17 +418,24 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/img/AlanMainWindowImagePaths.h
+		misc/img/AlanMainWindowImagePaths.h \
+		MainWindow/Panels/LogPanel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMainWindow.o MainWindow/AlanMainWindow.cpp
 
 LogPanel.o: MainWindow/Panels/LogPanel.cpp MainWindow/Panels/LogPanel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LogPanel.o MainWindow/Panels/LogPanel.cpp
+
+LogWidget.o: MainWindow/Panels/LogWidget/LogWidget.cpp MainWindow/Panels/LogWidget/LogWidget.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LogWidget.o MainWindow/Panels/LogWidget/LogWidget.cpp
 
 moc_AlanMainWindow.o: moc_AlanMainWindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanMainWindow.o moc_AlanMainWindow.cpp
 
 moc_LogPanel.o: moc_LogPanel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_LogPanel.o moc_LogPanel.cpp
+
+moc_LogWidget.o: moc_LogWidget.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_LogWidget.o moc_LogWidget.cpp
 
 ####### Install
 
