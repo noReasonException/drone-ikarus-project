@@ -7,6 +7,11 @@
 
 
 #include <QMainWindow>
+
+#include "../misc/errors/AlanMainWindowErrors.h"
+#include "../misc/version.h"
+#include "../misc/generic_text/AlanMainWindowDialogs.h"
+#include "../misc/img/AlanMainWindowImagePaths.h"
 class AlanMainWindow : public QMainWindow{
     Q_OBJECT
 

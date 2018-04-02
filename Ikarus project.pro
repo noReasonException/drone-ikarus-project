@@ -24,4 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # Input
 SOURCES += main.cpp \
 		MainWindow/AlanMainWindow.cpp
-HEADERS += MainWindow/AlanMainWindow.h
+HEADERS += MainWindow/AlanMainWindow.h \
+            misc/generic_text/AlanMainWindowDialogs.h \
+            misc/errors/AlanMainWindowErrors.h \
+            misc/img/AlanMainWindowImagePaths.h

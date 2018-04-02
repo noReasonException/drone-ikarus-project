@@ -7,16 +7,13 @@
 #include <QMenuBar>
 #include <QToolBar>
 #include "AlanMainWindow.h"
-#include "../misc/errors/AlanMainWindowErrors.h"
-#include "../misc/version.h"
+#include "../misc/img/AlanMainWindowImagePaths.h"
 
 AlanMainWindow::AlanMainWindow() {
     isStreaming= false;
     isReTransmitting= false;
     if(!genericInitializer()){
-        QMessageBox::critical(this,"Something Went wrong :( ","The initialization process failed "
-                " please contact with developer for further information <br>"
-                ERR01_DETAILS);
+        QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
     }
     setMinimumHeight(300);
     setMinimumWidth(400);
@@ -33,34 +30,34 @@ bool AlanMainWindow::initializeMenu() {
 }
 
 void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
-    optionsMenu=bar->addMenu("Options");
-    sourceMenu=bar->addMenu("Source");
-    retransmitMenu=bar->addMenu("Retransmit");
-    toolsMenu=bar->addMenu("Tools");
-    miscMenu=bar->addMenu("Misc");
-    aboutMenu=bar->addAction("About");
+    optionsMenu=bar->addMenu(OPTIONS_MENU_NAME);
+    sourceMenu=bar->addMenu(SOURCE_MENU_NAME);
+    retransmitMenu=bar->addMenu(RETRANSMIT_MENU_NAME);
+    toolsMenu=bar->addMenu(TOOLS_MENU_NAME);
+    miscMenu=bar->addMenu(MISC_MENU_NAME);
+    aboutMenu=bar->addAction(ABOUT_MENU_NAME);
 
     //Options Menu Setup
-    optionsMenu->addAction(setResolutionAction=new QAction("Resolution Setings"));
-    optionsMenu->addAction(setLatencyAction=new QAction("Latency Setings"));
-    optionsMenu->addAction(setErrorFile=new QAction("Error Location Settings"));
-    optionsMenu->addAction(setDataFile=new QAction("Data Location Settings"));
+    optionsMenu->addAction(setResolutionAction=new QAction(RESOLUTION_ACTION_NAME));
+    optionsMenu->addAction(setLatencyAction=new QAction(LATENCY_ACTION_NAME));
+    optionsMenu->addAction(setErrorFile=new QAction(ERROR_FILE_ACTION_NAME));
+    optionsMenu->addAction(setDataFile=new QAction(DATA_FILE_ACTION_NAME));
     optionsMenu->addSeparator();
-    optionsMenu->addAction(Exit=new QAction("Exit"));
+    optionsMenu->addAction(Exit=new QAction(EXIT_ACTION_NAME));
 
-    setResolutionAction->setIcon(QIcon("img/menu/resolution.png"));
+    setResolutionAction->setIcon(QIcon( RESOLUTION_ICON ));
     connect(setResolutionAction,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
-    setLatencyAction->setIcon(QIcon("img/menu/latency.png"));
+    setLatencyAction->setIcon(QIcon(LATENCY_ICON));
     connect(setLatencyAction,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
-    setErrorFile->setIcon(QIcon("img/menu/errorfile.png"));
+    setErrorFile->setIcon(QIcon(ERROR_FILE_ICON));
     connect(setErrorFile,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
-    setDataFile->setIcon(QIcon("img/menu/datafile.png"));
+    setDataFile->setIcon(QIcon(DATA_FILE_ICON));
     connect(setDataFile,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
-    Exit->setIcon(QIcon("img/menu/exit.png"));
+    Exit->setIcon(QIcon(EXIT_ICON));
     connect(Exit,SIGNAL(triggered(bool)),this,SLOT(closeSlot()));
 
 
@@ -71,11 +68,11 @@ void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
     sourceMenu->addAction(startStreaming=new QAction("Start streaming"));
     sourceMenu->addAction(stopStreaming=new QAction("Stop streaming"));
 
-    setDroneAddress->setIcon(QIcon("img/menu/droneip.png"));
+    setDroneAddress->setIcon(QIcon(DRONE_ADDR_ICON));
     connect(setDroneAddress,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
-    startStreaming->setIcon(QIcon("img/menu/play.png"));
+    startStreaming->setIcon(QIcon(STREAMING_ICON));
     connect(startStreaming,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
-    stopStreaming->setIcon(QIcon("img/menu/stop.png"));
+    stopStreaming->setIcon(QIcon(STOP_STREAMING_ICON));
     connect(stopStreaming,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
 
@@ -86,11 +83,11 @@ void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
     retransmitMenu->addAction(startBroadcast=new QAction("Start broadcast"));
     retransmitMenu->addAction(stopBroadcast=new QAction("Stop broadcast"));
 
-    setServerIp->setIcon(QIcon("img/menu/location.png"));
+    setServerIp->setIcon(QIcon(SERVER_ADDR_ICON));
     connect(setServerIp,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
-    startBroadcast->setIcon(QIcon("img/menu/wifi.png"));
+    startBroadcast->setIcon(QIcon(BROADCAST_ICON));
     connect(startBroadcast,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
-    stopBroadcast->setIcon(QIcon("img/menu/no-wifi.png"));
+    stopBroadcast->setIcon(QIcon(NO_BROADCAST_ICON));
     connect(stopBroadcast,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
 
 

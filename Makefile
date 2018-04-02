@@ -36,9 +36,10 @@ TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Ikarus\ project1.0.0
 DISTDIR = /home/noreasonexception/Desktop/Ikarus\ project/.tmp/Ikarus\ project1.0.0
-LINK          = g++
+LINK          = g++ -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
 LFLAGS        = -m64 -Wl,-O1 -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
 LIBS          = $(SUBLIBS) -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -L/usr/X11R6/lib64 -lQt5MultimediaWidgets -lpulse-mainloop-glib -lpulse -lglib-2.0 -lQt5Widgets -lQt5Multimedia -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread
+AR            = ar cqs
 RANLIB        = 
 SED           = sed
 STRIP         = strip
@@ -129,7 +130,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		Ikarus project.pro MainWindow/AlanMainWindow.h main.cpp \
+		Ikarus project.pro MainWindow/AlanMainWindow.h \
+		misc/generic_text/AlanMainWindowDialogs.h \
+		misc/errors/AlanMainWindowErrors.h \
+		misc/img/AlanMainWindowImagePaths.h main.cpp \
 		MainWindow/AlanMainWindow.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
@@ -322,7 +326,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/img/AlanMainWindowImagePaths.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp MainWindow/AlanMainWindow.cpp $(DISTDIR)/
 
 
@@ -358,7 +362,10 @@ moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 compiler_moc_header_make_all: moc_AlanMainWindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_AlanMainWindow.cpp
-moc_AlanMainWindow.cpp: MainWindow/AlanMainWindow.h \
+moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
+		misc/version.h \
+		misc/img/AlanMainWindowImagePaths.h \
+		MainWindow/AlanMainWindow.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/AlanMainWindow.h -o moc_AlanMainWindow.cpp
@@ -377,10 +384,16 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 
 ####### Compile
 
-main.o: main.cpp 
+main.o: main.cpp MainWindow/AlanMainWindow.h \
+		misc/errors/AlanMainWindowErrors.h \
+		misc/version.h \
+		misc/img/AlanMainWindowImagePaths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
-AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h
+AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
+		misc/errors/AlanMainWindowErrors.h \
+		misc/version.h \
+		misc/img/AlanMainWindowImagePaths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMainWindow.o MainWindow/AlanMainWindow.cpp
 
 moc_AlanMainWindow.o: moc_AlanMainWindow.cpp 

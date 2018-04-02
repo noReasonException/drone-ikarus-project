@@ -126,6 +126,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanMainWindowErrors.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowDialogs.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/AlanMainWindowImagePaths.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/version.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
