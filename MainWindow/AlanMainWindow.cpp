@@ -11,27 +11,45 @@
 
 /***
  * AlanMainWindowConstructor
+ * Checks all the initialization processes , terminates in case of error
  */
 AlanMainWindow::AlanMainWindow() {
     isStreaming= false;
     isReTransmitting= false;
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
+        closeSlot();
     }
     setMinimumHeight(300);
     setMinimumWidth(400);
     setCentralWidget(new QDialog());
 }
-
+/***
+ * genericInitializer
+ * @return true if all initialization steps where successful
+ */
 bool AlanMainWindow::genericInitializer() {
     return initializeMenu()&& initializeToolBar();
 }
-
+/***
+ * Calls the protected : onGenerateMenu() and returns true if everything where successful
+ * Why dont initialize directly from here?
+ * well.. for better code quality , it is need to split the initialization proccess from check if
+ * this is successful , if the future programmer wants to add something , just override the onGenerateMenu()
+ * and the job is done , if something where wrong , then just throw an exception and everything else will
+ * be managed by initializeMenu() and genericInitializer().
+ * @return true if the initialization proccess where successful
+ */
 bool AlanMainWindow::initializeMenu() {
-    onGenerateMenu(menuBar());
-    return true;
+    try{
+        onGenerateMenu(menuBar());
+        return true;
+    }catch (std::exception e){return false;}
 }
-
+/***
+ * Takes care the steps to initialize the menu
+ * @param bar , the
+ */
 void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
     optionsMenu=bar->addMenu(OPTIONS_MENU_NAME);
     sourceMenu=bar->addMenu(SOURCE_MENU_NAME);
