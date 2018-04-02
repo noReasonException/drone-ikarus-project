@@ -150,6 +150,33 @@ MainWindow/AlanMainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
 .PHONY : MainWindow/AlanMainWindow.cpp.s
 
+MainWindow/Panels/LogPanel.o: MainWindow/Panels/LogPanel.cpp.o
+
+.PHONY : MainWindow/Panels/LogPanel.o
+
+# target to build an object file
+MainWindow/Panels/LogPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o
+.PHONY : MainWindow/Panels/LogPanel.cpp.o
+
+MainWindow/Panels/LogPanel.i: MainWindow/Panels/LogPanel.cpp.i
+
+.PHONY : MainWindow/Panels/LogPanel.i
+
+# target to preprocess a source file
+MainWindow/Panels/LogPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.i
+.PHONY : MainWindow/Panels/LogPanel.cpp.i
+
+MainWindow/Panels/LogPanel.s: MainWindow/Panels/LogPanel.cpp.s
+
+.PHONY : MainWindow/Panels/LogPanel.s
+
+# target to generate assembly for a file
+MainWindow/Panels/LogPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.s
+.PHONY : MainWindow/Panels/LogPanel.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
+	@echo "... MainWindow/Panels/LogPanel.o"
+	@echo "... MainWindow/Panels/LogPanel.i"
+	@echo "... MainWindow/Panels/LogPanel.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

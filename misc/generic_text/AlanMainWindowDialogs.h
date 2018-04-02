@@ -33,6 +33,7 @@
 #define TOOLS_MENU_NAME                 "Tools"
 #define MISC_MENU_NAME                  "Misc"
 #define ABOUT_MENU_NAME                 "About"
+//MediaBar exposed Text
 
 
 #endif //IKARUS_PROJECT_ALANMAINWINDOWDIALOGS_H
