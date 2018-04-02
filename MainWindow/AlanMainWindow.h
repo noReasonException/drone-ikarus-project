@@ -20,7 +20,7 @@ private :
     //Initializers
     bool genericInitializer();
     bool initializeMenu();
-    bool initializePlayBar();
+    bool initializeToolBar();
     bool initializeTelemetryPanel();
     bool initializeDataPanel();
     bool initializeControlPanel();
@@ -52,7 +52,7 @@ private slots:
     void closeSlot();
 protected:
     void                onGenerateMenu(QMenuBar*bar);
-    std::vector<QToolBar*>            onGenerateToolBar();
+    std::vector<QToolBar*>*            onGenerateToolBar();
     QWidget*            onGenerateTelemetryPanel();
     QWidget*            onGenerateDataPanel();
     QWidget*            onGenerateControlPanel();

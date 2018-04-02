@@ -24,7 +24,7 @@ AlanMainWindow::AlanMainWindow() {
 }
 
 bool AlanMainWindow::genericInitializer() {
-    return initializeMenu();
+    return initializeMenu()&& initializeToolBar();
 }
 
 bool AlanMainWindow::initializeMenu() {
@@ -106,14 +106,25 @@ void AlanMainWindow::closeSlot(){
     close();
 }
 
-bool AlanMainWindow::initializePlayBar() {
-    for(QToolBar *bar:onGenerateToolBar())addToolBar(bar);
+bool AlanMainWindow::initializeToolBar() {
+    for(QToolBar *bar:*onGenerateToolBar())addToolBar(bar);
     return true;
 }
 
-std::vector<QToolBar*>AlanMainWindow::onGenerateToolBar() {
+std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() {
+    QToolBar*tmp;
+    QAction*tmpact;
     auto *retval=new std::vector<QToolBar*> ();
-    retval->push_back(new QToolBar("MediaBar"));
+    retval->push_back(tmp=new QToolBar("MediaBar"));
+    tmpact=tmp->addAction("Play");
+    tmpact->setIcon(QIcon("img/menu/play.png"));
+    tmpact=tmp->addAction("Stop");
+    tmpact->setIcon(QIcon("img/menu/stop.png"));
+    tmpact=tmp->addAction("BroadCast");
+    tmpact->setIcon(QIcon("img/menu/wifi.png"));
+    tmpact=tmp->addAction("StopBroadCast");
+    tmpact->setIcon(QIcon("img/menu/no-wifi.png"));
+    return retval;
 
 }
 
