@@ -53,9 +53,9 @@ protected:
     std::vector<QMenu*>*                onGenerateMenu(QMenuBar*bar) throw(std::exception);
     std::vector<QToolBar*>*             onGenerateToolBar() throw(std::exception);
     QWidget*                            onGenerateCentralWidget()throw(std::exception);
-    QVBoxLayout*                        onGenerateLeftLayout()throw(std::exception);
-    QVBoxLayout*                        onGenerateVideoArea()throw(std::exception);
-    QVBoxLayout*                        onGenerateRightLayout()throw(std::exception);
+    QWidget*                            onGenerateLeftLayout()throw(std::exception);
+    QWidget*                            onGenerateVideoArea()throw(std::exception);
+    QWidget*                            onGenerateRightLayout()throw(std::exception);
 
 
     QWidget*                            onGenerateTelemetryPanel();

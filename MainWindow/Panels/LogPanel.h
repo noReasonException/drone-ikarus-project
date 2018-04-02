@@ -6,8 +6,19 @@
 #define IKARUS_PROJECT_LOGPANEL_H
 
 
-class LogPanel {
+#include <QObject>
+#include <QWidget>
 
+class LogPanel:public QWidget {
+    Q_OBJECT
+public:
+    QLabel *titleLabel;
+
+    LogPanel();
+
+private:
+    void generic_initializer();
+    void title_initializer();
 };
 
 

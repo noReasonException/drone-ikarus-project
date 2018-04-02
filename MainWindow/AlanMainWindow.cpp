@@ -10,6 +10,7 @@
 #include <iostream>
 #include "AlanMainWindow.h"
 #include "../misc/img/AlanMainWindowImagePaths.h"
+#include "Panels/LogPanel.h"
 
 /***
  * AlanMainWindowConstructor
@@ -190,29 +191,24 @@ QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
     retval->setLayout(main_lay=new QHBoxLayout());
 
     try{
-        main_lay->addLayout(onGenerateLeftLayout());
-        main_lay->addLayout(onGenerateVideoArea());
-        main_lay->addLayout(onGenerateRightLayout());
+        main_lay->addWidget(onGenerateLeftLayout(),0,Qt::AlignLeft);
+        main_lay->addWidget(onGenerateVideoArea(),0,Qt::AlignCenter);
+        main_lay->addWidget(onGenerateRightLayout(),0,Qt::AlignRight);
     }catch(std::exception&e){throw e;}
 
     return retval;
 
 }
 
-QVBoxLayout *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
-    auto leftLay=new QVBoxLayout();
-    leftLay->addWidget(new QLabel("Hey!"));
-    return leftLay;
+QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
+    return new QLabel("Telemetry + Data Area");
 }
 
-QVBoxLayout *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
-    auto mainLay=new QVBoxLayout();
-    mainLay->addWidget(new QLabel("Hey!"));
-    return mainLay;
+QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
+    return new QLabel("Video Area");
 }
 
-QVBoxLayout *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    auto rightLay=new QVBoxLayout();
-    rightLay->addWidget(new QLabel("Hey!"));
-    return rightLay;
+QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
+    return new LogPanel();
+
 }
