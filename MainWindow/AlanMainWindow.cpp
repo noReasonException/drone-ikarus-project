@@ -9,6 +9,9 @@
 #include "AlanMainWindow.h"
 #include "../misc/img/AlanMainWindowImagePaths.h"
 
+/***
+ * AlanMainWindowConstructor
+ */
 AlanMainWindow::AlanMainWindow() {
     isStreaming= false;
     isReTransmitting= false;
@@ -63,10 +66,10 @@ void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
 
 
     //Source Menu Setup
-    sourceMenu->addAction(setDroneAddress=new QAction("Set Drone Address"));
+    sourceMenu->addAction(setDroneAddress=new QAction(DRONE_ADDR_ACTION_NAME));
 
-    sourceMenu->addAction(startStreaming=new QAction("Start streaming"));
-    sourceMenu->addAction(stopStreaming=new QAction("Stop streaming"));
+    sourceMenu->addAction(startStreaming=new QAction(START_STREAMING_ACTION_NAME));
+    sourceMenu->addAction(stopStreaming=new QAction(STOP_STREAMING_ACTION_NAME));
 
     setDroneAddress->setIcon(QIcon(DRONE_ADDR_ICON));
     connect(setDroneAddress,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
@@ -79,9 +82,9 @@ void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
 
 
     //Retransmit Menu Setup
-    retransmitMenu->addAction(setServerIp=new QAction("Set Server Address"));
-    retransmitMenu->addAction(startBroadcast=new QAction("Start broadcast"));
-    retransmitMenu->addAction(stopBroadcast=new QAction("Stop broadcast"));
+    retransmitMenu->addAction(setServerIp=new QAction(SERVER_ADDR_ACTION_NAME));
+    retransmitMenu->addAction(startBroadcast=new QAction(START_BROADCAST_ACTION_NAME));
+    retransmitMenu->addAction(stopBroadcast=new QAction(STOP_BROADCAST_ACTION_NAME));
 
     setServerIp->setIcon(QIcon(SERVER_ADDR_ICON));
     connect(setServerIp,SIGNAL(triggered(bool)),this,SLOT(operationNotSupportedSlot()));
@@ -93,7 +96,7 @@ void AlanMainWindow::onGenerateMenu(QMenuBar *bar) {
 
 }
 void AlanMainWindow::operationNotSupportedSlot() {
-    QMessageBox::warning(this,"Operation not supported","This operation is not supported at the version " VERSION);
+    QMessageBox::warning(this,OPERATION_NOT_SUPPORTED_ERROR_DIALOG);
 }
 void AlanMainWindow::closeSlot(){
     if((isStreaming||isReTransmitting)&&QMessageBox::warning(this,"Are you sure?",
