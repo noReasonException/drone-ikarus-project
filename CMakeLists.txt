@@ -9,5 +9,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Multimedia REQUIRED)
-add_executable(Ikarus_project main.cpp MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h misc/version.h misc/errors/AlanMainWindowErrors.h misc/generic_text/AlanMainWindowDialogs.h misc/img/AlanMainWindowImagePaths.h MainWindow/Panels/LogPanel.cpp MainWindow/Panels/LogPanel.h MainWindow/Panels/LogWidget/LogWidget.cpp MainWindow/Panels/LogWidget/LogWidget.h)
+add_executable(Ikarus_project main.cpp MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h misc/version.h misc/errors/AlanMainWindowErrors.h misc/generic_text/AlanMainWindowDialogs.h misc/img/AlanMainWindowImagePaths.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/LogWidget/LogWidget.cpp MainWindow/Panels/LogWidget/LogWidget.h MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

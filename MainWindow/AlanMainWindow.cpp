@@ -10,7 +10,7 @@
 #include <iostream>
 #include "AlanMainWindow.h"
 #include "../misc/img/AlanMainWindowImagePaths.h"
-#include "Panels/LogPanel.h"
+#include "Panels/StreamPanel/LogPanel/LogPanel.h"
 
 /***
  * AlanMainWindowConstructor
@@ -209,6 +209,6 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
 }
 
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    return new LogPanel();
+    return new QLabel("Log Area");
 
 }

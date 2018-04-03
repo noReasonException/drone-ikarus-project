@@ -23,12 +23,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # Input
 SOURCES += main.cpp \
-		MainWindow/AlanMainWindow.cpp \
-		MainWindow/Panels/LogPanel.cpp \
-		MainWindow/Panels/LogWidget/LogWidget.cpp
+           MainWindow/Panels/LogWidget/LogWidget.cpp \
+           MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
+           MainWindow/Panels/StreamPanel/StreamPanel.cpp \
+           MainWindow/Panels/AlanPanel.cpp \
+           MainWindow/AlanMainWindow.cpp \
+
 HEADERS += MainWindow/AlanMainWindow.h \
             misc/generic_text/AlanMainWindowDialogs.h \
             misc/errors/AlanMainWindowErrors.h \
             misc/img/AlanMainWindowImagePaths.h \
-            MainWindow/Panels/LogPanel.h    \
+            misc/version.h \
+            MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+            MainWindow/Panels/StreamPanel/StreamPanel.h \
+            MainWindow/Panels/AlanPanel.h \
             MainWindow/Panels/LogWidget/LogWidget.h

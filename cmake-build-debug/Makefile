@@ -150,32 +150,32 @@ MainWindow/AlanMainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
 .PHONY : MainWindow/AlanMainWindow.cpp.s
 
-MainWindow/Panels/LogPanel.o: MainWindow/Panels/LogPanel.cpp.o
+MainWindow/Panels/AlanPanel.o: MainWindow/Panels/AlanPanel.cpp.o
 
-.PHONY : MainWindow/Panels/LogPanel.o
+.PHONY : MainWindow/Panels/AlanPanel.o
 
 # target to build an object file
-MainWindow/Panels/LogPanel.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o
-.PHONY : MainWindow/Panels/LogPanel.cpp.o
+MainWindow/Panels/AlanPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o
+.PHONY : MainWindow/Panels/AlanPanel.cpp.o
 
-MainWindow/Panels/LogPanel.i: MainWindow/Panels/LogPanel.cpp.i
+MainWindow/Panels/AlanPanel.i: MainWindow/Panels/AlanPanel.cpp.i
 
-.PHONY : MainWindow/Panels/LogPanel.i
+.PHONY : MainWindow/Panels/AlanPanel.i
 
 # target to preprocess a source file
-MainWindow/Panels/LogPanel.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.i
-.PHONY : MainWindow/Panels/LogPanel.cpp.i
+MainWindow/Panels/AlanPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i
+.PHONY : MainWindow/Panels/AlanPanel.cpp.i
 
-MainWindow/Panels/LogPanel.s: MainWindow/Panels/LogPanel.cpp.s
+MainWindow/Panels/AlanPanel.s: MainWindow/Panels/AlanPanel.cpp.s
 
-.PHONY : MainWindow/Panels/LogPanel.s
+.PHONY : MainWindow/Panels/AlanPanel.s
 
 # target to generate assembly for a file
-MainWindow/Panels/LogPanel.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.s
-.PHONY : MainWindow/Panels/LogPanel.cpp.s
+MainWindow/Panels/AlanPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s
+.PHONY : MainWindow/Panels/AlanPanel.cpp.s
 
 MainWindow/Panels/LogWidget/LogWidget.o: MainWindow/Panels/LogWidget/LogWidget.cpp.o
 
@@ -203,6 +203,60 @@ MainWindow/Panels/LogWidget/LogWidget.s: MainWindow/Panels/LogWidget/LogWidget.c
 MainWindow/Panels/LogWidget/LogWidget.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.s
 .PHONY : MainWindow/Panels/LogWidget/LogWidget.cpp.s
+
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
+
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o
+
+# target to build an object file
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
+
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.i: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
+
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.i
+
+# target to preprocess a source file
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
+
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.s: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
+
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.s
+
+# target to generate assembly for a file
+MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
+.PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
+
+MainWindow/Panels/StreamPanel/StreamPanel.o: MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
+
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.o
+
+# target to build an object file
+MainWindow/Panels/StreamPanel/StreamPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
+
+MainWindow/Panels/StreamPanel/StreamPanel.i: MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
+
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.i
+
+# target to preprocess a source file
+MainWindow/Panels/StreamPanel/StreamPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
+
+MainWindow/Panels/StreamPanel/StreamPanel.s: MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
+
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.s
+
+# target to generate assembly for a file
+MainWindow/Panels/StreamPanel/StreamPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
+.PHONY : MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 
 main.o: main.cpp.o
 
@@ -243,12 +297,18 @@ help:
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
-	@echo "... MainWindow/Panels/LogPanel.o"
-	@echo "... MainWindow/Panels/LogPanel.i"
-	@echo "... MainWindow/Panels/LogPanel.s"
+	@echo "... MainWindow/Panels/AlanPanel.o"
+	@echo "... MainWindow/Panels/AlanPanel.i"
+	@echo "... MainWindow/Panels/AlanPanel.s"
 	@echo "... MainWindow/Panels/LogWidget/LogWidget.o"
 	@echo "... MainWindow/Panels/LogWidget/LogWidget.i"
 	@echo "... MainWindow/Panels/LogWidget/LogWidget.s"
+	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o"
+	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.i"
+	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.s"
+	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.o"
+	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.i"
+	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

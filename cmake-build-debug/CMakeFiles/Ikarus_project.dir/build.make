@@ -105,28 +105,28 @@ CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.provides: CMakeFil
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o: ../MainWindow/Panels/LogPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogPanel.cpp"
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o: ../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.i
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.s
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
 
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
@@ -153,20 +153,72 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provid
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o
 
 
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o: ../MainWindow/Panels/AlanPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp"
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires:
+
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.provides
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o
+
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o: ../MainWindow/Panels/StreamPanel/StreamPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp"
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires:
+
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.provides
+
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
+
+
 # Object files for target Ikarus_project
 Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/main.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o"
+"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
 
 # External object files for target Ikarus_project
 Ikarus_project_EXTERNAL_OBJECTS =
 
 Ikarus_project: CMakeFiles/Ikarus_project.dir/main.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/build.make
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.9.1
@@ -174,7 +226,7 @@ Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1
 Ikarus_project: CMakeFiles/Ikarus_project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Ikarus_project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Ikarus_project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ikarus_project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -184,8 +236,10 @@ CMakeFiles/Ikarus_project.dir/build: Ikarus_project
 
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/main.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogPanel.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires
 
 .PHONY : CMakeFiles/Ikarus_project.dir/requires
 

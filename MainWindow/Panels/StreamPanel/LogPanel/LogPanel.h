@@ -10,25 +10,15 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
+#include "../StreamPanel.h"
 
-class LogPanel:public QWidget {
+class LogPanel:public StreamPanel {
     Q_OBJECT
 public:
-    QLabel *titleLabel;
-    QVBoxLayout *main_lay;
-
 
     LogPanel();
 
-private:
-    bool generic_initializer();
-    bool initializeLayout();
-    bool initializeTitleWidget();
-    bool initializeLogWidgets();
-
-
 protected:
-    QWidget *onGenerateTitleWidget();
 
 };
 
