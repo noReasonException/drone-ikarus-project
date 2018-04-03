@@ -55,7 +55,10 @@ SOURCES       = main.cpp \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
 		MainWindow/Panels/StreamPanel/StreamPanel.cpp \
 		MainWindow/Panels/AlanPanel.cpp \
-		MainWindow/AlanMainWindow.cpp moc_AlanMainWindow.cpp \
+		MainWindow/AlanMainWindow.cpp \
+		MainWindow/InformationObject/InformationObject.cpp \
+		MainWindow/InformationObject/Log/Log.cpp \
+		MainWindow/InformationObject/Data/Data.cpp moc_AlanMainWindow.cpp \
 		moc_LogPanel.cpp \
 		moc_StreamPanel.cpp \
 		moc_AlanPanel.cpp \
@@ -66,6 +69,9 @@ OBJECTS       = main.o \
 		StreamPanel.o \
 		AlanPanel.o \
 		AlanMainWindow.o \
+		InformationObject.o \
+		Log.o \
+		Data.o \
 		moc_AlanMainWindow.o \
 		moc_LogPanel.o \
 		moc_StreamPanel.o \
@@ -154,12 +160,20 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
 		MainWindow/Panels/StreamPanel/StreamPanel.h \
 		MainWindow/Panels/AlanPanel.h \
-		MainWindow/Panels/LogWidget/LogWidget.h main.cpp \
+		MainWindow/Panels/LogWidget/LogWidget.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/InformationObject/Log/Log.h \
+		MainWindow/InformationObject/Data/Data.h \
+		misc/generic_text/generic_dialogs.h \
+		misc/errors/AlanPanelErrors.h main.cpp \
 		MainWindow/Panels/LogWidget/LogWidget.cpp \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
 		MainWindow/Panels/StreamPanel/StreamPanel.cpp \
 		MainWindow/Panels/AlanPanel.cpp \
-		MainWindow/AlanMainWindow.cpp
+		MainWindow/AlanMainWindow.cpp \
+		MainWindow/InformationObject/InformationObject.cpp \
+		MainWindow/InformationObject/Log/Log.cpp \
+		MainWindow/InformationObject/Data/Data.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -351,8 +365,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/img/AlanMainWindowImagePaths.h misc/version.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/LogWidget/LogWidget.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/Panels/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/AlanMainWindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/AlanMainWindow.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/img/AlanMainWindowImagePaths.h misc/version.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/LogWidget/LogWidget.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Log/Log.h MainWindow/InformationObject/Data/Data.h misc/generic_text/generic_dialogs.h misc/errors/AlanPanelErrors.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/Panels/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/AlanMainWindow.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Data/Data.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -452,7 +466,9 @@ StreamPanel.o: MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/S
 		MainWindow/Panels/AlanPanel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o StreamPanel.o MainWindow/Panels/StreamPanel/StreamPanel.cpp
 
-AlanPanel.o: MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/AlanPanel.h
+AlanPanel.o: MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/AlanPanel.h \
+		misc/errors/AlanPanelErrors.h \
+		misc/generic_text/generic_dialogs.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanPanel.o MainWindow/Panels/AlanPanel.cpp
 
 AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
@@ -462,8 +478,20 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		misc/img/AlanMainWindowImagePaths.h \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
 		MainWindow/Panels/StreamPanel/StreamPanel.h \
-		MainWindow/Panels/AlanPanel.h
+		MainWindow/Panels/AlanPanel.h \
+		misc/generic_text/generic_dialogs.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMainWindow.o MainWindow/AlanMainWindow.cpp
+
+InformationObject.o: MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/InformationObject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InformationObject.o MainWindow/InformationObject/InformationObject.cpp
+
+Log.o: MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Log/Log.h \
+		MainWindow/InformationObject/InformationObject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Log.o MainWindow/InformationObject/Log/Log.cpp
+
+Data.o: MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Data/Data.h \
+		MainWindow/InformationObject/InformationObject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Data.o MainWindow/InformationObject/Data/Data.cpp
 
 moc_AlanMainWindow.o: moc_AlanMainWindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanMainWindow.o moc_AlanMainWindow.cpp

@@ -28,6 +28,9 @@ SOURCES += main.cpp \
            MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            MainWindow/Panels/AlanPanel.cpp \
            MainWindow/AlanMainWindow.cpp \
+           MainWindow/InformationObject/InformationObject.cpp \
+           MainWindow/InformationObject/Log/Log.cpp \
+           MainWindow/InformationObject/Data/Data.cpp
 
 HEADERS += MainWindow/AlanMainWindow.h \
             misc/generic_text/AlanMainWindowDialogs.h \
@@ -37,4 +40,10 @@ HEADERS += MainWindow/AlanMainWindow.h \
             MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
             MainWindow/Panels/StreamPanel/StreamPanel.h \
             MainWindow/Panels/AlanPanel.h \
-            MainWindow/Panels/LogWidget/LogWidget.h
+            MainWindow/Panels/LogWidget/LogWidget.h \
+            MainWindow/InformationObject/InformationObject.h \
+            MainWindow/InformationObject/Log/Log.h \
+            MainWindow/InformationObject/Data/Data.h \
+            misc/generic_text/generic_dialogs.h \
+            misc/errors/AlanPanelErrors.h \
+

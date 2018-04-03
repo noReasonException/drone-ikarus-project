@@ -7,7 +7,6 @@
 
 
 //QMessageBox exposed text
-#define GENERIC_INITIALIZATION_ERROR_DIALOG "Something Went wrong :( ","The initialization process failed " " please contact with developer for further information <br>"
 #define OPERATION_NOT_SUPPORTED_ERROR_DIALOG "Operation not supported","This operation is not supported at the version " VERSION
 
 //Every macro with lastfix *MENU_NAME is QMenu

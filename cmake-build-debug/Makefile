@@ -150,6 +150,87 @@ MainWindow/AlanMainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
 .PHONY : MainWindow/AlanMainWindow.cpp.s
 
+MainWindow/InformationObject/Data/Data.o: MainWindow/InformationObject/Data/Data.cpp.o
+
+.PHONY : MainWindow/InformationObject/Data/Data.o
+
+# target to build an object file
+MainWindow/InformationObject/Data/Data.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o
+.PHONY : MainWindow/InformationObject/Data/Data.cpp.o
+
+MainWindow/InformationObject/Data/Data.i: MainWindow/InformationObject/Data/Data.cpp.i
+
+.PHONY : MainWindow/InformationObject/Data/Data.i
+
+# target to preprocess a source file
+MainWindow/InformationObject/Data/Data.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.i
+.PHONY : MainWindow/InformationObject/Data/Data.cpp.i
+
+MainWindow/InformationObject/Data/Data.s: MainWindow/InformationObject/Data/Data.cpp.s
+
+.PHONY : MainWindow/InformationObject/Data/Data.s
+
+# target to generate assembly for a file
+MainWindow/InformationObject/Data/Data.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.s
+.PHONY : MainWindow/InformationObject/Data/Data.cpp.s
+
+MainWindow/InformationObject/InformationObject.o: MainWindow/InformationObject/InformationObject.cpp.o
+
+.PHONY : MainWindow/InformationObject/InformationObject.o
+
+# target to build an object file
+MainWindow/InformationObject/InformationObject.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o
+.PHONY : MainWindow/InformationObject/InformationObject.cpp.o
+
+MainWindow/InformationObject/InformationObject.i: MainWindow/InformationObject/InformationObject.cpp.i
+
+.PHONY : MainWindow/InformationObject/InformationObject.i
+
+# target to preprocess a source file
+MainWindow/InformationObject/InformationObject.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.i
+.PHONY : MainWindow/InformationObject/InformationObject.cpp.i
+
+MainWindow/InformationObject/InformationObject.s: MainWindow/InformationObject/InformationObject.cpp.s
+
+.PHONY : MainWindow/InformationObject/InformationObject.s
+
+# target to generate assembly for a file
+MainWindow/InformationObject/InformationObject.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.s
+.PHONY : MainWindow/InformationObject/InformationObject.cpp.s
+
+MainWindow/InformationObject/Log/Log.o: MainWindow/InformationObject/Log/Log.cpp.o
+
+.PHONY : MainWindow/InformationObject/Log/Log.o
+
+# target to build an object file
+MainWindow/InformationObject/Log/Log.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o
+.PHONY : MainWindow/InformationObject/Log/Log.cpp.o
+
+MainWindow/InformationObject/Log/Log.i: MainWindow/InformationObject/Log/Log.cpp.i
+
+.PHONY : MainWindow/InformationObject/Log/Log.i
+
+# target to preprocess a source file
+MainWindow/InformationObject/Log/Log.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.i
+.PHONY : MainWindow/InformationObject/Log/Log.cpp.i
+
+MainWindow/InformationObject/Log/Log.s: MainWindow/InformationObject/Log/Log.cpp.s
+
+.PHONY : MainWindow/InformationObject/Log/Log.s
+
+# target to generate assembly for a file
+MainWindow/InformationObject/Log/Log.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.s
+.PHONY : MainWindow/InformationObject/Log/Log.cpp.s
+
 MainWindow/Panels/AlanPanel.o: MainWindow/Panels/AlanPanel.cpp.o
 
 .PHONY : MainWindow/Panels/AlanPanel.o
@@ -258,6 +339,87 @@ MainWindow/Panels/StreamPanel/StreamPanel.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 .PHONY : MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 
+MainWindow/Supplier/AbstractSupplier.o: MainWindow/Supplier/AbstractSupplier.cpp.o
+
+.PHONY : MainWindow/Supplier/AbstractSupplier.o
+
+# target to build an object file
+MainWindow/Supplier/AbstractSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/AbstractSupplier.cpp.o
+.PHONY : MainWindow/Supplier/AbstractSupplier.cpp.o
+
+MainWindow/Supplier/AbstractSupplier.i: MainWindow/Supplier/AbstractSupplier.cpp.i
+
+.PHONY : MainWindow/Supplier/AbstractSupplier.i
+
+# target to preprocess a source file
+MainWindow/Supplier/AbstractSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/AbstractSupplier.cpp.i
+.PHONY : MainWindow/Supplier/AbstractSupplier.cpp.i
+
+MainWindow/Supplier/AbstractSupplier.s: MainWindow/Supplier/AbstractSupplier.cpp.s
+
+.PHONY : MainWindow/Supplier/AbstractSupplier.s
+
+# target to generate assembly for a file
+MainWindow/Supplier/AbstractSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/AbstractSupplier.cpp.s
+.PHONY : MainWindow/Supplier/AbstractSupplier.cpp.s
+
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.o: MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.o
+
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.o
+
+# target to build an object file
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.o
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.o
+
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.i: MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.i
+
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.i
+
+# target to preprocess a source file
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.i
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.i
+
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.s: MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.s
+
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.s
+
+# target to generate assembly for a file
+MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.s
+.PHONY : MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.s
+
+MainWindow/Supplier/StreamSupplier/StreamSupplier.o: MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.o
+
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.o
+
+# target to build an object file
+MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.o
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.o
+
+MainWindow/Supplier/StreamSupplier/StreamSupplier.i: MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.i
+
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.i
+
+# target to preprocess a source file
+MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.i
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.i
+
+MainWindow/Supplier/StreamSupplier/StreamSupplier.s: MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.s
+
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.s
+
+# target to generate assembly for a file
+MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.s
+.PHONY : MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -297,6 +459,15 @@ help:
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
+	@echo "... MainWindow/InformationObject/Data/Data.o"
+	@echo "... MainWindow/InformationObject/Data/Data.i"
+	@echo "... MainWindow/InformationObject/Data/Data.s"
+	@echo "... MainWindow/InformationObject/InformationObject.o"
+	@echo "... MainWindow/InformationObject/InformationObject.i"
+	@echo "... MainWindow/InformationObject/InformationObject.s"
+	@echo "... MainWindow/InformationObject/Log/Log.o"
+	@echo "... MainWindow/InformationObject/Log/Log.i"
+	@echo "... MainWindow/InformationObject/Log/Log.s"
 	@echo "... MainWindow/Panels/AlanPanel.o"
 	@echo "... MainWindow/Panels/AlanPanel.i"
 	@echo "... MainWindow/Panels/AlanPanel.s"
@@ -309,6 +480,15 @@ help:
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.o"
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.i"
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.s"
+	@echo "... MainWindow/Supplier/AbstractSupplier.o"
+	@echo "... MainWindow/Supplier/AbstractSupplier.i"
+	@echo "... MainWindow/Supplier/AbstractSupplier.s"
+	@echo "... MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.o"
+	@echo "... MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.i"
+	@echo "... MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.s"
+	@echo "... MainWindow/Supplier/StreamSupplier/StreamSupplier.o"
+	@echo "... MainWindow/Supplier/StreamSupplier/StreamSupplier.i"
+	@echo "... MainWindow/Supplier/StreamSupplier/StreamSupplier.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

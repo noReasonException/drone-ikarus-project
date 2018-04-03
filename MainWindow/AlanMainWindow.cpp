@@ -11,6 +11,7 @@
 #include "AlanMainWindow.h"
 #include "../misc/img/AlanMainWindowImagePaths.h"
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
+#include "../misc/generic_text/generic_dialogs.h"
 
 /***
  * AlanMainWindowConstructor
