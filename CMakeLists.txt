@@ -34,5 +34,5 @@ add_executable(Ikarus_project main.cpp
         MainWindow/InformationObject/Log/Log.cpp
         MainWindow/InformationObject/Log/Log.h
         MainWindow/InformationObject/Data/Data.cpp
-        MainWindow/InformationObject/Data/Data.h)
+        MainWindow/InformationObject/Data/Data.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/LogConsumer/LogConsumer.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

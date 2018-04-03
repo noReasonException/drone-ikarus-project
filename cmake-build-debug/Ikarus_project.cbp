@@ -120,6 +120,18 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -136,6 +148,12 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Log/Log.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Interfaces/InformationSupplierFactory.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Interfaces/LogSupplierFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp">

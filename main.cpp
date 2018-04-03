@@ -24,7 +24,7 @@ class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
-    QMainWindow *wn = new AlanMainWindow();
-    wn->show();
+    QMainWindow *w = new AlanMainWindow();
+    w->show();
     return application.exec();
 }

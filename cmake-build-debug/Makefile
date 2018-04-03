@@ -150,6 +150,60 @@ MainWindow/AlanMainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
 .PHONY : MainWindow/AlanMainWindow.cpp.s
 
+MainWindow/Consumer/InformationObjectConsumer.o: MainWindow/Consumer/InformationObjectConsumer.cpp.o
+
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.o
+
+# target to build an object file
+MainWindow/Consumer/InformationObjectConsumer.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.o
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.cpp.o
+
+MainWindow/Consumer/InformationObjectConsumer.i: MainWindow/Consumer/InformationObjectConsumer.cpp.i
+
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.i
+
+# target to preprocess a source file
+MainWindow/Consumer/InformationObjectConsumer.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.i
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.cpp.i
+
+MainWindow/Consumer/InformationObjectConsumer.s: MainWindow/Consumer/InformationObjectConsumer.cpp.s
+
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.s
+
+# target to generate assembly for a file
+MainWindow/Consumer/InformationObjectConsumer.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.s
+.PHONY : MainWindow/Consumer/InformationObjectConsumer.cpp.s
+
+MainWindow/Consumer/LogConsumer/LogConsumer.o: MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o
+
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.o
+
+# target to build an object file
+MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o
+
+MainWindow/Consumer/LogConsumer/LogConsumer.i: MainWindow/Consumer/LogConsumer/LogConsumer.cpp.i
+
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.i
+
+# target to preprocess a source file
+MainWindow/Consumer/LogConsumer/LogConsumer.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.i
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.cpp.i
+
+MainWindow/Consumer/LogConsumer/LogConsumer.s: MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
+
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.s
+
+# target to generate assembly for a file
+MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
+.PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
+
 MainWindow/InformationObject/Data/Data.o: MainWindow/InformationObject/Data/Data.cpp.o
 
 .PHONY : MainWindow/InformationObject/Data/Data.o
@@ -432,6 +486,12 @@ help:
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
+	@echo "... MainWindow/Consumer/InformationObjectConsumer.o"
+	@echo "... MainWindow/Consumer/InformationObjectConsumer.i"
+	@echo "... MainWindow/Consumer/InformationObjectConsumer.s"
+	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.o"
+	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.i"
+	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.s"
 	@echo "... MainWindow/InformationObject/Data/Data.o"
 	@echo "... MainWindow/InformationObject/Data/Data.i"
 	@echo "... MainWindow/InformationObject/Data/Data.s"

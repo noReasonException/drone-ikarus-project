@@ -6,6 +6,8 @@
 #define IKARUS_PROJECT_ABSTRACTSUPPLIER_H
 
 
+#include <QtCore/QString>
+
 class InformationObjectSupplier {
 
 };

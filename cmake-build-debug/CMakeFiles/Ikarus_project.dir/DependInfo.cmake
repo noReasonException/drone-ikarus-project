@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/InformationObject.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Log/Log.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o"

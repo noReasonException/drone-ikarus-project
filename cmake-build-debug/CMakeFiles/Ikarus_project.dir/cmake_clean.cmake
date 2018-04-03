@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )
