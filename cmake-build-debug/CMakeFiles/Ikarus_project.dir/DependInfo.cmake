@@ -12,9 +12,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/AbstractSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/AbstractSupplier.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/main.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -8,11 +8,14 @@
 
 class InformationObject {
 public:
-    InformationObject(long timestamp);
+    explicit InformationObject(long timestamp);
 
 private:
     long timestamp;
 public:
+    long getTimestamp() const;
+    InformationObject* setTimestamp(long timestamp);
+
 };
 
 

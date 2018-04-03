@@ -14,8 +14,7 @@ AlanPanel::AlanPanel() : QWidget(nullptr) {
 }
 
 bool AlanPanel::generic_initializer() {
-    return initializeTitleArea() &&
-            initializePanelArea();
+    return initializeTitleArea() ;
 }
 
 bool AlanPanel::initializeTitleArea()try {
@@ -23,9 +22,3 @@ bool AlanPanel::initializeTitleArea()try {
     return true;
 }catch(std::exception&e){return false;}
 
-bool AlanPanel::initializePanelArea()try{
-
-    this->panelArea=onGeneratePanelArea();
-    return true;
-
-}catch (std::exception&e){return false;}

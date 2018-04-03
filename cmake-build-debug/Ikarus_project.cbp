@@ -162,22 +162,16 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/AbstractSupplier.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/AbstractSupplier.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/LogSupplier/LogSupplier.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/StreamSupplier.cpp">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/StreamSupplier/StreamSupplier.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">

@@ -6,7 +6,9 @@
 #define IKARUS_PROJECT_LOGSUPPLIER_H
 
 
-class LogSupplier {
+#include "../InformationObjectSupplier.h"
+
+class LogSupplier : public InformationObjectSupplier {
 
 };
 

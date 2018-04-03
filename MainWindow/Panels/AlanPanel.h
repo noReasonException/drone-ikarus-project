@@ -15,20 +15,17 @@ class AlanPanel : public QWidget{
 public:
     AlanPanel();
 
-    AlanPanel(QWidget *parent, const Qt::WindowFlags &f);
 
 private:
     QWidget *titleArea;
-    QWidget *panelArea;
 
-    bool generic_initializer();
     bool initializeTitleArea();
-    bool initializePanelArea();
+
 
 protected:
+    virtual bool generic_initializer();
 
     virtual QWidget*    onGenerateTitleArea() throw(std::exception)=0;
-    virtual QWidget*    onGeneratePanelArea() throw(std::exception)=0;
 
 
 

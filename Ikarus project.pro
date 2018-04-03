@@ -23,27 +23,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # Input
 SOURCES += main.cpp \
-           MainWindow/Panels/LogWidget/LogWidget.cpp \
-           MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
-           MainWindow/Panels/StreamPanel/StreamPanel.cpp \
-           MainWindow/Panels/AlanPanel.cpp \
-           MainWindow/AlanMainWindow.cpp \
-           MainWindow/InformationObject/InformationObject.cpp \
-           MainWindow/InformationObject/Log/Log.cpp \
-           MainWindow/InformationObject/Data/Data.cpp
+    MainWindow/Supplier/InformationObjectSupplier.cpp \
+    MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
+    MainWindow/AlanMainWindow.cpp \
+    MainWindow/Panels/LogWidget/LogWidget.cpp \
+    MainWindow/Panels/AlanPanel.cpp \
+    MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
+    MainWindow/Panels/StreamPanel/StreamPanel.cpp \
+    MainWindow/InformationObject/InformationObject.cpp \
+    MainWindow/InformationObject/Data/Data.cpp \
+    MainWindow/InformationObject/Log/Log.cpp
 
-HEADERS += MainWindow/AlanMainWindow.h \
-            misc/generic_text/AlanMainWindowDialogs.h \
-            misc/errors/AlanMainWindowErrors.h \
-            misc/img/AlanMainWindowImagePaths.h \
-            misc/version.h \
+
+HEADERS +=  MainWindow/Supplier/LogSupplier/LogSupplier.h \
+            MainWindow/Supplier/InformationObjectSupplier.h \
+            MainWindow/Panels/LogWidget/LogWidget.h \
+            MainWindow/Panels/AlanPanel.h \
             MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
             MainWindow/Panels/StreamPanel/StreamPanel.h \
-            MainWindow/Panels/AlanPanel.h \
-            MainWindow/Panels/LogWidget/LogWidget.h \
+            MainWindow/AlanMainWindow.h \
             MainWindow/InformationObject/InformationObject.h \
-            MainWindow/InformationObject/Log/Log.h \
             MainWindow/InformationObject/Data/Data.h \
-            misc/generic_text/generic_dialogs.h \
-            misc/errors/AlanPanelErrors.h \
+            MainWindow/InformationObject/Log/Log.h \
+             misc/version.h \
+             misc/img/AlanMainWindowImagePaths.h \
+             misc/generic_text/generic_dialogs.h \
+             misc/generic_text/AlanMainWindowDialogs.h \
+             misc/errors/AlanMainWindowErrors.h \
+             misc/errors/AlanPanelErrors.h
+
+
 

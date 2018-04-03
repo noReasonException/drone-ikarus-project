@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_ABSTRACTSUPPLIER_H
 
 
-class AbstractSupplier {
+class InformationObjectSupplier {
 
 };
 

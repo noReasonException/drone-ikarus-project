@@ -9,6 +9,21 @@
 #include "../InformationObject.h"
 
 class Log : public InformationObject{
+public:
+    Log(QString logType,long timestamp,QString logDesc);
+
+    const QString &getLogType() const;
+
+    Log* setLogType(const QString &logType);
+
+    const QString &getLogDesc() const;
+
+    Log* setLogDesc(const QString &logDesc);
+
+private:
+    QString logType;
+    QString logDesc;
+
 
 };
 
