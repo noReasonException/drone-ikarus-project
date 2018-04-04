@@ -14,7 +14,27 @@
 #include "../../../Consumer/LogConsumer/LogConsumer.h"
 #include "../../../Interfaces/LogSupplierFactory.h"
 
-class LogPanel:public StreamPanel, public LogConsumer,public LogSupplierFactory {
+/****
+ * class LogPanel
+ * The LogPanel class is a QWidget who belongs in AlanMainWindow (Aligned Right)
+ * is responsible for show logs , of any type , from any source(any subsystem of this client
+ * or server)
+ *
+ * To submit the logs inside the LogPanel, you need a subscribed Supplier
+ * the Supplier Object takes Log objects and send them in the Log Panel
+ * The Procedure go as follows ...
+ *
+ *
+ * LogSupplier*my_supplier=LogPanel::getInstance("instance")->createSupplier("TestSubsystem");
+ *  [...]
+ *  [...]
+ * my_supplier->send(new Log(...,...,...,...));
+ *
+ * @note This procedure is thread-safe
+ */
+class LogPanel:public StreamPanel,
+               public LogConsumer,
+               public LogSupplierFactory {
 public:
     LogPanel(const QString &str);
 
