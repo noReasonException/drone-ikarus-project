@@ -16,7 +16,7 @@ LogPanel* LogPanel::instance= nullptr;
 LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
     log=new std::vector<Log*>();
 }
-
+////TODO::Thread -safe accept;
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     auto *l= dynamic_cast<Log*>(info);
     if(!l){
@@ -44,7 +44,7 @@ LogPanel *LogPanel::getInstance(QString title) {
     LogPanel::instance=pnl;
     return pnl;
 }
-
+///TODO code quality refactor
 void LogPanel::onDataClicked(QListWidgetItem *item)try {
 
     (new LogWidget(log->operator[](item->listWidget()->currentRow())))->show();

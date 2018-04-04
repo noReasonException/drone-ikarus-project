@@ -2,12 +2,14 @@
 // Created by noreasonexception on 4/2/18.
 //
 
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QLabel>
 #include "LogWidget.h"
 
 LogWidget::LogWidget(Log*l) : QDialog(nullptr),log(l) {
-    ///TODO proper exception handling
+    ////TODO: proper exception handling
+    generic_initializer();
+    setWindowTitle("Log Details");
 }
 
 bool LogWidget::generic_initializer() {
@@ -21,7 +23,7 @@ bool LogWidget::initializeLayout()try{
 }catch (std::exception&e){return false;}
 
 QLayout *LogWidget::onGenerateLayout() {
-    return new QHBoxLayout;
+    return new QVBoxLayout;
 
 }
 
@@ -31,8 +33,8 @@ bool LogWidget::migrateLogData()try{
 }catch (std::exception&e){ return false;}
 
 void LogWidget::onMigrateLogData() {
-    main_lay->addWidget(new QLabel(log->getLogType()));
-    main_lay->addWidget(new QLabel(QString::number(log->getTimestamp())));
-    main_lay->addWidget(new QLabel(log->getLogDesc()));
+    main_lay->addWidget(new QLabel("Type :"+log->getLogType()));
+    main_lay->addWidget(new QLabel("Submitted on time:"+QString::number(log->getTimestamp())));
+    main_lay->addWidget(new QLabel("Description:"+log->getLogDesc()));
 }
 
