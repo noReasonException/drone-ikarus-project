@@ -11,14 +11,11 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include "../StreamPanel.h"
+#include "../../../Consumer/LogConsumer/LogConsumer.h"
+#include "../../../Interfaces/LogSupplierFactory.h"
 
-class LogPanel:public StreamPanel {
-    Q_OBJECT
-public:
+class LogPanel:public StreamPanel, public LogConsumer,public LogSupplierFactory {
 
-    LogPanel();
-
-protected:
 
 };
 

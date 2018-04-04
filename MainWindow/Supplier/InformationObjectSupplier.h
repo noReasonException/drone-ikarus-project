@@ -6,10 +6,27 @@
 #define IKARUS_PROJECT_ABSTRACTSUPPLIER_H
 
 
-#include <QtCore/QString>
+#include <QString>
+#include "../Consumer/InformationObjectConsumer.h"
+#include <QWidget>
+class InformationObjectConsumer;
+class InformationObjectSupplier :public QWidget{
+    Q_OBJECT
+    friend class InformationSupplierFactory;
+public:
+    InformationObjectSupplier(const QString &supplierName) : supplierName(supplierName) {}
 
-class InformationObjectSupplier {
+    const QString &getSupplierName() const;
+    InformationObjectConsumer *getTargetConsumer() const;
 
+protected:
+    InformationObjectSupplier* setSupplierName(const QString &supplierName);
+
+
+    InformationObjectSupplier* setTargetConsumer(InformationObjectConsumer *targetConsumer);
+
+    QString supplierName;
+    InformationObjectConsumer*targetConsumer;
 };
 
 

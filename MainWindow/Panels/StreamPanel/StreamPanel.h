@@ -11,17 +11,7 @@
 #include <QListView>
 
 class StreamPanel : public AlanPanel{
-    Q_OBJECT
-public:
-    StreamPanel();
 
-private:
-    QListView *dataView;
-    bool    initializeDataView();
-    virtual bool generic_initializer() override ;
-
-protected:
-    QListView *onGenerateDataView();
 };
 
 

@@ -6,7 +6,12 @@
 #define IKARUS_PROJECT_LOGCONSUMER_H
 
 
-class LogConsumer {
+#include <QArgument>
+#include "../../Supplier/InformationObjectSupplier.h"
+#include "../../InformationObject/InformationObject.h"
+#include "../InformationObjectConsumer.h"
+
+class LogConsumer: public InformationObjectConsumer {
 
 };
 

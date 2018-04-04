@@ -13,19 +13,27 @@
 class AlanPanel : public QWidget{
     Q_OBJECT;
 public:
-    AlanPanel();
+
+    static AlanPanel*getInstance(QString title);
+
 
 
 private:
+    AlanPanel(QString str);
+    AlanPanel()= default;
+    QLayout*mainLayout;
     QWidget *titleArea;
-
-    bool initializeTitleArea();
+    QString  title;
+    static AlanPanel*instance;
 
 
 protected:
     virtual bool generic_initializer();
+    virtual bool initializeLayout();
+    virtual bool initializeTitleArea();
 
-    virtual QWidget*    onGenerateTitleArea() throw(std::exception)=0;
+
+    QWidget*    onGenerateTitleArea() throw(std::exception);
 
 
 

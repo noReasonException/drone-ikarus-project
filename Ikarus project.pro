@@ -22,35 +22,43 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += main.cpp \
-    MainWindow/Supplier/InformationObjectSupplier.cpp \
-    MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
-    MainWindow/AlanMainWindow.cpp \
-    MainWindow/Panels/LogWidget/LogWidget.cpp \
-    MainWindow/Panels/AlanPanel.cpp \
-    MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
-    MainWindow/Panels/StreamPanel/StreamPanel.cpp \
-    MainWindow/InformationObject/InformationObject.cpp \
-    MainWindow/InformationObject/Data/Data.cpp \
-    MainWindow/InformationObject/Log/Log.cpp
+SOURCES += ./main.cpp \
+           ./MainWindow/Supplier/InformationObjectSupplier.cpp \
+           ./MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
+           ./MainWindow/AlanMainWindow.cpp \
+           ./MainWindow/Panels/LogWidget/LogWidget.cpp \
+           ./MainWindow/Panels/AlanPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
+           ./MainWindow/Consumer/LogConsumer/LogConsumer.cpp \
+           ./MainWindow/Consumer/InformationObjectConsumer.cpp \
+           ./MainWindow/InformationObject/InformationObject.cpp \
+           ./MainWindow/InformationObject/Data/Data.cpp \
+           ./MainWindow/InformationObject/Log/Log.cpp
 
 
-HEADERS +=  MainWindow/Supplier/LogSupplier/LogSupplier.h \
-            MainWindow/Supplier/InformationObjectSupplier.h \
-            MainWindow/Panels/LogWidget/LogWidget.h \
-            MainWindow/Panels/AlanPanel.h \
-            MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
-            MainWindow/Panels/StreamPanel/StreamPanel.h \
-            MainWindow/AlanMainWindow.h \
-            MainWindow/InformationObject/InformationObject.h \
-            MainWindow/InformationObject/Data/Data.h \
-            MainWindow/InformationObject/Log/Log.h \
-             misc/version.h \
-             misc/img/AlanMainWindowImagePaths.h \
-             misc/generic_text/generic_dialogs.h \
-             misc/generic_text/AlanMainWindowDialogs.h \
-             misc/errors/AlanMainWindowErrors.h \
-             misc/errors/AlanPanelErrors.h
+
+HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
+            ./MainWindow/Interfaces/InformationSupplierFactory.h \
+            ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
+            ./MainWindow/Supplier/InformationObjectSupplier.h \
+            ./MainWindow/Panels/LogWidget/LogWidget.h \
+            ./MainWindow/Panels/AlanPanel.h \
+            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+            ./MainWindow/Panels/StreamPanel/StreamPanel.h \
+            ./MainWindow/AlanMainWindow.h \
+            ./MainWindow/Consumer/InformationObjectConsumer.h \
+            ./MainWindow/Consumer/LogConsumer/LogConsumer.h \
+            ./MainWindow/InformationObject/InformationObject.h \
+            ./MainWindow/InformationObject/Data/Data.h \
+            ./MainWindow/InformationObject/Log/Log.h \
+             ./misc/version.h \
+             ./misc/img/AlanMainWindowImagePaths.h \
+             ./misc/generic_text/generic_dialogs.h \
+             ./misc/generic_text/AlanMainWindowDialogs.h \
+             ./misc/errors/AlanMainWindowErrors.h \
+             ./misc/errors/AlanPanelErrors.h
+
 
 
 

@@ -7,9 +7,13 @@
 
 
 #include <QObject>
-
-class InformationObjectConsumer: virtual public QObject {
-
+#include "../Supplier/InformationObjectSupplier.h"
+#include "../InformationObject/InformationObject.h"
+class InformationObjectSupplier;
+class InformationObject;
+class InformationObjectConsumer {
+public:
+    virtual void accept(InformationObjectSupplier*supplier,InformationObject*info)=0;
 };
 
 

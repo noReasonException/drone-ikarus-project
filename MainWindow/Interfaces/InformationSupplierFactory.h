@@ -7,10 +7,7 @@
 
 class InformationSupplierFactory{
 public:
-    InformationSupplierFactory() = delete;
 
 
-    virtual InformationObjectSupplier*createSupplier(QString supplierName){
-        return new InformationObjectSupplier();
-    }
+    virtual InformationObjectSupplier*createSupplier(QString supplierName){}
 };

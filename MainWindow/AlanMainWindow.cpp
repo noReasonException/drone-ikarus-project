@@ -210,6 +210,6 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
 }
 
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    return new QLabel("Log Area");
+    return LogPanel::getInstance("Hey!");
 
 }
