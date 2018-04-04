@@ -2,32 +2,23 @@
 // Created by noreasonexception on 4/2/18.
 //
 
+#include <QHBoxLayout>
 #include "LogWidget.h"
 
-Builder* Builder::setTimestamp(long timestamp) {
-    object->timestamp = timestamp;
-    return this;
-}
-
-Builder* Builder::setType(const QString &type) {
-    object->type = type;
-    return this;
-}
-
-Builder* Builder::setDesc(const QString &desc) {
-    object->desc = desc;
-    return this;
-}
-
-Builder::Builder() {
-    object=new LogWidget();
+LogWidget::LogWidget(Log*) : QDialog(nullptr) {
 
 }
 
-LogWidget *Builder::create() {
-    return object;
+bool LogWidget::generic_initializer() {
+    return initializeLayout();
 }
 
-bool Builder::sendToLogPanel() {
+bool LogWidget::initializeLayout()try{
     return false;
+}catch (std::exception&e){return false;}
+
+QLayout *LogWidget::onGenerateLayout() {
+    QHBoxLayout*mainLay=new QHBoxLayout;
+
 }
+

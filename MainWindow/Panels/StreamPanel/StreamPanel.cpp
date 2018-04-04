@@ -69,6 +69,6 @@ QListWidget *StreamPanel::getListView() const {
     return listView;
 }
 
-void StreamPanel::onDataClicked(QListWidgetItem *) {
-    QMessageBox::warning(nullptr,"hey","hjeu","hehe");
+void StreamPanel::onDataClicked(QListWidgetItem *ptr) {
+    int log_position=ptr->listWidget()->row(ptr);
 }

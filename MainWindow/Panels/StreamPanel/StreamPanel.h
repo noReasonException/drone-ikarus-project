@@ -14,17 +14,19 @@
 class StreamPanel : public AlanPanel{
     Q_OBJECT
 protected:
-    bool generic_initializer() override;            ///the generic initializer, overrider from AlanPanel
     StreamPanel(const QString &title);
 
+    ///Initializers/...
+    virtual bool generic_initializer() override;            ///the generic initializer, overrider from AlanPanel
     virtual bool initializeListView();              ///@returns true if the initialization step of QListView was successful
     virtual bool initializeSlots();
-    virtual QListWidget *onGenerateListView();      ///intializes and @returns the QListView object , needed for initialization
 
+    ///User-to-Override methods..
+    virtual QListWidget *onGenerateListView();      ///intializes and @returns the QListView object , needed for initialization
     QListWidget *getListView() const;
 
 private:
-    QListWidget*listView;
+    QListWidget*listView;                           ///TODO in later version , use a custom QListView instead..
     static StreamPanel*instance;                    ///Saved instance of siglenton
 private slots:
     virtual void onDataClicked(QListWidgetItem *);
