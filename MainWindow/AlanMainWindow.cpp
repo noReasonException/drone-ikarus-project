@@ -208,8 +208,10 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
 }
 
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-
-    return StreamPanel::getInstance("Hey!");
+    LogPanel*pnl=LogPanel::getInstance("Hey");
+    LogSupplier*spl=pnl->createSupplier("TestSUb");
+    spl->send(nullptr);
+    return pnl;
 
 
 }

@@ -2,6 +2,7 @@
 // Created by noreasonexception on 4/3/18.
 //
 
+#include <iostream>
 #include "InformationObjectSupplier.h"
 
 const QString &InformationObjectSupplier::getSupplierName() const {
@@ -20,4 +21,10 @@ InformationObjectConsumer *InformationObjectSupplier::getTargetConsumer() const 
 InformationObjectSupplier* InformationObjectSupplier::setTargetConsumer(InformationObjectConsumer *targetConsumer) {
     InformationObjectSupplier::targetConsumer = targetConsumer;
     return this;
+}
+
+void InformationObjectSupplier::send(InformationObject *info) {
+    targetConsumer->accept(this,info);
+    std::cout<<"Called";
+
 }
