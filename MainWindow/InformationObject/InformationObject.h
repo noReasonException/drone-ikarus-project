@@ -9,6 +9,7 @@
 class InformationObject {
 public:
     explicit InformationObject(long timestamp);
+    virtual ~InformationObject()= default;//TODO memory leak fix
 
 private:
     long timestamp;

@@ -4,18 +4,26 @@
 
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include "LogPanel.h"
 #include "../../../../misc/generic_text/generic_dialogs.h"
 #include "../../../../misc/errors/AlanPanelErrors.h"
 LogPanel* LogPanel::instance= nullptr;
 
-LogPanel::LogPanel(const QString &str) : StreamPanel(str) {}
+LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
+    log=new std::vector<Log*>();
+}
 
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
-    title=supplier->getSupplierName();
-    initializeTitleArea();
+    auto *l= dynamic_cast<Log*>(info);
+    if(!l){
+        return ;//TODO submit a log , explaining why this log cannot export
+    }
+    log->push_back(l);
+    getListView()->addItem(supplier->getSupplierName()+"|"+l->getLogType());
 }
+
+
 
 LogSupplier *LogPanel::createSupplier(QString supplierName) {
     LogSupplier*supplier=new LogSupplier(supplierName,this);

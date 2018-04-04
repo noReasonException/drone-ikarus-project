@@ -12,6 +12,7 @@
 #include "../misc/img/AlanMainWindowImagePaths.h"
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/generic_dialogs.h"
+#include "InformationObject/Log/Log.h"
 
 /***
  * AlanMainWindowConstructor
@@ -281,6 +282,6 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
     LogPanel*pnl=LogPanel::getInstance("Hey");
     LogSupplier*spl=pnl->createSupplier("TestSUb");
-    spl->send(nullptr);
+    spl->send(new Log("Fuck",1234,"Fuck"));
     return pnl;
 }

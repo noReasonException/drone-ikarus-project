@@ -7,16 +7,25 @@
 #include "../../../misc/errors/AlanPanelErrors.h"
 #include <QLayout>
 #include <QMessageBox>
+#include <QListWidget>
 
 StreamPanel* StreamPanel::instance= nullptr;
-StreamPanel::StreamPanel(const QString &title) : AlanPanel(title){}
+StreamPanel::StreamPanel(const QString &title) : AlanPanel(title){
+
+}
+
+bool StreamPanel::initializeSlots() {
+    QObject::connect(listView,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(onDataClicked(QListWidgetItem *)));
+    return true;
+}
 
 /***
  * @see the AlanPanel::generic_initializer comment section for details...
  */
 bool StreamPanel::generic_initializer() {
     return AlanPanel::generic_initializer()&&
-            initializeListView();
+            initializeListView()&&
+            initializeSlots();
 }
 /***
  * A simple wrapper over onGenerateListView ,it checks if this function is called successfully ,
@@ -40,8 +49,8 @@ bool StreamPanel::initializeListView() try {
  *                      this->mainLayout->addWidget(...)
  * ...is strictly forbidden (To maintain a elegant code)
  */
-QListView *StreamPanel::onGenerateListView() {
-    return new QListView;
+QListWidget *StreamPanel::onGenerateListView() {
+    return new QListWidget;
 }
 
 
@@ -54,4 +63,12 @@ StreamPanel *StreamPanel::getInstance(QString title) {
     }
     StreamPanel::instance=pnl;
     return pnl;
+}
+
+QListWidget *StreamPanel::getListView() const {
+    return listView;
+}
+
+void StreamPanel::onDataClicked(QListWidgetItem *) {
+    QMessageBox::warning(nullptr,"hey","hjeu","hehe");
 }

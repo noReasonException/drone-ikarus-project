@@ -13,6 +13,7 @@
 #include "../StreamPanel.h"
 #include "../../../Consumer/LogConsumer/LogConsumer.h"
 #include "../../../Interfaces/LogSupplierFactory.h"
+#include "../../../InformationObject/Log/Log.h"
 
 /****
  * class LogPanel
@@ -35,6 +36,7 @@
 class LogPanel:public StreamPanel,
                public LogConsumer,
                public LogSupplierFactory {
+    Q_OBJECT
 public:
     LogPanel(const QString &str);
 
@@ -46,6 +48,7 @@ public:
 
 protected:
     static LogPanel*instance;
+    std::vector<Log*>*log;
 
 
 };

@@ -41,7 +41,7 @@ bool AlanPanel::generic_initializer() {
  * @return true if everything is okay , false otherwise
  */
 bool AlanPanel::initializeTitleArea()try {
-    mainLayout->addWidget(this->titleArea=onGenerateTitleArea());
+    mainLayout->addWidget(this->titleArea=onGenerateTitleArea(),0,Qt::AlignCenter);
     return true;
 }catch(std::exception&e){return false;}
 /***
