@@ -14,12 +14,12 @@ class AlanPanel : public QWidget{
     Q_OBJECT;
 public:
 
-    static AlanPanel*getInstance(QString title);
+    static AlanPanel*getInstance(QString title);            ///Siglenton over AlanPanel
 
 
 
 private:
-    static AlanPanel*instance;
+    static AlanPanel*instance;                              ///The saved instance of siglenton
 
 protected:
     QVBoxLayout*mainLayout;
@@ -27,13 +27,13 @@ protected:
     QString  title;
     AlanPanel(QString str);
 
-    virtual bool generic_initializer();
-    virtual bool initializeLayout();
-    virtual bool initializeTitleArea();
+    virtual bool generic_initializer();                     ///@returns true if every initialization step was successful
+    virtual bool initializeLayout();                        ///@returns true if the initialization of layout was successful
+    virtual bool initializeTitleArea();                     ///@returns true if the title area initialization was successful
 
 
-    QWidget*    onGenerateTitleArea() throw(std::exception);
-    QVBoxLayout*onGenerateLayout()throw(std::exception);
+    QWidget*    onGenerateTitleArea() throw(std::exception);///@returns a new QWidget designed to be the title area of the panel
+    QVBoxLayout*onGenerateLayout()throw(std::exception);    ///@returns the layout designed to be the panels main layout
 
 
 

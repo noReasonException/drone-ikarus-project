@@ -9,22 +9,41 @@
 #include <QMessageBox>
 
 StreamPanel* StreamPanel::instance= nullptr;
+StreamPanel::StreamPanel(const QString &title) : AlanPanel(title){}
 
+/***
+ * @see the AlanPanel::generic_initializer comment section for details...
+ */
 bool StreamPanel::generic_initializer() {
     return AlanPanel::generic_initializer()&&
             initializeListView();
 }
-
+/***
+ * A simple wrapper over onGenerateListView ,it checks if this function is called successfully ,
+ * and informs the upper error-protection layer (the generic_initializer() in case of error
+ *
+ * @note why we dont initialize directly from here?
+ * @see the comment section of AlanMainWindow::initializeMenu
+ * @return true if everything is okay , false otherwise
+ *
+***/
 bool StreamPanel::initializeListView() try {
     AlanPanel::mainLayout->addWidget(listView=onGenerateListView());
     return true;
 }catch(std::exception&e){return false;}
-
+/***
+ * onGenerateListView() does the real job of initializing and returning a QListView
+ * destined to be in the main layout of StreamPanel.
+ * @return a new QListView
+ *  * @note this function HAS NOT responsibility of assigning the QListView in AlanPanel layout.
+ * this means that commands like...
+ *                      this->mainLayout->addWidget(...)
+ * ...is strictly forbidden (To maintain a elegant code)
+ */
 QListView *StreamPanel::onGenerateListView() {
     return new QListView;
 }
 
-StreamPanel::StreamPanel(const QString &str) : AlanPanel(str){}
 
 StreamPanel *StreamPanel::getInstance(QString title) {
     if(StreamPanel::instance)return StreamPanel::instance;

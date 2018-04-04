@@ -12,16 +12,16 @@
 
 class StreamPanel : public AlanPanel{
 protected:
-    bool generic_initializer() override;
-    StreamPanel(const QString &str);
+    bool generic_initializer() override;            ///the generic initializer, overrider from AlanPanel
+    StreamPanel(const QString &title);
 
-    virtual bool initializeListView();
-    virtual QListView *onGenerateListView();
+    virtual bool initializeListView();              ///@returns true if the initialization step of QListView was successful
+    virtual QListView *onGenerateListView();        ///intializes and @returns the QListView object , needed for initialization
 private:
     QListView*listView;
-    static StreamPanel*instance;
+    static StreamPanel*instance;                    ///Saved instance of siglenton
 public:
-    static StreamPanel*getInstance(QString title);
+    static StreamPanel*getInstance(QString title);  ///Siglenton over StreamPanel
 
 
 };

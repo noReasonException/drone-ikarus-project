@@ -15,7 +15,7 @@
 
 /***
  * AlanMainWindowConstructor
- * Checks all the initialization processes , terminates in case of error
+ *
  */
 AlanMainWindow::AlanMainWindow() {
 
@@ -28,6 +28,10 @@ AlanMainWindow::AlanMainWindow() {
 }
 /***
  * genericInitializer
+ * This is the top most error-check layer,
+ * Checks all the initialization processes
+ * In case of error , ask the user if want to continue or terminate.
+ *
  * @return true if all initialization steps where successful
  */
 bool AlanMainWindow::genericInitializer() {
@@ -166,7 +170,10 @@ void AlanMainWindow::closeSlot(){
 }
 /***
  * A simple wrapper over onGenerateToolBar ,it checks if this function is called successfully ,
- * and informs the upper error-protection layer (the generic_initializer()
+ * and informs the upper error-protection layer (the generic_initializer() in case of error
+ *
+ * @note why we dont initialize directly from here?
+ * @see the comment section of AlanMainWindow::initializeMenu
  * @return true if everything is okay , false otherwise
  */
 bool AlanMainWindow::initializeToolBar() try{
@@ -202,7 +209,10 @@ std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() throw(std::exception)
 }
 /***
  * A simple wrapper over onGenerateCentralWidget ,it checks if this function is called successfully ,
- * and informs the upper error-protection layer (the generic_initializer()
+ * and informs the upper error-protection layer (the generic_initializer() in case of error
+ *
+ * @note why we dont initialize directly from here?
+ * @see the comment section of AlanMainWindow::initializeMenu
  * @return true if everything is okay , false otherwise
  *
 ***/
