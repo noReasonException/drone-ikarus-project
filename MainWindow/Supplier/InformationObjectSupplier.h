@@ -10,21 +10,23 @@
 #include "../Consumer/InformationObjectConsumer.h"
 #include <QWidget>
 class InformationObjectConsumer;
-class InformationObjectSupplier :public QWidget{
-    Q_OBJECT
+class InformationObjectSupplier {
     friend class InformationSupplierFactory;
 public:
-    InformationObjectSupplier(const QString &supplierName) : supplierName(supplierName) {}
+
 
     const QString &getSupplierName() const;
     InformationObjectConsumer *getTargetConsumer() const;
 
-protected:
+
     InformationObjectSupplier* setSupplierName(const QString &supplierName);
 
 
     InformationObjectSupplier* setTargetConsumer(InformationObjectConsumer *targetConsumer);
-
+protected:
+    InformationObjectSupplier(const QString &supplierName,InformationObjectConsumer*target) :
+            supplierName(supplierName),
+            targetConsumer(target) {}
     QString supplierName;
     InformationObjectConsumer*targetConsumer;
 };

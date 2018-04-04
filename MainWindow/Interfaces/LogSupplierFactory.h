@@ -6,6 +6,7 @@
 
 class LogSupplierFactory:public InformationSupplierFactory{
 public:
+    virtual LogSupplier*createSupplier(QString supplierName)override=0;
 
 
 };

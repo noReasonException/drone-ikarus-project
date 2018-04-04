@@ -28,15 +28,15 @@ QWidget *AlanPanel::onGenerateTitleArea() throw(std::exception){
 }
 
 AlanPanel *AlanPanel::getInstance(QString title) {
-    if(instance)
-        return instance;
+    if(AlanPanel::instance)
+        return AlanPanel::instance;
     AlanPanel*pnl=new AlanPanel(title);
 
     if(!pnl->generic_initializer()){
         QMessageBox::warning(nullptr,GENERIC_INITIALIZATION_ERROR_DIALOG,ERR02_DETAILS);
         return nullptr;
     }
-    instance=pnl;
+    AlanPanel::instance=pnl;
     return pnl;
 
 }
@@ -44,5 +44,4 @@ AlanPanel *AlanPanel::getInstance(QString title) {
 bool AlanPanel::initializeLayout() {
     setLayout(mainLayout=new QVBoxLayout());
     return true;
-
 }

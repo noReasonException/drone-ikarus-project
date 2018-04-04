@@ -15,6 +15,17 @@
 #include "../../../Interfaces/LogSupplierFactory.h"
 
 class LogPanel:public StreamPanel, public LogConsumer,public LogSupplierFactory {
+public:
+    LogPanel(const QString &str);
+
+    void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
+
+    LogSupplier *createSupplier(QString supplierName) override;
+
+    static LogPanel*getInstance(QString title);
+
+protected:
+    static LogPanel*instance;
 
 
 };

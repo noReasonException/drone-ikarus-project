@@ -9,7 +9,7 @@
 #include <QWidget>
 #include <QObject>
 #include <QLabel>
-
+#include <QVBoxLayout>
 class AlanPanel : public QWidget{
     Q_OBJECT;
 public:
@@ -19,15 +19,14 @@ public:
 
 
 private:
-    AlanPanel(QString str);
-    AlanPanel()= default;
-    QLayout*mainLayout;
-    QWidget *titleArea;
-    QString  title;
     static AlanPanel*instance;
 
-
 protected:
+    QVBoxLayout*mainLayout;
+    QWidget *titleArea;
+    QString  title;
+    AlanPanel(QString str);
+
     virtual bool generic_initializer();
     virtual bool initializeLayout();
     virtual bool initializeTitleArea();

@@ -25,8 +25,6 @@ AlanMainWindow::AlanMainWindow() {
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
     }
-    setMinimumHeight(300);
-    setMinimumWidth(400);
 }
 /***
  * genericInitializer
@@ -210,6 +208,8 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
 }
 
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    return LogPanel::getInstance("Hey!");
+
+    return StreamPanel::getInstance("Hey!");
+
 
 }

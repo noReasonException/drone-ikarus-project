@@ -11,6 +11,18 @@
 #include <QListView>
 
 class StreamPanel : public AlanPanel{
+protected:
+    bool generic_initializer() override;
+    StreamPanel(const QString &str);
+
+    virtual bool initializeListView();
+    virtual QListView *onGenerateListView();
+private:
+    QListView*listView;
+    static StreamPanel*instance;
+public:
+    static StreamPanel*getInstance(QString title);
+
 
 };
 

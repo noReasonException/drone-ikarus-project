@@ -3,3 +3,6 @@
 //
 
 #include "LogSupplier.h"
+
+LogSupplier::LogSupplier(const QString &supplierName,InformationObjectConsumer*target) :
+        InformationObjectSupplier(supplierName,target) {}
