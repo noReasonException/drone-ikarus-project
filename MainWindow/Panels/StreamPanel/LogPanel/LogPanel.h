@@ -37,6 +37,9 @@ class LogPanel:public StreamPanel,
                public LogConsumer,
                public LogSupplierFactory {
     Q_OBJECT
+
+    void onDataClicked(QListWidgetItem *item) override;
+
 public:
     LogPanel(const QString &str);
 

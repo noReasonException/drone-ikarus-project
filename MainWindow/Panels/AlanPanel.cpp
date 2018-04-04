@@ -8,7 +8,6 @@
 #include "AlanPanel.h"
 #include "../../misc/errors/AlanPanelErrors.h"
 #include "../../misc/generic_text/generic_dialogs.h"
-AlanPanel* AlanPanel::instance= nullptr;
 AlanPanel::AlanPanel(QString str) : QWidget(nullptr),title(str) {}
 
 /***
@@ -57,19 +56,6 @@ QWidget *AlanPanel::onGenerateTitleArea() throw(std::exception){
     return new QLabel(title);
 }
 
-AlanPanel *AlanPanel::getInstance(QString title) {
-    if(AlanPanel::instance)
-        return AlanPanel::instance;
-    AlanPanel*pnl=new AlanPanel(title);
-
-    if(!pnl->generic_initializer()){
-        QMessageBox::warning(nullptr,GENERIC_INITIALIZATION_ERROR_DIALOG,ERR02_DETAILS);
-        return nullptr;
-    }
-    AlanPanel::instance=pnl;
-    return pnl;
-
-}
 /***
  * A simple wrapper over onGenerateLayout ,it checks if this function is called successfully ,
  * and informs the upper error-protection layer (the generic_initializer() in case of error

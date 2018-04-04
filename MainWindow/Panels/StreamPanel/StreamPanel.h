@@ -27,12 +27,8 @@ protected:
 
 private:
     QListWidget*listView;                           ///TODO in later version , use a custom QListView instead..
-    static StreamPanel*instance;                    ///Saved instance of siglenton
 private slots:
-    virtual void onDataClicked(QListWidgetItem *);
-public:
-    static StreamPanel*getInstance(QString title);  ///Siglenton over StreamPanel
-
+    virtual void onDataClicked(QListWidgetItem *)=0;
 
 };
 

@@ -5,9 +5,12 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QMessageBox>
+#include <iostream>
 #include "LogPanel.h"
 #include "../../../../misc/generic_text/generic_dialogs.h"
 #include "../../../../misc/errors/AlanPanelErrors.h"
+#include "LogWidget/LogWidget.h"
+
 LogPanel* LogPanel::instance= nullptr;
 
 LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
@@ -41,3 +44,9 @@ LogPanel *LogPanel::getInstance(QString title) {
     LogPanel::instance=pnl;
     return pnl;
 }
+
+void LogPanel::onDataClicked(QListWidgetItem *item)try {
+
+    (new LogWidget(log->operator[](item->listWidget()->currentRow())))->show();
+
+}catch (std::exception&e){std::cout<<"FALSE";}

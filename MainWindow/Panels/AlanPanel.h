@@ -12,14 +12,7 @@
 #include <QVBoxLayout>
 class AlanPanel : public QWidget{
     Q_OBJECT;
-public:
 
-    static AlanPanel*getInstance(QString title);            ///Siglenton over AlanPanel
-
-
-
-private:
-    static AlanPanel*instance;                              ///The saved instance of siglenton
 
 protected:
     QVBoxLayout*mainLayout;

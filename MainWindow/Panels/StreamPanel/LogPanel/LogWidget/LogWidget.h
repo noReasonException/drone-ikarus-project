@@ -14,11 +14,16 @@
 class LogWidget :public QDialog {
 public:
     explicit LogWidget(Log*);
-
+    QLayout*main_lay;
+    Log*log;
+private:
     bool generic_initializer();
     bool initializeLayout();
+    bool migrateLogData();
 
+protected:
     QLayout*onGenerateLayout();
+    void onMigrateLogData();
 
 };
 #endif //IKARUS_PROJECT_LOGWIDGET_H

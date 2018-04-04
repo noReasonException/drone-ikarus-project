@@ -9,7 +9,6 @@
 #include <QMessageBox>
 #include <QListWidget>
 
-StreamPanel* StreamPanel::instance= nullptr;
 StreamPanel::StreamPanel(const QString &title) : AlanPanel(title){
 
 }
@@ -52,23 +51,8 @@ bool StreamPanel::initializeListView() try {
 QListWidget *StreamPanel::onGenerateListView() {
     return new QListWidget;
 }
-
-
-StreamPanel *StreamPanel::getInstance(QString title) {
-    if(StreamPanel::instance)return StreamPanel::instance;
-    StreamPanel*pnl=new StreamPanel(title);
-    if(!pnl->generic_initializer()){
-        QMessageBox::warning(nullptr,GENERIC_INITIALIZATION_ERROR_DIALOG,ERR02_DETAILS);
-        return nullptr;
-    }
-    StreamPanel::instance=pnl;
-    return pnl;
-}
-
 QListWidget *StreamPanel::getListView() const {
     return listView;
 }
 
-void StreamPanel::onDataClicked(QListWidgetItem *ptr) {
-    int log_position=ptr->listWidget()->row(ptr);
-}
+
