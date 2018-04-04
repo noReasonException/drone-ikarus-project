@@ -129,28 +129,28 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cp
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o: ../MainWindow/Panels/LogWidget/LogWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.cpp"
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o: ../MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.i
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.s
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o
+CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o
 
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
@@ -374,7 +374,7 @@ Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/main.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o" \
@@ -391,7 +391,7 @@ Ikarus_project_EXTERNAL_OBJECTS =
 Ikarus_project: CMakeFiles/Ikarus_project.dir/main.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o
@@ -419,7 +419,7 @@ CMakeFiles/Ikarus_project.dir/build: Ikarus_project
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/main.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/LogWidget/LogWidget.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o.requires

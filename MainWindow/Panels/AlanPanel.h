@@ -33,6 +33,7 @@ protected:
 
 
     QWidget*    onGenerateTitleArea() throw(std::exception);
+    QVBoxLayout*onGenerateLayout()throw(std::exception);
 
 
 

@@ -162,16 +162,16 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.cpp">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/LogWidget/LogWidget.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp">

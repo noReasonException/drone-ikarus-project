@@ -18,8 +18,8 @@ add_executable(Ikarus_project main.cpp
         misc/img/AlanMainWindowImagePaths.h
         MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
         MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h
-        MainWindow/Panels/LogWidget/LogWidget.cpp
-        MainWindow/Panels/LogWidget/LogWidget.h
+        MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
+        MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h
         MainWindow/Panels/AlanPanel.cpp
         MainWindow/Panels/AlanPanel.h
         MainWindow/Panels/StreamPanel/StreamPanel.cpp

@@ -41,7 +41,11 @@ AlanPanel *AlanPanel::getInstance(QString title) {
 
 }
 
-bool AlanPanel::initializeLayout() {
-    setLayout(mainLayout=new QVBoxLayout());
+bool AlanPanel::initializeLayout()try{
+    setLayout(mainLayout=onGenerateLayout());
     return true;
+}catch(std::exception&e){return false;}
+
+QVBoxLayout *AlanPanel::onGenerateLayout()throw(std::exception) {
+    return new QVBoxLayout();
 }

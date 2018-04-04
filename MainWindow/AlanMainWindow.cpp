@@ -44,13 +44,12 @@ bool AlanMainWindow::genericInitializer() {
  * be managed by initializeMenu() and genericInitializer().
  * @return true if the initialization proccess where successful
  */
-bool AlanMainWindow::initializeMenu() {
-    try{
-        for(QMenu*tmp:*onGenerateMenu(menuBar()))
-            menuBar()->addMenu(tmp);
-        return true;
-    }catch (std::exception &e){return false;}
-}
+bool AlanMainWindow::initializeMenu() try {
+    for (QMenu *tmp:*onGenerateMenu(menuBar()))
+        menuBar()->addMenu(tmp);
+    return true;
+}catch (std::exception &e){return false;}
+
 /***
  * Takes care the steps to initialize the menu
  * @param bar , the
@@ -132,6 +131,15 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
 
     return retval;
 }
+/***
+ * A useful utility for more elegant menu initialization , is used by onGenerateMenu
+ * @param act           the QAction object to initialize
+ * @param fileName      the icon filename
+ * @param onClickSlot   the slot will be triggered in case of click
+ * @return a fresh - initialized QAction
+ * @note  use the misc/img/*ImagePaths.h files for parameter @param fileName , do not hard-copy the image paths
+ *              Its ugly .
+ */
 QAction* AlanMainWindow::initializeQAction(QAction *act,QString fileName,const char* onClickSlot){
     if(!act)return nullptr;
     act->setIcon(QIcon(fileName));
@@ -139,10 +147,16 @@ QAction* AlanMainWindow::initializeQAction(QAction *act,QString fileName,const c
     return act;
 
 }
-
+/***
+ * A default slot for develepoment purposes
+ * //TODO remove it!
+ */
 void AlanMainWindow::operationNotSupportedSlot() {
     QMessageBox::warning(this,OPERATION_NOT_SUPPORTED_ERROR_DIALOG);
 }
+/***
+ * This slot triggered in case of exit , it checks if any task is in progress and informs the user if really wants to exit ;)
+ */
 void AlanMainWindow::closeSlot(){
     if((isStreaming||isReTransmitting)&&QMessageBox::warning(this,"Are you sure?",
                                                           "Are you sure you want to exit in middle of operations?",QMessageBox::Ok,QMessageBox::Cancel)==QMessageBox::Cancel){
@@ -150,15 +164,26 @@ void AlanMainWindow::closeSlot(){
     }
     close();
 }
+/***
+ * A simple wrapper over onGenerateToolBar ,it checks if this function is called successfully ,
+ * and informs the upper error-protection layer (the generic_initializer()
+ * @return true if everything is okay , false otherwise
+ */
+bool AlanMainWindow::initializeToolBar() try{
 
-bool AlanMainWindow::initializeToolBar() {
-    try{
         for(QToolBar *bar:*onGenerateToolBar())addToolBar(bar);
         return true;
 
-    }catch (std::exception&e){return false;}
-}
-
+}catch (std::exception&e){return false;}
+/***
+ * onGenerateToolBar does the real job of initializing the ToolBar .
+ * this can be overriden . the user only returns a vector of brand-new toolbar's ,
+ * @note this function HAS NOT responsibility of toolbar insertion in Window .
+ * this means that commands like...
+ *                      this->addToolBar(bar)
+ * ...is strictly forbidden (To maintain a elegant code)
+ * @return a std::vector with Toolbars
+ */
 std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() throw(std::exception) {
     QToolBar*tmp;
     QAction*tmpact;
@@ -175,14 +200,26 @@ std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() throw(std::exception)
     return retval;
 
 }
-bool AlanMainWindow::initializeCentralWidget() {
-    try{
+/***
+ * A simple wrapper over onGenerateCentralWidget ,it checks if this function is called successfully ,
+ * and informs the upper error-protection layer (the generic_initializer()
+ * @return true if everything is okay , false otherwise
+ *
+***/
+bool AlanMainWindow::initializeCentralWidget()  try{
         setCentralWidget(onGenerateCentralWidget());
         return true;
 
-    }catch (std::exception&e){return false;}
-
-}
+}catch (std::exception&e){return false;}
+/***
+ * onGenerateCentralWidget() does the real job of initializing and returning a QWidget
+ * destined to be centralWidget().
+ * @return a new QWidget destined to be centralWidget
+ *  * @note this function HAS NOT responsibility of assigning the QWidget as CentralWidget.
+ * this means that commands like...
+ *                      this->setCentralWidget(...->)
+ * ...is strictly forbidden (To maintain a elegant code)
+ */
 QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
     QDialog*retval=new QDialog();
     setCentralWidget(retval);
@@ -198,20 +235,42 @@ QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
     return retval;
 
 }
-
+/***
+ * onGenerateLeftLayout() does the real job of initializing and returning a QWidget
+ * destined to be aligned as Qt::AlignLeft in CentralWidget().
+ * @return a new QWidget destined to added in CentralWidget()
+ *  * @note this function HAS NOT responsibility of assigning the QWidget inside CentralWidget.
+ * this means that commands like...
+ *                      layout->addWidget(...,...,Qt::AlignLeft)
+ * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
+ */
 QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
     return new QLabel("Telemetry + Data Area");
 }
-
+/***
+ * onGenerateVideoArea() does the real job of initializing and returning a QWidget
+ * destined to be aligned as Qt::AlignCenter in CentralWidget().
+ * @return a new QWidget destined to added in CentralWidget()
+ *  * @note this function HAS NOT responsibility of assigning the QWidget inside CentralWidget.
+ * this means that commands like...
+ *                      layout->addWidget(...,...,Qt::AlignCenter)
+ * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
+ */
 QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
     return new QLabel("Video Area");
 }
-
+/***
+ * onGenerateRightLayout() does the real job of initializing and returning a QWidget
+ * destined to be aligned as Qt::AlignRight in CentralWidget().
+ * @return a new QWidget destined to added in CentralWidget()
+ *  * @note this function HAS NOT responsibility of assigning the QWidget inside CentralWidget.
+ * this means that commands like...
+ *                      layout->addWidget(...,...,Qt::AlignRight)
+ * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
+ */
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
     LogPanel*pnl=LogPanel::getInstance("Hey");
     LogSupplier*spl=pnl->createSupplier("TestSUb");
     spl->send(nullptr);
     return pnl;
-
-
 }

@@ -26,8 +26,8 @@ SOURCES += ./main.cpp \
            ./MainWindow/Supplier/InformationObjectSupplier.cpp \
            ./MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
            ./MainWindow/AlanMainWindow.cpp \
-           ./MainWindow/Panels/LogWidget/LogWidget.cpp \
            ./MainWindow/Panels/AlanPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            ./MainWindow/Consumer/LogConsumer/LogConsumer.cpp \
@@ -37,13 +37,12 @@ SOURCES += ./main.cpp \
            ./MainWindow/InformationObject/Log/Log.cpp
 
 
-
 HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Interfaces/InformationSupplierFactory.h \
             ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
             ./MainWindow/Supplier/InformationObjectSupplier.h \
-            ./MainWindow/Panels/LogWidget/LogWidget.h \
             ./MainWindow/Panels/AlanPanel.h \
+            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
             ./MainWindow/Panels/StreamPanel/StreamPanel.h \
             ./MainWindow/AlanMainWindow.h \
@@ -52,12 +51,14 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/InformationObject/InformationObject.h \
             ./MainWindow/InformationObject/Data/Data.h \
             ./MainWindow/InformationObject/Log/Log.h \
-             ./misc/version.h \
-             ./misc/img/AlanMainWindowImagePaths.h \
-             ./misc/generic_text/generic_dialogs.h \
-             ./misc/generic_text/AlanMainWindowDialogs.h \
-             ./misc/errors/AlanMainWindowErrors.h \
-             ./misc/errors/AlanPanelErrors.h
+            ./misc/version.h \
+            ./misc/img/AlanMainWindowImagePaths.h \
+            ./misc/generic_text/generic_dialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/errors/AlanMainWindowErrors.h \
+            ./misc/errors/AlanPanelErrors.h
+
+
 
 
 
