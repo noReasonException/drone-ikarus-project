@@ -283,5 +283,6 @@ QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
     LogPanel*pnl=LogPanel::getInstance("Hey");
     LogSupplier*spl=pnl->createSupplier("TestSUb");
     spl->send(new Log("status-changed",2836283827367932,"GST_PLAYING -> GST_PAUSE",spl));
+    spl->send(new InformationObject(time(NULL),spl));
     return pnl;
 }

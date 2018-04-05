@@ -17,13 +17,18 @@ LogPanel* LogPanel::instance= nullptr;
 LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
     log=new std::vector<Log*>();
     class_locker=new QMutex;
+    self_supplier=createSupplier("Log panel");
 }
 ////Revision at : 5/4/2018 , Thread-safe accept;
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
-    QMutexLocker locker(class_locker);
-    auto *l= dynamic_cast<Log*>(info);
+    if(supplier!=self_supplier){
+        QMutexLocker locker(class_locker);
+    }
+    std::cout<<"ACCEPT";
+    Log *l= dynamic_cast<Log*>(info);
     if(!l){
-        return ;//TODO submit a log , explaining why this log cannot export
+        self_supplier->send(new Log("Invalid-accept-call(LogPanel)",time(NULL),"accept() method called with InformationObject instead of og Object",self_supplier));
+        return;
     }
     log->push_back(l);
     getListView()->addItem(supplier->getSupplierName()+" | "+l->getLogType());
