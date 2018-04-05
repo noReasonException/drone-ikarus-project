@@ -5,8 +5,8 @@
 #include <QString>
 #include "Log.h"
 
-Log::Log(QString type,long timestamp,QString desc) :
-        InformationObject(timestamp),
+Log::Log(QString type,long timestamp,QString desc,InformationObjectSupplier*source) :
+        InformationObject(timestamp,source),
         logType(type),
         logDesc(desc){
 

@@ -9,12 +9,13 @@
 #include <QString>
 #include <QObject>
 #include <QDialog>
+
 #include "../../../../InformationObject/Log/Log.h"
 
 class LogWidget :public QDialog {
 public:
     explicit LogWidget(Log*);
-    QLayout*main_lay;
+    QGridLayout*main_lay;
     Log*log;
 private:
     bool generic_initializer();
@@ -22,7 +23,7 @@ private:
     bool migrateLogData();
 
 protected:
-    QLayout*onGenerateLayout();
+    QGridLayout*onGenerateLayout();
     void onMigrateLogData();
 
 };

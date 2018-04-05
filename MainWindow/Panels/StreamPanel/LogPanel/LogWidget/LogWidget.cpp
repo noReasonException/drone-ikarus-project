@@ -2,7 +2,7 @@
 // Created by noreasonexception on 4/2/18.
 //
 
-#include <QVBoxLayout>
+    #include <QGridLayout>
 #include <QLabel>
 #include "LogWidget.h"
 
@@ -22,8 +22,8 @@ bool LogWidget::initializeLayout()try{
     return true;
 }catch (std::exception&e){return false;}
 
-QLayout *LogWidget::onGenerateLayout() {
-    return new QVBoxLayout;
+QGridLayout *LogWidget::onGenerateLayout() {
+        return new QGridLayout;
 
 }
 
@@ -33,8 +33,14 @@ bool LogWidget::migrateLogData()try{
 }catch (std::exception&e){ return false;}
 
 void LogWidget::onMigrateLogData() {
-    main_lay->addWidget(new QLabel("Type :"+log->getLogType()));
-    main_lay->addWidget(new QLabel("Submitted on time:"+QString::number(log->getTimestamp())));
-    main_lay->addWidget(new QLabel("Description:"+log->getLogDesc()));
+    main_lay->addWidget(new QLabel("Source"),0,0);
+    main_lay->addWidget(new QLabel("Type"),0,1);
+    main_lay->addWidget(new QLabel("Time"),0,2);
+    main_lay->addWidget(new QLabel("Description"),0,3);
+
+    main_lay->addWidget(new QLabel(log->getSource()->getSupplierName()),1,0);
+    main_lay->addWidget(new QLabel(log->getLogType()),1,1);
+    main_lay->addWidget(new QLabel(QString::number(log->getTimestamp())),1,2);
+    main_lay->addWidget(new QLabel(log->getLogDesc()),1,3);
 }
 

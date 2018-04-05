@@ -7,10 +7,9 @@
 
 
 #include "../InformationObject.h"
-
 class Log : public InformationObject{
 public:
-    Log(QString logType,long timestamp,QString logDesc);
+    Log(QString logType,long timestamp,QString logDesc,InformationObjectSupplier*source);
 
     const QString &getLogType() const;
 

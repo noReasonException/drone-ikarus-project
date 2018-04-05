@@ -25,6 +25,5 @@ InformationObjectSupplier* InformationObjectSupplier::setTargetConsumer(Informat
 
 void InformationObjectSupplier::send(InformationObject *info) {
     targetConsumer->accept(this,info);
-    std::cout<<"Called";
 
 }
