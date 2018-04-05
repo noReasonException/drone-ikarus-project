@@ -26,5 +26,7 @@ int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
+    QMainWindow*ptr= new QMainWindow;
+    (QWidget*)ptr;
     return application.exec();
 }

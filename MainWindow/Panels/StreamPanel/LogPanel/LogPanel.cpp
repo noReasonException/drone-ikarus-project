@@ -24,14 +24,16 @@ void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *in
     if(supplier!=self_supplier){
         QMutexLocker locker(class_locker);
     }
-    std::cout<<"ACCEPT";
     Log *l= dynamic_cast<Log*>(info);
     if(!l){
-        self_supplier->send(new Log("Invalid-accept-call(LogPanel)",time(NULL),"accept() method called with InformationObject instead of og Object",self_supplier));
+        self_supplier->send(new Log(
+                "Invalid-accept-call(LogPanel)",
+                time(NULL),
+                "accept() method called with InformationObject instead of Log Object",self_supplier));
         return;
     }
     log->push_back(l);
-    getListView()->addItem(supplier->getSupplierName()+" | "+l->getLogType());
+    getListView()->addItem(l->getLogType());
 }
 
 

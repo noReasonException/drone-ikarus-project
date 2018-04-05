@@ -26,6 +26,8 @@ AlanMainWindow::AlanMainWindow() {
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
     }
+    setMinimumWidth(maximumWidth());
+    setMinimumHeight(maximumHeight());
 }
 /***
  * genericInitializer

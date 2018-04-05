@@ -132,6 +132,18 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -156,6 +168,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Interfaces/LogSupplierFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Interfaces/StateRestorable.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -178,6 +193,33 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanDataFileDialogState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanDroneAddrDialogState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanErrorFileDialogState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanLatencyDialogState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanMainWindowState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanRestorationDialogState.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanServerAddrDialogState.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.cpp">

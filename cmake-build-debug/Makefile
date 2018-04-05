@@ -204,6 +204,60 @@ MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
 .PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
 
+MainWindow/Factory/AbstractGuiFactory.o: MainWindow/Factory/AbstractGuiFactory.cpp.o
+
+.PHONY : MainWindow/Factory/AbstractGuiFactory.o
+
+# target to build an object file
+MainWindow/Factory/AbstractGuiFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o
+.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.o
+
+MainWindow/Factory/AbstractGuiFactory.i: MainWindow/Factory/AbstractGuiFactory.cpp.i
+
+.PHONY : MainWindow/Factory/AbstractGuiFactory.i
+
+# target to preprocess a source file
+MainWindow/Factory/AbstractGuiFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.i
+.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.i
+
+MainWindow/Factory/AbstractGuiFactory.s: MainWindow/Factory/AbstractGuiFactory.cpp.s
+
+.PHONY : MainWindow/Factory/AbstractGuiFactory.s
+
+# target to generate assembly for a file
+MainWindow/Factory/AbstractGuiFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.s
+.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.s
+
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
+
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o
+
+# target to build an object file
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
+
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
+
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i
+
+# target to preprocess a source file
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
+
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
+
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s
+
+# target to generate assembly for a file
+MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
+.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
+
 MainWindow/InformationObject/Data/Data.o: MainWindow/InformationObject/Data/Data.cpp.o
 
 .PHONY : MainWindow/InformationObject/Data/Data.o
@@ -393,6 +447,33 @@ MainWindow/Panels/StreamPanel/StreamPanel.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 .PHONY : MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 
+MainWindow/State/State.o: MainWindow/State/State.cpp.o
+
+.PHONY : MainWindow/State/State.o
+
+# target to build an object file
+MainWindow/State/State.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o
+.PHONY : MainWindow/State/State.cpp.o
+
+MainWindow/State/State.i: MainWindow/State/State.cpp.i
+
+.PHONY : MainWindow/State/State.i
+
+# target to preprocess a source file
+MainWindow/State/State.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.i
+.PHONY : MainWindow/State/State.cpp.i
+
+MainWindow/State/State.s: MainWindow/State/State.cpp.s
+
+.PHONY : MainWindow/State/State.s
+
+# target to generate assembly for a file
+MainWindow/State/State.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s
+.PHONY : MainWindow/State/State.cpp.s
+
 MainWindow/Supplier/InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp.o
 
 .PHONY : MainWindow/Supplier/InformationObjectSupplier.o
@@ -492,6 +573,12 @@ help:
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.o"
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.i"
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.s"
+	@echo "... MainWindow/Factory/AbstractGuiFactory.o"
+	@echo "... MainWindow/Factory/AbstractGuiFactory.i"
+	@echo "... MainWindow/Factory/AbstractGuiFactory.s"
+	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o"
+	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i"
+	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s"
 	@echo "... MainWindow/InformationObject/Data/Data.o"
 	@echo "... MainWindow/InformationObject/Data/Data.i"
 	@echo "... MainWindow/InformationObject/Data/Data.s"
@@ -513,6 +600,9 @@ help:
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.o"
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.i"
 	@echo "... MainWindow/Panels/StreamPanel/StreamPanel.s"
+	@echo "... MainWindow/State/State.o"
+	@echo "... MainWindow/State/State.i"
+	@echo "... MainWindow/State/State.s"
 	@echo "... MainWindow/Supplier/InformationObjectSupplier.o"
 	@echo "... MainWindow/Supplier/InformationObjectSupplier.i"
 	@echo "... MainWindow/Supplier/InformationObjectSupplier.s"

@@ -8,6 +8,10 @@
 
 #include "../InformationObjectSupplier.h"
 
+
+/***
+ * LogSupplier . Represents a class who feeds a @see LogConsumer with Data of type @see Log
+ */
 class LogSupplier : public InformationObjectSupplier {
 public:
     friend class LogSupplierFactory;
