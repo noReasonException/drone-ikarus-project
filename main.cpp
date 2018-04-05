@@ -20,13 +20,15 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include "MainWindow/AlanMainWindow.h"
+#include "MainWindow/Dialogs/AlanSingleOptionDialog.h"
+
 class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    QMainWindow*ptr= new QMainWindow;
-    (QWidget*)ptr;
+    AlanSingleOptionDialog*dialog=AlanSingleOptionDialog::getInstance("Server ");
+    dialog->show();
     return application.exec();
 }

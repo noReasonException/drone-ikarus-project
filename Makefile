@@ -62,8 +62,8 @@ SOURCES       = main.cpp \
 		MainWindow/Consumer/InformationObjectConsumer.cpp \
 		MainWindow/InformationObject/InformationObject.cpp \
 		MainWindow/InformationObject/Data/Data.cpp \
-		MainWindow/InformationObject/Log/Log.cpp moc_AlanPanel.cpp \
-		moc_LogWidget.cpp \
+		MainWindow/InformationObject/Log/Log.cpp \
+		MainWindow/Dialogs/AlanSingleOptionDialog.cpp moc_AlanPanel.cpp \
 		moc_LogPanel.cpp \
 		moc_StreamPanel.cpp \
 		moc_AlanMainWindow.cpp
@@ -80,8 +80,8 @@ OBJECTS       = main.o \
 		InformationObject.o \
 		Data.o \
 		Log.o \
+		AlanSingleOptionDialog.o \
 		moc_AlanPanel.o \
-		moc_LogWidget.o \
 		moc_LogPanel.o \
 		moc_StreamPanel.o \
 		moc_AlanMainWindow.o
@@ -179,7 +179,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		misc/generic_text/generic_dialogs.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/errors/AlanMainWindowErrors.h \
-		misc/errors/AlanPanelErrors.h main.cpp \
+		misc/errors/AlanPanelErrors.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h main.cpp \
 		MainWindow/Supplier/InformationObjectSupplier.cpp \
 		MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
 		MainWindow/AlanMainWindow.cpp \
@@ -191,7 +192,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/Consumer/InformationObjectConsumer.cpp \
 		MainWindow/InformationObject/InformationObject.cpp \
 		MainWindow/InformationObject/Data/Data.cpp \
-		MainWindow/InformationObject/Log/Log.cpp
+		MainWindow/InformationObject/Log/Log.cpp \
+		MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -383,8 +385,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/AlanMainWindowImagePaths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/AlanMainWindowImagePaths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -416,18 +418,13 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -m64 -pipe -std=c++0x $(pkg-config --cflags --libs gstreamer-1.0) -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogWidget.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
+compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogWidget.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
+	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
 moc_AlanPanel.cpp: MainWindow/Panels/AlanPanel.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Panels/AlanPanel.h -o moc_AlanPanel.cpp
-
-moc_LogWidget.cpp: MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
-		moc_predefs.h \
-		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
-	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h -o moc_LogWidget.cpp
 
 moc_LogPanel.cpp: MainWindow/Panels/StreamPanel/StreamPanel.h \
 		MainWindow/Panels/AlanPanel.h \
@@ -477,7 +474,8 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/img/AlanMainWindowImagePaths.h
+		misc/img/AlanMainWindowImagePaths.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/InformationObjectSupplier.h \
@@ -515,7 +513,11 @@ AlanPanel.o: MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/AlanPanel.h \
 		misc/generic_text/generic_dialogs.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanPanel.o MainWindow/Panels/AlanPanel.cpp
 
-LogWidget.o: MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h
+LogWidget.o: MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
+		MainWindow/InformationObject/Log/Log.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/Supplier/InformationObjectSupplier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LogWidget.o MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
 
 LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
@@ -530,7 +532,8 @@ LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panel
 		MainWindow/Supplier/LogSupplier/LogSupplier.h \
 		MainWindow/InformationObject/Log/Log.h \
 		misc/generic_text/generic_dialogs.h \
-		misc/errors/AlanPanelErrors.h
+		misc/errors/AlanPanelErrors.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LogPanel.o MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
 
 StreamPanel.o: MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.h \
@@ -550,22 +553,28 @@ InformationObjectConsumer.o: MainWindow/Consumer/InformationObjectConsumer.cpp M
 		MainWindow/InformationObject/InformationObject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InformationObjectConsumer.o MainWindow/Consumer/InformationObjectConsumer.cpp
 
-InformationObject.o: MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/InformationObject.h
+InformationObject.o: MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/Supplier/InformationObjectSupplier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InformationObject.o MainWindow/InformationObject/InformationObject.cpp
 
 Data.o: MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Data/Data.h \
-		MainWindow/InformationObject/InformationObject.h
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/Supplier/InformationObjectSupplier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Data.o MainWindow/InformationObject/Data/Data.cpp
 
 Log.o: MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Log/Log.h \
-		MainWindow/InformationObject/InformationObject.h
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/Supplier/InformationObjectSupplier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Log.o MainWindow/InformationObject/Log/Log.cpp
+
+AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanSingleOptionDialog.o MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
 moc_AlanPanel.o: moc_AlanPanel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanPanel.o moc_AlanPanel.cpp
-
-moc_LogWidget.o: moc_LogWidget.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_LogWidget.o moc_LogWidget.cpp
 
 moc_LogPanel.o: moc_LogPanel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_LogPanel.o moc_LogPanel.cpp

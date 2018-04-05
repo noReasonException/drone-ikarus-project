@@ -132,6 +132,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>

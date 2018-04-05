@@ -204,6 +204,33 @@ MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
 .PHONY : MainWindow/Consumer/LogConsumer/LogConsumer.cpp.s
 
+MainWindow/Dialogs/AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o
+
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.o
+
+# target to build an object file
+MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o
+
+MainWindow/Dialogs/AlanSingleOptionDialog.i: MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i
+
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.i
+
+# target to preprocess a source file
+MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i
+
+MainWindow/Dialogs/AlanSingleOptionDialog.s: MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s
+
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.s
+
+# target to generate assembly for a file
+MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s
+.PHONY : MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s
+
 MainWindow/Factory/AbstractGuiFactory.o: MainWindow/Factory/AbstractGuiFactory.cpp.o
 
 .PHONY : MainWindow/Factory/AbstractGuiFactory.o
@@ -573,6 +600,9 @@ help:
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.o"
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.i"
 	@echo "... MainWindow/Consumer/LogConsumer/LogConsumer.s"
+	@echo "... MainWindow/Dialogs/AlanSingleOptionDialog.o"
+	@echo "... MainWindow/Dialogs/AlanSingleOptionDialog.i"
+	@echo "... MainWindow/Dialogs/AlanSingleOptionDialog.s"
 	@echo "... MainWindow/Factory/AbstractGuiFactory.o"
 	@echo "... MainWindow/Factory/AbstractGuiFactory.i"
 	@echo "... MainWindow/Factory/AbstractGuiFactory.s"

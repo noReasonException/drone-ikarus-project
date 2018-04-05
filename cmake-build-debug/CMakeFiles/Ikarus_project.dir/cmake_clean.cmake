@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )

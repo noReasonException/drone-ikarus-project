@@ -34,7 +34,8 @@ SOURCES += ./main.cpp \
            ./MainWindow/Consumer/InformationObjectConsumer.cpp \
            ./MainWindow/InformationObject/InformationObject.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
-           ./MainWindow/InformationObject/Log/Log.cpp
+           ./MainWindow/InformationObject/Log/Log.cpp \
+           MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
 
 HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
@@ -56,7 +57,8 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./misc/generic_text/generic_dialogs.h \
             ./misc/generic_text/AlanMainWindowDialogs.h \
             ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h
+            ./misc/errors/AlanPanelErrors.h \
+            MainWindow/Dialogs/AlanSingleOptionDialog.h
 
 
 
