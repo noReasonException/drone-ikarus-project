@@ -9,6 +9,8 @@
 #include <QObject>
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QMutexLocker>
+#include <QMutex>
 #include <QLabel>
 #include "../StreamPanel.h"
 #include "../../../Consumer/LogConsumer/LogConsumer.h"
@@ -52,6 +54,7 @@ public:
 protected:
     static LogPanel*instance;
     std::vector<Log*>*log;
+    QMutex *class_locker;
 
 
 };

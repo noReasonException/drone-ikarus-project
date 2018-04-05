@@ -37,7 +37,6 @@ void LogWidget::onMigrateLogData() {
     main_lay->addWidget(new QLabel("Type"),0,1);
     main_lay->addWidget(new QLabel("Time"),0,2);
     main_lay->addWidget(new QLabel("Description"),0,3);
-
     main_lay->addWidget(new QLabel(log->getSource()->getSupplierName()),1,0);
     main_lay->addWidget(new QLabel(log->getLogType()),1,1);
     main_lay->addWidget(new QLabel(QString::number(log->getTimestamp())),1,2);

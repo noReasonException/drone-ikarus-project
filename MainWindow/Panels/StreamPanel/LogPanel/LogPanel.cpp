@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <iostream>
+#include <QtCore/QMutexLocker>
 #include "LogPanel.h"
 #include "../../../../misc/generic_text/generic_dialogs.h"
 #include "../../../../misc/errors/AlanPanelErrors.h"
@@ -15,15 +16,17 @@ LogPanel* LogPanel::instance= nullptr;
 
 LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
     log=new std::vector<Log*>();
+    class_locker=new QMutex;
 }
-////TODO::Thread -safe accept;
+////Revision at : 5/4/2018 , Thread-safe accept;
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
+    QMutexLocker locker(class_locker);
     auto *l= dynamic_cast<Log*>(info);
     if(!l){
         return ;//TODO submit a log , explaining why this log cannot export
     }
     log->push_back(l);
-    getListView()->addItem(supplier->getSupplierName()+"|"+l->getLogType());
+    getListView()->addItem(supplier->getSupplierName()+" | "+l->getLogType());
 }
 
 
