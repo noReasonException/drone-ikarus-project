@@ -28,7 +28,7 @@ int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    AlanSingleOptionDialog*dialog=AlanTwoButtonDialog::getInstance("Server ");
+    AlanSingleOptionDialog*dialog=AlanTwoButtonDialog::getInstance("Server ",RESOLUTION_ICON);
     dialog->show();
     return application.exec();
 }

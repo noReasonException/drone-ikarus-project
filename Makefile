@@ -67,7 +67,9 @@ SOURCES       = main.cpp \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp moc_AlanPanel.cpp \
 		moc_LogPanel.cpp \
 		moc_StreamPanel.cpp \
-		moc_AlanMainWindow.cpp
+		moc_AlanMainWindow.cpp \
+		moc_AlanSingleOptionDialog.cpp \
+		moc_AlanTwoButtonDialog.cpp
 OBJECTS       = main.o \
 		InformationObjectSupplier.o \
 		LogSupplier.o \
@@ -86,7 +88,9 @@ OBJECTS       = main.o \
 		moc_AlanPanel.o \
 		moc_LogPanel.o \
 		moc_StreamPanel.o \
-		moc_AlanMainWindow.o
+		moc_AlanMainWindow.o \
+		moc_AlanSingleOptionDialog.o \
+		moc_AlanTwoButtonDialog.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -422,9 +426,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -m64 -pipe -std=c++0x $(pkg-config --cflags --libs gstreamer-1.0) -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
+compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp
+	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp
 moc_AlanPanel.cpp: MainWindow/Panels/AlanPanel.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
@@ -459,6 +463,17 @@ moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/AlanMainWindow.h -o moc_AlanMainWindow.cpp
+
+moc_AlanSingleOptionDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		moc_predefs.h \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanSingleOptionDialog.h -o moc_AlanSingleOptionDialog.cpp
+
+moc_AlanTwoButtonDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+		moc_predefs.h \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h -o moc_AlanTwoButtonDialog.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -595,6 +610,12 @@ moc_StreamPanel.o: moc_StreamPanel.cpp
 
 moc_AlanMainWindow.o: moc_AlanMainWindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanMainWindow.o moc_AlanMainWindow.cpp
+
+moc_AlanSingleOptionDialog.o: moc_AlanSingleOptionDialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanSingleOptionDialog.o moc_AlanSingleOptionDialog.cpp
+
+moc_AlanTwoButtonDialog.o: moc_AlanTwoButtonDialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanTwoButtonDialog.o moc_AlanTwoButtonDialog.cpp
 
 ####### Install
 

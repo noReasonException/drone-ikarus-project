@@ -9,19 +9,30 @@
 #include "../AlanSingleOptionDialog.h"
 
 class AlanTwoButtonDialog: public AlanSingleOptionDialog {
+    Q_OBJECT
+private:
+    QPushButton *okBtn;
+    QPushButton *cancelBtn;
 public:
-    AlanTwoButtonDialog(const QString );
-public:
-    static AlanTwoButtonDialog*getInstance(const QString &);
+    AlanTwoButtonDialog(const QString&,const QString &icon );
+    ///TODO:fix leak on getInstance
+    static AlanTwoButtonDialog*getInstance(const QString &,const QString&);
 
 protected:
-    QWidget *onGenerateIconArea() override;
 
-    QWidget *onGenerateTitleArea() override;
+    virtual bool generic_initializer() override ;
+    virtual bool connectionInitializer();
 
-    QWidget *onGenerateConfigArea() override;
 
-    QWidget *onGenerateButtonsArea() override;
+    QWidget *onGenerateConfigArea() throw (std::exception)override;
+
+    QWidget *onGenerateButtonsArea() throw(std::exception)override;
+
+protected slots:
+    virtual void onOkButtonSlot();
+    virtual void onCancelButtonSlot();
+
+
 };
 
 
