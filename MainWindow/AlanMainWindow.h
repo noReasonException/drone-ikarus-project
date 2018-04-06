@@ -13,7 +13,7 @@
 #include "../misc/errors/AlanMainWindowErrors.h"
 #include "../misc/version.h"
 #include "../misc/generic_text/AlanMainWindowDialogs.h"
-#include "../misc/img/AlanMainWindowImagePaths.h"
+#include "../misc/img/generic_paths.h"
 
 /***
  * AlanMainWindow

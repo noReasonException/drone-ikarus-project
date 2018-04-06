@@ -255,7 +255,7 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/generic_dialogs.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/AlanMainWindowImagePaths.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/generic_paths.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/version.h">

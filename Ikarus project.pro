@@ -53,7 +53,7 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/InformationObject/Data/Data.h \
             ./MainWindow/InformationObject/Log/Log.h \
             ./misc/version.h \
-            ./misc/img/AlanMainWindowImagePaths.h \
+            ./misc/img/generic_paths.h \
             ./misc/generic_text/generic_dialogs.h \
             ./misc/generic_text/AlanMainWindowDialogs.h \
             ./misc/errors/AlanMainWindowErrors.h \

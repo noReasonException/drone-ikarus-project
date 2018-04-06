@@ -9,7 +9,7 @@
 #include <QLabel>
 #include <iostream>
 #include "AlanMainWindow.h"
-#include "../misc/img/AlanMainWindowImagePaths.h"
+#include "../misc/img/generic_paths.h"
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/generic_dialogs.h"
 #include "InformationObject/Log/Log.h"

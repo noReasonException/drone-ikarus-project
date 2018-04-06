@@ -175,7 +175,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/InformationObject/Data/Data.h \
 		MainWindow/InformationObject/Log/Log.h \
 		misc/version.h \
-		misc/img/AlanMainWindowImagePaths.h \
+		misc/img/generic_paths.h \
 		misc/generic_text/generic_dialogs.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/errors/AlanMainWindowErrors.h \
@@ -385,7 +385,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/AlanMainWindowImagePaths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp $(DISTDIR)/
 
 
@@ -450,7 +450,7 @@ moc_StreamPanel.cpp: MainWindow/Panels/AlanPanel.h \
 moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/img/AlanMainWindowImagePaths.h \
+		misc/img/generic_paths.h \
 		MainWindow/AlanMainWindow.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
@@ -474,7 +474,7 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/img/AlanMainWindowImagePaths.h \
+		misc/img/generic_paths.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
@@ -493,7 +493,7 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/img/AlanMainWindowImagePaths.h \
+		misc/img/generic_paths.h \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
 		MainWindow/Panels/StreamPanel/StreamPanel.h \
 		MainWindow/Panels/AlanPanel.h \
@@ -570,7 +570,8 @@ Log.o: MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Log
 		MainWindow/Supplier/InformationObjectSupplier.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Log.o MainWindow/InformationObject/Log/Log.cpp
 
-AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h
+AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanSingleOptionDialog.o MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
 moc_AlanPanel.o: moc_AlanPanel.cpp 
