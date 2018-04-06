@@ -10,20 +10,21 @@
 
 class AlanSingleOptionDialog : public QDialog{
 private:
-    AlanSingleOptionDialog(QString);
+    QLayout*mainLay;
+    QString*titleArea;
 
-public:
-    static AlanSingleOptionDialog*getInstance(QString);
+
 
 protected:
+    AlanSingleOptionDialog(QString);
     virtual bool generic_initializer();                     ///@returns true if all initialization processes completed
     virtual bool layoutInitializer();                       ///@returns true if layout initialization process completed
 
     virtual QLayout*onGenerateLayout();                     ///@returns the AlanSingleOptionDialog layout
-    virtual QWidget*onGenerateIconArea();                   ///@returns the left icon Area Widget
-    virtual QWidget*onGenerateTitleArea();                  ///@returns the right-top title area
-    virtual QWidget*onGenerateConfigArea();                 ///@returns the right-center actual configuration area
-    virtual QWidget*onGenerateButtonsArea();                ///@returns the right-bottom button area
+    virtual QWidget*onGenerateIconArea()=0;                   ///@returns the left icon Area Widget
+    virtual QWidget*onGenerateTitleArea()=0;                  ///@returns the right-top title area
+    virtual QWidget*onGenerateConfigArea()=0;                 ///@returns the right-center actual configuration area
+    virtual QWidget*onGenerateButtonsArea()=0;                ///@returns the right-bottom button area
     virtual QWidget*onGenerateLeftmostArea();
     virtual QWidget*onGenerateRightMostArea();
 ///Why protected setters-getters? only the derived classes can have access to mainLay/titleArea,not   client!
@@ -34,9 +35,7 @@ protected:
     QString *getTitleArea() const;
 
     void setTitleArea(QString *titleArea);
-private:
-    QLayout*mainLay;
-    QString*titleArea;
+
 
 
 };

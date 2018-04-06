@@ -15,14 +15,6 @@
 AlanSingleOptionDialog::AlanSingleOptionDialog(QString) {
 
 }
-
-AlanSingleOptionDialog *AlanSingleOptionDialog::getInstance(QString titleName) {
-    AlanSingleOptionDialog*ptr=new AlanSingleOptionDialog(titleName);
-    return ptr->generic_initializer()?ptr: nullptr;
-
-
-}
-
 bool AlanSingleOptionDialog::generic_initializer() {
     return layoutInitializer();
 }
@@ -36,24 +28,6 @@ bool AlanSingleOptionDialog::layoutInitializer()try {
 
 QLayout *AlanSingleOptionDialog::onGenerateLayout() {
     return new QHBoxLayout();
-}
-
-QWidget *AlanSingleOptionDialog::onGenerateIconArea() {
-    QLabel*lbl=new QLabel;
-    lbl->setPixmap(QPixmap(RESOLUTION_ICON));
-    return lbl;
-}
-
-QWidget *AlanSingleOptionDialog::onGenerateTitleArea() {
-    return new QLabel("TitleArea");
-}
-
-QWidget *AlanSingleOptionDialog::onGenerateConfigArea() {
-    return new QLabel("ConfigArea");
-}
-
-QWidget *AlanSingleOptionDialog::onGenerateButtonsArea() {
-    return new QLabel("btnArea");
 }
 
 QLayout *AlanSingleOptionDialog::getMainLay() const {

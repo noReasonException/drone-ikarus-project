@@ -21,14 +21,14 @@
 #include <QFileDialog>
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Dialogs/AlanSingleOptionDialog.h"
-
+#include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h"
 class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    AlanSingleOptionDialog*dialog=AlanSingleOptionDialog::getInstance("Server ");
+    AlanSingleOptionDialog*dialog=AlanTwoButtonDialog::getInstance("Server ");
     dialog->show();
     return application.exec();
 }

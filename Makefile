@@ -63,7 +63,8 @@ SOURCES       = main.cpp \
 		MainWindow/InformationObject/InformationObject.cpp \
 		MainWindow/InformationObject/Data/Data.cpp \
 		MainWindow/InformationObject/Log/Log.cpp \
-		MainWindow/Dialogs/AlanSingleOptionDialog.cpp moc_AlanPanel.cpp \
+		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp moc_AlanPanel.cpp \
 		moc_LogPanel.cpp \
 		moc_StreamPanel.cpp \
 		moc_AlanMainWindow.cpp
@@ -81,6 +82,7 @@ OBJECTS       = main.o \
 		Data.o \
 		Log.o \
 		AlanSingleOptionDialog.o \
+		AlanTwoButtonDialog.o \
 		moc_AlanPanel.o \
 		moc_LogPanel.o \
 		moc_StreamPanel.o \
@@ -180,7 +182,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/errors/AlanMainWindowErrors.h \
 		misc/errors/AlanPanelErrors.h \
-		MainWindow/Dialogs/AlanSingleOptionDialog.h main.cpp \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h main.cpp \
 		MainWindow/Supplier/InformationObjectSupplier.cpp \
 		MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
 		MainWindow/AlanMainWindow.cpp \
@@ -193,7 +196,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/InformationObject/InformationObject.cpp \
 		MainWindow/InformationObject/Data/Data.cpp \
 		MainWindow/InformationObject/Log/Log.cpp \
-		MainWindow/Dialogs/AlanSingleOptionDialog.cpp
+		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -385,8 +389,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -475,7 +479,8 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanSingleOptionDialog.h
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/InformationObjectSupplier.h \
@@ -573,6 +578,11 @@ Log.o: MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Log
 AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanSingleOptionDialog.o MainWindow/Dialogs/AlanSingleOptionDialog.cpp
+
+AlanTwoButtonDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		misc/img/generic_paths.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanTwoButtonDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
 
 moc_AlanPanel.o: moc_AlanPanel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanPanel.o moc_AlanPanel.cpp
