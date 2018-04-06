@@ -22,13 +22,15 @@
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Dialogs/AlanSingleOptionDialog.h"
 #include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h"
+#include "MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h"
+
 class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    AlanSingleOptionDialog*dialog=AlanTwoButtonDialog::getInstance("Server ",RESOLUTION_ICON);
+    AlanSingleOptionDialog*dialog=AlanResolutionDialog::getInstance();
     dialog->show();
     return application.exec();
 }

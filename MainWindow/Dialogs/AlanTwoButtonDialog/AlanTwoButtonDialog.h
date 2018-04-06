@@ -15,22 +15,20 @@ private:
     QPushButton *cancelBtn;
 public:
     AlanTwoButtonDialog(const QString&,const QString &icon );
-    ///TODO:fix leak on getInstance
-    static AlanTwoButtonDialog*getInstance(const QString &,const QString&);
 
 protected:
 
-    virtual bool generic_initializer() override ;
+    bool generic_initializer() override ;
     virtual bool connectionInitializer();
 
 
-    QWidget *onGenerateConfigArea() throw (std::exception)override;
+
 
     QWidget *onGenerateButtonsArea() throw(std::exception)override;
 
 protected slots:
-    virtual void onOkButtonSlot();
-    virtual void onCancelButtonSlot();
+    virtual void onOkButtonSlot()=0;
+    virtual void onCancelButtonSlot()=0;
 
 
 };

@@ -60,7 +60,8 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./misc/errors/AlanMainWindowErrors.h \
             ./misc/errors/AlanPanelErrors.h \
             MainWindow/Dialogs/AlanSingleOptionDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h
+            MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+            MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h
 
 
 

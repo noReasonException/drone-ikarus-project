@@ -12,13 +12,6 @@
 AlanTwoButtonDialog::AlanTwoButtonDialog(const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(titleArea,iconArea){
 }
 
-
-
-
-QWidget *AlanTwoButtonDialog::onGenerateConfigArea() throw (std::exception) {
-    return new QLabel("ConfigArea");
-}
-
 QWidget *AlanTwoButtonDialog::onGenerateButtonsArea() throw (std::exception) {
     QWidget *dia = new QWidget;
     QLayout *mainLay;
@@ -27,12 +20,7 @@ QWidget *AlanTwoButtonDialog::onGenerateButtonsArea() throw (std::exception) {
     mainLay->addWidget(okBtn=new QPushButton("OK"));
     return dia;
 }
-AlanTwoButtonDialog *AlanTwoButtonDialog::getInstance(const QString &titleName,const QString&icon) {
-    AlanTwoButtonDialog*ptr=new AlanTwoButtonDialog(titleName,icon);
-    return ptr->generic_initializer()?ptr: nullptr;
 
-
-}
 
 bool AlanTwoButtonDialog::connectionInitializer() try{
     QObject::connect(okBtn,SIGNAL(clicked(bool)),this,SLOT(onOkButtonSlot()));
@@ -40,13 +28,6 @@ bool AlanTwoButtonDialog::connectionInitializer() try{
     return true;
 }catch (std::exception&e){return false;}
 
-void AlanTwoButtonDialog::onOkButtonSlot() {
-
-}
-
-void AlanTwoButtonDialog::onCancelButtonSlot() {
-
-}
 
 bool AlanTwoButtonDialog::generic_initializer() {
     return AlanSingleOptionDialog::generic_initializer()&&
