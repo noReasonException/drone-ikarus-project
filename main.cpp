@@ -22,7 +22,7 @@
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Dialogs/AlanSingleOptionDialog.h"
 #include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h"
-#include "MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h"
+#include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h"
 
 class MainWindow;
 using namespace std;
@@ -30,7 +30,7 @@ int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    AlanSingleOptionDialog*dialog=AlanResolutionDialog::getInstance();
+    AlanSingleOptionDialog*dialog=AlanMultipleChoiceDialog::getInstance();
     dialog->show();
     return application.exec();
 }

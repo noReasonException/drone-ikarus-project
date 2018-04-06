@@ -64,13 +64,14 @@ SOURCES       = main.cpp \
 		MainWindow/InformationObject/Data/Data.cpp \
 		MainWindow/InformationObject/Log/Log.cpp \
 		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp moc_AlanPanel.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp moc_AlanPanel.cpp \
 		moc_LogPanel.cpp \
 		moc_StreamPanel.cpp \
 		moc_AlanMainWindow.cpp \
 		moc_AlanSingleOptionDialog.cpp \
 		moc_AlanTwoButtonDialog.cpp \
-		moc_AlanResolutionDialog.cpp
+		moc_AlanMultipleChoiceDialog.cpp
 OBJECTS       = main.o \
 		InformationObjectSupplier.o \
 		LogSupplier.o \
@@ -86,13 +87,14 @@ OBJECTS       = main.o \
 		Log.o \
 		AlanSingleOptionDialog.o \
 		AlanTwoButtonDialog.o \
+		AlanMultipleChoiceDialog.o \
 		moc_AlanPanel.o \
 		moc_LogPanel.o \
 		moc_StreamPanel.o \
 		moc_AlanMainWindow.o \
 		moc_AlanSingleOptionDialog.o \
 		moc_AlanTwoButtonDialog.o \
-		moc_AlanResolutionDialog.o
+		moc_AlanMultipleChoiceDialog.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -190,7 +192,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		misc/errors/AlanPanelErrors.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h main.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h main.cpp \
 		MainWindow/Supplier/InformationObjectSupplier.cpp \
 		MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
 		MainWindow/AlanMainWindow.cpp \
@@ -204,7 +206,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/InformationObject/Data/Data.cpp \
 		MainWindow/InformationObject/Log/Log.cpp \
 		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -396,8 +399,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -429,9 +432,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -m64 -pipe -std=c++0x $(pkg-config --cflags --libs gstreamer-1.0) -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp moc_AlanResolutionDialog.cpp
+compiler_moc_header_make_all: moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp moc_AlanMultipleChoiceDialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp moc_AlanResolutionDialog.cpp
+	-$(DEL_FILE) moc_AlanPanel.cpp moc_LogPanel.cpp moc_StreamPanel.cpp moc_AlanMainWindow.cpp moc_AlanSingleOptionDialog.cpp moc_AlanTwoButtonDialog.cpp moc_AlanMultipleChoiceDialog.cpp
 moc_AlanPanel.cpp: MainWindow/Panels/AlanPanel.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
@@ -478,13 +481,13 @@ moc_AlanTwoButtonDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h -o moc_AlanTwoButtonDialog.cpp
 
-moc_AlanResolutionDialog.cpp: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+moc_AlanMultipleChoiceDialog.cpp: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
-	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h -o moc_AlanResolutionDialog.cpp
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h -o moc_AlanMultipleChoiceDialog.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -507,7 +510,7 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/img/generic_paths.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/InformationObjectSupplier.h \
@@ -611,6 +614,12 @@ AlanTwoButtonDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialo
 		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanTwoButtonDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
 
+AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		misc/img/generic_paths.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMultipleChoiceDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
+
 moc_AlanPanel.o: moc_AlanPanel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanPanel.o moc_AlanPanel.cpp
 
@@ -629,8 +638,8 @@ moc_AlanSingleOptionDialog.o: moc_AlanSingleOptionDialog.cpp
 moc_AlanTwoButtonDialog.o: moc_AlanTwoButtonDialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanTwoButtonDialog.o moc_AlanTwoButtonDialog.cpp
 
-moc_AlanResolutionDialog.o: moc_AlanResolutionDialog.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanResolutionDialog.o moc_AlanResolutionDialog.cpp
+moc_AlanMultipleChoiceDialog.o: moc_AlanMultipleChoiceDialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanMultipleChoiceDialog.o moc_AlanMultipleChoiceDialog.cpp
 
 ####### Install
 

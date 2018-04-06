@@ -36,7 +36,8 @@ SOURCES += ./main.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
            ./MainWindow/InformationObject/Log/Log.cpp \
            MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-           MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
+           MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
+           MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
 
 
 HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
@@ -61,7 +62,7 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./misc/errors/AlanPanelErrors.h \
             MainWindow/Dialogs/AlanSingleOptionDialog.h \
             MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/AlanResolutionDialog.h
+            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h
 
 
 

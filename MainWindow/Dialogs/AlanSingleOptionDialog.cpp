@@ -9,14 +9,18 @@
 #include <QIcon>
 #include <QWindow>
 #include <QWindow>
+#include <iostream>
 #include "AlanSingleOptionDialog.h"
 #include "../../misc/img/generic_paths.h"
 
-AlanSingleOptionDialog::AlanSingleOptionDialog(const QString &title,const QString&icon):titleArea(title),iconArea(icon) {
+AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState Currstate,const QString &title,const QString&icon):
+        titleArea(title),
+        iconArea(icon),
+        state(Currstate){
 
 }
 bool AlanSingleOptionDialog::generic_initializer() {
-    return layoutInitializer();
+    return layoutInitializer()&&restoreState();
 }
 QWidget *AlanSingleOptionDialog::onGenerateTitleArea() throw(std::exception) {
     QWidget*widget=new QWidget;
@@ -54,4 +58,15 @@ QWidget *AlanSingleOptionDialog::onGenerateRightMostArea() throw(std::exception)
     lay->addWidget(onGenerateButtonsArea());
     return dia;
 }
+/***
+ * If you override , always call parent constructor
+ * @return
+ */
+AlanSingleOptionDialogState& AlanSingleOptionDialog::onRestoreState() throw(std::exception){
+    return state;
+}
 
+bool AlanSingleOptionDialog::restoreState()try{
+    onRestoreState();
+    return true;
+}catch(std::exception&e){return false;}

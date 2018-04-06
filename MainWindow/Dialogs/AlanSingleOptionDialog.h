@@ -7,6 +7,7 @@
 
 
 #include <QDialog>
+#include "../State/WindowStates/AlanSingleOptionDialog.h"
 
 class AlanSingleOptionDialog : public QDialog{
     Q_OBJECT
@@ -14,15 +15,18 @@ private:
     QLayout*mainLay;
     QString titleArea;
     QString iconArea;
+    AlanSingleOptionDialogState state;
+
 
 
 
 protected:
-    AlanSingleOptionDialog(const QString&,const QString&);
+    AlanSingleOptionDialog(AlanSingleOptionDialogState,const QString&,const QString&);
     virtual bool generic_initializer();                     ///@returns true if all initialization processes completed
-    virtual bool layoutInitializer();                       ///@returns true if layout initialization process completed
+    bool layoutInitializer();                       ///@returns true if layout initialization process completed
+    bool restoreState();
 
-
+    virtual AlanSingleOptionDialogState& onRestoreState() throw(std::exception);
     virtual QLayout*onGenerateLayout() throw(std::exception);                     ///@returns the AlanSingleOptionDialog layout
     virtual QWidget*onGenerateIconArea() throw (std::exception);                   ///@returns the left icon Area Widget
     virtual QWidget*onGenerateTitleArea() throw (std::exception);                  ///@returns the right-top title area

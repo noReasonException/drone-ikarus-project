@@ -7,9 +7,10 @@
 #include "AlanTwoButtonDialog.h"
 #include <QPushButton>
 #include <QtWidgets/QMessageBox>
+#include <iostream>
 #include "../../../misc/img/generic_paths.h"
 
-AlanTwoButtonDialog::AlanTwoButtonDialog(const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(titleArea,iconArea){
+AlanTwoButtonDialog::AlanTwoButtonDialog(AlanTwoButtonsDialogState state,const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(state,titleArea,iconArea){
 }
 
 QWidget *AlanTwoButtonDialog::onGenerateButtonsArea() throw (std::exception) {
@@ -32,4 +33,12 @@ bool AlanTwoButtonDialog::connectionInitializer() try{
 bool AlanTwoButtonDialog::generic_initializer() {
     return AlanSingleOptionDialog::generic_initializer()&&
             connectionInitializer();
+}
+
+AlanTwoButtonsDialogState& AlanTwoButtonDialog::onRestoreState() throw(std::exception) {
+    AlanTwoButtonsDialogState &stat=(AlanTwoButtonsDialogState&)AlanSingleOptionDialog::onRestoreState();
+
+    return stat;
+
+
 }
