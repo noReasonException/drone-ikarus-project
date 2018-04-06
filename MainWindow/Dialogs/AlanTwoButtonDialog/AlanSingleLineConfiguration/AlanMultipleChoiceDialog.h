@@ -1,0 +1,14 @@
+//
+// Created by noreasonexception on 4/6/18.
+//
+
+#ifndef IKARUS_PROJECT_ALANSINGLELINECONFIGURATION_H
+#define IKARUS_PROJECT_ALANSINGLELINECONFIGURATION_H
+
+
+class AlanSingleLineConfiguration {
+
+};
+
+
+#endif //IKARUS_PROJECT_ALANSINGLELINECONFIGURATION_H
