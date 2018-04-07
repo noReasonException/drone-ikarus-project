@@ -6,22 +6,29 @@
 #define IKARUS_PROJECT_ALANSINGLEOPTIONDIALOGSTATE_H
 
 #include "../State.h"
+#include <iostream>
 
 class AlanSingleOptionDialogState: public State{
 public:
-    std::string o="3";
+    AlanSingleOptionDialogState():State(){
+
+    }
+public:
 };
 class AlanTwoButtonsDialogState:public AlanSingleOptionDialogState{
-    std::string t="2";
+public:
+    AlanTwoButtonsDialogState():AlanSingleOptionDialogState(){
+
+    }
 
 };
 class AlanMultipleChoiceDialogState:public AlanTwoButtonsDialogState{
-    std::string tr="1";
-
 public:
-    std::vector<QString> MultipleChoices;
-    AlanMultipleChoiceDialogState(){
-        MultipleChoices.push_back("he");
+    std::vector<QString>he;
+    AlanMultipleChoiceDialogState():AlanTwoButtonsDialogState(){
+        he.push_back("he");
+        he.push_back("he");
+        he.push_back("he");
     }
 
 };

@@ -7,6 +7,8 @@
 
 ////TODO : Dont forget to implement State subsystem
 class State {
+public:
+    State()= default;
 
 };
 

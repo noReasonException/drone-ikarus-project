@@ -10,7 +10,7 @@
 #include <iostream>
 #include "../../../misc/img/generic_paths.h"
 
-AlanTwoButtonDialog::AlanTwoButtonDialog(AlanTwoButtonsDialogState state,const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(state,titleArea,iconArea){
+AlanTwoButtonDialog::AlanTwoButtonDialog(AlanTwoButtonsDialogState* state,const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(state,titleArea,iconArea){
 }
 
 QWidget *AlanTwoButtonDialog::onGenerateButtonsArea() throw (std::exception) {
@@ -35,10 +35,6 @@ bool AlanTwoButtonDialog::generic_initializer() {
             connectionInitializer();
 }
 
-AlanTwoButtonsDialogState& AlanTwoButtonDialog::onRestoreState() throw(std::exception) {
-    AlanTwoButtonsDialogState &stat=(AlanTwoButtonsDialogState&)AlanSingleOptionDialog::onRestoreState();
-
-    return stat;
-
-
+AlanTwoButtonsDialogState *AlanTwoButtonDialog::onRestoreState()  throw(std::exception){
+    return static_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
 }

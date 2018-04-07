@@ -27,10 +27,10 @@ public:
     ////TODO::error: ‘virtual bool AlanTwoButtonDialog::generic_initializer()’ is protected within this context ptr->generic_initializer();*/
     static AlanTwoButtonDialog*getInstance();
 protected:
-    AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState state,const QString &title,const QString&icon,const QString&buttonText) : AlanTwoButtonDialog(state,title,icon),pushButtonText(buttonText){}
+    AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState* state,const QString &title,const QString&icon,const QString&buttonText) : AlanTwoButtonDialog(state,title,icon),pushButtonText(buttonText){}
     QWidget *onGenerateConfigArea() throw (std::exception)override;
-    AlanMultipleChoiceDialogState& onRestoreState() throw(std::exception) override;
-
+    AlanMultipleChoiceDialogState* onRestoreState() throw(std::exception) override;
+    virtual bool generic_initializer()override ;
 
 protected slots:
 

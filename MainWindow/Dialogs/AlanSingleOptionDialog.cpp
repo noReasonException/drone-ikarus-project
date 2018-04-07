@@ -13,14 +13,18 @@
 #include "AlanSingleOptionDialog.h"
 #include "../../misc/img/generic_paths.h"
 
-AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState Currstate,const QString &title,const QString&icon):
+AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState* Currstate,const QString &title,const QString&icon):
         titleArea(title),
         iconArea(icon),
         state(Currstate){
 
 }
+/***
+ * @note . if you create a final class derived from AlanSingleOptionDialog , you need to call in the final generic_initializer the restoreState()!
+ * @return
+ */
 bool AlanSingleOptionDialog::generic_initializer() {
-    return layoutInitializer()&&restoreState();
+    return layoutInitializer();
 }
 QWidget *AlanSingleOptionDialog::onGenerateTitleArea() throw(std::exception) {
     QWidget*widget=new QWidget;
@@ -58,15 +62,11 @@ QWidget *AlanSingleOptionDialog::onGenerateRightMostArea() throw(std::exception)
     lay->addWidget(onGenerateButtonsArea());
     return dia;
 }
-/***
- * If you override , always call parent constructor
- * @return
- */
-AlanSingleOptionDialogState& AlanSingleOptionDialog::onRestoreState() throw(std::exception){
+
+AlanSingleOptionDialogState * AlanSingleOptionDialog::onRestoreState() throw(std::exception) {
     return state;
 }
-
-bool AlanSingleOptionDialog::restoreState()try{
-    onRestoreState();
-    return true;
-}catch(std::exception&e){return false;}
+/***
+ * If you override , always call parent - version
+ * @return
+ */

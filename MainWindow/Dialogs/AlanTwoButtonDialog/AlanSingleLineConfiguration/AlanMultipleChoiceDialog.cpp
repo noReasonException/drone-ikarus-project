@@ -34,14 +34,19 @@ void AlanMultipleChoiceDialog::onCancelButtonSlot() {
 }
 
 AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
-    AlanMultipleChoiceDialogState stat;
-    AlanMultipleChoiceDialog *ptr = new AlanMultipleChoiceDialog(stat,"Add New...",RESOLUTION_ICON,"+");
+    AlanMultipleChoiceDialogState *s=new AlanMultipleChoiceDialogState();
+    AlanMultipleChoiceDialog *ptr = new AlanMultipleChoiceDialog(s,"Add New...",RESOLUTION_ICON,"+");
     ptr->generic_initializer();
     return ptr;
 }
 
-AlanMultipleChoiceDialogState& AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
-    AlanMultipleChoiceDialogState &retval=(AlanMultipleChoiceDialogState&)AlanTwoButtonDialog::onRestoreState();
-    for(QString &i:retval.MultipleChoices)//listWidget->addItem(i);
-    return retval;
+
+bool AlanMultipleChoiceDialog::generic_initializer() {
+    return AlanTwoButtonDialog::generic_initializer()&&onRestoreState();
+}
+
+AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
+    auto*state=static_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
+    for(const QString &i:state->he)listWidget->addItem(i+">");
+    return state;
 }

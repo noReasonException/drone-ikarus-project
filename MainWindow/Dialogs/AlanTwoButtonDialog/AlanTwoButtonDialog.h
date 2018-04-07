@@ -14,13 +14,13 @@ private:
     QPushButton *okBtn;
     QPushButton *cancelBtn;
 public:
-    AlanTwoButtonDialog(AlanTwoButtonsDialogState ,const QString&,const QString &icon );
+    AlanTwoButtonDialog(AlanTwoButtonsDialogState* ,const QString&,const QString &icon );
 
 protected:
 
     bool generic_initializer() override ;
     bool connectionInitializer();
-    AlanTwoButtonsDialogState& onRestoreState() throw(std::exception) override;
+    AlanTwoButtonsDialogState* onRestoreState() throw(std::exception) override;
     QWidget *onGenerateButtonsArea() throw(std::exception)override;
 
 protected slots:

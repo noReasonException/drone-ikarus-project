@@ -15,18 +15,16 @@ private:
     QLayout*mainLay;
     QString titleArea;
     QString iconArea;
-    AlanSingleOptionDialogState state;
+    AlanSingleOptionDialogState *state;
 
 
 
 
 protected:
-    AlanSingleOptionDialog(AlanSingleOptionDialogState,const QString&,const QString&);
+    AlanSingleOptionDialog(AlanSingleOptionDialogState*,const QString&,const QString&);
     virtual bool generic_initializer();                     ///@returns true if all initialization processes completed
     bool layoutInitializer();                       ///@returns true if layout initialization process completed
-    bool restoreState();
 
-    virtual AlanSingleOptionDialogState& onRestoreState() throw(std::exception);
     virtual QLayout*onGenerateLayout() throw(std::exception);                     ///@returns the AlanSingleOptionDialog layout
     virtual QWidget*onGenerateIconArea() throw (std::exception);                   ///@returns the left icon Area Widget
     virtual QWidget*onGenerateTitleArea() throw (std::exception);                  ///@returns the right-top title area
@@ -34,6 +32,7 @@ protected:
     virtual QWidget*onGenerateButtonsArea() throw (std::exception)=0;                ///@returns the right-bottom button area
     virtual QWidget*onGenerateLeftmostArea() throw (std::exception);
     virtual QWidget*onGenerateRightMostArea() throw (std::exception);
+    virtual AlanSingleOptionDialogState * onRestoreState() throw(std::exception);
 
 
 

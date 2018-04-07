@@ -30,7 +30,7 @@ int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     QMainWindow *waa= new AlanMainWindow();
     waa->show();
-    AlanSingleOptionDialog*dialog=AlanMultipleChoiceDialog::getInstance();
-    dialog->show();
+    AlanSingleOptionDialog*a=AlanMultipleChoiceDialog::getInstance();
+    a->show();
     return application.exec();
 }
