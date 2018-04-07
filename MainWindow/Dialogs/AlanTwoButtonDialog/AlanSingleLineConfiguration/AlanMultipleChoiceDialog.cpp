@@ -6,6 +6,12 @@
 #include "AlanMultipleChoiceDialog.h"
 #include "../../../State/WindowStates/AlanSingleOptionDialog.h"
 
+bool AlanMultipleChoiceDialog::generic_initializer() {
+    return AlanTwoButtonDialog::generic_initializer()&& additionalButtonsInitializer()&&onRestoreState();
+}
+
+
+
 QWidget *AlanMultipleChoiceDialog::onGenerateConfigArea()  throw (std::exception){
 
     QWidget *widget = new QWidget();                       //Main Config Widget
@@ -25,14 +31,17 @@ QWidget *AlanMultipleChoiceDialog::onGenerateConfigArea()  throw (std::exception
 
 }
 
-void AlanMultipleChoiceDialog::onOkButtonSlot() {
 
+void AlanMultipleChoiceDialog::onOkButtonSlot() {
+    close();
 }
 
 
 void AlanMultipleChoiceDialog::onCancelButtonSlot() {
-
+    close();
 }
+
+
 
 AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
     AlanMultipleChoiceDialogState *s=(new AlanMultipleChoiceDialogState())->setListViewData({"a","b","c"});
@@ -42,21 +51,27 @@ AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
 }
 
 
-bool AlanMultipleChoiceDialog::generic_initializer() {
-    return AlanTwoButtonDialog::generic_initializer()&&additionalButtonInitializer()&&onRestoreState();
-}
-
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
     auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
     for(const QString &i:state->getListViewData())listWidget->addItem(i);
     return state;
 }
 
+
+
 void  AlanMultipleChoiceDialog::onAdditionalButtonSlot() {
     getState()->update();
 }
 
-bool AlanMultipleChoiceDialog::additionalButtonInitializer() {
+
+
+bool AlanMultipleChoiceDialog::additionalButtonsInitializer() {
     QObject::connect(additionalButton,SIGNAL(clicked()),this,SLOT(onAdditionalButtonSlot()));
+    QObject::connect(listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(onClickedChoiceSlot(QListWidgetItem *)));
+
     return true;
+}
+
+void AlanMultipleChoiceDialog::onClickedChoiceSlot(QListWidgetItem*) {
+    getState()->update();
 }

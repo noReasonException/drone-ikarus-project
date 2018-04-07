@@ -35,7 +35,7 @@ protected:
 
 
     ///New additional initialization steps...
-    virtual bool additionalButtonInitializer();
+    virtual bool additionalButtonsInitializer();
 
 
 
@@ -51,6 +51,8 @@ protected slots:
     void onCancelButtonSlot() override ;
 
     virtual void onAdditionalButtonSlot();
+
+    virtual void onClickedChoiceSlot(QListWidgetItem*);
 
 
 };
