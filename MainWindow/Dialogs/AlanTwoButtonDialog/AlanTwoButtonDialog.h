@@ -15,6 +15,7 @@ private:
     QPushButton *cancelBtn;
 public:
     AlanTwoButtonDialog(AlanTwoButtonsDialogState* ,const QString&,const QString &icon );
+    virtual ~AlanTwoButtonDialog()= default;
 
 protected:
 

@@ -66,6 +66,10 @@ QWidget *AlanSingleOptionDialog::onGenerateRightMostArea() throw(std::exception)
 AlanSingleOptionDialogState * AlanSingleOptionDialog::onRestoreState() throw(std::exception) {
     return state;
 }
+
+AlanSingleOptionDialogState *AlanSingleOptionDialog::getState() const {
+    return state;
+}
 /***
  * If you override , always call parent - version
  * @return

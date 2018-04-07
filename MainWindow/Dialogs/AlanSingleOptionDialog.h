@@ -19,9 +19,10 @@ private:
 
 
 
-
 protected:
     AlanSingleOptionDialog(AlanSingleOptionDialogState*,const QString&,const QString&);
+    //TODO final here?
+    virtual ~AlanSingleOptionDialog()= default;
     virtual bool generic_initializer();                     ///@returns true if all initialization processes completed
     bool layoutInitializer();                       ///@returns true if layout initialization process completed
 
@@ -33,6 +34,7 @@ protected:
     virtual QWidget*onGenerateLeftmostArea() throw (std::exception);
     virtual QWidget*onGenerateRightMostArea() throw (std::exception);
     virtual AlanSingleOptionDialogState * onRestoreState() throw(std::exception);
+    AlanSingleOptionDialogState *getState() const;
 
 
 

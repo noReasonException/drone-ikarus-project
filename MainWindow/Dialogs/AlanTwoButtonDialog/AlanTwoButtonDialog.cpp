@@ -36,5 +36,5 @@ bool AlanTwoButtonDialog::generic_initializer() {
 }
 
 AlanTwoButtonsDialogState *AlanTwoButtonDialog::onRestoreState()  throw(std::exception){
-    return static_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
+    return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
 }

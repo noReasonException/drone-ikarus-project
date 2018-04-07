@@ -20,6 +20,7 @@ class AlanMultipleChoiceDialog: public AlanTwoButtonDialog{
 private:
     const QString pushButtonText;
     QListWidget*listWidget;
+    QPushButton*additionalButton;
 
 public:
 
@@ -27,9 +28,20 @@ public:
     ////TODO::error: ‘virtual bool AlanTwoButtonDialog::generic_initializer()’ is protected within this context ptr->generic_initializer();*/
     static AlanTwoButtonDialog*getInstance();
 protected:
-    AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState* state,const QString &title,const QString&icon,const QString&buttonText) : AlanTwoButtonDialog(state,title,icon),pushButtonText(buttonText){}
-    QWidget *onGenerateConfigArea() throw (std::exception)override;
+    AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState* state,const QString &title,const QString&icon,const QString&buttonText) :
+            AlanTwoButtonDialog(state,title,icon),
+            pushButtonText(buttonText){}
+    virtual ~AlanMultipleChoiceDialog()= default;
+
+
+    ///New additional initialization steps...
+    virtual bool additionalButtonInitializer();
+
+
+
+    ///Override previous stuff + override generic_initializer to initialize this new functionality
     AlanMultipleChoiceDialogState* onRestoreState() throw(std::exception) override;
+    QWidget *onGenerateConfigArea() throw (std::exception)override;
     virtual bool generic_initializer()override ;
 
 protected slots:
@@ -37,6 +49,8 @@ protected slots:
     void onOkButtonSlot() override ;
 
     void onCancelButtonSlot() override ;
+
+    virtual void onAdditionalButtonSlot();
 
 
 };
