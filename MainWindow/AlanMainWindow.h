@@ -14,6 +14,8 @@
 #include "../misc/version.h"
 #include "../misc/generic_text/AlanMainWindowDialogs.h"
 #include "../misc/img/generic_paths.h"
+#include "Factory/AbstractGuiFactory.h"
+#include "Supplier/LogSupplier/LogSupplier.h"
 
 /***
  * AlanMainWindow
@@ -24,11 +26,14 @@ class AlanMainWindow : public QMainWindow{
     Q_OBJECT
 
 public:
-    AlanMainWindow();
+    AlanMainWindow(AbstractGuiFactory*factory);
 private :
     //Misc Members
     bool isStreaming;
     bool isReTransmitting;
+    AbstractGuiFactory*parentFactory;
+    LogSupplier*supplier;
+
 
     //Initializers
 
@@ -48,6 +53,7 @@ private :
 
 protected slots:
     void operationNotSupportedSlot();   //Shows a Warning message that the pressed QAction is not supported
+    void genericActionSlot();
     void closeSlot();                   //triggers on QAction "Exit" //TODO connect with closeEvent() also
 protected:
     std::vector<QMenu*>*                onGenerateMenu(QMenuBar*bar) throw(std::exception);
@@ -64,6 +70,7 @@ protected:
     QWidget*                            onGenerateLogPanel();
     QWidget*                            onGenerateStatusBar();
 
+    LogSupplier *getSupplier() const;
 
 
 };

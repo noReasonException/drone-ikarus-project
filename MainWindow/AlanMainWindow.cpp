@@ -18,10 +18,11 @@
  * AlanMainWindowConstructor
  *
  */
-AlanMainWindow::AlanMainWindow() {
+AlanMainWindow::AlanMainWindow(AbstractGuiFactory*factory):parentFactory(factory) {
 
     isStreaming= false;
     isReTransmitting= false;
+    supplier=LogPanel::getInstance("Logs")->createSupplier("MainWindow");
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
@@ -72,7 +73,7 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(RESOLUTION_ACTION_NAME),
                 RESOLUTION_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(LATENCY_ACTION_NAME),
@@ -102,7 +103,7 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(DRONE_ADDR_ACTION_NAME),
                 DRONE_ADDR_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(START_STREAMING_ACTION_NAME),
@@ -120,7 +121,7 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(SERVER_ADDR_ACTION_NAME),
                 SERVER_ADDR_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(START_BROADCAST_ACTION_NAME),
@@ -159,8 +160,10 @@ QAction* AlanMainWindow::initializeQAction(QAction *act,QString fileName,const c
  * //TODO remove it!
  */
 void AlanMainWindow::operationNotSupportedSlot() {
+
     QMessageBox::warning(this,OPERATION_NOT_SUPPORTED_ERROR_DIALOG);
 }
+
 /***
  * This slot triggered in case of exit , it checks if any task is in progress and informs the user if really wants to exit ;)
  */
@@ -282,9 +285,21 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    LogPanel*pnl=LogPanel::getInstance("Hey");
-    LogSupplier*spl=pnl->createSupplier("TestSUb");
-    spl->send(new Log("status-changed",2836283827367932,"GST_PLAYING -> GST_PAUSE",spl));
-    spl->send(new InformationObject(time(NULL),spl));
+    LogPanel*pnl=LogPanel::getInstance("Logs");
     return pnl;
+}
+
+void AlanMainWindow::genericActionSlot() {
+    QDialog * preparedDialog = nullptr;
+    std::string str=reinterpret_cast<QAction*>(QObject::sender())->text().toStdString();
+    const char *cstr=str.c_str();
+    if(!strcmp(cstr,SERVER_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getServerAddrDialog());
+    else if(!strcmp(cstr,DRONE_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getDroneAddrDialog());
+    if(preparedDialog)preparedDialog->show();
+    else getSupplier()->send(new Log("Op-not-supp",time(NULL),"genericActionSlot() invoked by unknown QAction , A bug maybe?",getSupplier()));
+
+}
+
+LogSupplier *AlanMainWindow::getSupplier() const {
+    return supplier;
 }

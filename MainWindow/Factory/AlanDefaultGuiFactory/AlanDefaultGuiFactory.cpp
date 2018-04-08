@@ -8,7 +8,7 @@
 #include "../../Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
-    return new AlanMainWindow();
+    return new AlanMainWindow(this);
 }
 
 QDialog *AlanDefaultGuiFactory::getResolutionDialog() {
