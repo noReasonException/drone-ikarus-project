@@ -9,6 +9,7 @@
 #include "../AbstractGuiFactory.h"
 
 class AlanDefaultGuiFactory : public AbstractGuiFactory{
+
 public:
     QMainWindow *getMainWindow() override;
 

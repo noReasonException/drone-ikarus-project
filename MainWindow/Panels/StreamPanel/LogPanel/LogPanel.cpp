@@ -11,6 +11,7 @@
 #include "../../../../misc/generic_text/generic_dialogs.h"
 #include "../../../../misc/errors/AlanPanelErrors.h"
 #include "LogWidget/LogWidget.h"
+#include "../../../../misc/Suppliers/LogSuppliers.h"
 
 LogPanel* LogPanel::instance= nullptr;
 
@@ -20,6 +21,7 @@ LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
     self_supplier=createSupplier("Log panel");
 }
 ////Revision at : 5/4/2018 , Thread-safe accept;
+///TODO , InformationObjectSupplier , not safe in case we use other class than LogSupplier , fix that
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     if(supplier!=self_supplier){
         QMutexLocker locker(class_locker);
@@ -27,9 +29,9 @@ void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *in
     Log *l= dynamic_cast<Log*>(info);
     if(!l){
         self_supplier->send(new Log(
-                "Invalid-accept-call(LogPanel)",
+                INVALID_ARGS_IN_ACCEPT_LOG,
                 time(NULL),
-                "accept() method called with InformationObject instead of Log Object",self_supplier));
+                INVALID_ARGS_IN_ACCEPT_DESC_LOG,self_supplier));
         return;
     }
     log->push_back(l);

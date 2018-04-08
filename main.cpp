@@ -31,8 +31,5 @@ int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
     AbstractGuiFactory*factory=new AlanDefaultGuiFactory();
     factory->getMainWindow()->show();
-    factory->getServerAddrDialog()->show();
-    factory->getDroneAddrDialog()->show();
-
     return application.exec();
 }

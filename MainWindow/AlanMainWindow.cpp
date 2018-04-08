@@ -13,6 +13,8 @@
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/generic_dialogs.h"
 #include "InformationObject/Log/Log.h"
+#include "../misc/generic_text/AlanMainWindowMisc.h"
+#include "../misc/Suppliers/LogSuppliers.h"
 
 /***
  * AlanMainWindowConstructor
@@ -22,7 +24,7 @@ AlanMainWindow::AlanMainWindow(AbstractGuiFactory*factory):parentFactory(factory
 
     isStreaming= false;
     isReTransmitting= false;
-    supplier=LogPanel::getInstance("Logs")->createSupplier("MainWindow");
+    supplier=LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
@@ -78,17 +80,17 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(LATENCY_ACTION_NAME),
                 LATENCY_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(ERROR_FILE_ACTION_NAME),
                 ERROR_FILE_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(DATA_FILE_ACTION_NAME),
                 DATA_FILE_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addSeparator();
         tmp->addAction(initializeQAction(
@@ -108,12 +110,12 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(START_STREAMING_ACTION_NAME),
                 STREAMING_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(STOP_STREAMING_ACTION_NAME),
                 STOP_STREAMING_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
     }
 
     retval->push_back(tmp=new QMenu(RETRANSMIT_MENU_NAME));
@@ -126,12 +128,12 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(START_BROADCAST_ACTION_NAME),
                 BROADCAST_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(STOP_BROADCAST_ACTION_NAME),
                 NO_BROADCAST_ICON,
-                SLOT(operationNotSupportedSlot())));
+                SLOT(genericActionSlot())));
     }
     retval->push_back(tmp=new QMenu(TOOLS_MENU_NAME));
     retval->push_back(tmp=new QMenu(MISC_MENU_NAME));
@@ -285,7 +287,7 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    LogPanel*pnl=LogPanel::getInstance("Logs");
+    LogPanel*pnl=LogPanel::getInstance(LOGS_PANEL_TITLE);
     return pnl;
 }
 
@@ -296,7 +298,10 @@ void AlanMainWindow::genericActionSlot() {
     if(!strcmp(cstr,SERVER_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getServerAddrDialog());
     else if(!strcmp(cstr,DRONE_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getDroneAddrDialog());
     if(preparedDialog)preparedDialog->show();
-    else getSupplier()->send(new Log("Op-not-supp",time(NULL),"genericActionSlot() invoked by unknown QAction , A bug maybe?",getSupplier()));
+    else {
+        getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
+        operationNotSupportedSlot();
+    }
 
 }
 

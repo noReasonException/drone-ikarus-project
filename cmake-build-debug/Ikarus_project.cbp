@@ -243,6 +243,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/LogSuppliers.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanMainWindowErrors.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -250,6 +253,9 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowDialogs.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowMisc.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/generic_dialogs.h">

@@ -9,6 +9,8 @@
 #include <QMainWindow>
 #include <QWindow>
 
+
+
 class AbstractGuiFactory {
 public:
     virtual QMainWindow *getMainWindow()        =0;
