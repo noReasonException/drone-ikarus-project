@@ -55,5 +55,5 @@ add_executable(Ikarus_project main.cpp
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
-        MainWindow/State/WindowStates/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h misc/generic_text/AlanMainWindowMisc.h misc/Suppliers/LogSuppliers.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h)
+        MainWindow/State/WindowStates/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h misc/generic_text/AlanMainWindowMisc.h misc/Suppliers/LogSuppliers.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

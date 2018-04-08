@@ -298,6 +298,7 @@ void AlanMainWindow::genericActionSlot() {
     if(!strcmp(cstr,SERVER_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getServerAddrDialog());
     else if(!strcmp(cstr,DRONE_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getDroneAddrDialog());
     else if(!strcmp(cstr,RESOLUTION_ACTION_NAME))preparedDialog=(parentFactory->getResolutionDialog());
+    else if(!strcmp(cstr,LATENCY_ACTION_NAME))preparedDialog=(parentFactory->getLatencyDialog());
     if(preparedDialog)preparedDialog->show();
     else {
         getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
