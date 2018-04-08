@@ -34,17 +34,13 @@ SOURCES += ./main.cpp \
            ./MainWindow/Panels/AlanPanel.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
-           ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \ \
            ./MainWindow/Consumer/LogConsumer/LogConsumer.cpp \
            ./MainWindow/Consumer/InformationObjectConsumer.cpp \
            ./MainWindow/State/State.cpp \
            ./MainWindow/InformationObject/InformationObject.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
-           ./MainWindow/InformationObject/Log/Log.cpp \
-
-
-
-
+           ./MainWindow/InformationObject/Log/Log.cpp
 
 HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Interfaces/StateRestorable.h \
@@ -53,7 +49,10 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Supplier/InformationObjectSupplier.h \
             ./MainWindow/Factory/AbstractGuiFactory.h \
             ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
+            ./MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
@@ -78,6 +77,8 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./misc/generic_text/AlanMainWindowDialogs.h \
             ./misc/errors/AlanMainWindowErrors.h \
             ./misc/errors/AlanPanelErrors.h
+
+
 
 
 
