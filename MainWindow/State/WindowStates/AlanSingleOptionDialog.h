@@ -20,6 +20,7 @@ class AlanTwoButtonsDialogState:public AlanSingleOptionDialogState{
 public:
     AlanTwoButtonsDialogState()= default;
     virtual ~AlanTwoButtonsDialogState()= default;
+    virtual void update() override {}
 
 };
 class AlanMultipleChoiceDialogState:public AlanTwoButtonsDialogState{

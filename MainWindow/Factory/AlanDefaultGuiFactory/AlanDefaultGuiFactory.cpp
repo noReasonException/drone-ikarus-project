@@ -6,13 +6,14 @@
 #include "../../AlanMainWindow.h"
 #include "../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h"
 #include "../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h"
+#include "../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
     return new AlanMainWindow(this);
 }
 
 QDialog *AlanDefaultGuiFactory::getResolutionDialog() {
-    return nullptr;
+    return (new SetResolutionDialog(new AlanTwoButtonsDialogState()))->prepare();
 }
 
 QDialog *AlanDefaultGuiFactory::getLatencyDialog() {

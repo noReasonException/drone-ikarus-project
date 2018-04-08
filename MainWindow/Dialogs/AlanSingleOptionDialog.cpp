@@ -74,7 +74,3 @@ AlanSingleOptionDialogState *AlanSingleOptionDialog::getState() const {
 AlanSingleOptionDialog *AlanSingleOptionDialog::prepare() {
     return generic_initializer()?this: nullptr;
 }
-/***
- * If you override , always call parent - version
- * @return
- */

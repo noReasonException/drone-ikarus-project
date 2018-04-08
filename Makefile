@@ -586,6 +586,7 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		MainWindow/Interfaces/InformationSupplierFactory.h \
 		MainWindow/InformationObject/Log/Log.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
 		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
@@ -635,7 +636,22 @@ AlanDefaultGuiFactory.o: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGui
 		MainWindow/Supplier/LogSupplier/LogSupplier.h \
 		MainWindow/Supplier/InformationObjectSupplier.h \
 		MainWindow/Consumer/InformationObjectConsumer.h \
-		MainWindow/InformationObject/InformationObject.h
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanDefaultGuiFactory.o MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp
 
 AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h \
