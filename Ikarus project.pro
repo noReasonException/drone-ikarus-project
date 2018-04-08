@@ -62,7 +62,8 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./misc/errors/AlanPanelErrors.h \
             MainWindow/Dialogs/AlanSingleOptionDialog.h \
             MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h
+            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h
 
 
 

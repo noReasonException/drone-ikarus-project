@@ -28,9 +28,9 @@ class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
-    QMainWindow *waa= new AlanMainWindow();
-    waa->show();
-    AlanSingleOptionDialog*a=AlanMultipleChoiceDialog::getInstance();
+    QMainWindow *a= new AlanMainWindow();
     a->show();
+    AlanSingleOptionDialog*aa=AlanMultipleChoiceDialog::getInstance();
+    aa->show();
     return application.exec();
 }

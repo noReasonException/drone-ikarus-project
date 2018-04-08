@@ -8,21 +8,24 @@
 
 #include "../AlanMultipleChoiceDialog.h"
 
-class setDroneDialog : public AlanMultipleChoiceDialog{
+class setDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    setDroneDialog(AlanMultipleChoiceDialogState *state, const QString &title, const QString &icon,
+    setDroneAddrDialog(AlanMultipleChoiceDialogState *state, const QString &title, const QString &icon,
                    const QString &buttonText) : AlanMultipleChoiceDialog(state, title, icon, buttonText) {}
 
 protected:
     void onAdditionalButtonSlot() override {
-
+        QMessageBox::warning(nullptr,"aaa","aaaaa");
     }
 
     void onClickedChoiceSlot(QListWidgetItem *item) override {
+        QMessageBox::warning(nullptr,"bbb","bbbbbbb");
 
     }
 
     void onOkButtonSlot() override {
+        QMessageBox::warning(nullptr,"ccc","ccccc");
+
 
     }
 };

@@ -5,7 +5,8 @@
 #include <iostream>
 #include "AlanMultipleChoiceDialog.h"
 #include "../../../State/WindowStates/AlanSingleOptionDialog.h"
-#include "ChildDialogs/setDroneDialog.h"
+#include "ChildDialogs/setDroneAddrDialog.h"
+#include "ChildDialogs/setServersAddrDialog.h"
 
 bool AlanMultipleChoiceDialog::generic_initializer() {
     return AlanTwoButtonDialog::generic_initializer()&& additionalButtonsInitializer()&&onRestoreState();
@@ -40,7 +41,7 @@ void AlanMultipleChoiceDialog::onCancelButtonSlot() {
 
 AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
     AlanMultipleChoiceDialogState *s=(new AlanMultipleChoiceDialogState())->setListViewData({"a","b","c"});
-    AlanMultipleChoiceDialog *ptr = new setDroneDialog(s,"Add New...",RESOLUTION_ICON,"+");
+    AlanMultipleChoiceDialog *ptr = new setServersAddrDialog(s,"Add New...",RESOLUTION_ICON,"+");
     ptr->generic_initializer();
     return ptr;
 }
