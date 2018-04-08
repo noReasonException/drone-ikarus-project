@@ -49,6 +49,7 @@ private :
 
     //Misc
     QAction* initializeQAction(QAction *act,QString filename, const char*onClickSlot);
+    QMenu* initializeQMenu(QMenu *act, const char*onClickSlot);
 
 
 protected slots:

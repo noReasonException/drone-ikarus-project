@@ -22,7 +22,7 @@ private:
 
 
 protected:
-    AlanSingleOptionDialog(AlanSingleOptionDialogState*,const QString&,const QString&);
+    AlanSingleOptionDialog(AlanSingleOptionDialogState*state,const QString&title,const QString&icon);
     //TODO final here?
     virtual ~AlanSingleOptionDialog()= default;
     virtual bool generic_initializer();                     ///@returns true if all initialization processes completed

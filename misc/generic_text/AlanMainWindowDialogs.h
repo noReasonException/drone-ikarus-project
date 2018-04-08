@@ -30,8 +30,8 @@
     #define START_BROADCAST_ACTION_NAME     "Start Broadcast"
     #define STOP_BROADCAST_ACTION_NAME      "Stop Broadcast"
 #define TOOLS_MENU_NAME                 "Tools"
-#define MISC_MENU_NAME                  "Misc"
-#define ABOUT_MENU_NAME                 "About"
+#define HELP_MENU_NAME                  "Help"
+#define ABOUT_ACTION_NAME                 "About"
 //MediaBar exposed Text
 
 

@@ -136,9 +136,13 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
                 SLOT(genericActionSlot())));
     }
     retval->push_back(tmp=new QMenu(TOOLS_MENU_NAME));
-    retval->push_back(tmp=new QMenu(MISC_MENU_NAME));
-    retval->push_back(tmp=new QMenu(ABOUT_MENU_NAME));
-
+    retval->push_back(tmp=new QMenu(HELP_MENU_NAME));
+    {
+        tmp->addAction(initializeQAction(
+                new QAction(ABOUT_ACTION_NAME),
+                DRONE_ADDR_ICON, ////TODO find a About Icon
+                SLOT(genericActionSlot())));
+    }
     return retval;
 }
 /***
@@ -299,6 +303,7 @@ void AlanMainWindow::genericActionSlot() {
     else if(!strcmp(cstr,DRONE_ADDR_ACTION_NAME))preparedDialog=(parentFactory->getDroneAddrDialog());
     else if(!strcmp(cstr,RESOLUTION_ACTION_NAME))preparedDialog=(parentFactory->getResolutionDialog());
     else if(!strcmp(cstr,LATENCY_ACTION_NAME))preparedDialog=(parentFactory->getLatencyDialog());
+    else if(!strcmp(cstr,ABOUT_ACTION_NAME))preparedDialog=(parentFactory->getAboutDialog());
     if(preparedDialog)preparedDialog->show();
     else {
         getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));

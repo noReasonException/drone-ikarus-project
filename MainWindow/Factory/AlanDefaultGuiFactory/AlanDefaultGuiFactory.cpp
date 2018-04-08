@@ -8,6 +8,7 @@
 #include "../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h"
 #include "../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 #include "../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h"
+#include "../../Dialogs/ChildDialogs/AlanAboutDialog.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
     return new AlanMainWindow(this);
@@ -39,5 +40,5 @@ QDialog *AlanDefaultGuiFactory::getServerAddrDialog() {
 }
 
 QDialog *AlanDefaultGuiFactory::getAboutDialog() {
-    return nullptr;
+    return (new AlanAboutDialog())->prepare();
 }
