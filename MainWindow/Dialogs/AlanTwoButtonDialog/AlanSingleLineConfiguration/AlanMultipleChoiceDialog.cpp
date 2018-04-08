@@ -5,6 +5,7 @@
 #include <iostream>
 #include "AlanMultipleChoiceDialog.h"
 #include "../../../State/WindowStates/AlanSingleOptionDialog.h"
+#include "ChildDialogs/setDroneDialog.h"
 
 bool AlanMultipleChoiceDialog::generic_initializer() {
     return AlanTwoButtonDialog::generic_initializer()&& additionalButtonsInitializer()&&onRestoreState();
@@ -31,21 +32,15 @@ QWidget *AlanMultipleChoiceDialog::onGenerateConfigArea()  throw (std::exception
 
 }
 
-
-void AlanMultipleChoiceDialog::onOkButtonSlot() {
-    close();
-}
-
-
 void AlanMultipleChoiceDialog::onCancelButtonSlot() {
+    getState()->update();
     close();
+
 }
-
-
 
 AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
     AlanMultipleChoiceDialogState *s=(new AlanMultipleChoiceDialogState())->setListViewData({"a","b","c"});
-    AlanMultipleChoiceDialog *ptr = new AlanMultipleChoiceDialog(s,"Add New...",RESOLUTION_ICON,"+");
+    AlanMultipleChoiceDialog *ptr = new setDroneDialog(s,"Add New...",RESOLUTION_ICON,"+");
     ptr->generic_initializer();
     return ptr;
 }
@@ -59,11 +54,6 @@ AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(
 
 
 
-void  AlanMultipleChoiceDialog::onAdditionalButtonSlot() {
-    getState()->update();
-}
-
-
 
 bool AlanMultipleChoiceDialog::additionalButtonsInitializer() {
     QObject::connect(additionalButton,SIGNAL(clicked()),this,SLOT(onAdditionalButtonSlot()));
@@ -72,6 +62,3 @@ bool AlanMultipleChoiceDialog::additionalButtonsInitializer() {
     return true;
 }
 
-void AlanMultipleChoiceDialog::onClickedChoiceSlot(QListWidgetItem*) {
-    getState()->update();
-}

@@ -46,13 +46,11 @@ protected:
 
 protected slots:
 
-    void onOkButtonSlot() override ;
-
     void onCancelButtonSlot() override ;
 
-    virtual void onAdditionalButtonSlot();
+    virtual void onAdditionalButtonSlot()=0;
 
-    virtual void onClickedChoiceSlot(QListWidgetItem*);
+    virtual void onClickedChoiceSlot(QListWidgetItem*)=0;
 
 
 };

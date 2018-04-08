@@ -470,12 +470,38 @@ moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/AlanMainWindow.h -o moc_AlanMainWindow.cpp
 
-moc_AlanSingleOptionDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
+moc_AlanSingleOptionDialog.cpp: MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanSingleOptionDialog.h -o moc_AlanSingleOptionDialog.cpp
 
 moc_AlanTwoButtonDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
@@ -483,6 +509,19 @@ moc_AlanTwoButtonDialog.cpp: MainWindow/Dialogs/AlanSingleOptionDialog.h \
 
 moc_AlanMultipleChoiceDialog.cpp: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
 		misc/img/generic_paths.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
 		moc_predefs.h \
@@ -509,6 +548,19 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
@@ -606,18 +658,58 @@ Log.o: MainWindow/InformationObject/Log/Log.cpp MainWindow/InformationObject/Log
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Log.o MainWindow/InformationObject/Log/Log.cpp
 
 AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
 		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanSingleOptionDialog.o MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
 AlanTwoButtonDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
 		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanTwoButtonDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
 
 AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
-		misc/img/generic_paths.h
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
+		MainWindow/Panels/StreamPanel/StreamPanel.h \
+		MainWindow/Panels/AlanPanel.h \
+		MainWindow/Consumer/LogConsumer/LogConsumer.h \
+		MainWindow/Interfaces/LogSupplierFactory.h \
+		MainWindow/Interfaces/InformationSupplierFactory.h \
+		MainWindow/InformationObject/Log/Log.h \
+		misc/img/generic_paths.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMultipleChoiceDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
 
 moc_AlanPanel.o: moc_AlanPanel.cpp 

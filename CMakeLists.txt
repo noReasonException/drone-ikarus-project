@@ -55,5 +55,5 @@ add_executable(Ikarus_project main.cpp
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
-        MainWindow/State/WindowStates/AlanSingleOptionDialog.h)
+        MainWindow/State/WindowStates/AlanSingleOptionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneDialog.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)
