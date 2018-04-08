@@ -138,16 +138,16 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp">

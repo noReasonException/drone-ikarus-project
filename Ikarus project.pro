@@ -29,7 +29,7 @@ SOURCES += ./main.cpp \
            ./MainWindow/Factory/AbstractGuiFactory.cpp \
            ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
            ./MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-           ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp \
+           ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp \
            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
            ./MainWindow/Panels/AlanPanel.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
@@ -40,17 +40,13 @@ SOURCES += ./main.cpp \
            ./MainWindow/State/State.cpp \
            ./MainWindow/InformationObject/InformationObject.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
-           ./MainWindow/InformationObject/Log/Log.cpp
+           ./MainWindow/InformationObject/Log/Log.cpp \
 
 
 
-HEADERS +=  ./misc/version.h \
-            ./misc/img/generic_paths.h \
-            ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h \
-            ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h \
-            ./MainWindow/Interfaces/LogSupplierFactory.h \
+
+
+HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Interfaces/StateRestorable.h \
             ./MainWindow/Interfaces/InformationSupplierFactory.h \
             ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
@@ -58,9 +54,9 @@ HEADERS +=  ./misc/version.h \
             ./MainWindow/Factory/AbstractGuiFactory.h \
             ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h \
-            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h \
-            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
             ./MainWindow/Dialogs/AlanSingleOptionDialog.h \
             ./MainWindow/Panels/AlanPanel.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
@@ -74,6 +70,16 @@ HEADERS +=  ./misc/version.h \
             ./MainWindow/InformationObject/InformationObject.h \
             ./MainWindow/InformationObject/Data/Data.h \
             ./MainWindow/InformationObject/Log/Log.h \
+            ./misc/version.h \
+            ./misc/Suppliers/LogSuppliers.h \
+            ./misc/img/generic_paths.h \
+            ./misc/generic_text/AlanMainWindowMisc.h \
+            ./misc/generic_text/generic_dialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/errors/AlanMainWindowErrors.h \
+            ./misc/errors/AlanPanelErrors.h
+
+
 
 
 

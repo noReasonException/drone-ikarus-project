@@ -57,7 +57,7 @@ SOURCES       = main.cpp \
 		MainWindow/Factory/AbstractGuiFactory.cpp \
 		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
 		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
 		MainWindow/Panels/AlanPanel.cpp \
 		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
@@ -176,13 +176,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		Ikarus project.pro misc/version.h \
-		misc/img/generic_paths.h \
-		misc/generic_text/generic_dialogs.h \
-		misc/generic_text/AlanMainWindowDialogs.h \
-		misc/errors/AlanMainWindowErrors.h \
-		misc/errors/AlanPanelErrors.h \
-		MainWindow/Interfaces/LogSupplierFactory.h \
+		Ikarus project.pro MainWindow/Interfaces/LogSupplierFactory.h \
 		MainWindow/Interfaces/StateRestorable.h \
 		MainWindow/Interfaces/InformationSupplierFactory.h \
 		MainWindow/Supplier/LogSupplier/LogSupplier.h \
@@ -190,9 +184,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/Factory/AbstractGuiFactory.h \
 		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		MainWindow/Panels/AlanPanel.h \
 		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
@@ -205,14 +199,22 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		MainWindow/State/State.h \
 		MainWindow/InformationObject/InformationObject.h \
 		MainWindow/InformationObject/Data/Data.h \
-		MainWindow/InformationObject/Log/Log.h main.cpp \
+		MainWindow/InformationObject/Log/Log.h \
+		misc/version.h \
+		misc/Suppliers/LogSuppliers.h \
+		misc/img/generic_paths.h \
+		misc/generic_text/AlanMainWindowMisc.h \
+		misc/generic_text/generic_dialogs.h \
+		misc/generic_text/AlanMainWindowDialogs.h \
+		misc/errors/AlanMainWindowErrors.h \
+		misc/errors/AlanPanelErrors.h main.cpp \
 		MainWindow/Supplier/InformationObjectSupplier.cpp \
 		MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
 		MainWindow/AlanMainWindow.cpp \
 		MainWindow/Factory/AbstractGuiFactory.cpp \
 		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
 		MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
 		MainWindow/Panels/AlanPanel.cpp \
 		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
@@ -415,8 +417,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents misc/version.h misc/img/generic_paths.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/StateRestorable.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Factory/AbstractGuiFactory.h MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/State/WindowStates/AlanSingleOptionDialog.h MainWindow/State/State.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Factory/AbstractGuiFactory.cpp MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/State/State.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MainWindow/Interfaces/LogSupplierFactory.h MainWindow/Interfaces/StateRestorable.h MainWindow/Interfaces/InformationSupplierFactory.h MainWindow/Supplier/LogSupplier/LogSupplier.h MainWindow/Supplier/InformationObjectSupplier.h MainWindow/Factory/AbstractGuiFactory.h MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/Consumer/InformationObjectConsumer.h MainWindow/Consumer/LogConsumer/LogConsumer.h MainWindow/State/WindowStates/AlanSingleOptionDialog.h MainWindow/State/State.h MainWindow/InformationObject/InformationObject.h MainWindow/InformationObject/Data/Data.h MainWindow/InformationObject/Log/Log.h misc/version.h misc/Suppliers/LogSuppliers.h misc/img/generic_paths.h misc/generic_text/AlanMainWindowMisc.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/LogSupplier/LogSupplier.cpp MainWindow/AlanMainWindow.cpp MainWindow/Factory/AbstractGuiFactory.cpp MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Consumer/LogConsumer/LogConsumer.cpp MainWindow/Consumer/InformationObjectConsumer.cpp MainWindow/State/State.cpp MainWindow/InformationObject/InformationObject.cpp MainWindow/InformationObject/Data/Data.cpp MainWindow/InformationObject/Log/Log.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -486,10 +488,10 @@ moc_AlanMultipleChoiceDialog.cpp: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwo
 		MainWindow/Interfaces/InformationSupplierFactory.h \
 		MainWindow/InformationObject/Log/Log.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
-	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h -o moc_AlanMultipleChoiceDialog.cpp
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I'/home/noreasonexception/Desktop/Ikarus project' -I'/home/noreasonexception/Desktop/Ikarus project' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h -o moc_AlanMultipleChoiceDialog.cpp
 
 moc_AlanSingleOptionDialog.cpp: MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
 		MainWindow/State/State.h \
@@ -539,6 +541,11 @@ moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
+		MainWindow/Factory/AbstractGuiFactory.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
 		MainWindow/AlanMainWindow.h \
 		moc_predefs.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
@@ -563,13 +570,14 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanSingleOptionDialog.h \
-		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
-		MainWindow/State/State.h \
+		MainWindow/Factory/AbstractGuiFactory.h \
 		MainWindow/Supplier/LogSupplier/LogSupplier.h \
 		MainWindow/Supplier/InformationObjectSupplier.h \
 		MainWindow/Consumer/InformationObjectConsumer.h \
 		MainWindow/InformationObject/InformationObject.h \
+		MainWindow/Dialogs/AlanSingleOptionDialog.h \
+		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+		MainWindow/State/State.h \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
 		MainWindow/Panels/StreamPanel/StreamPanel.h \
 		MainWindow/Panels/AlanPanel.h \
@@ -578,9 +586,7 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		MainWindow/Interfaces/InformationSupplierFactory.h \
 		MainWindow/InformationObject/Log/Log.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
-		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
-		MainWindow/Factory/AbstractGuiFactory.h
+		MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp MainWindow/Supplier/InformationObjectSupplier.h \
@@ -599,18 +605,21 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
+		MainWindow/Factory/AbstractGuiFactory.h \
+		MainWindow/Supplier/LogSupplier/LogSupplier.h \
+		MainWindow/Supplier/InformationObjectSupplier.h \
+		MainWindow/Consumer/InformationObjectConsumer.h \
+		MainWindow/InformationObject/InformationObject.h \
 		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
 		MainWindow/Panels/StreamPanel/StreamPanel.h \
 		MainWindow/Panels/AlanPanel.h \
 		MainWindow/Consumer/LogConsumer/LogConsumer.h \
-		MainWindow/Supplier/InformationObjectSupplier.h \
-		MainWindow/Consumer/InformationObjectConsumer.h \
-		MainWindow/InformationObject/InformationObject.h \
 		MainWindow/Interfaces/LogSupplierFactory.h \
 		MainWindow/Interfaces/InformationSupplierFactory.h \
-		MainWindow/Supplier/LogSupplier/LogSupplier.h \
 		MainWindow/InformationObject/Log/Log.h \
-		misc/generic_text/generic_dialogs.h
+		misc/generic_text/generic_dialogs.h \
+		misc/generic_text/AlanMainWindowMisc.h \
+		misc/Suppliers/LogSuppliers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMainWindow.o MainWindow/AlanMainWindow.cpp
 
 AbstractGuiFactory.o: MainWindow/Factory/AbstractGuiFactory.cpp MainWindow/Factory/AbstractGuiFactory.h
@@ -623,24 +632,10 @@ AlanDefaultGuiFactory.o: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGui
 		misc/version.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-		MainWindow/Dialogs/AlanSingleOptionDialog.h \
-		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
-		MainWindow/State/State.h \
 		MainWindow/Supplier/LogSupplier/LogSupplier.h \
 		MainWindow/Supplier/InformationObjectSupplier.h \
 		MainWindow/Consumer/InformationObjectConsumer.h \
-		MainWindow/InformationObject/InformationObject.h \
-		MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
-		MainWindow/Panels/StreamPanel/StreamPanel.h \
-		MainWindow/Panels/AlanPanel.h \
-		MainWindow/Consumer/LogConsumer/LogConsumer.h \
-		MainWindow/Interfaces/LogSupplierFactory.h \
-		MainWindow/Interfaces/InformationSupplierFactory.h \
-		MainWindow/InformationObject/Log/Log.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h
+		MainWindow/InformationObject/InformationObject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanDefaultGuiFactory.o MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp
 
 AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanSingleOptionDialog.h \
@@ -660,7 +655,7 @@ AlanSingleOptionDialog.o: MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWind
 		misc/img/generic_paths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanSingleOptionDialog.o MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
-AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
 		MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
@@ -677,9 +672,9 @@ AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLin
 		MainWindow/Interfaces/InformationSupplierFactory.h \
 		MainWindow/InformationObject/Log/Log.h \
 		misc/img/generic_paths.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h \
-		MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMultipleChoiceDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
+		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMultipleChoiceDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
 
 AlanTwoButtonDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
 		MainWindow/Dialogs/AlanSingleOptionDialog.h \
@@ -724,7 +719,8 @@ LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panel
 		MainWindow/InformationObject/Log/Log.h \
 		misc/generic_text/generic_dialogs.h \
 		misc/errors/AlanPanelErrors.h \
-		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h
+		MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
+		misc/Suppliers/LogSuppliers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LogPanel.o MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
 
 StreamPanel.o: MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.h \

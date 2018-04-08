@@ -8,9 +8,9 @@
 
 #include "../AlanMultipleChoiceDialog.h"
 
-class setDroneAddrDialog : public AlanMultipleChoiceDialog{
+class SetDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    setDroneAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Drones Address", DRONE_ADDR_ICON, "+") {}
+    SetDroneAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Drones Address", DRONE_ADDR_ICON, "+") {}
 
 protected:
     void onAdditionalButtonSlot() override {

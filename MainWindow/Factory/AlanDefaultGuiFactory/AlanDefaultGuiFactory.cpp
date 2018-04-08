@@ -4,8 +4,8 @@
 
 #include "AlanDefaultGuiFactory.h"
 #include "../../AlanMainWindow.h"
-#include "../../Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h"
-#include "../../Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h"
+#include "../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h"
+#include "../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
     return new AlanMainWindow(this);
@@ -28,11 +28,11 @@ QDialog *AlanDefaultGuiFactory::getErrorFileDialog() {
 }
 
 QDialog *AlanDefaultGuiFactory::getDroneAddrDialog() {
-    return (new setDroneAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
+    return (new SetDroneAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
 }
 
 QDialog *AlanDefaultGuiFactory::getServerAddrDialog() {
-    return (new setServersAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
+    return (new SetServersAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
 
 }
 

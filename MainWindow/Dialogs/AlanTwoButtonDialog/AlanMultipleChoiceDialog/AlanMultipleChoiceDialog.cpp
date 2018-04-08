@@ -5,8 +5,8 @@
 #include <iostream>
 #include "AlanMultipleChoiceDialog.h"
 #include "../../../State/WindowStates/AlanSingleOptionDialog.h"
-#include "ChildDialogs/setDroneAddrDialog.h"
-#include "ChildDialogs/setServersAddrDialog.h"
+#include "ChildDialogs/SetDroneAddrDialog.h"
+#include "ChildDialogs/SetServersAddrDialog.h"
 
 bool AlanMultipleChoiceDialog::generic_initializer() {
     return AlanTwoButtonDialog::generic_initializer()&& additionalButtonsInitializer()&&onRestoreState();

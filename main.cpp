@@ -22,14 +22,14 @@
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Dialogs/AlanSingleOptionDialog.h"
 #include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h"
-#include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h"
+#include "MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h"
 #include "MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h"
 
 class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
-    AbstractGuiFactory*factory=new AlanDefaultGuiFactory();
-    factory->getMainWindow()->show();
+    AbstractGuiFactory*fa=new AlanDefaultGuiFactory();
+    fa->getMainWindow()->show();
     return application.exec();
 }

@@ -9,9 +9,9 @@
 #include "../../../../State/WindowStates/AlanSingleOptionDialog.h"
 #include "../AlanMultipleChoiceDialog.h"
 
-class setServersAddrDialog : public AlanMultipleChoiceDialog{
+class SetServersAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    setServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Server Address", SERVER_ADDR_ICON, "+") {}
+    SetServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Server Address", SERVER_ADDR_ICON, "+") {}
 
 
 protected:
