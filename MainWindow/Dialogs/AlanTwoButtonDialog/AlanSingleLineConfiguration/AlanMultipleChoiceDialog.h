@@ -22,11 +22,6 @@ private:
     QListWidget*listWidget;
     QPushButton*additionalButton;
 
-public:
-
-    ///TODO:fix leak on getInstance
-    ////TODO::error: ‘virtual bool AlanTwoButtonDialog::generic_initializer()’ is protected within this context ptr->generic_initializer();*/
-    static AlanTwoButtonDialog*getInstance();
 protected:
     AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState* state,const QString &title,const QString&icon,const QString&buttonText) :
             AlanTwoButtonDialog(state,title,icon),

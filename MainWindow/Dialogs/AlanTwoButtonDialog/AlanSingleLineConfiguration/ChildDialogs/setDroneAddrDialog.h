@@ -10,8 +10,7 @@
 
 class setDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    setDroneAddrDialog(AlanMultipleChoiceDialogState *state, const QString &title, const QString &icon,
-                   const QString &buttonText) : AlanMultipleChoiceDialog(state, title, icon, buttonText) {}
+    setDroneAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Drones Address", DRONE_ADDR_ICON, "+") {}
 
 protected:
     void onAdditionalButtonSlot() override {

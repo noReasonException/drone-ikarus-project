@@ -26,24 +26,42 @@ SOURCES += ./main.cpp \
            ./MainWindow/Supplier/InformationObjectSupplier.cpp \
            ./MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
            ./MainWindow/AlanMainWindow.cpp \
+           ./MainWindow/Factory/AbstractGuiFactory.cpp \
+           ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
+           ./MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
+           ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp \
+           ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
            ./MainWindow/Panels/AlanPanel.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            ./MainWindow/Consumer/LogConsumer/LogConsumer.cpp \
            ./MainWindow/Consumer/InformationObjectConsumer.cpp \
+           ./MainWindow/State/State.cpp \
            ./MainWindow/InformationObject/InformationObject.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
-           ./MainWindow/InformationObject/Log/Log.cpp \
-           MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
-           MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
-           MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.cpp
+           ./MainWindow/InformationObject/Log/Log.cpp
 
 
-HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
+
+HEADERS +=  ./misc/version.h \
+            ./misc/img/generic_paths.h \
+            ./misc/generic_text/generic_dialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/errors/AlanMainWindowErrors.h \
+            ./misc/errors/AlanPanelErrors.h \
+            ./MainWindow/Interfaces/LogSupplierFactory.h \
+            ./MainWindow/Interfaces/StateRestorable.h \
             ./MainWindow/Interfaces/InformationSupplierFactory.h \
             ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
             ./MainWindow/Supplier/InformationObjectSupplier.h \
+            ./MainWindow/Factory/AbstractGuiFactory.h \
+            ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setServersAddrDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h \
+            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
+            ./MainWindow/Dialogs/AlanSingleOptionDialog.h \
             ./MainWindow/Panels/AlanPanel.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
@@ -51,19 +69,13 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/AlanMainWindow.h \
             ./MainWindow/Consumer/InformationObjectConsumer.h \
             ./MainWindow/Consumer/LogConsumer/LogConsumer.h \
+            ./MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+            ./MainWindow/State/State.h \
             ./MainWindow/InformationObject/InformationObject.h \
             ./MainWindow/InformationObject/Data/Data.h \
             ./MainWindow/InformationObject/Log/Log.h \
-            ./misc/version.h \
-            ./misc/img/generic_paths.h \
-            ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h \
-            ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h \
-            MainWindow/Dialogs/AlanSingleOptionDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/AlanMultipleChoiceDialog.h \
-            MainWindow/Dialogs/AlanTwoButtonDialog/AlanSingleLineConfiguration/ChildDialogs/setDroneAddrDialog.h
+
+
 
 
 

@@ -39,14 +39,6 @@ void AlanMultipleChoiceDialog::onCancelButtonSlot() {
 
 }
 
-AlanTwoButtonDialog *AlanMultipleChoiceDialog::getInstance() {
-    AlanMultipleChoiceDialogState *s=(new AlanMultipleChoiceDialogState())->setListViewData({"a","b","c"});
-    AlanMultipleChoiceDialog *ptr = new setServersAddrDialog(s,"Add New...",RESOLUTION_ICON,"+");
-    ptr->generic_initializer();
-    return ptr;
-}
-
-
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
     auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
     for(const QString &i:state->getListViewData())listWidget->addItem(i);

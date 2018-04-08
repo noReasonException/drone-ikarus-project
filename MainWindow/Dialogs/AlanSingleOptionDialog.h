@@ -11,6 +11,8 @@
 
 class AlanSingleOptionDialog : public QDialog{
     Q_OBJECT
+public:
+    virtual AlanSingleOptionDialog*prepare();
 private:
     QLayout*mainLay;
     QString titleArea;

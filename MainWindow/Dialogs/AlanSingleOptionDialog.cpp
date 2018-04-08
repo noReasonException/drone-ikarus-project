@@ -35,7 +35,7 @@ QWidget *AlanSingleOptionDialog::onGenerateTitleArea() throw(std::exception) {
 }
 QWidget *AlanSingleOptionDialog::onGenerateIconArea() throw (std::exception){
     QLabel*lbl=new QLabel;
-    lbl->setPixmap(QPixmap(RESOLUTION_ICON));
+    lbl->setPixmap(QPixmap(iconArea));
     return lbl;
 }
 bool AlanSingleOptionDialog::layoutInitializer()try {
@@ -69,6 +69,10 @@ AlanSingleOptionDialogState * AlanSingleOptionDialog::onRestoreState() throw(std
 
 AlanSingleOptionDialogState *AlanSingleOptionDialog::getState() const {
     return state;
+}
+
+AlanSingleOptionDialog *AlanSingleOptionDialog::prepare() {
+    return generic_initializer()?this: nullptr;
 }
 /***
  * If you override , always call parent - version

@@ -11,8 +11,8 @@
 
 class setServersAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    setServersAddrDialog(AlanMultipleChoiceDialogState *state, const QString &title, const QString &icon,
-                         const QString &buttonText) : AlanMultipleChoiceDialog(state, title, icon, buttonText) {}
+    setServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Server Address", SERVER_ADDR_ICON, "+") {}
+
 
 protected:
     void onAdditionalButtonSlot() override {
