@@ -14,7 +14,7 @@
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:
-    SetLatencyDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,"Set Video Resolution",LATENCY_ICON){}
+    SetLatencyDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,LATENCY_DIALOG_TITLE,LATENCY_ICON){}
 
 private:
     QWidget *onGenerateConfigArea() throw (std::exception)override {

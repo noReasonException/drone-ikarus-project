@@ -12,7 +12,7 @@
 
 class SetResolutionDialog : public AlanTwoButtonDialog {
 public:
-    SetResolutionDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,"Set Video Resolution",RESOLUTION_ICON){}
+    SetResolutionDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,RESOLUTION_DIALOG_TITLE,RESOLUTION_ICON){}
 
 private:
     QWidget *onGenerateConfigArea() throw (std::exception)override {

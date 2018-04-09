@@ -15,7 +15,7 @@ private:
     QPushButton*goBackBtn;
 public:
     AlanAboutDialog()
-            : AlanSingleOptionDialog(new AlanSingleOptionDialogState, "About", DRONE_ADDR_ICON) {}
+            : AlanSingleOptionDialog(new AlanSingleOptionDialogState, ABOUT_DIALOG_TITLE, DRONE_ADDR_ICON) {}
 
 protected:
     QWidget *onGenerateConfigArea() throw(std::exception)override {
@@ -28,10 +28,11 @@ protected:
 
     bool connectionInitializer(){
         QObject::connect(goBackBtn,SIGNAL(clicked(bool)),this,SLOT(close()));
+        return true;
     }
     bool generic_initializer() override {
-        return AlanSingleOptionDialog::generic_initializer();/*&&
-               connectionInitializer();*/
+        return AlanSingleOptionDialog::generic_initializer()&&
+               connectionInitializer();
     }
 };
 

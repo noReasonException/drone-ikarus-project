@@ -11,7 +11,7 @@
 
 class SetServersAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    SetServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, "Set Server Address", SERVER_ADDR_ICON, "+") {}
+    SetServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, SERVER_ADDR_DIALOG_TITLE, SERVER_ADDR_ICON, "+") {}
 
 
 protected:
