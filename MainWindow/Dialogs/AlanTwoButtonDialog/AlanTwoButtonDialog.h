@@ -7,6 +7,7 @@
 
 
 #include "../AlanSingleOptionDialog.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 
 class AlanTwoButtonDialog: public AlanSingleOptionDialog {
     Q_OBJECT

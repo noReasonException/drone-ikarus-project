@@ -14,6 +14,7 @@
 #include <QListWidget>
 #include "../AlanTwoButtonDialog.h"
 #include "../../../../misc/img/generic_paths.h"
+#include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
 
 class AlanMultipleChoiceDialog: public AlanTwoButtonDialog{
     Q_OBJECT

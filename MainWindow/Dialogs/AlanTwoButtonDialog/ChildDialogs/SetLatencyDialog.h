@@ -11,6 +11,7 @@
 #include <QGridLayout>
 #include "../AlanTwoButtonDialog.h"
 #include "../../../../misc/img/generic_paths.h"
+#include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:

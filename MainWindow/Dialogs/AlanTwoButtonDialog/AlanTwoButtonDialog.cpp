@@ -9,6 +9,7 @@
 #include <QtWidgets/QMessageBox>
 #include <iostream>
 #include "../../../misc/img/generic_paths.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 
 AlanTwoButtonDialog::AlanTwoButtonDialog(AlanTwoButtonsDialogState* state,const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(state,titleArea,iconArea){
 }
