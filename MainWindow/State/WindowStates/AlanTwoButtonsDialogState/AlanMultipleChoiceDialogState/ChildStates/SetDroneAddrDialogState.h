@@ -7,6 +7,7 @@
 
 
 #include "../AlanMultipleChoiceDialogState.h"
+#include "../../../../../Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h"
 
 class SetDroneAddrDialogState : public AlanMultipleChoiceDialogState{
 public:

@@ -7,6 +7,7 @@
 
 
 #include "../AlanTwoButtonsDialogState.h"
+#include "../../../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h"
 
 class SetLatencyDialogState: AlanTwoButtonsDialogState{
 public:

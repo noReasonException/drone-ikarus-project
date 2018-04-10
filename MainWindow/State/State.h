@@ -7,16 +7,19 @@
 
 #include <QSettings>
 #include <QString>
+#include <QtWidgets/QDialog>
 
-////TODO : Dont forget to implement State subsystem
 class State {
 public:
     State()= default;
     virtual void update()=0;
     virtual QString createPath()=0;
+
+    State*setWrapperWidget(QWidget*ptr){wrapperWidget=ptr;return this;}
+    QWidget*getwrapperWidget(){ return wrapperWidget;}
 protected:
     static QSettings settings;
-
+    QWidget*wrapperWidget;
 
 };
 

@@ -17,6 +17,7 @@ AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState* Curr
         titleArea(title),
         iconArea(icon),
         state(Currstate){
+    getState()->setWrapperWidget(this);
 
 }
 /***

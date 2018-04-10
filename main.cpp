@@ -8,7 +8,6 @@
 #include <iostream>
 #include <QMainWindow>
 #include <QFileDialog>
-#include <QtCore/QJsonDocument>
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h"
 
@@ -16,7 +15,8 @@ class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
-    AbstractGuiFactory*aa=new AlanDefaultGuiFactory();
-    aa->getMainWindow()->show();
+    AbstractGuiFactory*assss=new AlanDefaultGuiFactory();
+    assss->getMainWindow()->show();
+
     return application.exec();
 }

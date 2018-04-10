@@ -7,6 +7,7 @@
 
 
 #include "../AlanTwoButtonsDialogState.h"
+#include "../../../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 
 class SetResolutionDialogState: AlanTwoButtonsDialogState {
 public:
