@@ -71,7 +71,7 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h \
-            ./MainWindow/State/WindowStates/AlanSingleOptionDialog.h \
+            ./MainWindow/State/WindowStates/AlanSingleOptionDialogState.h \
             ./MainWindow/State/State.h \
             ./MainWindow/InformationObject/InformationObject.h \
             ./MainWindow/InformationObject/Data/Data.h \

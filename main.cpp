@@ -16,7 +16,7 @@ class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     QApplication application(argc,argv);
-    AbstractGuiFactory*a=new AlanDefaultGuiFactory();
-    a->getMainWindow()->show();
+    AbstractGuiFactory*aa=new AlanDefaultGuiFactory();
+    aa->getMainWindow()->show();
     return application.exec();
 }

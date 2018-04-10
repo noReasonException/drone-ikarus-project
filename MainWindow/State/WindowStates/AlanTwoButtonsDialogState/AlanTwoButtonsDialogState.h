@@ -7,7 +7,7 @@
 
 
 #include "../../../InformationObject/Log/Log.h"
-#include "../AlanSingleOptionDialog.h"
+#include "../AlanSingleOptionDialogState.h"
 #include "../../../Supplier/LogSupplier/LogSupplier.h"
 
 class AlanTwoButtonsDialogState: public AlanSingleOptionDialogState{

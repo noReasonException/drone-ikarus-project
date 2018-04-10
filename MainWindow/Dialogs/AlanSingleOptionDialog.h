@@ -7,7 +7,7 @@
 
 
 #include <QDialog>
-#include "../State/WindowStates/AlanSingleOptionDialog.h"
+#include "../State/WindowStates/AlanSingleOptionDialogState.h"
 
 class AlanSingleOptionDialog : public QDialog{
     Q_OBJECT

@@ -8,13 +8,21 @@
 #include "../State.h"
 #include "../../Supplier/LogSupplier/LogSupplier.h"
 #include "../../Panels/StreamPanel/LogPanel/LogPanel.h"
+#include "../../../misc/states.h"
 #include <iostream>
 
 class AlanSingleOptionDialogState: public State{
 public:
     AlanSingleOptionDialogState()= default;
     virtual ~AlanSingleOptionDialogState()= default;
-    virtual void update() override {}
+
+    void update() override{
+
+    }
+
+    QString createPath() override{
+        return SINGLE_OPTION_DIALOG_STATE_PATH;
+    }
 
 public:
 };

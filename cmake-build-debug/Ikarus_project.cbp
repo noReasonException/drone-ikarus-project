@@ -234,7 +234,7 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanSingleOptionDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanSingleOptionDialogState.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h">
@@ -289,6 +289,9 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/generic_paths.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/states.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/version.h">

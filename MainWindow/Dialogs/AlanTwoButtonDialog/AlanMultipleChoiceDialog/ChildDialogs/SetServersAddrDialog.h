@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_SETSERVERSADDRDIALOG_H
 
 
-#include "../../../../State/WindowStates/AlanSingleOptionDialog.h"
+#include "../../../../State/WindowStates/AlanSingleOptionDialogState.h"
 #include "../AlanMultipleChoiceDialog.h"
 
 class SetServersAddrDialog : public AlanMultipleChoiceDialog{

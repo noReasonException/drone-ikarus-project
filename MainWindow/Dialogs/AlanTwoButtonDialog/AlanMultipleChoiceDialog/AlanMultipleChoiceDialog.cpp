@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "AlanMultipleChoiceDialog.h"
-#include "../../../State/WindowStates/AlanSingleOptionDialog.h"
+#include "../../../State/WindowStates/AlanSingleOptionDialogState.h"
 #include "ChildDialogs/SetDroneAddrDialog.h"
 #include "ChildDialogs/SetServersAddrDialog.h"
 
