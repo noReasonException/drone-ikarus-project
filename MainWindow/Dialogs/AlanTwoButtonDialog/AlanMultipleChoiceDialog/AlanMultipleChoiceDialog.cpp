@@ -41,7 +41,7 @@ void AlanMultipleChoiceDialog::onCancelButtonSlot() {
 
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
     auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
-    for(const QString &i:state->getListViewData())listWidget->addItem(i);
+
     return state;
 }
 

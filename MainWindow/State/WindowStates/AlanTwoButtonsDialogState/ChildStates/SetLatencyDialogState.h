@@ -9,7 +9,19 @@
 #include "../AlanTwoButtonsDialogState.h"
 
 class SetLatencyDialogState: AlanTwoButtonsDialogState{
+public:
+    SetLatencyDialogState() = default;
 
+    virtual ~SetLatencyDialogState() = default;
+
+private:
+    void update() override {
+        AlanTwoButtonsDialogState::update();
+    }
+
+    QString createPath() override {
+        return AlanTwoButtonsDialogState::createPath()+SET_LATENCY_DIALOG_STATE_PATH;
+    }
 };
 
 

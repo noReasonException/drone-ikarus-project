@@ -11,25 +11,17 @@
 
 class AlanMultipleChoiceDialogState: public AlanTwoButtonsDialogState{
 public:
-    const std::vector<QString> &getListViewData() const{ return listViewData;}
+    AlanMultipleChoiceDialogState() = default;
+
+    virtual ~AlanMultipleChoiceDialogState() = default;
 
     void update() override {
-        supl->send(new Log("Update-Inner-State",time(NULL),"-",supl));
+        AlanTwoButtonsDialogState::update();
     }
 
-    AlanMultipleChoiceDialogState* setListViewData(const std::vector<QString> &listViewData){this->listViewData=listViewData;return this;}
-
-    AlanMultipleChoiceDialogState(){
-        supl=LogPanel::getInstance("")->createSupplier("AlanMultipleChoiceDialogState");
+    QString createPath() override {
+        return AlanTwoButtonsDialogState::createPath()+MULTIPLE_CHOICE_DIALOG_STATE_PATH;
     }
-    virtual ~AlanMultipleChoiceDialogState()= default;
-
-protected:
-    std::vector<QString>listViewData;
-    LogSupplier*supl;
-
-
-
 };
 
 #endif //IKARUS_PROJECT_ALANMULTIPLECHOICEDIALOGSTATE_H
