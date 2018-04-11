@@ -20,10 +20,12 @@ class AlanMultipleChoiceDialog: public AlanTwoButtonDialog{
     Q_OBJECT
 private:
     const QString pushButtonText;
-    QListWidget*listWidget;
+
     QPushButton*additionalButton;
 
 protected:
+    QLineEdit*lineEdit;
+    QListWidget*listWidget;
     AlanMultipleChoiceDialog(AlanMultipleChoiceDialogState* state,const QString &title,const QString&icon,const QString&buttonText) :
             AlanTwoButtonDialog(state,title,icon),
             pushButtonText(buttonText){}
@@ -37,6 +39,9 @@ protected:
 
     ///Override previous stuff + override generic_initializer to initialize this new functionality
     AlanMultipleChoiceDialogState* onRestoreState() throw(std::exception) override;
+
+    AlanMultipleChoiceDialogState *onSaveState() throw(std::exception) override;
+
     QWidget *onGenerateConfigArea() throw (std::exception)override;
     virtual bool generic_initializer()override ;
 

@@ -11,11 +11,13 @@
 
 class SetDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    SetDroneAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, DRONE_ADDR_DIALOG_TITLE, DRONE_ADDR_ICON, "+") {}
+    SetDroneAddrDialog(AlanMultipleChoiceDialogState *state) :
+            AlanMultipleChoiceDialog(state, DRONE_ADDR_DIALOG_TITLE, DRONE_ADDR_ICON, "+") {}
 
 protected:
     void onAdditionalButtonSlot() override {
-        QMessageBox::warning(nullptr,"aaa","aaaaa");
+        listWidget->addItem(lineEdit->text());
+        onSaveState();
     }
 
     void onClickedChoiceSlot(QListWidgetItem *item) override {

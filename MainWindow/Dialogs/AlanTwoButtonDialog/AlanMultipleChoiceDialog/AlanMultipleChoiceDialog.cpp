@@ -9,7 +9,8 @@
 #include "ChildDialogs/SetServersAddrDialog.h"
 
 bool AlanMultipleChoiceDialog::generic_initializer() {
-    return AlanTwoButtonDialog::generic_initializer()&& additionalButtonsInitializer()&&onRestoreState();
+    return AlanTwoButtonDialog::generic_initializer()&&
+            additionalButtonsInitializer();
 }
 
 
@@ -26,17 +27,11 @@ QWidget *AlanMultipleChoiceDialog::onGenerateConfigArea()  throw (std::exception
     newData->setLayout(newData_Layout);
 
     lay->addWidget(listWidget=new QListWidget);                    //Add QListWidget in Config Area
-    newData_Layout->addWidget(new QLineEdit);
+    newData_Layout->addWidget(lineEdit=new QLineEdit);
     newData_Layout->addWidget(additionalButton=new QPushButton(pushButtonText));
     lay->addWidget(newData);                            //Add new configuration in bottom of config area
     return widget;
 
-}
-
-AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
-    auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
-
-    return state;
 }
 
 
@@ -48,4 +43,31 @@ bool AlanMultipleChoiceDialog::additionalButtonsInitializer() {
 
     return true;
 }
+
+AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onSaveState() throw(std::exception) {
+
+    auto*state = dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onSaveState());
+    state->multipleChoices.clear();
+    for (int i = 0; i < listWidget->count(); ++i) {
+        state->multipleChoices.push_back(listWidget->item(i)->text());
+
+    }
+    std::cout<<"onSaveState()..";
+    for(QString &str:state->multipleChoices){std::cout<<str.toStdString()<<std::endl;}
+    return state;
+}
+
+AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
+    auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
+    std::cout<<"onRestoreState()..."<<std::endl;
+    for(QString &str:state->multipleChoices){
+
+        listWidget->addItem(str);
+        std::cout<<str.toStdString()<<std::endl;
+
+    }
+
+    return state;
+}
+
 

@@ -18,12 +18,17 @@ public:
 
 protected:
     void onAdditionalButtonSlot() override {
-        QMessageBox::warning(nullptr,"aaa2","aaaaa2");
+        listWidget->addItem(lineEdit->text());
+        onSaveState();
     }
 
     void onClickedChoiceSlot(QListWidgetItem *item) override {
         QMessageBox::warning(nullptr,"bbb2","bbbbbbb2");
 
+    }
+
+    bool generic_initializer() override {
+        return AlanMultipleChoiceDialog::generic_initializer()&&onRestoreState();
     }
 
 };
