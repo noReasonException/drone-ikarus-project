@@ -24,6 +24,10 @@ protected:
         QMessageBox::warning(nullptr,"bbb","bbbbbbb");
 
     }
+
+    bool generic_initializer() override {
+        return AlanMultipleChoiceDialog::generic_initializer()&&onRestoreState();
+    }
 };
 
 

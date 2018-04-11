@@ -35,11 +35,13 @@ protected:
     SetLatencyDialogState *onRestoreState() throw(std::exception)override {
         SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onRestoreState());
         input->setText(thisState->latencyInput);
+
         return thisState;
     }
     SetLatencyDialogState *onSaveState() throw(std::exception)override {
-        SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onRestoreState());
+        SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onSaveState());
         thisState->latencyInput=input->text();
+        thisState->update();
         return thisState;
     }
 

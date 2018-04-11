@@ -15,6 +15,7 @@
 #include "InformationObject/Log/Log.h"
 #include "../misc/generic_text/AlanMainWindowMisc.h"
 #include "../misc/Suppliers/LogSuppliers.h"
+#include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
 
 /***
  * AlanMainWindowConstructor
@@ -315,3 +316,4 @@ void AlanMainWindow::genericActionSlot() {
 LogSupplier *AlanMainWindow::getSupplier() const {
     return supplier;
 }
+std::vector<QString> AlanMultipleChoiceDialogState::testsrc;

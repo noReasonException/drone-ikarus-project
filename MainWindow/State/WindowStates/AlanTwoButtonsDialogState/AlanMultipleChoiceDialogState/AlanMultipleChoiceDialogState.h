@@ -8,33 +8,41 @@
 
 #include "../../../../InformationObject/Log/Log.h"
 #include "../AlanTwoButtonsDialogState.h"
-#include <iostream>
-
 
 class AlanMultipleChoiceDialogState: public AlanTwoButtonsDialogState{
 public:
-    AlanMultipleChoiceDialogState(){
-        if(State::settings.contains(createPath()+MULTIPLE_CHOICES_STATE)){
-
-            for (int i = 0; i < State::settings.beginReadArray(createPath()+MULTIPLE_CHOICES_STATE); ++i) {
-                multipleChoices.push_back(State::settings.value(MULTIPLE_STATE_AT_INDEX+QString(i)).toString());
-                std::cout<<i;
-            }
-            State::settings.endArray();
-        }
-    }
-
+    static std::vector<QString> testsrc;
     std::vector<QString> multipleChoices;
+    AlanMultipleChoiceDialogState() {
+        for (int i = 0; i < State::settings.beginReadArray(createPath() + MULTIPLE_CHOICES_STATE); ++i) {
+            State::settings.setArrayIndex(i);
+            multipleChoices.push_back(State::settings.value(MULTIPLE_STATE_AT_INDEX).toString());
+            std::cout << i;
+        }
+        State::settings.endArray();
+        /*for (QString &temp:testsrc){
+            multipleChoices.push_back(temp);
+        }*/
+    }
 
     virtual ~AlanMultipleChoiceDialogState() = default;
 
+
+
+
     void update() override {
+
+        State::settings.remove(createPath()+MULTIPLE_CHOICES_STATE);
         State::settings.beginWriteArray(createPath()+MULTIPLE_CHOICES_STATE);
         for (int i = 0; i < multipleChoices.size(); ++i) {
             State::settings.setArrayIndex(i);
-            State::settings.setValue(MULTIPLE_STATE_AT_INDEX+QString(i),multipleChoices[i]);
+            State::settings.setValue(MULTIPLE_STATE_AT_INDEX,multipleChoices[i]);
         }
         State::settings.endArray();
+        /*AlanMultipleChoiceDialogState::testsrc.clear();
+        for(QString&tmp:multipleChoices){
+            AlanMultipleChoiceDialogState::testsrc.push_back(tmp);
+        }*/
 
     }
 

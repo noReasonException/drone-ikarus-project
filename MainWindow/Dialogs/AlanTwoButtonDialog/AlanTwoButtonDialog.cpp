@@ -40,16 +40,14 @@ AlanTwoButtonsDialogState *AlanTwoButtonDialog::onRestoreState()  throw(std::exc
     return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
 }
 AlanTwoButtonsDialogState *AlanTwoButtonDialog::onSaveState() throw(std::exception){
-    return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
+    return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onSaveState());
 }
 void AlanTwoButtonDialog::onOkButtonSlot() {
     onSaveState();
-    getState()->update();
     close();
 }
 
 void AlanTwoButtonDialog::onCancelButtonSlot() {
     onSaveState();
-    getState()->update();
     close();
 }

@@ -10,10 +10,13 @@
 #include <QFileDialog>
 #include "MainWindow/AlanMainWindow.h"
 #include "MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h"
+#include "misc/states.h"
+#include "MainWindow/State/State.h"
 
 class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
+
     QApplication application(argc,argv);
     AbstractGuiFactory*assss=new AlanDefaultGuiFactory();
     assss->getMainWindow()->show();
