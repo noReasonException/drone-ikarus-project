@@ -42,7 +42,7 @@ protected:
 
 protected slots:
 
-    void onCancelButtonSlot() override ;
+
 
     virtual void onAdditionalButtonSlot()=0;
 

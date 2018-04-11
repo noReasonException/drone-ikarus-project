@@ -12,30 +12,42 @@
 #include "../AlanTwoButtonDialog.h"
 #include "../../../../misc/img/generic_paths.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
+#include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
+#include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:
     SetLatencyDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,LATENCY_DIALOG_TITLE,LATENCY_ICON){}
 
 private:
+    QLineEdit *input;
     QWidget *onGenerateConfigArea() throw (std::exception)override {
         QWidget*widget=new QWidget;
         QHBoxLayout*lay;
         widget->setLayout(lay=new QHBoxLayout);
-        lay->addWidget(new QLineEdit);
+        lay->addWidget(input=new QLineEdit);
         lay->addWidget(new QLabel("ms"));
         return widget;
 
-
     }
 
-    void onOkButtonSlot() override {
-        QMessageBox::warning(nullptr,"aaaaa","aa");
+protected:
+    SetLatencyDialogState *onRestoreState() throw(std::exception)override {
+        SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onRestoreState());
+        input->setText(thisState->latencyInput);
+        return thisState;
+    }
+    SetLatencyDialogState *onSaveState() throw(std::exception)override {
+        SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onRestoreState());
+        thisState->latencyInput=input->text();
+        return thisState;
     }
 
-    void onCancelButtonSlot() override {
-
+    bool generic_initializer() override {
+        return AlanTwoButtonDialog::generic_initializer()&&
+                onRestoreState();
     }
+
 };
 
 

@@ -16,9 +16,8 @@ public:
     virtual ~SetDroneAddrDialogState() = default;
 
     void update() override {
-        AlanMultipleChoiceDialogState::update();
-    }
 
+    }
     QString createPath() override {
         return AlanMultipleChoiceDialogState::createPath()+SET_DRONE_ADDR_DIALOG_STATE_PATH;
     }

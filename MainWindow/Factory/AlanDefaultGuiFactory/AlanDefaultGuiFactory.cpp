@@ -9,17 +9,19 @@
 #include "../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 #include "../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h"
 #include "../../Dialogs/ChildDialogs/AlanAboutDialog.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
     return new AlanMainWindow(this);
 }
 
 QDialog *AlanDefaultGuiFactory::getResolutionDialog() {
-    return (new SetResolutionDialog(new AlanTwoButtonsDialogState()))->prepare();
+    return (new SetResolutionDialog(new SetResolutionDialogState()))->prepare();
 }
 
 QDialog *AlanDefaultGuiFactory::getLatencyDialog() {
-    return (new SetLatencyDialog(new AlanTwoButtonsDialogState()))->prepare();
+    return (new SetLatencyDialog(new SetLatencyDialogState()))->prepare();
 }
 
 QDialog *AlanDefaultGuiFactory::getDataFileDialog() {

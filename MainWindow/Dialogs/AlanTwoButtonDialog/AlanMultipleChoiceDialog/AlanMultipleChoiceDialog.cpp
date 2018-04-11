@@ -33,12 +33,6 @@ QWidget *AlanMultipleChoiceDialog::onGenerateConfigArea()  throw (std::exception
 
 }
 
-void AlanMultipleChoiceDialog::onCancelButtonSlot() {
-    getState()->update();
-    close();
-
-}
-
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
     auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
 

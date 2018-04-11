@@ -23,11 +23,12 @@ protected:
     bool generic_initializer() override ;
     bool connectionInitializer();
     AlanTwoButtonsDialogState* onRestoreState() throw(std::exception) override;
+    AlanTwoButtonsDialogState* onSaveState() throw(std::exception) override;
     QWidget *onGenerateButtonsArea() throw(std::exception)override;
 
 protected slots:
-    virtual void onOkButtonSlot()=0;
-    virtual void onCancelButtonSlot()=0;
+    virtual void onOkButtonSlot();
+    virtual void onCancelButtonSlot();
 
 
 

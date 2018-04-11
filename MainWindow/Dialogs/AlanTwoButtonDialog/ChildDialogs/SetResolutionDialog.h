@@ -29,14 +29,6 @@ private:
 
     }
 
-    void onOkButtonSlot() override {
-        QMessageBox::warning(nullptr,"aaaaa","aa");
-    }
-
-    void onCancelButtonSlot() override {
-
-    }
-
 };
 
 

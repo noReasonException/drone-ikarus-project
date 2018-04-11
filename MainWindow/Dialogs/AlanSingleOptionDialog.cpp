@@ -17,7 +17,6 @@ AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState* Curr
         titleArea(title),
         iconArea(icon),
         state(Currstate){
-    getState()->setWrapperWidget(this);
 
 }
 /***
@@ -67,8 +66,12 @@ QWidget *AlanSingleOptionDialog::onGenerateRightMostArea() throw(std::exception)
 AlanSingleOptionDialogState * AlanSingleOptionDialog::onRestoreState() throw(std::exception) {
     return state;
 }
+AlanSingleOptionDialogState * AlanSingleOptionDialog::onSaveState() throw(std::exception) {
+    return state;
+}
 
 AlanSingleOptionDialogState *AlanSingleOptionDialog::getState() const {
+
     return state;
 }
 

@@ -31,4 +31,9 @@
      */
     #define INVALID_ARGS_IN_ACCEPT_LOG      "Invalid args in .accept()"
     #define INVALID_ARGS_IN_ACCEPT_DESC_LOG "accept() method called with InformationObject* instead of Log* Object"
+#define STATE_LOG_SUPPLIER "State Supplier"
+    #define INVALID_UPDATE_CALL_LOG         "Invalid .update() call"
+    #define INVALID_UPDATE_CALL_DESC_LOG     ".update() called without .setWrapperWidget() call first"
+
+
 #endif //IKARUS_PROJECT_LOGSUPPLIERS_H

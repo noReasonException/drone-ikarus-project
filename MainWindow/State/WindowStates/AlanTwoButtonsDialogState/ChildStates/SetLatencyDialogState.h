@@ -9,16 +9,24 @@
 #include "../AlanTwoButtonsDialogState.h"
 #include "../../../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h"
 
-class SetLatencyDialogState: AlanTwoButtonsDialogState{
+class SetLatencyDialogState: public AlanTwoButtonsDialogState{
 public:
-    SetLatencyDialogState() = default;
 
+    SetLatencyDialogState() {
+        if(State::settings.contains(createPath()+LATENCY_INPUT_QLINEEDIT_STATE)){
+            latencyInput=State::settings.value(createPath()+LATENCY_INPUT_QLINEEDIT_STATE).toString();
+            return ;
+        }
+        latencyInput="0";
+    }
+
+    QString latencyInput;
     virtual ~SetLatencyDialogState() = default;
 
-private:
     void update() override {
-        AlanTwoButtonsDialogState::update();
+        settings.setValue(createPath()+LATENCY_INPUT_QLINEEDIT_STATE,latencyInput);
     }
+private:
 
     QString createPath() override {
         return AlanTwoButtonsDialogState::createPath()+SET_LATENCY_DIALOG_STATE_PATH;

@@ -16,9 +16,8 @@ public:
     virtual ~SetServersAddrDialogState() = default;
 
     void update() override {
-        AlanMultipleChoiceDialogState::update();
-    }
 
+    }
     QString createPath() override {
         return AlanMultipleChoiceDialogState::createPath()+SET_SERVERS_ADDR_DIALOG_STATE_PATH;
     }

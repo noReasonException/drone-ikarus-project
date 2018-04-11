@@ -9,15 +9,13 @@
 #include "../AlanTwoButtonsDialogState.h"
 #include "../../../../Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 
-class SetResolutionDialogState: AlanTwoButtonsDialogState {
+class SetResolutionDialogState: public AlanTwoButtonsDialogState {
 public:
     SetResolutionDialogState() = default;
 
     virtual ~SetResolutionDialogState() = default;
 
-private:
     void update() override {
-        AlanTwoButtonsDialogState::update();
     }
 
     QString createPath() override {

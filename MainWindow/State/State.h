@@ -8,18 +8,17 @@
 #include <QSettings>
 #include <QString>
 #include <QtWidgets/QDialog>
+#include <iostream>
+#include "../Panels/StreamPanel/LogPanel/LogPanel.h"
+#include "../../misc/generic_text/AlanMainWindowMisc.h"
+#include "../../misc/Suppliers/LogSuppliers.h"
 
 class State {
 public:
-    State()= default;
-    virtual void update()=0;
     virtual QString createPath()=0;
+    virtual void update()=0;
 
-    State*setWrapperWidget(QWidget*ptr){wrapperWidget=ptr;return this;}
-    QWidget*getwrapperWidget(){ return wrapperWidget;}
-protected:
     static QSettings settings;
-    QWidget*wrapperWidget;
 
 };
 

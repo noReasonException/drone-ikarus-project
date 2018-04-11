@@ -22,12 +22,6 @@ protected:
         QMessageBox::warning(nullptr,"bbb","bbbbbbb");
 
     }
-
-    void onOkButtonSlot() override {
-        QMessageBox::warning(nullptr,"ccc","ccccc");
-
-
-    }
 };
 
 

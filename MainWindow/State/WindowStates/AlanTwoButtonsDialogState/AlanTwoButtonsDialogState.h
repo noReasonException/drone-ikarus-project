@@ -15,9 +15,6 @@ public:
     AlanTwoButtonsDialogState()= default;
     virtual ~AlanTwoButtonsDialogState()= default;
 
-    void update() override {
-        AlanSingleOptionDialogState::update();
-    }
 
     QString createPath() override {
         return AlanSingleOptionDialogState::createPath()+TWO_BUTTONS_DIALOG_STATE_PATH;

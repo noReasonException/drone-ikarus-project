@@ -36,6 +36,7 @@ protected:
     virtual QWidget*onGenerateLeftmostArea() throw (std::exception);
     virtual QWidget*onGenerateRightMostArea() throw (std::exception);
     virtual AlanSingleOptionDialogState * onRestoreState() throw(std::exception);
+    virtual AlanSingleOptionDialogState * onSaveState() throw(std::exception);
     AlanSingleOptionDialogState *getState() const;
 
 

@@ -16,7 +16,8 @@ public:
     AlanSingleOptionDialogState()= default;
     virtual ~AlanSingleOptionDialogState()= default;
 
-    void update() override{
+
+    void update() override {
 
     }
 

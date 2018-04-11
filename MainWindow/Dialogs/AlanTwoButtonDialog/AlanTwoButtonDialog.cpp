@@ -39,3 +39,17 @@ bool AlanTwoButtonDialog::generic_initializer() {
 AlanTwoButtonsDialogState *AlanTwoButtonDialog::onRestoreState()  throw(std::exception){
     return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
 }
+AlanTwoButtonsDialogState *AlanTwoButtonDialog::onSaveState() throw(std::exception){
+    return dynamic_cast<AlanTwoButtonsDialogState*>(AlanSingleOptionDialog::onRestoreState());
+}
+void AlanTwoButtonDialog::onOkButtonSlot() {
+    onSaveState();
+    getState()->update();
+    close();
+}
+
+void AlanTwoButtonDialog::onCancelButtonSlot() {
+    onSaveState();
+    getState()->update();
+    close();
+}
