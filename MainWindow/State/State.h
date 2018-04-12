@@ -15,10 +15,13 @@
 
 class State {
 public:
+    State();
     virtual QString createPath()=0;
     virtual void update()=0;
+    virtual void load()=0;
 
-    static QSettings settings;
+    QSettings *settings;
+
 
 };
 

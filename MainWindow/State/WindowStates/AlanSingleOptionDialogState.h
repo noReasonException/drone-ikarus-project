@@ -17,9 +17,9 @@ public:
     virtual ~AlanSingleOptionDialogState()= default;
 
 
-    void update() override {
+    void update() override { return;}
 
-    }
+    void load() override { return; }
 
     QString createPath() override{
         return SINGLE_OPTION_DIALOG_STATE_PATH;

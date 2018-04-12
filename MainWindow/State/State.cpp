@@ -4,4 +4,7 @@
 
 #include <QtCore/QSettings>
 #include "State.h"
-QSettings State::settings;
+
+State::State() : settings(new QSettings()) {
+
+}

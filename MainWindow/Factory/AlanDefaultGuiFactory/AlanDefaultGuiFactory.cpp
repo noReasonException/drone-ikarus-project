@@ -11,6 +11,8 @@
 #include "../../Dialogs/ChildDialogs/AlanAboutDialog.h"
 #include "../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
 #include "../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h"
+#include "../../State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h"
 
 QMainWindow *AlanDefaultGuiFactory::getMainWindow() {
     return new AlanMainWindow(this);
@@ -33,11 +35,11 @@ QDialog *AlanDefaultGuiFactory::getErrorFileDialog() {
 }
 
 QDialog *AlanDefaultGuiFactory::getDroneAddrDialog() {
-    return (new SetDroneAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
+    return (new SetDroneAddrDialog(new SetDroneAddrDialogState()))->prepare();
 }
 
 QDialog *AlanDefaultGuiFactory::getServerAddrDialog() {
-    return (new SetServersAddrDialog(new AlanMultipleChoiceDialogState()))->prepare();
+    return (new SetServersAddrDialog(new SetServersAddrDialogState()))->prepare();
 
 }
 

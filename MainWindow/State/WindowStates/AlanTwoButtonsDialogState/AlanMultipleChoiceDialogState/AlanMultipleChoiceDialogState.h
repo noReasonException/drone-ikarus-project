@@ -8,42 +8,37 @@
 
 #include "../../../../InformationObject/Log/Log.h"
 #include "../AlanTwoButtonsDialogState.h"
-
+#include <QSettings>
 class AlanMultipleChoiceDialogState: public AlanTwoButtonsDialogState{
 public:
-    static std::vector<QString> testsrc;
-    std::vector<QString> multipleChoices;
-    AlanMultipleChoiceDialogState() {
-        for (int i = 0; i < State::settings.beginReadArray(createPath() + MULTIPLE_CHOICES_STATE); ++i) {
-            State::settings.setArrayIndex(i);
-            multipleChoices.push_back(State::settings.value(MULTIPLE_STATE_AT_INDEX).toString());
-            std::cout << i;
-        }
-        State::settings.endArray();
-        /*for (QString &temp:testsrc){
-            multipleChoices.push_back(temp);
-        }*/
-    }
+    static std::vector<QString> staticchoices;
+    std::vector<QString> choices;
+    AlanMultipleChoiceDialogState()= default;
 
     virtual ~AlanMultipleChoiceDialogState() = default;
-
-
-
-
     void update() override {
+        AlanTwoButtonsDialogState::update();
+        std::cout<<createPath().toStdString()<<std::endl;
 
-        State::settings.remove(createPath()+MULTIPLE_CHOICES_STATE);
-        State::settings.beginWriteArray(createPath()+MULTIPLE_CHOICES_STATE);
-        for (int i = 0; i < multipleChoices.size(); ++i) {
-            State::settings.setArrayIndex(i);
-            State::settings.setValue(MULTIPLE_STATE_AT_INDEX,multipleChoices[i]);
+        settings->beginWriteArray(createPath()+MULTIPLE_CHOICES_STATE);
+        for (int i = 0; i < choices.size(); ++i) {
+            settings->setArrayIndex(i);
+            settings->setValue(MULTIPLE_STATE_AT_INDEX,choices[i]);
         }
-        State::settings.endArray();
-        /*AlanMultipleChoiceDialogState::testsrc.clear();
-        for(QString&tmp:multipleChoices){
-            AlanMultipleChoiceDialogState::testsrc.push_back(tmp);
-        }*/
+        settings->endArray();
+        settings->sync();
 
+    }
+
+    void load() override {
+        AlanTwoButtonsDialogState::load();
+        std::cout<<createPath().toStdString()<<std::endl;
+        for (int i = 0; i < settings->beginReadArray(createPath()+MULTIPLE_CHOICES_STATE); ++i) {
+            settings->setArrayIndex(i);
+            choices.push_back(settings->value(MULTIPLE_STATE_AT_INDEX).toString());
+        }
+        settings->endArray();
+        settings->sync();
     }
 
     QString createPath() override {

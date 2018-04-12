@@ -316,4 +316,4 @@ void AlanMainWindow::genericActionSlot() {
 LogSupplier *AlanMainWindow::getSupplier() const {
     return supplier;
 }
-std::vector<QString> AlanMultipleChoiceDialogState::testsrc;
+std::vector<QString> AlanMultipleChoiceDialogState::staticchoices;

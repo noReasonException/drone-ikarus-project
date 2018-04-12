@@ -46,25 +46,22 @@ bool AlanMultipleChoiceDialog::additionalButtonsInitializer() {
 
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onSaveState() throw(std::exception) {
     auto*state = dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onSaveState());
-    state->multipleChoices.clear();
+    state->choices.clear();
     for (int i = 0; i < listWidget->count(); ++i) {
-        state->multipleChoices.push_back(listWidget->item(i)->text());
-
+        state->choices.push_back(listWidget->item(i)->text());
+        std::cout<<"save to state\t\t "<<listWidget->item(i)->text().toStdString()<<std::endl;
     }
+
     state->update();
     return state;
 }
 
 AlanMultipleChoiceDialogState *AlanMultipleChoiceDialog::onRestoreState() throw(std::exception) {
     auto*state= dynamic_cast<AlanMultipleChoiceDialogState*>(AlanTwoButtonDialog::onRestoreState());
-    std::cout<<"onRestoreState() on "<<state<<std::endl;
-    for(QString &str:state->multipleChoices){
-
-        listWidget->addItem(str);
-        std::cout<<str.toStdString()<<std::endl;
-
+    state->load();
+    for(QString &ref:state->choices){
+        listWidget->addItem(ref);
     }
-
     return state;
 }
 

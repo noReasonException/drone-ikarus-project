@@ -37,6 +37,7 @@ protected:
     SetResolutionDialogState *onRestoreState() throw(std::exception)override {
             SetResolutionDialogState*thisState= dynamic_cast<SetResolutionDialogState*>
                                 (AlanTwoButtonDialog::onRestoreState());
+            thisState->load();
             width->setText(thisState->width);
             height->setText(thisState->height);
             return thisState;

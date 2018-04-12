@@ -11,13 +11,11 @@
 
 class SetServersAddrDialogState : public AlanMultipleChoiceDialogState{
 public:
-    SetServersAddrDialogState() = default;
+    SetServersAddrDialogState() :AlanMultipleChoiceDialogState(){}
 
     virtual ~SetServersAddrDialogState() = default;
 
-    void update() override {
 
-    }
     QString createPath() override {
         return AlanMultipleChoiceDialogState::createPath()+SET_SERVERS_ADDR_DIALOG_STATE_PATH;
     }

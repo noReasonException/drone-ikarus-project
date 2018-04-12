@@ -11,13 +11,12 @@
 
 class SetDroneAddrDialogState : public AlanMultipleChoiceDialogState{
 public:
-    SetDroneAddrDialogState() = default;
+    SetDroneAddrDialogState() :AlanMultipleChoiceDialogState(){}
+
 
     virtual ~SetDroneAddrDialogState() = default;
 
-    void update() override {
 
-    }
     QString createPath() override {
         return AlanMultipleChoiceDialogState::createPath()+SET_DRONE_ADDR_DIALOG_STATE_PATH;
     }

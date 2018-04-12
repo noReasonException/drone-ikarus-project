@@ -12,20 +12,25 @@
 class SetLatencyDialogState: public AlanTwoButtonsDialogState{
 public:
 
-    SetLatencyDialogState() {
-        if(State::settings.contains(createPath()+LATENCY_INPUT_QLINEEDIT_STATE)){
-            latencyInput=State::settings.value(createPath()+LATENCY_INPUT_QLINEEDIT_STATE).toString();
-            return ;
-        }
-        latencyInput="0";
-    }
+    SetLatencyDialogState() = default;
 
     QString latencyInput;
     virtual ~SetLatencyDialogState() = default;
 
     void update() override {
-        settings.setValue(createPath()+LATENCY_INPUT_QLINEEDIT_STATE,latencyInput);
+        AlanTwoButtonsDialogState::update();
+        settings->setValue(createPath()+LATENCY_INPUT_QLINEEDIT_STATE,latencyInput);
     }
+
+    void load() override {
+        AlanTwoButtonsDialogState::load();
+        if(settings->contains(createPath()+LATENCY_INPUT_QLINEEDIT_STATE)){
+            latencyInput=settings->value(createPath()+LATENCY_INPUT_QLINEEDIT_STATE).toString();
+            return ;
+        }
+        latencyInput="0";
+    }
+
 private:
 
     QString createPath() override {

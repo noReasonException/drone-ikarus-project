@@ -34,6 +34,7 @@ private:
 protected:
     SetLatencyDialogState *onRestoreState() throw(std::exception)override {
         SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onRestoreState());
+        thisState->load();
         input->setText(thisState->latencyInput);
 
         return thisState;

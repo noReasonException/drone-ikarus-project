@@ -18,6 +18,9 @@ using namespace std;
 int main(int argc,char *argv[]) {
 
     QApplication application(argc,argv);
+    application.setOrganizationName("noReasonException");
+    application.setOrganizationDomain("com.noreasonException");
+    application.setApplicationName("Alan");
     AbstractGuiFactory*assss=new AlanDefaultGuiFactory();
     assss->getMainWindow()->show();
 

@@ -11,23 +11,27 @@
 
 class SetResolutionDialogState: public AlanTwoButtonsDialogState {
 public:
-    SetResolutionDialogState(){
-        if(State::settings.contains(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE) &&
-                State::settings.contains(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE)){
-            width=State::settings.value(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE).toString();
-            height=State::settings.value(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE).toString();
-            return ;
-        }
-        width="0";
-        height="0";
-    };
+    SetResolutionDialogState()= default;
     QString width;
     QString height;
     virtual ~SetResolutionDialogState() = default;
 
     void update() override {
-        settings.setValue(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE,width);
-        settings.setValue(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE,height);
+        AlanTwoButtonsDialogState::update();
+        settings->setValue(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE,width);
+        settings->setValue(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE,height);
+    }
+
+    void load() override {
+        AlanTwoButtonsDialogState::load();
+        if(settings->contains(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE) &&
+           settings->contains(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE)){
+            width=settings->value(createPath()+RESOLUTION_WIDTH_QLINEEDIT_STATE).toString();
+            height=settings->value(createPath()+RESOLUTION_HEIGHT_QLINEEDIT_STATE).toString();
+            return ;
+        }
+        width="0";
+        height="0";
     }
 
     QString createPath() override {
