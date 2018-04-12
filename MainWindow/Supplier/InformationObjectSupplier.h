@@ -9,6 +9,15 @@
 #include <QString>
 #include "../Consumer/InformationObjectConsumer.h"
 #include <QWidget>
+
+/****
+ * Class InformationObjectSupplier
+ * this class represents any class that Supplies with data a InformationObjectConsumer-derived class
+ * this is a simple Consumer-Supplier pattern this class has a .send() method , who calls the
+ * corresponding .accept() method in the defined Consumer .
+ * Supplier may be any subsystem in this programm
+ * Consummer may be the LogPanel , or the DataPanel , e.t.c
+ */
 class InformationObjectConsumer;
 class InformationObject;
 class InformationObjectSupplier {
