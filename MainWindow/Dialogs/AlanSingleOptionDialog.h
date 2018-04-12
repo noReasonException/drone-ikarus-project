@@ -8,7 +8,10 @@
 
 #include <QDialog>
 #include "../State/WindowStates/AlanSingleOptionDialogState.h"
-
+/****
+ * class AlanSingleOptionDialog
+ * this class represents an absract Alan dialog
+ */
 class AlanSingleOptionDialog : public QDialog{
     Q_OBJECT
 public:

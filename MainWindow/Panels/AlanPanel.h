@@ -10,6 +10,14 @@
 #include <QObject>
 #include <QLabel>
 #include <QVBoxLayout>
+/****
+ * AlanPanel represents an abstract panel to exist in AlanMainWindow .
+ * Panels exists in two flavors , Stream panels ( a panel witch is a stream , that means that
+ * the data witch enter in panel , will never change , for example LogPanel or DataPanel)
+ * and StaticPanels (a panel that the view data is fixed and changes, for example a
+ * Telemetry panel (not implemented yet //TODO telemetry panel))
+ *
+ */
 class AlanPanel : public QWidget{
     Q_OBJECT;
 

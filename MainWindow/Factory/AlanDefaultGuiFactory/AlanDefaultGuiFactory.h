@@ -7,7 +7,9 @@
 
 
 #include "../AbstractGuiFactory.h"
-
+/****
+ * This is the default implementation of AbstractGuiFactory
+ */
 class AlanDefaultGuiFactory : public AbstractGuiFactory{
 
 public:

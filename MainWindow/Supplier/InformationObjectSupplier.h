@@ -17,6 +17,8 @@
  * corresponding .accept() method in the defined Consumer .
  * Supplier may be any subsystem in this programm
  * Consummer may be the LogPanel , or the DataPanel , e.t.c
+ *
+ * @note i have use fluent interface getters-setters, because...why not!?
  */
 class InformationObjectConsumer;
 class InformationObject;
@@ -26,6 +28,8 @@ public:
 
 
     const QString &getSupplierName() const;
+
+
     InformationObjectConsumer *getTargetConsumer() const;
 
 

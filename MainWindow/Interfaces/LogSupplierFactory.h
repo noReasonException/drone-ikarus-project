@@ -3,7 +3,9 @@
 //
 #include "InformationSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
-
+/****
+ * Represents a class that can provide a Supplier Object (To send @see Log objects)
+ */
 class LogSupplierFactory:public InformationSupplierFactory{
 public:
     virtual LogSupplier*createSupplier(QString supplierName)override=0;

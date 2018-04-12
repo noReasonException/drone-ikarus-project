@@ -10,7 +10,9 @@
 #include <QWindow>
 
 
-
+/****
+ * This is the interface for abstract gui factory of Alan
+ */
 class AbstractGuiFactory {
 public:
     virtual QMainWindow *getMainWindow()        =0;
