@@ -19,6 +19,5 @@ public:
     QString createPath() override {
         return AlanSingleOptionDialogState::createPath()+TWO_BUTTONS_DIALOG_STATE_PATH;
     }
-
 };
 #endif //IKARUS_PROJECT_ALANTWOBUTTONSDIALOGSTATE_H

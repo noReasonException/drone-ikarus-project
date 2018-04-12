@@ -133,7 +133,7 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
 
         tmp->addAction(initializeQAction(
                 new QAction(STOP_BROADCAST_ACTION_NAME),
-                NO_BROADCAST_ICON,
+                STOP_BROADCAST_ICON,
                 SLOT(genericActionSlot())));
     }
     retval->push_back(tmp=new QMenu(TOOLS_MENU_NAME));
@@ -209,14 +209,10 @@ std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() throw(std::exception)
     QAction*tmpact;
     auto *retval=new std::vector<QToolBar*> ();
     retval->push_back(tmp=new QToolBar("MediaBar"));
-    tmpact=tmp->addAction("Play");
-    tmpact->setIcon(QIcon("img/menu/play.png"));
-    tmpact=tmp->addAction("Stop");
-    tmpact->setIcon(QIcon("img/menu/stop.png"));
-    tmpact=tmp->addAction("BroadCast");
-    tmpact->setIcon(QIcon("img/menu/wifi.png"));
-    tmpact=tmp->addAction("StopBroadCast");
-    tmpact->setIcon(QIcon("img/menu/no-wifi.png"));
+    initializeQAction(tmp->addAction("Play"),STREAMING_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction("Stop"),STOP_STREAMING_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction("Streaming"),BROADCAST_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction("NO Streaming"),STOP_BROADCAST_ICON,SLOT(genericActionSlot()));
     return retval;
 
 }

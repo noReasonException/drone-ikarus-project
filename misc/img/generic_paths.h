@@ -20,5 +20,5 @@
 //Retransmit Menu
 #define SERVER_ADDR_ICON    "img/menu/location.png"
 #define BROADCAST_ICON      "img/menu/wifi.png"
-#define NO_BROADCAST_ICON   "img/menu/no-wifi.png"
+#define STOP_BROADCAST_ICON   "img/menu/no-wifi.png"
 #endif //IKARUS_PROJECT_ALANMAINWINDOWERRORS_H
