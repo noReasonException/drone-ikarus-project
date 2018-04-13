@@ -126,6 +126,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/OptionConsumer/OptionConsumer.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/OptionConsumer/OptionConsumer.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -310,9 +316,6 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/generic_paths.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/option_types.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/states.h">

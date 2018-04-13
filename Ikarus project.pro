@@ -22,12 +22,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += ./InformationObject/InformationObject.cpp \
-           ./InformationObject/Data/Data.cpp \
-           ./InformationObject/Log/Log.cpp \
-           ./main.cpp \
-           ./Supplier/InformationObjectSupplier.cpp \
+SOURCES += ./Supplier/InformationObjectSupplier.cpp \
            ./Supplier/LogSupplier/LogSupplier.cpp \
+           ./Supplier/OptionSupplier/OptionSupplier.cpp \
+           ./Consumer/LogConsumer/LogConsumer.cpp \
+           ./Consumer/InformationObjectConsumer.cpp \
+           ./main.cpp \
            ./MainWindow/AlanMainWindow.cpp \
            ./MainWindow/Factory/AbstractGuiFactory.cpp \
            ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
@@ -39,25 +39,18 @@ SOURCES += ./InformationObject/InformationObject.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            ./MainWindow/State/State.cpp \
-           ./Consumer/LogConsumer/LogConsumer.cpp \
-           ./Consumer/InformationObjectConsumer.cpp
+           ./InformationObject/InformationObject.cpp \
+           ./InformationObject/Data/Data.cpp \
+           ./InformationObject/Log/Log.cpp \
+           ./InformationObject/Option/Option.cpp \
 
-HEADERS +=  ./misc/states.h \
-            ./misc/version.h \
-            ./misc/Suppliers/LogSuppliers.h \
-            ./misc/img/generic_paths.h \
-            ./misc/generic_text/AlanMainWindowMisc.h \
-            ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h \
-            ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h \
-            ./Consumer/InformationObjectConsumer.h \
+
+
+
+
+
+HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./Consumer/LogConsumer/LogConsumer.h \
-            ./Interfaces/LogSupplierFactory.h \
-            ./Interfaces/StateRestorable.h \
-            ./Interfaces/InformationSupplierFactory.h \
-            ./Supplier/LogSupplier/LogSupplier.h \
-            ./Supplier/InformationObjectSupplier.h \
             ./MainWindow/Factory/AbstractGuiFactory.h \
             ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
             ./MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h \
@@ -83,7 +76,26 @@ HEADERS +=  ./misc/states.h \
             ./MainWindow/State/State.h \
             ./InformationObject/InformationObject.h \
             ./InformationObject/Data/Data.h \
-            ./InformationObject/Log/Log.h
+            ./InformationObject/Log/Log.h \
+            ./InformationObject/Option/ChildOptions/LatencyOption.h \
+            ./InformationObject/Option/ChildOptions/ResolutionOption.h \
+            ./InformationObject/Option/ChildOptions/ClientStatusOption.h \
+            ./InformationObject/Option/Option.h \
+            ./Interfaces/LogSupplierFactory.h \
+            ./Interfaces/StateRestorable.h \ \
+            ./Interfaces/InformationSupplierFactory.h \
+            ./misc/states.h \
+            ./misc/version.h \
+            ./misc/Suppliers/LogSuppliers.h \
+            ./misc/img/generic_paths.h \
+            ./misc/generic_text/AlanMainWindowMisc.h \
+            ./misc/generic_text/generic_dialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/errors/AlanMainWindowErrors.h \
+            ./misc/errors/AlanPanelErrors.h \
+            ./Supplier/LogSupplier/LogSupplier.h \
+            ./Supplier/OptionSupplier/OptionSupplier.h \
+            ./Supplier/InformationObjectSupplier.h
 
 
 

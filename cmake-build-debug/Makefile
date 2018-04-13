@@ -177,6 +177,33 @@ Consumer/LogConsumer/LogConsumer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s
 .PHONY : Consumer/LogConsumer/LogConsumer.cpp.s
 
+Consumer/OptionConsumer/OptionConsumer.o: Consumer/OptionConsumer/OptionConsumer.cpp.o
+
+.PHONY : Consumer/OptionConsumer/OptionConsumer.o
+
+# target to build an object file
+Consumer/OptionConsumer/OptionConsumer.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o
+.PHONY : Consumer/OptionConsumer/OptionConsumer.cpp.o
+
+Consumer/OptionConsumer/OptionConsumer.i: Consumer/OptionConsumer/OptionConsumer.cpp.i
+
+.PHONY : Consumer/OptionConsumer/OptionConsumer.i
+
+# target to preprocess a source file
+Consumer/OptionConsumer/OptionConsumer.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.i
+.PHONY : Consumer/OptionConsumer/OptionConsumer.cpp.i
+
+Consumer/OptionConsumer/OptionConsumer.s: Consumer/OptionConsumer/OptionConsumer.cpp.s
+
+.PHONY : Consumer/OptionConsumer/OptionConsumer.s
+
+# target to generate assembly for a file
+Consumer/OptionConsumer/OptionConsumer.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s
+.PHONY : Consumer/OptionConsumer/OptionConsumer.cpp.s
+
 InformationObject/Data/Data.o: InformationObject/Data/Data.cpp.o
 
 .PHONY : InformationObject/Data/Data.o
@@ -705,6 +732,9 @@ help:
 	@echo "... Consumer/LogConsumer/LogConsumer.o"
 	@echo "... Consumer/LogConsumer/LogConsumer.i"
 	@echo "... Consumer/LogConsumer/LogConsumer.s"
+	@echo "... Consumer/OptionConsumer/OptionConsumer.o"
+	@echo "... Consumer/OptionConsumer/OptionConsumer.i"
+	@echo "... Consumer/OptionConsumer/OptionConsumer.s"
 	@echo "... InformationObject/Data/Data.o"
 	@echo "... InformationObject/Data/Data.i"
 	@echo "... InformationObject/Data/Data.s"

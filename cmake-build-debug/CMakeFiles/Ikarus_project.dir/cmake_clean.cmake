@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
   "CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
   "CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )
