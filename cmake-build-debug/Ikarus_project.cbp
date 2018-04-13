@@ -171,6 +171,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Interfaces/LogSupplierFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Interfaces/OptionSupplierFactory.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Interfaces/StateRestorable.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
