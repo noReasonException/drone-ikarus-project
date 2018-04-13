@@ -7,7 +7,7 @@
 
 
 #include <QString>
-#include "../Consumer/InformationObjectConsumer.h"
+#include "../../Consumer/InformationObjectConsumer.h"
 #include <QWidget>
 
 /****

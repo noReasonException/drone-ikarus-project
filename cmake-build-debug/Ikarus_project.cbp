@@ -114,22 +114,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.cpp">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.cpp">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp">

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/InformationObjectConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/InformationObjectConsumer.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Consumer/LogConsumer/LogConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Consumer/LogConsumer/LogConsumer.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o"

@@ -13,7 +13,7 @@
 #include <QMutex>
 #include <QLabel>
 #include "../StreamPanel.h"
-#include "../../../Consumer/LogConsumer/LogConsumer.h"
+#include "../../../../Consumer/LogConsumer/LogConsumer.h"
 #include "../../../Interfaces/LogSupplierFactory.h"
 #include "../../../InformationObject/Log/Log.h"
 

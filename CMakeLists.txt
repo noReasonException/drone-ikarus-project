@@ -37,10 +37,10 @@ add_executable(Ikarus_project main.cpp
         MainWindow/InformationObject/Data/Data.h
         MainWindow/Interfaces/InformationSupplierFactory.h
         MainWindow/Interfaces/LogSupplierFactory.h
-        MainWindow/Consumer/InformationObjectConsumer.cpp
-        MainWindow/Consumer/InformationObjectConsumer.h
-        MainWindow/Consumer/LogConsumer/LogConsumer.cpp
-        MainWindow/Consumer/LogConsumer/LogConsumer.h
+        Consumer/InformationObjectConsumer.cpp
+        Consumer/InformationObjectConsumer.h
+        Consumer/LogConsumer/LogConsumer.cpp
+        Consumer/LogConsumer/LogConsumer.h
         MainWindow/Factory/AbstractGuiFactory.cpp
         MainWindow/Factory/AbstractGuiFactory.h
         MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp

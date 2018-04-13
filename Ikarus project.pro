@@ -35,15 +35,28 @@ SOURCES += ./main.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
-           ./MainWindow/Consumer/LogConsumer/LogConsumer.cpp \
-           ./MainWindow/Consumer/InformationObjectConsumer.cpp \
            ./MainWindow/State/State.cpp \
            ./MainWindow/InformationObject/InformationObject.cpp \
            ./MainWindow/InformationObject/Data/Data.cpp \
            ./MainWindow/InformationObject/Log/Log.cpp \
+           ./Consumer/LogConsumer/LogConsumer.cpp \
+           ./Consumer/InformationObjectConsumer.cpp \
 
 
-HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
+
+
+HEADERS +=  ./misc/states.h \
+            ./misc/version.h \
+            ./misc/Suppliers/LogSuppliers.h \
+            ./misc/img/generic_paths.h \
+            ./misc/generic_text/AlanMainWindowMisc.h \
+            ./misc/generic_text/generic_dialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/errors/AlanMainWindowErrors.h \
+            ./misc/errors/AlanPanelErrors.h \
+            ./Consumer/InformationObjectConsumer.h \
+            ./Consumer/LogConsumer/LogConsumer.h \
+            ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Interfaces/StateRestorable.h \
             ./MainWindow/Interfaces/InformationSupplierFactory.h \
             ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
@@ -63,8 +76,6 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
             ./MainWindow/Panels/StreamPanel/StreamPanel.h \
             ./MainWindow/AlanMainWindow.h \
-            ./MainWindow/Consumer/InformationObjectConsumer.h \
-            ./MainWindow/Consumer/LogConsumer/LogConsumer.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h \
@@ -76,14 +87,8 @@ HEADERS +=  ./MainWindow/Interfaces/LogSupplierFactory.h \
             ./MainWindow/InformationObject/InformationObject.h \
             ./MainWindow/InformationObject/Data/Data.h \
             ./MainWindow/InformationObject/Log/Log.h \
-            ./misc/version.h \
-            ./misc/Suppliers/LogSuppliers.h \
-            ./misc/img/generic_paths.h \
-            ./misc/generic_text/AlanMainWindowMisc.h \
-            ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h \
-            ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h \
+
+
 
 
 

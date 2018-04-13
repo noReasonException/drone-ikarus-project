@@ -21,8 +21,8 @@ int main(int argc,char *argv[]) {
     application.setOrganizationName("noReasonException");
     application.setOrganizationDomain("com.noreasonException");
     application.setApplicationName("Alan");
-    AbstractGuiFactory*assss=new AlanDefaultGuiFactory();
-    assss->getMainWindow()->show();
+    AbstractGuiFactory*a=new AlanDefaultGuiFactory();
+    a->getMainWindow()->show();
 
     return application.exec();
 }
