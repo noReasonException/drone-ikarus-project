@@ -15,7 +15,7 @@
 #include "../StreamPanel.h"
 #include "../../../../Consumer/LogConsumer/LogConsumer.h"
 #include "../../../Interfaces/LogSupplierFactory.h"
-#include "../../../InformationObject/Log/Log.h"
+#include "../../../../InformationObject/Log/Log.h"
 
 /****
  * class LogPanel

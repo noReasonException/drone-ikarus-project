@@ -29,12 +29,12 @@ add_executable(Ikarus_project main.cpp
         MainWindow/Supplier/LogSupplier/LogSupplier.cpp
         MainWindow/Supplier/LogSupplier/LogSupplier.h misc/errors/AlanPanelErrors.h
         misc/generic_text/generic_dialogs.h
-        MainWindow/InformationObject/InformationObject.cpp
-        MainWindow/InformationObject/InformationObject.h
-        MainWindow/InformationObject/Log/Log.cpp
-        MainWindow/InformationObject/Log/Log.h
-        MainWindow/InformationObject/Data/Data.cpp
-        MainWindow/InformationObject/Data/Data.h
+        InformationObject/InformationObject.cpp
+        InformationObject/InformationObject.h
+        InformationObject/Log/Log.cpp
+        InformationObject/Log/Log.h
+        InformationObject/Data/Data.cpp
+        InformationObject/Data/Data.h
         MainWindow/Interfaces/InformationSupplierFactory.h
         MainWindow/Interfaces/LogSupplierFactory.h
         Consumer/InformationObjectConsumer.cpp

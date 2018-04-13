@@ -22,7 +22,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += ./main.cpp \
+SOURCES += ./InformationObject/InformationObject.cpp \
+           ./InformationObject/Data/Data.cpp \
+           ./InformationObject/Log/Log.cpp \
+           ./main.cpp \
            ./MainWindow/Supplier/InformationObjectSupplier.cpp \
            ./MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
            ./MainWindow/AlanMainWindow.cpp \
@@ -36,14 +39,8 @@ SOURCES += ./main.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            ./MainWindow/State/State.cpp \
-           ./MainWindow/InformationObject/InformationObject.cpp \
-           ./MainWindow/InformationObject/Data/Data.cpp \
-           ./MainWindow/InformationObject/Log/Log.cpp \
            ./Consumer/LogConsumer/LogConsumer.cpp \
-           ./Consumer/InformationObjectConsumer.cpp \
-
-
-
+           ./Consumer/InformationObjectConsumer.cpp
 
 HEADERS +=  ./misc/states.h \
             ./misc/version.h \
@@ -84,9 +81,10 @@ HEADERS +=  ./misc/states.h \
             ./MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h \
             ./MainWindow/State/WindowStates/AlanSingleOptionDialogState.h \
             ./MainWindow/State/State.h \
-            ./MainWindow/InformationObject/InformationObject.h \
-            ./MainWindow/InformationObject/Data/Data.h \
-            ./MainWindow/InformationObject/Log/Log.h \
+            ./InformationObject/InformationObject.h \
+            ./InformationObject/Data/Data.h \
+            ./InformationObject/Log/Log.h
+
 
 
 

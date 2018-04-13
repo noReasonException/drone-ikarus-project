@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_INFORMATIONOBJECT_H
 
 
-#include "../../Consumer/InformationObjectConsumer.h"
+#include "../Consumer/InformationObjectConsumer.h"
 class InformationObjectSupplier;
 /*****
  * class InformationObject

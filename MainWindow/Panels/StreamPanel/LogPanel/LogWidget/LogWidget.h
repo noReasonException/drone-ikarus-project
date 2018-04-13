@@ -10,7 +10,7 @@
 #include <QObject>
 #include <QDialog>
 
-#include "../../../../InformationObject/Log/Log.h"
+#include "../../../../../InformationObject/Log/Log.h"
 
 class LogWidget :public QDialog {
 public:

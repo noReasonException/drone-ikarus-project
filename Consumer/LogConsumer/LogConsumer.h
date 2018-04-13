@@ -8,7 +8,7 @@
 
 #include <QArgument>
 #include "../../MainWindow/Supplier/InformationObjectSupplier.h"
-#include "../../MainWindow/InformationObject/InformationObject.h"
+#include "../../InformationObject/InformationObject.h"
 #include "../InformationObjectConsumer.h"
 
 class LogConsumer: public InformationObjectConsumer {

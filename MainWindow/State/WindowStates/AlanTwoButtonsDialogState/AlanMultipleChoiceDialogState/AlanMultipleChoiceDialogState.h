@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_ALANMULTIPLECHOICEDIALOGSTATE_H
 
 
-#include "../../../../InformationObject/Log/Log.h"
+#include "../../../../../InformationObject/Log/Log.h"
 #include "../AlanTwoButtonsDialogState.h"
 #include <QSettings>
 class AlanMultipleChoiceDialogState: public AlanTwoButtonsDialogState{

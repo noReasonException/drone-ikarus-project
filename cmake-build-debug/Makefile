@@ -177,6 +177,87 @@ Consumer/LogConsumer/LogConsumer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s
 .PHONY : Consumer/LogConsumer/LogConsumer.cpp.s
 
+InformationObject/Data/Data.o: InformationObject/Data/Data.cpp.o
+
+.PHONY : InformationObject/Data/Data.o
+
+# target to build an object file
+InformationObject/Data/Data.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o
+.PHONY : InformationObject/Data/Data.cpp.o
+
+InformationObject/Data/Data.i: InformationObject/Data/Data.cpp.i
+
+.PHONY : InformationObject/Data/Data.i
+
+# target to preprocess a source file
+InformationObject/Data/Data.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i
+.PHONY : InformationObject/Data/Data.cpp.i
+
+InformationObject/Data/Data.s: InformationObject/Data/Data.cpp.s
+
+.PHONY : InformationObject/Data/Data.s
+
+# target to generate assembly for a file
+InformationObject/Data/Data.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s
+.PHONY : InformationObject/Data/Data.cpp.s
+
+InformationObject/InformationObject.o: InformationObject/InformationObject.cpp.o
+
+.PHONY : InformationObject/InformationObject.o
+
+# target to build an object file
+InformationObject/InformationObject.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o
+.PHONY : InformationObject/InformationObject.cpp.o
+
+InformationObject/InformationObject.i: InformationObject/InformationObject.cpp.i
+
+.PHONY : InformationObject/InformationObject.i
+
+# target to preprocess a source file
+InformationObject/InformationObject.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i
+.PHONY : InformationObject/InformationObject.cpp.i
+
+InformationObject/InformationObject.s: InformationObject/InformationObject.cpp.s
+
+.PHONY : InformationObject/InformationObject.s
+
+# target to generate assembly for a file
+InformationObject/InformationObject.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s
+.PHONY : InformationObject/InformationObject.cpp.s
+
+InformationObject/Log/Log.o: InformationObject/Log/Log.cpp.o
+
+.PHONY : InformationObject/Log/Log.o
+
+# target to build an object file
+InformationObject/Log/Log.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o
+.PHONY : InformationObject/Log/Log.cpp.o
+
+InformationObject/Log/Log.i: InformationObject/Log/Log.cpp.i
+
+.PHONY : InformationObject/Log/Log.i
+
+# target to preprocess a source file
+InformationObject/Log/Log.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i
+.PHONY : InformationObject/Log/Log.cpp.i
+
+InformationObject/Log/Log.s: InformationObject/Log/Log.cpp.s
+
+.PHONY : InformationObject/Log/Log.s
+
+# target to generate assembly for a file
+InformationObject/Log/Log.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s
+.PHONY : InformationObject/Log/Log.cpp.s
+
 MainWindow/AlanMainWindow.o: MainWindow/AlanMainWindow.cpp.o
 
 .PHONY : MainWindow/AlanMainWindow.o
@@ -338,87 +419,6 @@ MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s: MainWindow/Fac
 MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
 .PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
-
-MainWindow/InformationObject/Data/Data.o: MainWindow/InformationObject/Data/Data.cpp.o
-
-.PHONY : MainWindow/InformationObject/Data/Data.o
-
-# target to build an object file
-MainWindow/InformationObject/Data/Data.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o
-.PHONY : MainWindow/InformationObject/Data/Data.cpp.o
-
-MainWindow/InformationObject/Data/Data.i: MainWindow/InformationObject/Data/Data.cpp.i
-
-.PHONY : MainWindow/InformationObject/Data/Data.i
-
-# target to preprocess a source file
-MainWindow/InformationObject/Data/Data.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.i
-.PHONY : MainWindow/InformationObject/Data/Data.cpp.i
-
-MainWindow/InformationObject/Data/Data.s: MainWindow/InformationObject/Data/Data.cpp.s
-
-.PHONY : MainWindow/InformationObject/Data/Data.s
-
-# target to generate assembly for a file
-MainWindow/InformationObject/Data/Data.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.s
-.PHONY : MainWindow/InformationObject/Data/Data.cpp.s
-
-MainWindow/InformationObject/InformationObject.o: MainWindow/InformationObject/InformationObject.cpp.o
-
-.PHONY : MainWindow/InformationObject/InformationObject.o
-
-# target to build an object file
-MainWindow/InformationObject/InformationObject.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o
-.PHONY : MainWindow/InformationObject/InformationObject.cpp.o
-
-MainWindow/InformationObject/InformationObject.i: MainWindow/InformationObject/InformationObject.cpp.i
-
-.PHONY : MainWindow/InformationObject/InformationObject.i
-
-# target to preprocess a source file
-MainWindow/InformationObject/InformationObject.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.i
-.PHONY : MainWindow/InformationObject/InformationObject.cpp.i
-
-MainWindow/InformationObject/InformationObject.s: MainWindow/InformationObject/InformationObject.cpp.s
-
-.PHONY : MainWindow/InformationObject/InformationObject.s
-
-# target to generate assembly for a file
-MainWindow/InformationObject/InformationObject.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.s
-.PHONY : MainWindow/InformationObject/InformationObject.cpp.s
-
-MainWindow/InformationObject/Log/Log.o: MainWindow/InformationObject/Log/Log.cpp.o
-
-.PHONY : MainWindow/InformationObject/Log/Log.o
-
-# target to build an object file
-MainWindow/InformationObject/Log/Log.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o
-.PHONY : MainWindow/InformationObject/Log/Log.cpp.o
-
-MainWindow/InformationObject/Log/Log.i: MainWindow/InformationObject/Log/Log.cpp.i
-
-.PHONY : MainWindow/InformationObject/Log/Log.i
-
-# target to preprocess a source file
-MainWindow/InformationObject/Log/Log.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.i
-.PHONY : MainWindow/InformationObject/Log/Log.cpp.i
-
-MainWindow/InformationObject/Log/Log.s: MainWindow/InformationObject/Log/Log.cpp.s
-
-.PHONY : MainWindow/InformationObject/Log/Log.s
-
-# target to generate assembly for a file
-MainWindow/InformationObject/Log/Log.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.s
-.PHONY : MainWindow/InformationObject/Log/Log.cpp.s
 
 MainWindow/Panels/AlanPanel.o: MainWindow/Panels/AlanPanel.cpp.o
 
@@ -651,6 +651,15 @@ help:
 	@echo "... Consumer/LogConsumer/LogConsumer.o"
 	@echo "... Consumer/LogConsumer/LogConsumer.i"
 	@echo "... Consumer/LogConsumer/LogConsumer.s"
+	@echo "... InformationObject/Data/Data.o"
+	@echo "... InformationObject/Data/Data.i"
+	@echo "... InformationObject/Data/Data.s"
+	@echo "... InformationObject/InformationObject.o"
+	@echo "... InformationObject/InformationObject.i"
+	@echo "... InformationObject/InformationObject.s"
+	@echo "... InformationObject/Log/Log.o"
+	@echo "... InformationObject/Log/Log.i"
+	@echo "... InformationObject/Log/Log.s"
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
@@ -669,15 +678,6 @@ help:
 	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o"
 	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i"
 	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s"
-	@echo "... MainWindow/InformationObject/Data/Data.o"
-	@echo "... MainWindow/InformationObject/Data/Data.i"
-	@echo "... MainWindow/InformationObject/Data/Data.s"
-	@echo "... MainWindow/InformationObject/InformationObject.o"
-	@echo "... MainWindow/InformationObject/InformationObject.i"
-	@echo "... MainWindow/InformationObject/InformationObject.s"
-	@echo "... MainWindow/InformationObject/Log/Log.o"
-	@echo "... MainWindow/InformationObject/Log/Log.i"
-	@echo "... MainWindow/InformationObject/Log/Log.s"
 	@echo "... MainWindow/Panels/AlanPanel.o"
 	@echo "... MainWindow/Panels/AlanPanel.i"
 	@echo "... MainWindow/Panels/AlanPanel.s"

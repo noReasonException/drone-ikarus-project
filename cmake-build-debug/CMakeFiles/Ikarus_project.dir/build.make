@@ -249,76 +249,76 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o.
 CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o: ../MainWindow/InformationObject/InformationObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/InformationObject.cpp"
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o: ../InformationObject/InformationObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/InformationObject.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.i
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/InformationObject.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.s
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.provides: CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o
-
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o: ../MainWindow/InformationObject/Log/Log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Log/Log.cpp"
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Log/Log.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.i
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Log/Log.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.s
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.requires:
-
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.requires
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.provides
-
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o
+CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o: ../MainWindow/InformationObject/Data/Data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp"
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o: ../InformationObject/Log/Log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.i
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/InformationObject/Data/Data.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.s
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.provides: CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o
+CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o
+
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o: ../InformationObject/Data/Data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp"
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires:
+
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.provides: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.provides
+
+CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o
 
 
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
@@ -523,9 +523,9 @@ Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o" \
@@ -546,9 +546,9 @@ Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o
@@ -580,9 +580,9 @@ CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/InformationObject.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Log/Log.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/InformationObject/Data/Data.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.requires

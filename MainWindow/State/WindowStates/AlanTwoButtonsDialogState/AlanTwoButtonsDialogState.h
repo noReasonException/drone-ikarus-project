@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_ALANTWOBUTTONSDIALOGSTATE_H
 
 
-#include "../../../InformationObject/Log/Log.h"
+#include "../../../../InformationObject/Log/Log.h"
 #include "../AlanSingleOptionDialogState.h"
 #include "../../../Supplier/LogSupplier/LogSupplier.h"
 
