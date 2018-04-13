@@ -13,7 +13,8 @@
 enum OptionType{
     ClientStatusOption,
     LatencyOption,
-    ResolutionOption
+    ResolutionOption,
+    WindowHandlerOption
 };
 class Option : public InformationObject{
 protected:

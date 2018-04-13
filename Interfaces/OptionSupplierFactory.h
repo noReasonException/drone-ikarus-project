@@ -9,7 +9,7 @@
 #include "InformationSupplierFactory.h"
 #include "../Supplier/OptionSupplier/OptionSupplier.h"
 
-class OptionSupplierFactory: InformationSupplierFactory {
+class OptionSupplierFactory: public InformationSupplierFactory {
 public:
     OptionSupplier *createSupplier(QString supplierName) override =0;
 

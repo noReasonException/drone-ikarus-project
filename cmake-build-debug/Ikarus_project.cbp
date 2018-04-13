@@ -159,6 +159,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/ResolutionOption.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/WindowHandleOption.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>

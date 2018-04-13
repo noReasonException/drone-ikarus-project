@@ -43,6 +43,9 @@ SOURCES += ./Supplier/InformationObjectSupplier.cpp \
            ./InformationObject/Data/Data.cpp \
            ./InformationObject/Log/Log.cpp \
            ./InformationObject/Option/Option.cpp \
+           ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp \
+           ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp \
+
 
 
 
@@ -95,7 +98,10 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./misc/errors/AlanPanelErrors.h \
             ./Supplier/LogSupplier/LogSupplier.h \
             ./Supplier/OptionSupplier/OptionSupplier.h \
-            ./Supplier/InformationObjectSupplier.h
+            ./Supplier/InformationObjectSupplier.h \
+            ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
+
 
 
 

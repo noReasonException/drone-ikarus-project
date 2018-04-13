@@ -1,6 +1,10 @@
+
 //
 // Created by noreasonexception on 4/4/18.
 //
+#ifndef IKARUS_PROJECT_LOGSUPPLIERFACTORY_H
+#define IKARUS_PROJECT_LOGSUPPLIERFACTORY_H
+
 #include "InformationSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
 /****
@@ -12,3 +16,5 @@ public:
 
 
 };
+
+#endif

@@ -8,7 +8,7 @@
 
 #include "../InformationObjectConsumer.h"
 
-class OptionConsumer: InformationObjectConsumer {
+class OptionConsumer: public InformationObjectConsumer {
 
 };
 
