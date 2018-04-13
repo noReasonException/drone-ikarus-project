@@ -26,8 +26,8 @@ SOURCES += ./InformationObject/InformationObject.cpp \
            ./InformationObject/Data/Data.cpp \
            ./InformationObject/Log/Log.cpp \
            ./main.cpp \
-           ./MainWindow/Supplier/InformationObjectSupplier.cpp \
-           ./MainWindow/Supplier/LogSupplier/LogSupplier.cpp \
+           ./Supplier/InformationObjectSupplier.cpp \
+           ./Supplier/LogSupplier/LogSupplier.cpp \
            ./MainWindow/AlanMainWindow.cpp \
            ./MainWindow/Factory/AbstractGuiFactory.cpp \
            ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
@@ -56,8 +56,8 @@ HEADERS +=  ./misc/states.h \
             ./Interfaces/LogSupplierFactory.h \
             ./Interfaces/StateRestorable.h \
             ./Interfaces/InformationSupplierFactory.h \
-            ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
-            ./MainWindow/Supplier/InformationObjectSupplier.h \
+            ./Supplier/LogSupplier/LogSupplier.h \
+            ./Supplier/InformationObjectSupplier.h \
             ./MainWindow/Factory/AbstractGuiFactory.h \
             ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
             ./MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h \

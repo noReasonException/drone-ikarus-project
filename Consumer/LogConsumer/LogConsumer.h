@@ -7,7 +7,7 @@
 
 
 #include <QArgument>
-#include "../../MainWindow/Supplier/InformationObjectSupplier.h"
+#include "../../Supplier/InformationObjectSupplier.h"
 #include "../../InformationObject/InformationObject.h"
 #include "../InformationObjectConsumer.h"
 

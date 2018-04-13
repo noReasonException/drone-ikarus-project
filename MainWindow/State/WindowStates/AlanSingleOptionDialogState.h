@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_ALANSINGLEOPTIONDIALOGSTATE_H
 
 #include "../State.h"
-#include "../../Supplier/LogSupplier/LogSupplier.h"
+#include "../../../Supplier/LogSupplier/LogSupplier.h"
 #include "../../Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../../../misc/states.h"
 #include <iostream>

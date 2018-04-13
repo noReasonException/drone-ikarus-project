@@ -24,10 +24,10 @@ add_executable(Ikarus_project main.cpp
         MainWindow/Panels/AlanPanel.h
         MainWindow/Panels/StreamPanel/StreamPanel.cpp
         MainWindow/Panels/StreamPanel/StreamPanel.h
-        MainWindow/Supplier/InformationObjectSupplier.cpp
-        MainWindow/Supplier/InformationObjectSupplier.h
-        MainWindow/Supplier/LogSupplier/LogSupplier.cpp
-        MainWindow/Supplier/LogSupplier/LogSupplier.h misc/errors/AlanPanelErrors.h
+        Supplier/InformationObjectSupplier.cpp
+        Supplier/InformationObjectSupplier.h
+        Supplier/LogSupplier/LogSupplier.cpp
+        Supplier/LogSupplier/LogSupplier.h misc/errors/AlanPanelErrors.h
         misc/generic_text/generic_dialogs.h
         InformationObject/InformationObject.cpp
         InformationObject/InformationObject.h

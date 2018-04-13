@@ -255,16 +255,16 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">

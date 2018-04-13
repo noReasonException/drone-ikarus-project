@@ -7,7 +7,7 @@
 
 
 #include <QObject>
-#include "../MainWindow/Supplier/InformationObjectSupplier.h"
+#include "../Supplier/InformationObjectSupplier.h"
 #include "../InformationObject/InformationObject.h"
 class InformationObjectSupplier;
 class InformationObject;

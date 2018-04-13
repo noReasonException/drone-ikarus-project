@@ -20,8 +20,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/InformationObjectSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o"
-  "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Supplier/LogSupplier/LogSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o"
+  "/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/main.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

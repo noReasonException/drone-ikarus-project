@@ -555,59 +555,59 @@ MainWindow/State/State.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s
 .PHONY : MainWindow/State/State.cpp.s
 
-MainWindow/Supplier/InformationObjectSupplier.o: MainWindow/Supplier/InformationObjectSupplier.cpp.o
+Supplier/InformationObjectSupplier.o: Supplier/InformationObjectSupplier.cpp.o
 
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.o
-
-# target to build an object file
-MainWindow/Supplier/InformationObjectSupplier.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.o
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.cpp.o
-
-MainWindow/Supplier/InformationObjectSupplier.i: MainWindow/Supplier/InformationObjectSupplier.cpp.i
-
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.i
-
-# target to preprocess a source file
-MainWindow/Supplier/InformationObjectSupplier.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.i
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.cpp.i
-
-MainWindow/Supplier/InformationObjectSupplier.s: MainWindow/Supplier/InformationObjectSupplier.cpp.s
-
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.s
-
-# target to generate assembly for a file
-MainWindow/Supplier/InformationObjectSupplier.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/InformationObjectSupplier.cpp.s
-.PHONY : MainWindow/Supplier/InformationObjectSupplier.cpp.s
-
-MainWindow/Supplier/LogSupplier/LogSupplier.o: MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o
-
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.o
+.PHONY : Supplier/InformationObjectSupplier.o
 
 # target to build an object file
-MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.cpp.o
+Supplier/InformationObjectSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o
+.PHONY : Supplier/InformationObjectSupplier.cpp.o
 
-MainWindow/Supplier/LogSupplier/LogSupplier.i: MainWindow/Supplier/LogSupplier/LogSupplier.cpp.i
+Supplier/InformationObjectSupplier.i: Supplier/InformationObjectSupplier.cpp.i
 
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.i
+.PHONY : Supplier/InformationObjectSupplier.i
 
 # target to preprocess a source file
-MainWindow/Supplier/LogSupplier/LogSupplier.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.i
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.cpp.i
+Supplier/InformationObjectSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.i
+.PHONY : Supplier/InformationObjectSupplier.cpp.i
 
-MainWindow/Supplier/LogSupplier/LogSupplier.s: MainWindow/Supplier/LogSupplier/LogSupplier.cpp.s
+Supplier/InformationObjectSupplier.s: Supplier/InformationObjectSupplier.cpp.s
 
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.s
+.PHONY : Supplier/InformationObjectSupplier.s
 
 # target to generate assembly for a file
-MainWindow/Supplier/LogSupplier/LogSupplier.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Supplier/LogSupplier/LogSupplier.cpp.s
-.PHONY : MainWindow/Supplier/LogSupplier/LogSupplier.cpp.s
+Supplier/InformationObjectSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.s
+.PHONY : Supplier/InformationObjectSupplier.cpp.s
+
+Supplier/LogSupplier/LogSupplier.o: Supplier/LogSupplier/LogSupplier.cpp.o
+
+.PHONY : Supplier/LogSupplier/LogSupplier.o
+
+# target to build an object file
+Supplier/LogSupplier/LogSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o
+.PHONY : Supplier/LogSupplier/LogSupplier.cpp.o
+
+Supplier/LogSupplier/LogSupplier.i: Supplier/LogSupplier/LogSupplier.cpp.i
+
+.PHONY : Supplier/LogSupplier/LogSupplier.i
+
+# target to preprocess a source file
+Supplier/LogSupplier/LogSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.i
+.PHONY : Supplier/LogSupplier/LogSupplier.cpp.i
+
+Supplier/LogSupplier/LogSupplier.s: Supplier/LogSupplier/LogSupplier.cpp.s
+
+.PHONY : Supplier/LogSupplier/LogSupplier.s
+
+# target to generate assembly for a file
+Supplier/LogSupplier/LogSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s
+.PHONY : Supplier/LogSupplier/LogSupplier.cpp.s
 
 main.o: main.cpp.o
 
@@ -693,12 +693,12 @@ help:
 	@echo "... MainWindow/State/State.o"
 	@echo "... MainWindow/State/State.i"
 	@echo "... MainWindow/State/State.s"
-	@echo "... MainWindow/Supplier/InformationObjectSupplier.o"
-	@echo "... MainWindow/Supplier/InformationObjectSupplier.i"
-	@echo "... MainWindow/Supplier/InformationObjectSupplier.s"
-	@echo "... MainWindow/Supplier/LogSupplier/LogSupplier.o"
-	@echo "... MainWindow/Supplier/LogSupplier/LogSupplier.i"
-	@echo "... MainWindow/Supplier/LogSupplier/LogSupplier.s"
+	@echo "... Supplier/InformationObjectSupplier.o"
+	@echo "... Supplier/InformationObjectSupplier.i"
+	@echo "... Supplier/InformationObjectSupplier.s"
+	@echo "... Supplier/LogSupplier/LogSupplier.o"
+	@echo "... Supplier/LogSupplier/LogSupplier.i"
+	@echo "... Supplier/LogSupplier/LogSupplier.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
