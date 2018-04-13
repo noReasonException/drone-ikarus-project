@@ -144,6 +144,21 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/ClientStatusOption.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/LatencyOption.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/ResolutionOption.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Interfaces/InformationSupplierFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -295,6 +310,9 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/generic_paths.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/option_types.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/states.h">

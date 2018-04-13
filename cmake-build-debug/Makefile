@@ -258,6 +258,33 @@ InformationObject/Log/Log.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s
 .PHONY : InformationObject/Log/Log.cpp.s
 
+InformationObject/Option/Option.o: InformationObject/Option/Option.cpp.o
+
+.PHONY : InformationObject/Option/Option.o
+
+# target to build an object file
+InformationObject/Option/Option.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o
+.PHONY : InformationObject/Option/Option.cpp.o
+
+InformationObject/Option/Option.i: InformationObject/Option/Option.cpp.i
+
+.PHONY : InformationObject/Option/Option.i
+
+# target to preprocess a source file
+InformationObject/Option/Option.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.i
+.PHONY : InformationObject/Option/Option.cpp.i
+
+InformationObject/Option/Option.s: InformationObject/Option/Option.cpp.s
+
+.PHONY : InformationObject/Option/Option.s
+
+# target to generate assembly for a file
+InformationObject/Option/Option.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.s
+.PHONY : InformationObject/Option/Option.cpp.s
+
 MainWindow/AlanMainWindow.o: MainWindow/AlanMainWindow.cpp.o
 
 .PHONY : MainWindow/AlanMainWindow.o
@@ -687,6 +714,9 @@ help:
 	@echo "... InformationObject/Log/Log.o"
 	@echo "... InformationObject/Log/Log.i"
 	@echo "... InformationObject/Log/Log.s"
+	@echo "... InformationObject/Option/Option.o"
+	@echo "... InformationObject/Option/Option.i"
+	@echo "... InformationObject/Option/Option.s"
 	@echo "... MainWindow/AlanMainWindow.o"
 	@echo "... MainWindow/AlanMainWindow.i"
 	@echo "... MainWindow/AlanMainWindow.s"
