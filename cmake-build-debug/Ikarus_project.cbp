@@ -267,6 +267,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>

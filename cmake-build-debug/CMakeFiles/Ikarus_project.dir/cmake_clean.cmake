@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )

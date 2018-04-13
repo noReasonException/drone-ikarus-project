@@ -609,6 +609,33 @@ Supplier/LogSupplier/LogSupplier.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s
 .PHONY : Supplier/LogSupplier/LogSupplier.cpp.s
 
+Supplier/OptionSupplier/OptionSupplier.o: Supplier/OptionSupplier/OptionSupplier.cpp.o
+
+.PHONY : Supplier/OptionSupplier/OptionSupplier.o
+
+# target to build an object file
+Supplier/OptionSupplier/OptionSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o
+.PHONY : Supplier/OptionSupplier/OptionSupplier.cpp.o
+
+Supplier/OptionSupplier/OptionSupplier.i: Supplier/OptionSupplier/OptionSupplier.cpp.i
+
+.PHONY : Supplier/OptionSupplier/OptionSupplier.i
+
+# target to preprocess a source file
+Supplier/OptionSupplier/OptionSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i
+.PHONY : Supplier/OptionSupplier/OptionSupplier.cpp.i
+
+Supplier/OptionSupplier/OptionSupplier.s: Supplier/OptionSupplier/OptionSupplier.cpp.s
+
+.PHONY : Supplier/OptionSupplier/OptionSupplier.s
+
+# target to generate assembly for a file
+Supplier/OptionSupplier/OptionSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s
+.PHONY : Supplier/OptionSupplier/OptionSupplier.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -699,6 +726,9 @@ help:
 	@echo "... Supplier/LogSupplier/LogSupplier.o"
 	@echo "... Supplier/LogSupplier/LogSupplier.i"
 	@echo "... Supplier/LogSupplier/LogSupplier.s"
+	@echo "... Supplier/OptionSupplier/OptionSupplier.o"
+	@echo "... Supplier/OptionSupplier/OptionSupplier.i"
+	@echo "... Supplier/OptionSupplier/OptionSupplier.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

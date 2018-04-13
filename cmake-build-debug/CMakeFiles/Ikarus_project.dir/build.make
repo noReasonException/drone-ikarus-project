@@ -513,6 +513,30 @@ CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o.provides: CMakeFiles/
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o
 
 
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o: ../Supplier/OptionSupplier/OptionSupplier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp"
+
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp" > CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i
+
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp" -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s
+
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.requires:
+
+.PHONY : CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.requires
+
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.provides: CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.provides
+
+CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o
+
+
 # Object files for target Ikarus_project
 Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/main.cpp.o" \
@@ -533,7 +557,8 @@ Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
+"CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
 
 # External object files for target Ikarus_project
 Ikarus_project_EXTERNAL_OBJECTS =
@@ -557,6 +582,7 @@ Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptio
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/build.make
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.9.1
@@ -564,7 +590,7 @@ Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1
 Ikarus_project: CMakeFiles/Ikarus_project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Ikarus_project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable Ikarus_project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ikarus_project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -591,6 +617,7 @@ CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.requires
 
 .PHONY : CMakeFiles/Ikarus_project.dir/requires
 
