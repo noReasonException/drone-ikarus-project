@@ -12,7 +12,7 @@
 #include "../misc/img/generic_paths.h"
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/generic_dialogs.h"
-#include "InformationObject/Log/Log.h"
+#include "../InformationObject/Log/Log.h"
 #include "../misc/generic_text/AlanMainWindowMisc.h"
 #include "../misc/Suppliers/LogSuppliers.h"
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"

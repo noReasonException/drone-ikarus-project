@@ -14,7 +14,6 @@
  */
 class LogSupplier : public InformationObjectSupplier {
 public:
-    friend class LogSupplierFactory;
     LogSupplier(const QString &supplierName,InformationObjectConsumer*target);
 
 };
