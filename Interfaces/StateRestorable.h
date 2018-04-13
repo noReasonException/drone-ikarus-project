@@ -5,7 +5,7 @@
 #ifndef IKARUS_PROJECT_STATERESTORABLE_H
 #define IKARUS_PROJECT_STATERESTORABLE_H
 
-#include "../State/State.h"
+#include "../MainWindow/State/State.h"
 
 class StateRestorable{
 public:

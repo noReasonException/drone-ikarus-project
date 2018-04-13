@@ -35,8 +35,8 @@ add_executable(Ikarus_project main.cpp
         InformationObject/Log/Log.h
         InformationObject/Data/Data.cpp
         InformationObject/Data/Data.h
-        MainWindow/Interfaces/InformationSupplierFactory.h
-        MainWindow/Interfaces/LogSupplierFactory.h
+        Interfaces/InformationSupplierFactory.h
+        Interfaces/LogSupplierFactory.h
         Consumer/InformationObjectConsumer.cpp
         Consumer/InformationObjectConsumer.h
         Consumer/LogConsumer/LogConsumer.cpp
@@ -47,7 +47,7 @@ add_executable(Ikarus_project main.cpp
         MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h
         MainWindow/State/State.h
         MainWindow/State/WindowStates/AlanSingleOptionDialogState.h
-        MainWindow/Interfaces/StateRestorable.h
+        Interfaces/StateRestorable.h
         MainWindow/Dialogs/AlanSingleOptionDialog.cpp
         MainWindow/Dialogs/AlanSingleOptionDialog.h
         MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp

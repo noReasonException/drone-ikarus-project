@@ -2,7 +2,7 @@
 // Created by noreasonexception on 4/4/18.
 //
 #include "InformationSupplierFactory.h"
-#include "../Supplier/LogSupplier/LogSupplier.h"
+#include "../MainWindow/Supplier/LogSupplier/LogSupplier.h"
 /****
  * Represents a class that can provide a Supplier Object (To send @see Log objects)
  */

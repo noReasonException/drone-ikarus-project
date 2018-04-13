@@ -53,9 +53,9 @@ HEADERS +=  ./misc/states.h \
             ./misc/errors/AlanPanelErrors.h \
             ./Consumer/InformationObjectConsumer.h \
             ./Consumer/LogConsumer/LogConsumer.h \
-            ./MainWindow/Interfaces/LogSupplierFactory.h \
-            ./MainWindow/Interfaces/StateRestorable.h \
-            ./MainWindow/Interfaces/InformationSupplierFactory.h \
+            ./Interfaces/LogSupplierFactory.h \
+            ./Interfaces/StateRestorable.h \
+            ./Interfaces/InformationSupplierFactory.h \
             ./MainWindow/Supplier/LogSupplier/LogSupplier.h \
             ./MainWindow/Supplier/InformationObjectSupplier.h \
             ./MainWindow/Factory/AbstractGuiFactory.h \

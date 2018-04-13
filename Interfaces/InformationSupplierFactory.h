@@ -3,7 +3,7 @@
 //
 
 #include <QString>
-#include "../Supplier/InformationObjectSupplier.h"
+#include "../MainWindow/Supplier/InformationObjectSupplier.h"
 /****
  * Represents a class that can provide a Supplier Object (To send @see InformationObject objects)
  */
