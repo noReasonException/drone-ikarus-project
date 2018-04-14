@@ -43,13 +43,15 @@ QDialog *AlanDefaultFactory::getErrorFileDialog() {
 }
 
 QDialog *AlanDefaultFactory::getDroneAddrDialog() {
-    return (new SetDroneAddrDialog(new SetDroneAddrDialogState()))->prepare();
+    return (new SetDroneAddrDialog(
+            new SetDroneAddrDialogState(),
+            getRTSPSubsystem()->createSupplier(SETDRONEADDR_OPTION_SUPPLIER)))->prepare();
 }
 
 QDialog *AlanDefaultFactory::getServerAddrDialog() {
     return (new SetServersAddrDialog(
             new SetServersAddrDialogState(),
-            getRTSPSubsystem()->createSupplier(SETDRONEADDR_OPTION_SUPPLIER)))->prepare();
+            getRTSPSubsystem()->createSupplier(SETSERVERADDR_OPTION_SUPPLIER)))->prepare();
 
 }
 

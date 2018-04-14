@@ -60,6 +60,10 @@ void AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
 }
 
 void AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *option) {
+    if(isNull(option,
+              INVALID_ARG_LOCATION_EXPECTED_LOG,
+              OPTION_CHANGED_SUCCESS_LOCATION_DESC_LOG))return;
+    //TODO implement
 
 
 }

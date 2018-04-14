@@ -8,11 +8,13 @@
 
 #include "../AlanMultipleChoiceDialog.h"
 #include "../../../../../misc/generic_text/AlanMainWindowDialogs.h"
-
+#include "../../../../../Supplier/OptionSupplier/OptionSupplier.h"
+#include "../../../../../InformationObject/Option/ChildOptions/LocationOption.h"
 class SetDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:
-    SetDroneAddrDialog(AlanMultipleChoiceDialogState *state) :
-            AlanMultipleChoiceDialog(state, DRONE_ADDR_DIALOG_TITLE, DRONE_ADDR_ICON, "+") {}
+    SetDroneAddrDialog(AlanMultipleChoiceDialogState *state,OptionSupplier*supplier) :
+            AlanMultipleChoiceDialog(state, DRONE_ADDR_DIALOG_TITLE, DRONE_ADDR_ICON, "+"),
+    rtspClientOptionSupplier(supplier){}
 
 protected:
     void onAdditionalButtonSlot() override {
@@ -21,13 +23,24 @@ protected:
     }
 
     void onClickedChoiceSlot(QListWidgetItem *item) override {
-        QMessageBox::warning(nullptr,"bbb","bbbbbbb");
+        getRtspClientOptionSupplier()->send(new class LocationOption(
+                listWidget->item(listWidget->currentRow())->text(),
+                time(NULL),
+                getRtspClientOptionSupplier()));
 
     }
 
     bool generic_initializer() override {
         return AlanMultipleChoiceDialog::generic_initializer()&&onRestoreState();
     }
+
+    OptionSupplier *getRtspClientOptionSupplier() const {
+        return rtspClientOptionSupplier;
+    }
+
+private:
+    OptionSupplier*rtspClientOptionSupplier;
+
 };
 
 
