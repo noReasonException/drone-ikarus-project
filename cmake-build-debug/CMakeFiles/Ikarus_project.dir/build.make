@@ -369,52 +369,52 @@ CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.provides: C
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o: ../MainWindow/Factory/AbstractGuiFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.cpp"
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o: ../Factory/AbstractFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.i
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp" > CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AbstractGuiFactory.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.s
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp" -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.provides: CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o
+CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o
 
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o: ../MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp"
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o: ../Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp"
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp" > CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp" -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.requires:
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.requires
+.PHONY : CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.requires
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.provides: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.provides.build
-.PHONY : CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.provides
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.provides: CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.provides
 
-CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
+CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.provides.build: CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
 
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
@@ -648,8 +648,8 @@ Ikarus_project_OBJECTS = \
 "CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o" \
-"CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o" \
+"CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o" \
 "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o" \
@@ -676,8 +676,8 @@ Ikarus_project: CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o
-Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o
+Ikarus_project: CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o
 Ikarus_project: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o
@@ -715,8 +715,8 @@ CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Informatio
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o.requires
-CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.requires
+CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o.requires
 CMakeFiles/Ikarus_project.dir/requires: CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o.requires

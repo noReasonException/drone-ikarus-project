@@ -21,7 +21,7 @@
  * AlanMainWindowConstructor
  *
  */
-AlanMainWindow::AlanMainWindow(AbstractGuiFactory*factory):parentFactory(factory) {
+AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
 
     isStreaming= false;
     isReTransmitting= false;

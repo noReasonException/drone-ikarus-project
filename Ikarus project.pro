@@ -29,8 +29,8 @@ SOURCES += ./Supplier/InformationObjectSupplier.cpp \
            ./Consumer/InformationObjectConsumer.cpp \
            ./main.cpp \
            ./MainWindow/AlanMainWindow.cpp \
-           ./MainWindow/Factory/AbstractGuiFactory.cpp \
-           ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp \
+           ./Factory/AbstractFactory.cpp \
+           ./Factory/AlanDefaultFactory/AlanDefaultFactory.cpp \
            ./MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp \
            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
@@ -54,8 +54,8 @@ SOURCES += ./Supplier/InformationObjectSupplier.cpp \
 
 HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./Consumer/LogConsumer/LogConsumer.h \
-            ./MainWindow/Factory/AbstractGuiFactory.h \
-            ./MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h \
+            ./Factory/AbstractFactory.h \
+            ./Factory/AlanDefaultFactory/AlanDefaultFactory.h \
             ./MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h \

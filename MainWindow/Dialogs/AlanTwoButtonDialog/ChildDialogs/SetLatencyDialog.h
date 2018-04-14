@@ -14,6 +14,7 @@
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
+#include "../../../../Supplier/OptionSupplier/OptionSupplier.h"
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:
@@ -21,6 +22,7 @@ public:
 
 private:
     QLineEdit *input;
+    OptionSupplier*rtspClientOptionSupplier;
     QWidget *onGenerateConfigArea() throw (std::exception)override {
         QWidget*widget=new QWidget;
         QHBoxLayout*lay;

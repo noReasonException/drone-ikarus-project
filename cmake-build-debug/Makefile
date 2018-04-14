@@ -204,6 +204,60 @@ Consumer/OptionConsumer/OptionConsumer.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s
 .PHONY : Consumer/OptionConsumer/OptionConsumer.cpp.s
 
+Factory/AbstractFactory.o: Factory/AbstractFactory.cpp.o
+
+.PHONY : Factory/AbstractFactory.o
+
+# target to build an object file
+Factory/AbstractFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o
+.PHONY : Factory/AbstractFactory.cpp.o
+
+Factory/AbstractFactory.i: Factory/AbstractFactory.cpp.i
+
+.PHONY : Factory/AbstractFactory.i
+
+# target to preprocess a source file
+Factory/AbstractFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i
+.PHONY : Factory/AbstractFactory.cpp.i
+
+Factory/AbstractFactory.s: Factory/AbstractFactory.cpp.s
+
+.PHONY : Factory/AbstractFactory.s
+
+# target to generate assembly for a file
+Factory/AbstractFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s
+.PHONY : Factory/AbstractFactory.cpp.s
+
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
+
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o
+
+# target to build an object file
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
+
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
+
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i
+
+# target to preprocess a source file
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
+
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
+
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s
+
+# target to generate assembly for a file
+Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
+.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
+
 InformationObject/Data/Data.o: InformationObject/Data/Data.cpp.o
 
 .PHONY : InformationObject/Data/Data.o
@@ -419,60 +473,6 @@ MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.s: MainWindow/Dialogs
 MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
 .PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
-
-MainWindow/Factory/AbstractGuiFactory.o: MainWindow/Factory/AbstractGuiFactory.cpp.o
-
-.PHONY : MainWindow/Factory/AbstractGuiFactory.o
-
-# target to build an object file
-MainWindow/Factory/AbstractGuiFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.o
-.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.o
-
-MainWindow/Factory/AbstractGuiFactory.i: MainWindow/Factory/AbstractGuiFactory.cpp.i
-
-.PHONY : MainWindow/Factory/AbstractGuiFactory.i
-
-# target to preprocess a source file
-MainWindow/Factory/AbstractGuiFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.i
-.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.i
-
-MainWindow/Factory/AbstractGuiFactory.s: MainWindow/Factory/AbstractGuiFactory.cpp.s
-
-.PHONY : MainWindow/Factory/AbstractGuiFactory.s
-
-# target to generate assembly for a file
-MainWindow/Factory/AbstractGuiFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AbstractGuiFactory.cpp.s
-.PHONY : MainWindow/Factory/AbstractGuiFactory.cpp.s
-
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
-
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o
-
-# target to build an object file
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.o
-
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
-
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i
-
-# target to preprocess a source file
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.i
-
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s: MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
-
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s
-
-# target to generate assembly for a file
-MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
-.PHONY : MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp.s
 
 MainWindow/Panels/AlanPanel.o: MainWindow/Panels/AlanPanel.cpp.o
 
@@ -789,6 +789,12 @@ help:
 	@echo "... Consumer/OptionConsumer/OptionConsumer.o"
 	@echo "... Consumer/OptionConsumer/OptionConsumer.i"
 	@echo "... Consumer/OptionConsumer/OptionConsumer.s"
+	@echo "... Factory/AbstractFactory.o"
+	@echo "... Factory/AbstractFactory.i"
+	@echo "... Factory/AbstractFactory.s"
+	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o"
+	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i"
+	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s"
 	@echo "... InformationObject/Data/Data.o"
 	@echo "... InformationObject/Data/Data.i"
 	@echo "... InformationObject/Data/Data.s"
@@ -813,12 +819,6 @@ help:
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.o"
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.i"
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.s"
-	@echo "... MainWindow/Factory/AbstractGuiFactory.o"
-	@echo "... MainWindow/Factory/AbstractGuiFactory.i"
-	@echo "... MainWindow/Factory/AbstractGuiFactory.s"
-	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.o"
-	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.i"
-	@echo "... MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.s"
 	@echo "... MainWindow/Panels/AlanPanel.o"
 	@echo "... MainWindow/Panels/AlanPanel.i"
 	@echo "... MainWindow/Panels/AlanPanel.s"

@@ -9,7 +9,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include "MainWindow/AlanMainWindow.h"
-#include "MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h"
+#include "Factory/AlanDefaultFactory/AlanDefaultFactory.h"
 #include "misc/states.h"
 #include "MainWindow/State/State.h"
 
@@ -21,7 +21,7 @@ int main(int argc,char *argv[]) {
     application.setOrganizationName("noReasonException");
     application.setOrganizationDomain("com.noreasonException");
     application.setApplicationName("Alan");
-    AbstractGuiFactory*a=new AlanDefaultGuiFactory();
+    AbstractFactory*a=new AlanDefaultFactory();
     a->getMainWindow()->show();
 
     return application.exec();

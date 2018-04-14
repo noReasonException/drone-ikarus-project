@@ -14,8 +14,8 @@
 #include "../misc/version.h"
 #include "../misc/generic_text/AlanMainWindowDialogs.h"
 #include "../misc/img/generic_paths.h"
-#include "Factory/AbstractGuiFactory.h"
-#include "Supplier/LogSupplier/LogSupplier.h"
+#include "../Factory/AbstractFactory.h"
+#include "../Supplier/LogSupplier/LogSupplier.h"
 
 /***
  * AlanMainWindow
@@ -26,12 +26,12 @@ class AlanMainWindow : public QMainWindow{
     Q_OBJECT
 
 public:
-    AlanMainWindow(AbstractGuiFactory*factory);
+    AlanMainWindow(AbstractFactory*factory);
 private :
     //Misc Members
     bool isStreaming;
     bool isReTransmitting;
-    AbstractGuiFactory*parentFactory;
+    AbstractFactory*parentFactory;
     LogSupplier*supplier;
 
 
@@ -49,7 +49,6 @@ private :
 
     //Misc
     QAction* initializeQAction(QAction *act,QString filename, const char*onClickSlot);
-    QMenu* initializeQMenu(QMenu *act, const char*onClickSlot);
 
 
 protected slots:

@@ -13,7 +13,7 @@
 /****
  * This is the interface for abstract gui factory of Alan
  */
-class AbstractGuiFactory {
+class AbstractFactory {
 public:
     virtual QMainWindow *getMainWindow()        =0;
     virtual QDialog     *getResolutionDialog()  =0;

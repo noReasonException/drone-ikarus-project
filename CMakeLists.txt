@@ -41,10 +41,10 @@ add_executable(Ikarus_project main.cpp
         Consumer/InformationObjectConsumer.h
         Consumer/LogConsumer/LogConsumer.cpp
         Consumer/LogConsumer/LogConsumer.h
-        MainWindow/Factory/AbstractGuiFactory.cpp
-        MainWindow/Factory/AbstractGuiFactory.h
-        MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.cpp
-        MainWindow/Factory/AlanDefaultGuiFactory/AlanDefaultGuiFactory.h
+        Factory/AbstractFactory.cpp
+        Factory/AbstractFactory.h
+        Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp
+        Factory/AlanDefaultGuiFactory/AlanDefaultFactory.h
         MainWindow/State/State.h
         MainWindow/State/WindowStates/AlanSingleOptionDialogState.h
         Interfaces/StateRestorable.h

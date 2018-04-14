@@ -6,11 +6,11 @@
 #define IKARUS_PROJECT_ALANDEFAULTGUIFACTORY_H
 
 
-#include "../AbstractGuiFactory.h"
+#include "../AbstractFactory.h"
 /****
  * This is the default implementation of AbstractGuiFactory
  */
-class AlanDefaultGuiFactory : public AbstractGuiFactory{
+class AlanDefaultFactory : public AbstractFactory{
 
 public:
     QMainWindow *getMainWindow() override;
