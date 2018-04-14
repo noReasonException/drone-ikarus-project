@@ -18,7 +18,11 @@
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:
-    SetLatencyDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,LATENCY_DIALOG_TITLE,LATENCY_ICON){}
+    SetLatencyDialog(AlanTwoButtonsDialogState *state,OptionSupplier *supplier):
+            AlanTwoButtonDialog(state,LATENCY_DIALOG_TITLE,LATENCY_ICON),
+            rtspClientOptionSupplier(supplier){
+        std::cout<<supplier<<"COME AS SUPPLER (LANCY)"<<std::endl;
+    }
 
 private:
     QLineEdit *input;
@@ -45,6 +49,11 @@ protected:
         SetLatencyDialogState*thisState= dynamic_cast<SetLatencyDialogState*>(AlanTwoButtonDialog::onSaveState());
         thisState->latencyInput=input->text();
         thisState->update();
+        getRtspClientOptionSupplier()->send(new class LatencyOption(
+                12,
+                time(NULL),
+                getRtspClientOptionSupplier()));
+        std::cout<<"onSaveState"<<std::endl;
         return thisState;
     }
 
@@ -53,6 +62,9 @@ protected:
                 onRestoreState();
     }
 
+    OptionSupplier *getRtspClientOptionSupplier() const {
+        return rtspClientOptionSupplier;
+    }
 };
 
 

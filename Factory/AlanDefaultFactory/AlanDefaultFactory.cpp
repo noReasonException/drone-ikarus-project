@@ -14,7 +14,9 @@
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h"
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h"
 #include "../../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h"
-
+AlanDefaultFactory::AlanDefaultFactory():rtspsystem(nullptr){
+    //std::cout<<"FACTORY CREATED WITH RTSPSYSTEM "<<rtspsystem<<std::endl;
+}
 QMainWindow *AlanDefaultFactory::getMainWindow() {
     return new AlanMainWindow(this);
 }
@@ -24,7 +26,10 @@ QDialog *AlanDefaultFactory::getResolutionDialog() {
 }
 
 QDialog *AlanDefaultFactory::getLatencyDialog() {
-    return (new SetLatencyDialog(new SetLatencyDialogState()))->prepare();
+
+    return (new SetLatencyDialog(
+            new SetLatencyDialogState(),
+            getRTSPSubsystem()->createSupplier("LatencyOptionSupplier")))->prepare();
 }
 
 QDialog *AlanDefaultFactory::getDataFileDialog() {
@@ -49,5 +54,8 @@ QDialog *AlanDefaultFactory::getAboutDialog() {
 }
 
 AbstractRTSPClientSubsystem *AlanDefaultFactory::getRTSPSubsystem() {
-    return new AlanDefaultRTSPClientSubsystem();
+    return rtspsystem!= nullptr?rtspsystem:(rtspsystem=new AlanDefaultRTSPClientSubsystem);
+
 }
+
+

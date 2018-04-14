@@ -27,7 +27,7 @@ public:
     OptionSupplier *createSupplier(QString supplierName) override;
 
 protected:
-    virtual void generic_initializer()=0;
+
     //@may be null
     virtual void onLatencySettingChangedHandler(class LatencyOption*)=0;
     virtual void onResolutionSettingChangedHandler(class ResolutionOption*)=0;

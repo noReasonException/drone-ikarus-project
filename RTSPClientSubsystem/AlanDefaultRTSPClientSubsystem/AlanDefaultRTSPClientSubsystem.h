@@ -15,7 +15,6 @@ class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
 private :
     QSettings settings;
     bool isNull(void *ptr, QString message);
-    bool logSuccess();
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
     ClientStatus currentStatus;
@@ -28,9 +27,6 @@ protected:
     void onClientStatusSettingChangedHandler(class ClientStatusOption *) override;
 
     void onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
-
-    void generic_initializer() override;
-
 };
 
 
