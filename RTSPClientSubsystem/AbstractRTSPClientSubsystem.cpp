@@ -15,7 +15,7 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
     Option*optionObject;
     if(!(optionObject= dynamic_cast<Option*>(info))){
         getSupplier()->send(new Log(
-                INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_LOG,
+                INVALID_ARG_IN_ACCEPT_LOG,
                 time(NULL),
                 INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
                 getSupplier()));
@@ -28,7 +28,7 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
         case OptionType::WindowHandlerOption:{onWindowHandlerSettingChangedHandler(dynamic_cast<class WindowHandleOption*>(optionObject));break;}
         default:{
             getSupplier()->send(new Log(
-                    UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_LOG,
+                    INVALID_ARG_IN_ACCEPT_LOG,
                     time(NULL),
                     UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
                     getSupplier()));

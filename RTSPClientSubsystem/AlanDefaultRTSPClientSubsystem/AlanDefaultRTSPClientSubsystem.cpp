@@ -4,29 +4,29 @@
 
 #include "AlanDefaultRTSPClientSubsystem.h"
 #include "../../InformationObject/Log/Log.h"
+#include "../../misc/Suppliers/LogSuppliers.h"
 
 void AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
-    if(isNullThenLog(option,"onLatencySettingChangedHandler() call , LatencyOption* object expected"))return;
+    if(isNullThenLog(option,INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LATENCY,option->getLatency());
     delete option;
 }
 
 void AlanDefaultRTSPClientSubsystem::onResolutionSettingChangedHandler(class ResolutionOption *option) {
-    if(isNullThenLog(option,"onResolutionSettingChangedHandler() call , ResolutionOption* object expected"))return;
+    if(isNullThenLog(option,INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG))return;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_WIDTH,option->getWidth());
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_HEIGHT,option->getHeight());
     delete option;
 }
 
 void AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class ClientStatusOption *option) {
-    if(isNullThenLog(option,"onClientStatusSettingChangedHandler() call , ClientStatusOption* object expected"))return;
+    if(isNullThenLog(option,INVALID_ARG_CLIENTSTATUSOPTION_EXPECTED_LOG))return;
     if(!isWindowHandleDefined){
         getSupplier()->send(new Log(
-                "test",
+                UNABLE_TO_CHANGE_STATE_LOG,
                 time(NULL),
-                "cant change state before set WindowHandler",
-                getSupplier()
-        ));
+                STATE_CHANGE_REQUEST_WITHOUT_WINDOWHANDLER_SET_DESC_LOG,
+                getSupplier()));
         return;
     }
     isClientStatusDefined=true;
@@ -36,12 +36,12 @@ void AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
 }
 
 void AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class WindowHandleOption *option) {
-    if(isNullThenLog(option,"onWindowHandlerSettingChangedHandler() call , WindowHandleOption* object expected"))return;
+    if(isNullThenLog(option,INVALID_ARG_WINDOWHANDLEOPTION_EXPECTED_LOG))return;
     if(isWindowHandleDefined){
         getSupplier()->send(new Log(
-                "test",
+                INVALID_HANDLER_CALL_LOG,
                 time(NULL),
-                "already defined handler",
+                WINDOWHANDLER_ALREADY_DEFINED_DESC_LOG,
                 getSupplier()
         ));
         return;
@@ -54,9 +54,10 @@ void AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
 bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,QString message) {
     if(!ptr){
         getSupplier()->send(new Log(
-                "test",
+                INVALID_ARG_IN_ACCEPT_LOG,
                 time(NULL),
-                "invalid object given ("+message+")",getSupplier()));
+                message,
+                getSupplier()));
         return true;
     }
     return false;

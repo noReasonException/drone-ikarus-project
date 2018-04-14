@@ -33,12 +33,16 @@
     #define INVALID_ARGS_IN_ACCEPT_DESC_LOG "accept() method called with InformationObject* instead of Log* Object"
 
     #define ABSTRACT_RTSP_CLIENT_SUPPLIER                                       "AbstractRtspClientSupplier"
-        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_LOG          "Invalid args in .accept() call"
-        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG     "In AbstractRTSPClientSubsystem , in .accept() call , object of type Option* excepted at arg 2 , but something else provided"
 
-        //-----//
-        #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_LOG      "Invalid arg in .accept() call"
-        #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG "Unknown object of type Option* is provided , AbstractRTSPClientSubsystem is unable to handle the request"
-
-
+        #define INVALID_ARG_IN_ACCEPT_LOG                                           "Invalid args in .accept() call"
+            #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG     "In AbstractRTSPClientSubsystem , in .accept() call , object of type Option* excepted at arg 2 , but something else provided"
+            #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG "Unknown object of type Option* is provided , AbstractRTSPClientSubsystem is unable to handle the request"
+            #define INVALID_ARG_LATENCYOPTION_EXPECTED_LOG      ".onLatencySettingChangedHandler() handler call , LatencyOption* object expected"
+            #define INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG   ".onResolutionSettingChangedHandler() handler call , ResolutionOption* object expected"
+            #define INVALID_ARG_CLIENTSTATUSOPTION_EXPECTED_LOG ".onClientStatusSettingChangedHandler() handlercall , ClientStatusOption* object expected"
+            #define INVALID_ARG_WINDOWHANDLEOPTION_EXPECTED_LOG ".onWindowHandlerSettingChangedHandler() handler call , WindowHandleOption* object expected"
+        #define INVALID_HANDLER_CALL_LOG "Invalid Handler Call"
+            #define WINDOWHANDLER_ALREADY_DEFINED_DESC_LOG ".onWindowHandlerSettingChangedHandler() can called only once,AbstractRTSPClientSubsystem will ignore the request"
+        #define UNABLE_TO_CHANGE_STATE_LOG "Unable to change state"
+            #define STATE_CHANGE_REQUEST_WITHOUT_WINDOWHANDLER_SET_DESC_LOG "AbstractRTSPClientSubsystem Cant change his state because the WindowHandle is not set,request will ignored"
 #endif //IKARUS_PROJECT_LOGSUPPLIERS_H
