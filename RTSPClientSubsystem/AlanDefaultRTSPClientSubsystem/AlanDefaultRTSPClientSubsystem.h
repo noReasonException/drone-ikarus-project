@@ -29,6 +29,8 @@ protected:
 
     void onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
 
+    void generic_initializer() override;
+
 };
 
 

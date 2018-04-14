@@ -41,12 +41,6 @@ private :
     bool initializeMenu();                  ///@return true if the menu initialization process was successful
     bool initializeToolBar();               ///@return true if ToolBar initialization process was successful
     bool initializeCentralWidget();
-    bool initializeTelemetryPanel();        ///@return true if Telemetry panel initialization process was successful
-    bool initializeDataPanel();             ///@return true if data panel initialization process was successful
-    bool initializeControlPanel();          ///@return true if control panel initialization process was successful
-    bool initializeLogPanel();              ///@return true if log panel initialization process was successful
-    bool initializeStatusBar();             ///@return true if status bas initialization process was successful
-
     //Misc
     QAction* initializeQAction(QAction *act,QString filename, const char*onClickSlot);
 
@@ -62,13 +56,6 @@ protected:
     QWidget*                            onGenerateLeftLayout()throw(std::exception);
     QWidget*                            onGenerateVideoArea()throw(std::exception);
     QWidget*                            onGenerateRightLayout()throw(std::exception);
-
-
-    QWidget*                            onGenerateTelemetryPanel();
-    QWidget*                            onGenerateDataPanel();
-    QWidget*                            onGenerateControlPanel();
-    QWidget*                            onGenerateLogPanel();
-    QWidget*                            onGenerateStatusBar();
 
     LogSupplier *getSupplier() const;
 

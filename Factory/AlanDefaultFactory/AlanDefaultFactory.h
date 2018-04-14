@@ -28,6 +28,8 @@ public:
     QDialog *getServerAddrDialog() override;
 
     QDialog *getAboutDialog() override;
+
+    AbstractRTSPClientSubsystem *getRTSPSubsystem() override;
 };
 
 

@@ -68,3 +68,7 @@ bool AlanDefaultRTSPClientSubsystem::isNull(void *ptr, QString message) {
     return false;
 }
 
+void AlanDefaultRTSPClientSubsystem::generic_initializer() {
+
+}
+

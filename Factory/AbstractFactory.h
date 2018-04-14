@@ -8,6 +8,7 @@
 
 #include <QMainWindow>
 #include <QWindow>
+#include "../RTSPClientSubsystem/AbstractRTSPClientSubsystem.h"
 
 
 /****
@@ -15,14 +16,15 @@
  */
 class AbstractFactory {
 public:
-    virtual QMainWindow *getMainWindow()        =0;
-    virtual QDialog     *getResolutionDialog()  =0;
-    virtual QDialog     *getLatencyDialog()     =0;
-    virtual QDialog     *getDataFileDialog()    =0;
-    virtual QDialog     *getErrorFileDialog()   =0;
-    virtual QDialog     *getDroneAddrDialog()   =0;
-    virtual QDialog     *getServerAddrDialog()  =0;
-    virtual QDialog     *getAboutDialog()       =0;
+    virtual AbstractRTSPClientSubsystem *getRTSPSubsystem()     =0;
+    virtual QMainWindow                 *getMainWindow()        =0;
+    virtual QDialog                     *getResolutionDialog()  =0;
+    virtual QDialog                     *getLatencyDialog()     =0;
+    virtual QDialog                     *getDataFileDialog()    =0;
+    virtual QDialog                     *getErrorFileDialog()   =0;
+    virtual QDialog                     *getDroneAddrDialog()   =0;
+    virtual QDialog                     *getServerAddrDialog()  =0;
+    virtual QDialog                     *getAboutDialog()       =0;
 };
 
 
