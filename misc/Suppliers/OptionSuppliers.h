@@ -4,8 +4,9 @@
 
 #ifndef IKARUS_PROJECT_OPTIONSUPPLIERS_H
 #define IKARUS_PROJECT_OPTIONSUPPLIERS_H
-#define LATENCY_OPTION_SUPPLIER "LatencyOptionSupplier"
-#define RESOLUTION_OPTION_SUPPLIER "ResolutionOptionSupplier"
-#define SETDRONEADDR_OPTION_SUPPLIER "SetDroneAddrOptionSupplier"
-#define SETSERVERADDR_OPTION_SUPPLIER "SetDroneAddrOptionSupplier"
+#define LATENCY_OPTION_SUPPLIER         "LatencyOptionSupplier"
+#define RESOLUTION_OPTION_SUPPLIER      "ResolutionOptionSupplier"
+#define SETDRONEADDR_OPTION_SUPPLIER    "SetDroneAddrOptionSupplier"
+#define SETSERVERADDR_OPTION_SUPPLIER   "SetDroneAddrOptionSupplier"
+#define MAINWINDOW_OPTION_SUPPLIER      "SetDroneAddrOptionSupplier"
 #endif //IKARUS_PROJECT_OPTIONSUPPLIERS_H

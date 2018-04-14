@@ -16,6 +16,7 @@
 #include "../misc/generic_text/AlanMainWindowMisc.h"
 #include "../misc/Suppliers/LogSuppliers.h"
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
+#include "../misc/Suppliers/OptionSuppliers.h"
 
 /***
  * AlanMainWindowConstructor
@@ -26,6 +27,7 @@ AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
     isStreaming= false;
     isReTransmitting= false;
     supplier=LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
+    rtspClientOptionSupplier=factory->getRTSPSubsystem()->createSupplier(MAINWINDOW_OPTION_SUPPLIER);
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
@@ -304,8 +306,14 @@ void AlanMainWindow::genericActionSlot() {
 
     if(preparedDialog)preparedDialog->show();
     else {
-    /*    getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
-        operationNotSupportedSlot();*/
+        if(!strcmp(cstr,START_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
+        else if(!strcmp(cstr,STOP_STREAMING_ICON))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_STOP);
+        else{
+            /*getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
+            operationNotSupportedSlot();*/
+            std::cout<<"OK";
+        }
+
 
     }
 
