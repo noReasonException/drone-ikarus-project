@@ -12,9 +12,8 @@ class WindowHandleOption: public Option {
 public:
     WindowHandleOption(int windowHandleValue,long timestamp, InformationObjectSupplier *source):
             Option(OptionType::WindowHandlerOption,timestamp,source),
-            windowHanle(windowHandleValue){
-
-    }
+            windowHanle(windowHandleValue){}
+    ~WindowHandleOption()override {}
 
 private:
     int windowHanle;

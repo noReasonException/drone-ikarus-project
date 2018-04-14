@@ -23,6 +23,7 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
     }
     switch(optionObject->getType()){
         case OptionType::LatencyOption:      {onLatencySettingChangedHandler(dynamic_cast<class LatencyOption*>(optionObject));break;}
+        case OptionType::LocationOption:     {onLocationSettingChangedHandler(dynamic_cast<class LocationOption *>(info));}
         case OptionType::ResolutionOption:   {onResolutionSettingChangedHandler(dynamic_cast<class ResolutionOption*>(optionObject));break;}
         case OptionType::ClientStatusOption: {onClientStatusSettingChangedHandler(dynamic_cast<class ClientStatusOption*>(optionObject));break;}
         case OptionType::WindowHandlerOption:{onWindowHandlerSettingChangedHandler(dynamic_cast<class WindowHandleOption*>(optionObject));break;}

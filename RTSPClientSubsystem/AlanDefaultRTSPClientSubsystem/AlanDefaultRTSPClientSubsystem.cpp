@@ -59,7 +59,14 @@ void AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
     delete option;
 }
 
-bool AlanDefaultRTSPClientSubsystem::isNull(void *ptr, const QString &onErrorMessage,const QString &onSuccessMessage) {
+void AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *option) {
+
+
+}
+
+bool AlanDefaultRTSPClientSubsystem::isNull(void *ptr,
+                                            const QString &onErrorMessage,
+                                            const QString &onSuccessMessage) {
     if(!ptr){
         getSupplier()->send(new Log(
                 INVALID_ARG_IN_ACCEPT_LOG,

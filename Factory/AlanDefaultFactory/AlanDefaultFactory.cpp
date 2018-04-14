@@ -47,7 +47,9 @@ QDialog *AlanDefaultFactory::getDroneAddrDialog() {
 }
 
 QDialog *AlanDefaultFactory::getServerAddrDialog() {
-    return (new SetServersAddrDialog(new SetServersAddrDialogState()))->prepare();
+    return (new SetServersAddrDialog(
+            new SetServersAddrDialogState(),
+            getRTSPSubsystem()->createSupplier(SETDRONEADDR_OPTION_SUPPLIER)))->prepare();
 
 }
 

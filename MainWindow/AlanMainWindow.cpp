@@ -124,17 +124,17 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
         tmp->addAction(initializeQAction(
                 new QAction(SERVER_ADDR_ACTION_NAME),
                 SERVER_ADDR_ICON,
-                SLOT(genericActionSlot())));
+                SLOT(operationNotSupportedSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(START_BROADCAST_ACTION_NAME),
                 BROADCAST_ICON,
-                SLOT(genericActionSlot())));
+                SLOT(operationNotSupportedSlot())));
 
         tmp->addAction(initializeQAction(
                 new QAction(STOP_BROADCAST_ACTION_NAME),
                 STOP_BROADCAST_ICON,
-                SLOT(genericActionSlot())));
+                SLOT(operationNotSupportedSlot())));
     }
     retval->push_back(tmp=new QMenu(TOOLS_MENU_NAME));
     retval->push_back(tmp=new QMenu(HELP_MENU_NAME));

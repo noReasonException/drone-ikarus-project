@@ -14,11 +14,13 @@ enum OptionType{
     ClientStatusOption,
     LatencyOption,
     ResolutionOption,
-    WindowHandlerOption
+    WindowHandlerOption,
+    LocationOption
 };
 class Option : public InformationObject{
 protected:
     Option(OptionType optiontype,long timestamp, InformationObjectSupplier *source);
+    virtual ~Option(){}
 
 public:
     OptionType getType() const;

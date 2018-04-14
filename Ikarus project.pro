@@ -81,7 +81,9 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./InformationObject/Data/Data.h \
             ./InformationObject/Log/Log.h \
             ./InformationObject/Option/ChildOptions/LatencyOption.h \
+            ./InformationObject/Option/ChildOptions/LocationOption.h \
             ./InformationObject/Option/ChildOptions/ResolutionOption.h \
+            ./InformationObject/Option/ChildOptions/WindowHandleOption.h \
             ./InformationObject/Option/ChildOptions/ClientStatusOption.h \
             ./InformationObject/Option/Option.h \
             ./Interfaces/LogSupplierFactory.h \

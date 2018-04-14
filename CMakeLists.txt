@@ -87,5 +87,5 @@ add_executable(Ikarus_project main.cpp
         ./Supplier/InformationObjectSupplier.cpp
         ./Supplier/LogSupplier/LogSupplier.cpp
         ./Supplier/OptionSupplier/OptionSupplier.cpp
-        )
+        InformationObject/Option/ChildOptions/LocationOption.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

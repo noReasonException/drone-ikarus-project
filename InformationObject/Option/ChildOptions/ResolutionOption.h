@@ -16,6 +16,7 @@ public:
                    source),
             width(width_value),
             height(height_value){}
+    ~ResolutionOption() override {}
 
 private:
     int width,height;

@@ -22,6 +22,7 @@ public:
                    timestamp,
                    source),
             status(status_value){}
+    ~ClientStatusOption()override {}
 
 private:
     ClientStatus status;

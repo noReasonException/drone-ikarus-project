@@ -10,6 +10,7 @@
 #include "../Interfaces/OptionSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
 #include "../InformationObject/Option/ChildOptions/LatencyOption.h"
+#include "../InformationObject/Option/ChildOptions/LocationOption.h"
 #include "../InformationObject/Option/ChildOptions/ResolutionOption.h"
 #include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
 #include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
@@ -33,6 +34,7 @@ protected:
     virtual void onResolutionSettingChangedHandler(class ResolutionOption*)=0;
     virtual void onClientStatusSettingChangedHandler(class ClientStatusOption*)=0;
     virtual void onWindowHandlerSettingChangedHandler(class WindowHandleOption*)=0;
+    virtual void onLocationSettingChangedHandler(class LocationOption*)=0;
     LogSupplier *getSupplier() const;
 
 

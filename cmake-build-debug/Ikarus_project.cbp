@@ -168,6 +168,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/LatencyOption.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/LocationOption.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/ChildOptions/ResolutionOption.h">
 			<Option target="Ikarus_project"/>
 		</Unit>

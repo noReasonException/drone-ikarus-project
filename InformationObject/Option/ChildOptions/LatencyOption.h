@@ -13,6 +13,7 @@ public:
     LatencyOption(int latency_value,long timestamp,InformationObjectSupplier *source) :
             Option(OptionType::LatencyOption, timestamp,source),
             latency(latency_value){}
+    ~LatencyOption()override {}
 
 private:
     int latency;

@@ -8,22 +8,31 @@
 
 #include "../../../../State/WindowStates/AlanSingleOptionDialogState.h"
 #include "../AlanMultipleChoiceDialog.h"
-
+class OptionSupplier;
 class SetServersAddrDialog : public AlanMultipleChoiceDialog{
+private:
+    OptionSupplier*rtspClientOptionSupplier;
+
 public:
-    SetServersAddrDialog(AlanMultipleChoiceDialogState *state) : AlanMultipleChoiceDialog(state, SERVER_ADDR_DIALOG_TITLE, SERVER_ADDR_ICON, "+") {
+    SetServersAddrDialog(AlanMultipleChoiceDialogState *state,OptionSupplier*supplier) :
+            AlanMultipleChoiceDialog(state, SERVER_ADDR_DIALOG_TITLE, SERVER_ADDR_ICON, "+"),
+            rtspClientOptionSupplier(supplier){
 
     }
 
 
 protected:
+    OptionSupplier *getRtspClientOptionSupplier() const {
+        return rtspClientOptionSupplier;
+    }
+
     void onAdditionalButtonSlot() override {
         listWidget->addItem(lineEdit->text());
         onSaveState();
     }
 
     void onClickedChoiceSlot(QListWidgetItem *item) override {
-        QMessageBox::warning(nullptr,"bbb2","bbbbbbb2");
+
 
     }
 

@@ -27,6 +27,8 @@ protected:
     void onClientStatusSettingChangedHandler(class ClientStatusOption *) override;
 
     void onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
+
+    void onLocationSettingChangedHandler(class LocationOption *option) override;
 };
 
 
