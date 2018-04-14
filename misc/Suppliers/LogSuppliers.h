@@ -31,9 +31,14 @@
      */
     #define INVALID_ARGS_IN_ACCEPT_LOG      "Invalid args in .accept()"
     #define INVALID_ARGS_IN_ACCEPT_DESC_LOG "accept() method called with InformationObject* instead of Log* Object"
-#define STATE_LOG_SUPPLIER "State Supplier"
-    #define INVALID_UPDATE_CALL_LOG         "Invalid .update() call"
-    #define INVALID_UPDATE_CALL_DESC_LOG     ".update() called without .setWrapperWidget() call first"
+
+    #define ABSTRACT_RTSP_CLIENT_SUPPLIER                                       "AbstractRtspClientSupplier"
+        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_LOG          "Invalid args in .accept() call"
+        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG     "In AbstractRTSPClientSubsystem , in .accept() call , object of type Option* excepted at arg 2 , but something else provided"
+
+        //-----//
+        #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_LOG      "Invalid arg in .accept() call"
+        #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG "Unknown object of type Option* is provided , AbstractRTSPClientSubsystem is unable to handle the request"
 
 
 #endif //IKARUS_PROJECT_LOGSUPPLIERS_H
