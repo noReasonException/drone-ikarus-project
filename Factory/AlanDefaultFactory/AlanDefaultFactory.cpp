@@ -22,7 +22,9 @@ QMainWindow *AlanDefaultFactory::getMainWindow() {
 }
 
 QDialog *AlanDefaultFactory::getResolutionDialog() {
-    return (new SetResolutionDialog(new SetResolutionDialogState()))->prepare();
+    return (new SetResolutionDialog(
+            new SetResolutionDialogState(),
+            getRTSPSubsystem()->createSupplier("ResolutionOptionSupplier")))->prepare();
 }
 
 QDialog *AlanDefaultFactory::getLatencyDialog() {

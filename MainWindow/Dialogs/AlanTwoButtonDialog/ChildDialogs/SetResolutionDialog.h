@@ -14,11 +14,16 @@
 
 class SetResolutionDialog : public AlanTwoButtonDialog {
 public:
-    SetResolutionDialog(AlanTwoButtonsDialogState *state):AlanTwoButtonDialog(state,RESOLUTION_DIALOG_TITLE,RESOLUTION_ICON){}
+    SetResolutionDialog(AlanTwoButtonsDialogState *state,OptionSupplier*supplier):
+            AlanTwoButtonDialog(state,RESOLUTION_DIALOG_TITLE,RESOLUTION_ICON),
+            rtspClientOptionSupplier(supplier){}
+    virtual ~SetResolutionDialog(){delete rtspClientOptionSupplier;}
+
 
 private:
     QLineEdit *width;
     QLineEdit *height;
+    OptionSupplier*rtspClientOptionSupplier;
 
     QWidget *onGenerateConfigArea() throw (std::exception)override {
         QWidget*widget=new QWidget;
@@ -48,6 +53,11 @@ protected:
             thisState->width=width->text();
             thisState->height=height->text();
             thisState->update();
+            getRtspClientOptionSupplier()->send(new class ResolutionOption(
+                width->text().toInt(),
+                height->text().toInt(),
+                time(NULL),
+                getRtspClientOptionSupplier()));
             return thisState;
     }
 
@@ -55,6 +65,10 @@ protected:
             return AlanTwoButtonDialog::generic_initializer()&&
                    onRestoreState();
     }
+    OptionSupplier *getRtspClientOptionSupplier() const {
+        return rtspClientOptionSupplier;
+    }
+
 
 };
 
