@@ -138,10 +138,10 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp">
@@ -319,6 +319,9 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/LogSuppliers.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/OptionSuppliers.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanMainWindowErrors.h">

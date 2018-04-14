@@ -14,9 +14,7 @@
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h"
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h"
 #include "../../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h"
-AlanDefaultFactory::AlanDefaultFactory():rtspsystem(nullptr){
-    //std::cout<<"FACTORY CREATED WITH RTSPSYSTEM "<<rtspsystem<<std::endl;
-}
+AlanDefaultFactory::AlanDefaultFactory():rtspsystem(nullptr){}
 QMainWindow *AlanDefaultFactory::getMainWindow() {
     return new AlanMainWindow(this);
 }

@@ -231,32 +231,32 @@ Factory/AbstractFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s
 .PHONY : Factory/AbstractFactory.cpp.s
 
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
+Factory/AlanDefaultFactory/AlanDefaultFactory.o: Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o
 
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.o
 
 # target to build an object file
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.o
+Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o
 
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
+Factory/AlanDefaultFactory/AlanDefaultFactory.i: Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i
 
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.i
 
 # target to preprocess a source file
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.i
+Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i
 
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s: Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
+Factory/AlanDefaultFactory/AlanDefaultFactory.s: Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
 
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.s
 
 # target to generate assembly for a file
-Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
-.PHONY : Factory/AlanDefaultGuiFactory/AlanDefaultFactory.cpp.s
+Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
+.PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
 
 InformationObject/Data/Data.o: InformationObject/Data/Data.cpp.o
 
@@ -792,9 +792,9 @@ help:
 	@echo "... Factory/AbstractFactory.o"
 	@echo "... Factory/AbstractFactory.i"
 	@echo "... Factory/AbstractFactory.s"
-	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.o"
-	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.i"
-	@echo "... Factory/AlanDefaultGuiFactory/AlanDefaultFactory.s"
+	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.o"
+	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.i"
+	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.s"
 	@echo "... InformationObject/Data/Data.o"
 	@echo "... InformationObject/Data/Data.i"
 	@echo "... InformationObject/Data/Data.s"
