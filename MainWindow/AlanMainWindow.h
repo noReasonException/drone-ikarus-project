@@ -17,6 +17,7 @@
 #include "../Factory/AbstractFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
 #include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
+#include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
 
 /***
  * AlanMainWindow
@@ -49,6 +50,7 @@ private:
     //Misc
     QAction* initializeQAction(QAction *act,QString filename, const char*onClickSlot);
     void   changeStatusOfRTSPClientSubsystem(ClientStatus status);
+    void   setWindowHandlerOfRTSPClientSubsystem(const WId status);
 
 
 protected slots:

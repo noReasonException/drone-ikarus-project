@@ -278,6 +278,8 @@ QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
+    QLabel *lbl = new QLabel();
+    setWindowHandlerOfRTSPClientSubsystem(lbl->winId());
     return new QLabel("Video Area");
 }
 /***
@@ -334,4 +336,12 @@ void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
 
 OptionSupplier *AlanMainWindow::getRtspClientOptionSupplier() const {
     return rtspClientOptionSupplier;
+}
+
+void AlanMainWindow::setWindowHandlerOfRTSPClientSubsystem(const WId handle) {
+    getRtspClientOptionSupplier()->send(new class WindowHandleOption(
+            handle,
+            time(NULL),
+            getRtspClientOptionSupplier()));
+
 }
