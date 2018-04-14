@@ -11,8 +11,16 @@
 class WindowHandleOption: public Option {
 public:
     WindowHandleOption(int windowHandleValue,long timestamp, InformationObjectSupplier *source):
-            Option(OptionType::WindowHandlerOption,timestamp,source){
+            Option(OptionType::WindowHandlerOption,timestamp,source),
+            windowHanle(windowHandleValue){
 
+    }
+
+private:
+    int windowHanle;
+public:
+    int getWindowHanle() const {
+        return windowHanle;
     }
 
 

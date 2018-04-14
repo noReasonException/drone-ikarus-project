@@ -9,6 +9,10 @@
 #include "../Consumer/OptionConsumer/OptionConsumer.h"
 #include "../Interfaces/OptionSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
+#include "../InformationObject/Option/ChildOptions/LatencyOption.h"
+#include "../InformationObject/Option/ChildOptions/ResolutionOption.h"
+#include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
+#include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
 
 class AbstractRTSPClientSubsystem : public OptionConsumer,
                                     public OptionSupplierFactory{
@@ -24,9 +28,11 @@ public:
 
 protected:
     virtual void generic_initializer()=0;
-    virtual void onLatencySettingChangedHandler()=0;
-    virtual void onResolutionSettingChangedHandler()=0;
-    virtual void onClientStatusSettingChangedHandler()=0;
+    //@may be null
+    virtual void onLatencySettingChangedHandler(class LatencyOption*)=0;
+    virtual void onResolutionSettingChangedHandler(class ResolutionOption*)=0;
+    virtual void onClientStatusSettingChangedHandler(class ClientStatusOption*)=0;
+    virtual void onWindowHandlerSettingChangedHandler(class WindowHandleOption*)=0;
     LogSupplier *getSupplier() const;
 
 

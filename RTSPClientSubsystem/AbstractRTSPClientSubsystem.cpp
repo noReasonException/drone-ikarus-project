@@ -5,7 +5,6 @@
 #include "AbstractRTSPClientSubsystem.h"
 #include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/AlanMainWindowMisc.h"
-#include "../InformationObject/Option/Option.h"
 
 OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName) {
     return new OptionSupplier(supplierName,this);
@@ -18,15 +17,16 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
                 "test",time(NULL),"invalid-cast",getSupplier()));
         return;
     }
-    switch(optionObject->getType()){
-        case OptionType::LatencyOption:     {onLatencySettingChangedHandler();break;}
-        case OptionType::ResolutionOption:  {onResolutionSettingChangedHandler();break;}
-        case OptionType::ClientStatusOption:{onClientStatusSettingChangedHandler();break;}
+    /*switch(optionObject->getType()){
+        case OptionType::LatencyOption:      {onLatencySettingChangedHandler(dynamic_cast<LatencyOption*>(optionObject));break;}
+        case OptionType::ResolutionOption:   {onResolutionSettingChangedHandler(dynamic_cast<ResolutionOption*>(optionObject));break;}
+        case OptionType::ClientStatusOption: {onClientStatusSettingChangedHandler(dynamic_cast<ClientStatusOption*>(optionObject));break;}
+        case OptionType::WindowHandlerOption:{onWindowHandlerSettingChangedHandler(dynamic_cast<WindowHandleOption*>(optionObject));break;}
         default:{
             getSupplier()->send(new Log(
                     "test",time(NULL),"invalid OptionType",getSupplier()));
         }
-    }
+    }*/
 
 }
 

@@ -294,6 +294,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/qsettings.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
