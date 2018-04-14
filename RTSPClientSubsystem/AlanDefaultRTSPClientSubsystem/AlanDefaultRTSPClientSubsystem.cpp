@@ -63,7 +63,8 @@ void AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
     if(isNull(option,
               INVALID_ARG_LOCATION_EXPECTED_LOG,
               OPTION_CHANGED_SUCCESS_LOCATION_DESC_LOG))return;
-    //TODO implement
+    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION,option->getIpLocation());
+    delete option;
 
 
 }

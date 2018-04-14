@@ -11,7 +11,6 @@
 #include <QSettings>
 class AlanMultipleChoiceDialogState: public AlanTwoButtonsDialogState{
 public:
-    static std::vector<QString> staticchoices;
     std::vector<QString> choices;
     AlanMultipleChoiceDialogState()= default;
 

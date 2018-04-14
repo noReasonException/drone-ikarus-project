@@ -209,10 +209,10 @@ std::vector<QToolBar*>*AlanMainWindow::onGenerateToolBar() throw(std::exception)
     QAction*tmpact;
     auto *retval=new std::vector<QToolBar*> ();
     retval->push_back(tmp=new QToolBar("MediaBar"));
-    initializeQAction(tmp->addAction("Play"),STREAMING_ICON,SLOT(genericActionSlot()));
-    initializeQAction(tmp->addAction("Stop"),STOP_STREAMING_ICON,SLOT(genericActionSlot()));
-    initializeQAction(tmp->addAction("Streaming"),BROADCAST_ICON,SLOT(genericActionSlot()));
-    initializeQAction(tmp->addAction("NO Streaming"),STOP_BROADCAST_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction(START_STREAMING_ACTION_NAME),STREAMING_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction(STOP_STREAMING_ACTION_NAME),STOP_STREAMING_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction(START_BROADCAST_ACTION_NAME),BROADCAST_ICON,SLOT(genericActionSlot()));
+    initializeQAction(tmp->addAction(STOP_BROADCAST_ACTION_NAME),STOP_BROADCAST_ICON,SLOT(genericActionSlot()));
     return retval;
 
 }
@@ -301,10 +301,12 @@ void AlanMainWindow::genericActionSlot() {
     else if(!strcmp(cstr,RESOLUTION_ACTION_NAME))preparedDialog=(parentFactory->getResolutionDialog());
     else if(!strcmp(cstr,LATENCY_ACTION_NAME))preparedDialog=(parentFactory->getLatencyDialog());
     else if(!strcmp(cstr,ABOUT_ACTION_NAME))preparedDialog=(parentFactory->getAboutDialog());
+
     if(preparedDialog)preparedDialog->show();
     else {
-        getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
-        operationNotSupportedSlot();
+    /*    getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
+        operationNotSupportedSlot();*/
+
     }
 
 }
@@ -312,4 +314,16 @@ void AlanMainWindow::genericActionSlot() {
 LogSupplier *AlanMainWindow::getSupplier() const {
     return supplier;
 }
-std::vector<QString> AlanMultipleChoiceDialogState::staticchoices;
+
+void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
+    getRtspClientOptionSupplier()->send(new class ClientStatusOption(
+            status,
+            time(NULL),
+            getRtspClientOptionSupplier()
+    ));
+
+}
+
+OptionSupplier *AlanMainWindow::getRtspClientOptionSupplier() const {
+    return rtspClientOptionSupplier;
+}

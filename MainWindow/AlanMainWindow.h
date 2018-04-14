@@ -16,6 +16,7 @@
 #include "../misc/img/generic_paths.h"
 #include "../Factory/AbstractFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
+#include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
 
 /***
  * AlanMainWindow
@@ -33,6 +34,10 @@ private :
     bool isReTransmitting;
     AbstractFactory*parentFactory;
     LogSupplier*supplier;
+    OptionSupplier*rtspClientOptionSupplier;
+
+
+private:
 
 
     //Initializers
@@ -43,6 +48,7 @@ private :
     bool initializeCentralWidget();
     //Misc
     QAction* initializeQAction(QAction *act,QString filename, const char*onClickSlot);
+    void   changeStatusOfRTSPClientSubsystem(ClientStatus status);
 
 
 protected slots:
@@ -56,8 +62,9 @@ protected:
     QWidget*                            onGenerateLeftLayout()throw(std::exception);
     QWidget*                            onGenerateVideoArea()throw(std::exception);
     QWidget*                            onGenerateRightLayout()throw(std::exception);
+    LogSupplier                         *getSupplier() const;
+    OptionSupplier                      *getRtspClientOptionSupplier() const;
 
-    LogSupplier *getSupplier() const;
 
 
 };
