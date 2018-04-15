@@ -37,6 +37,7 @@ void AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
     }
     isClientStatusDefined=true;
     currentStatus =option->getStatus();
+    callProperStatusHandler();
     delete option;
 
 }
@@ -86,4 +87,31 @@ bool AlanDefaultRTSPClientSubsystem::isNull(void *ptr,
             onSuccessMessage,
             getSupplier()));
     return false;
+}
+
+AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {}
+
+void AlanDefaultRTSPClientSubsystem::callProperStatusHandler() {
+    switch(currentStatus){
+        case Client_PAUSE   :onPauseStatusRequest();break;
+        case Client_START   :onStartStatusRequest();break;
+        case Client_PLAY    :onPlayStatusRequest() ;break;
+        case Client_STOP    :onStopStatusRequest() ;break;
+        case Client_NONE:{
+            getSupplier()->send(new Log(
+                    ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
+                    time(NULL),
+                    NONE_STATE_REQUESTED_DESC_LOG,
+                    getSupplier()));
+            break;}
+        default:{
+            getSupplier()->send(new Log(
+                    ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
+                    time(NULL),
+                    UNNKNOWN_STATE_REQUESTED_DESC_LOG,
+                    getSupplier()));
+            break;}
+
+    }
+
 }

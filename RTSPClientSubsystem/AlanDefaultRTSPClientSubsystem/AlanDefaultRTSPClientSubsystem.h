@@ -7,7 +7,6 @@
 
 
 #include <QSettings>
-#include <glib/gtypes.h>
 #include <gst/gstelementfactory.h>
 #include "../AbstractRTSPClientSubsystem.h"
 #include "qsettings.h"
@@ -19,6 +18,10 @@ private :
     bool isNull(void *ptr, const QString &onErrorMessage,const QString &onSuccessMessage);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
+public:
+    AlanDefaultRTSPClientSubsystem();
+
+private:
     ClientStatus currentStatus;
     int windowHandle;
     guint   major,
@@ -56,6 +59,14 @@ protected:
     void onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
 
     void onLocationSettingChangedHandler(class LocationOption *option) override;
+
+    void callProperStatusHandler();
+    void onStartStatusRequest();
+    void onPlayStatusRequest();
+    void onPauseStatusRequest();
+    void onStopStatusRequest();
+
+
 };
 
 
