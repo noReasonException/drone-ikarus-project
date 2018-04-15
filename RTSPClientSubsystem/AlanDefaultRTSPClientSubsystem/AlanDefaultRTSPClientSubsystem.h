@@ -40,7 +40,7 @@ private :
             *pipeline,
             *gstrtspsrc_elem,
             *queue_elem,
-            *rtph264depayloader,
+            *rtph264depayloader_elem,
             *decodebin_elem,
             *videoconvert_elem,
             *ximagessink_elem;
@@ -49,6 +49,9 @@ private :
     GstBus      *mainBus;
 
     bool initializeGstreamer();
+    bool _initializeFactories();
+    bool _initializeElements();
+    bool _initializeConnections();
 
 protected:
     bool onLatencySettingChangedHandler(class LatencyOption *) override;

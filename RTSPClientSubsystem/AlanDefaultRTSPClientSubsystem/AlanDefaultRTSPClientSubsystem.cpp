@@ -6,6 +6,8 @@
 #include "AlanDefaultRTSPClientSubsystem.h"
 #include "../../InformationObject/Log/Log.h"
 #include "../../misc/Suppliers/LogSuppliers.h"
+#include "common.h"
+extern "C" gboolean generic_initializer(const int flags, int num, ...);
 
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
     if(isNullThenLog(option,
@@ -173,27 +175,78 @@ bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
 bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     GError*err;
     char sprintf_buffer[50];
+
+    /*Initialization check of gstreamer*/
     if(!gst_init_check(0,0,&err)){
         sprintf(sprintf_buffer,"%s",err->message);
         getSupplier()->send(new Log("Gstreamer init fail", time(NULL), sprintf_buffer, getSupplier()));
         return false;
     }
+    /*Print current version...*/
     gst_version(&major,&minor,&nano,&pico);
     sprintf(sprintf_buffer,"Gstreamer version %d.%d.%d.%d",major,minor,nano,pico);
     getSupplier()->send(new Log("Gstreamer Version", time(NULL), sprintf_buffer, getSupplier()));
+
+    /*Initialize GMainLoop*/
     if(!(mainLoop=g_main_loop_new(NULL,FALSE))){
         getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "g_main_loop_new fail", getSupplier()));
         return false;
 
     }
     getSupplier()->send(new Log("MainLoop initialized", time(NULL), "-", getSupplier()));
+    /*Initialize Pipeline*/
     if(!(pipeline=gst_pipeline_new("AlanDefaultRTSPClientSubSystem"))){
         getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "gst_pipeline_new fail", getSupplier()));
         return false;
     }
     getSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getSupplier()));
+    /*Initialize elements*/
+
+    _initializeFactories();
+    _initializeElements();
+    _initializeConnections();
 
 
 
     return true;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializeFactories() {
+    /*Initialize Factories...*/
+    return generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_FACTORY), 6,
+                             &gstrtspsrc_fact, g_strdup("rtspsrc"),
+                             &queue_fact,g_strdup("queue"),
+                             &rtph264depayloader_fact,g_strdup("rtph264depay"),
+                             &decodebin_fact,g_strdup("decodebin"),
+                             &videoconvert_fact,g_strdup("videoconvert"),
+                             &ximagesink_fact,g_strdup("ximagesink"));
+
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializeElements() {
+    return(generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_ELEMENT), 6,
+                             gstrtspsrc_fact, &gstrtspsrc_elem, g_strdup("rtsp-src"),
+                             queue_fact,&queue_elem,g_strdup("buffer-queue-eleme"),
+                             rtph264depayloader_fact,&rtph264depayloader_elem,g_strdup("depay-elem"),
+                             decodebin_fact,&decodebin_elem,g_strdup("decodebin-element"),
+                             videoconvert_fact,&videoconvert_elem,g_strdup("videoconvert-element"),
+                             ximagesink_fact,&ximagessink_elem,g_strdup("autovideo-elem")));
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
+    gst_bin_add_many(GST_BIN(pipeline),
+                     gstrtspsrc_elem,           ///packets from network under RTSP
+                     queue_elem,                ///Buffer
+                     rtph264depayloader_elem,         ///depayloader to data
+                     decodebin_elem,            ///convert h264 to video
+                     videoconvert_elem,         ///raw video
+                     ximagessink_elem,NULL);  ///screen
+    return gst_element_link_many(
+                    queue_elem,
+                    rtph264depayloader_elem,
+                    decodebin_elem,NULL)&&
+                                            ///decodebin -> videoconvert connection happens on on-pad event lisener
+                    gst_element_link(
+                     videoconvert_elem,
+                     ximagessink_elem);
 }
