@@ -56,7 +56,18 @@
         #define NONE_STATE_REQUESTED_DESC_LOG                                   "RTSP Client subsystem has received a request to change in status NONE,the request is invalid , and will be ignored"
         #define UNNKNOWN_STATE_REQUESTED_DESC_LOG                               "RTSP Client subsystem has received a request to unnknown status,the request is invalid , and will be ignored"
         #define INVALID_CURRENT_STATE_TO_SWITCH_DESC_LOG                        "RTSP Client subsystem has received a request to switch in impossible state,the request is invalid , and will be ignored"
-        #define GSTREAMER_INIT_FAILED_DESC_LOG                                  "RTSP Client subsystem has received a request to switch in impossible state,the request is invalid , and will be ignored"
+        #define GSTREAMER_INIT_FAILED_DESC_LOG                                  "RTSP Client subsystem has failed to initialize itself"
+        #define GSTREAMER_FACTORIES_INIT_ERROR_LOG          "Gstreamer:Factory init fail"
+        #define GSTREAMER_ELEMENTS_INIT_ERROR_LOG           "Gstreamer:Element init fail"
+    #define GSTREAMER_FACTORIES_INIT_SUCCESS_LOG            "Factories Loaded"
+        #define GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG   "Gstreamer:All required factories loaded"
+
+    #define GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG             "Elements Loaded"
+        #define GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG    "Gstreamer:All required elements loaded"
+    #define GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG             "Elements Linked"
+        #define GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG    "Gstreamer:All required elements linked"
+
+
 
 
 

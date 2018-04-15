@@ -202,9 +202,12 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     getSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getSupplier()));
     /*Initialize elements*/
 
-    _initializeFactories();
-    _initializeElements();
-    _initializeConnections();
+    _utillLogHandler(_initializeFactories(),
+                     GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG);
+    _utillLogHandler(_initializeElements(),
+                     GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG);
+    _utillLogHandler(_initializeConnections(),
+                     GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG);
 
 
 
@@ -230,7 +233,7 @@ bool AlanDefaultRTSPClientSubsystem::_initializeElements() {
                              rtph264depayloader_fact,&rtph264depayloader_elem,g_strdup("depay-elem"),
                              decodebin_fact,&decodebin_elem,g_strdup("decodebin-element"),
                              videoconvert_fact,&videoconvert_elem,g_strdup("videoconvert-element"),
-                             ximagesink_fact,&ximagessink_elem,g_strdup("autovideo-elem")));
+                             ximagesink_fact,&ximagessink_elem,g_strdup("ximagesink-elem")));
 }
 
 bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
@@ -249,4 +252,9 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
                     gst_element_link(
                      videoconvert_elem,
                      ximagessink_elem);
+}
+
+bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
+    if(status)getSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg ,getSupplier()));
+    return status;
 }
