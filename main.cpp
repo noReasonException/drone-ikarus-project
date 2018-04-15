@@ -1,5 +1,6 @@
 #include <iostream>
 #include <gst/gst.h>
+#include <gst/gstenumtypes.h>
 #include <QApplication>
 #include <QJsonObject>
 #include <QDialog>
@@ -17,6 +18,7 @@ class MainWindow;
 using namespace std;
 int main(int argc,char *argv[]) {
     gst_init(&argc,&argv);
+
     QApplication application(argc,argv);
     application.setOrganizationName("noReasonException");
     application.setOrganizationDomain("com.noreasonException");

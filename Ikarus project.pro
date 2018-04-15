@@ -45,6 +45,8 @@ SOURCES += ./Supplier/InformationObjectSupplier.cpp \
            ./InformationObject/Option/Option.cpp \
            ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp \
            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp \
+           ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c \
+           ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
 
 
 
@@ -103,6 +105,7 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./Supplier/InformationObjectSupplier.h \
             ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
             ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h
 
 
 

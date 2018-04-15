@@ -72,7 +72,9 @@ SOURCES       = Supplier/InformationObjectSupplier.cpp \
 		InformationObject/Log/Log.cpp \
 		InformationObject/Option/Option.cpp \
 		RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp \
-		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp moc_AlanTwoButtonDialog.cpp \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c moc_AlanTwoButtonDialog.cpp \
 		moc_AlanMultipleChoiceDialog.cpp \
 		moc_AlanSingleOptionDialog.cpp \
 		moc_AlanPanel.cpp \
@@ -102,6 +104,8 @@ OBJECTS       = InformationObjectSupplier.o \
 		Option.o \
 		AbstractRTSPClientSubsystem.o \
 		AlanDefaultRTSPClientSubsystem.o \
+		utill.o \
+		handle.o \
 		moc_AlanTwoButtonDialog.o \
 		moc_AlanMultipleChoiceDialog.o \
 		moc_AlanSingleOptionDialog.o \
@@ -235,7 +239,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		Supplier/OptionSupplier/OptionSupplier.h \
 		Supplier/InformationObjectSupplier.h \
 		RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
-		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h Supplier/InformationObjectSupplier.cpp \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h Supplier/InformationObjectSupplier.cpp \
 		Supplier/LogSupplier/LogSupplier.cpp \
 		Supplier/OptionSupplier/OptionSupplier.cpp \
 		Consumer/LogConsumer/LogConsumer.cpp \
@@ -257,7 +262,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		InformationObject/Log/Log.cpp \
 		InformationObject/Option/Option.cpp \
 		RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp \
-		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c \
+		RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
 QMAKE_TARGET  = Ikarus\ project
 DESTDIR       = 
 TARGET        = Ikarus\ project
@@ -449,8 +456,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents Consumer/InformationObjectConsumer.h Consumer/LogConsumer/LogConsumer.h Factory/AbstractFactory.h Factory/AlanDefaultFactory/AlanDefaultFactory.h MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h MainWindow/State/WindowStates/AlanSingleOptionDialogState.h MainWindow/State/State.h InformationObject/InformationObject.h InformationObject/Data/Data.h InformationObject/Log/Log.h InformationObject/Option/ChildOptions/LatencyOption.h InformationObject/Option/ChildOptions/LocationOption.h InformationObject/Option/ChildOptions/ResolutionOption.h InformationObject/Option/ChildOptions/WindowHandleOption.h InformationObject/Option/ChildOptions/ClientStatusOption.h InformationObject/Option/Option.h Interfaces/LogSupplierFactory.h Interfaces/StateRestorable.h / Interfaces/InformationSupplierFactory.h misc/states.h misc/version.h misc/Suppliers/LogSuppliers.h misc/img/generic_paths.h misc/generic_text/AlanMainWindowMisc.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h Supplier/LogSupplier/LogSupplier.h Supplier/OptionSupplier/OptionSupplier.h Supplier/InformationObjectSupplier.h RTSPClientSubsystem/AbstractRTSPClientSubsystem.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h $(DISTDIR)/
-	$(COPY_FILE) --parents Supplier/InformationObjectSupplier.cpp Supplier/LogSupplier/LogSupplier.cpp Supplier/OptionSupplier/OptionSupplier.cpp Consumer/LogConsumer/LogConsumer.cpp Consumer/InformationObjectConsumer.cpp main.cpp MainWindow/AlanMainWindow.cpp Factory/AbstractFactory.cpp Factory/AlanDefaultFactory/AlanDefaultFactory.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/State/State.cpp InformationObject/InformationObject.cpp InformationObject/Data/Data.cpp InformationObject/Log/Log.cpp InformationObject/Option/Option.cpp RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents Consumer/InformationObjectConsumer.h Consumer/LogConsumer/LogConsumer.h Factory/AbstractFactory.h Factory/AlanDefaultFactory/AlanDefaultFactory.h MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h MainWindow/Dialogs/AlanSingleOptionDialog.h MainWindow/Panels/AlanPanel.h MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h MainWindow/Panels/StreamPanel/StreamPanel.h MainWindow/AlanMainWindow.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h MainWindow/State/WindowStates/AlanSingleOptionDialogState.h MainWindow/State/State.h InformationObject/InformationObject.h InformationObject/Data/Data.h InformationObject/Log/Log.h InformationObject/Option/ChildOptions/LatencyOption.h InformationObject/Option/ChildOptions/LocationOption.h InformationObject/Option/ChildOptions/ResolutionOption.h InformationObject/Option/ChildOptions/WindowHandleOption.h InformationObject/Option/ChildOptions/ClientStatusOption.h InformationObject/Option/Option.h Interfaces/LogSupplierFactory.h Interfaces/StateRestorable.h / Interfaces/InformationSupplierFactory.h misc/states.h misc/version.h misc/Suppliers/LogSuppliers.h misc/img/generic_paths.h misc/generic_text/AlanMainWindowMisc.h misc/generic_text/generic_dialogs.h misc/generic_text/AlanMainWindowDialogs.h misc/errors/AlanMainWindowErrors.h misc/errors/AlanPanelErrors.h Supplier/LogSupplier/LogSupplier.h Supplier/OptionSupplier/OptionSupplier.h Supplier/InformationObjectSupplier.h RTSPClientSubsystem/AbstractRTSPClientSubsystem.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h $(DISTDIR)/
+	$(COPY_FILE) --parents Supplier/InformationObjectSupplier.cpp Supplier/LogSupplier/LogSupplier.cpp Supplier/OptionSupplier/OptionSupplier.cpp Consumer/LogConsumer/LogConsumer.cpp Consumer/InformationObjectConsumer.cpp main.cpp MainWindow/AlanMainWindow.cpp Factory/AbstractFactory.cpp Factory/AlanDefaultFactory/AlanDefaultFactory.cpp MainWindow/Dialogs/AlanSingleOptionDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp MainWindow/Panels/AlanPanel.cpp MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp MainWindow/Panels/StreamPanel/StreamPanel.cpp MainWindow/State/State.cpp InformationObject/InformationObject.cpp InformationObject/Data/Data.cpp InformationObject/Log/Log.cpp InformationObject/Option/Option.cpp RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -597,6 +604,7 @@ moc_AlanMainWindow.cpp: misc/errors/AlanMainWindowErrors.h \
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -664,6 +672,7 @@ main.o: main.cpp MainWindow/AlanMainWindow.h \
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -697,6 +706,7 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -713,7 +723,8 @@ AlanMainWindow.o: MainWindow/AlanMainWindow.cpp MainWindow/AlanMainWindow.h \
 		MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h \
 		MainWindow/State/WindowStates/AlanSingleOptionDialogState.h \
 		MainWindow/State/State.h \
-		misc/states.h
+		misc/states.h \
+		misc/Suppliers/OptionSuppliers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMainWindow.o MainWindow/AlanMainWindow.cpp
 
 AbstractFactory.o: Factory/AbstractFactory.cpp Factory/AbstractFactory.h \
@@ -728,6 +739,7 @@ AbstractFactory.o: Factory/AbstractFactory.cpp Factory/AbstractFactory.h \
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h
@@ -746,6 +758,7 @@ AlanDefaultFactory.o: Factory/AlanDefaultFactory/AlanDefaultFactory.cpp Factory/
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -828,6 +841,9 @@ AlanMultipleChoiceDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleC
 		MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h \
 		misc/generic_text/AlanMainWindowDialogs.h \
+		Supplier/OptionSupplier/OptionSupplier.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
+		InformationObject/Option/Option.h \
 		MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanMultipleChoiceDialog.o MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
 
@@ -938,6 +954,7 @@ AbstractRTSPClientSubsystem.o: RTSPClientSubsystem/AbstractRTSPClientSubsystem.c
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -963,6 +980,7 @@ AlanDefaultRTSPClientSubsystem.o: RTSPClientSubsystem/AlanDefaultRTSPClientSubsy
 		Supplier/LogSupplier/LogSupplier.h \
 		InformationObject/Option/ChildOptions/LatencyOption.h \
 		InformationObject/Option/Option.h \
+		InformationObject/Option/ChildOptions/LocationOption.h \
 		InformationObject/Option/ChildOptions/ResolutionOption.h \
 		InformationObject/Option/ChildOptions/ClientStatusOption.h \
 		InformationObject/Option/ChildOptions/WindowHandleOption.h \
@@ -970,6 +988,12 @@ AlanDefaultRTSPClientSubsystem.o: RTSPClientSubsystem/AlanDefaultRTSPClientSubsy
 		InformationObject/Log/Log.h \
 		misc/Suppliers/LogSuppliers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AlanDefaultRTSPClientSubsystem.o RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp
+
+utill.o: RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c 
+	$(CC) -c $(CFLAGS) $(INCPATH) -o utill.o RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c
+
+handle.o: RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c 
+	$(CC) -c $(CFLAGS) $(INCPATH) -o handle.o RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
 
 moc_AlanTwoButtonDialog.o: moc_AlanTwoButtonDialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_AlanTwoButtonDialog.o moc_AlanTwoButtonDialog.cpp

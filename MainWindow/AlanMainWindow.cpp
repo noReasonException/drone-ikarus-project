@@ -280,7 +280,7 @@ QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
 QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
     QLabel *lbl = new QLabel();
     setWindowHandlerOfRTSPClientSubsystem(lbl->winId());
-    return new QLabel("Video Area");
+    return lbl;
 }
 /***
  * onGenerateRightLayout() does the real job of initializing and returning a QWidget
@@ -309,11 +309,11 @@ void AlanMainWindow::genericActionSlot() {
     if(preparedDialog)preparedDialog->show();
     else {
         if(!strcmp(cstr,START_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
-        else if(!strcmp(cstr,STOP_STREAMING_ICON))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_STOP);
+        else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_STOP);
         else{
-            /*getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
-            operationNotSupportedSlot();*/
-            std::cout<<"OK";
+            getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
+            operationNotSupportedSlot();
+
         }
 
 

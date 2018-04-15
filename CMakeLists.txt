@@ -5,6 +5,7 @@ include_directories(/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets)
 include_directories(/usr/include/gstreamer-1.0)
 include_directories(/usr/include/gstreamer-1.0/gst/)
 
+include_directories(/usr/include/glib-2.0)
 set(CMAKE_CXX_STANDARD 11)
 
 find_package(Qt5Widgets REQUIRED)
@@ -87,5 +88,6 @@ add_executable(Ikarus_project main.cpp
         ./Supplier/InformationObjectSupplier.cpp
         ./Supplier/LogSupplier/LogSupplier.cpp
         ./Supplier/OptionSupplier/OptionSupplier.cpp
-        InformationObject/Option/ChildOptions/LocationOption.h)
+        InformationObject/Option/ChildOptions/LocationOption.h
+        RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

@@ -52,6 +52,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets"/>
 					<Add directory="/usr/include/gstreamer-1.0"/>
 					<Add directory="/usr/include/gstreamer-1.0/gst"/>
+					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -90,6 +91,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets"/>
 					<Add directory="/usr/include/gstreamer-1.0"/>
 					<Add directory="/usr/include/gstreamer-1.0/gst"/>
+					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -297,7 +299,16 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/qsettings.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp">

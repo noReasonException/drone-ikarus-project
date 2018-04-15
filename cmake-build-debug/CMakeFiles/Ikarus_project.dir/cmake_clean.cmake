@@ -23,11 +23,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o"
   "CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o"
   "CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o"
+  "CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C CXX)
   include(CMakeFiles/Ikarus_project.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

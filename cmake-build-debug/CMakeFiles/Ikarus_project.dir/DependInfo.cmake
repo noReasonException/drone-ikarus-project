@@ -1,8 +1,38 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "C"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o"
+  "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_C
+  "QT_CORE_LIB"
+  "QT_GUI_LIB"
+  "QT_MULTIMEDIA_LIB"
+  "QT_NETWORK_LIB"
+  "QT_WIDGETS_LIB"
+  )
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets"
+  "/usr/include/gstreamer-1.0"
+  "/usr/include/gstreamer-1.0/gst"
+  "/usr/include/glib-2.0"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"
+  "/usr/include/x86_64-linux-gnu/qt5/QtMultimedia"
+  "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
+  )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o"
   "/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o"
@@ -45,6 +75,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets"
   "/usr/include/gstreamer-1.0"
   "/usr/include/gstreamer-1.0/gst"
+  "/usr/include/glib-2.0"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
