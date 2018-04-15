@@ -2,6 +2,7 @@
 // Created by noreasonexception on 4/14/18.
 //
 
+#include <gst/gst.h>
 #include "AlanDefaultRTSPClientSubsystem.h"
 #include "../../InformationObject/Log/Log.h"
 #include "../../misc/Suppliers/LogSuppliers.h"
@@ -133,6 +134,11 @@ bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
         return false;
     }
     //g_main_loop_run(mainLoop);
+    getSupplier()->send(new Log(
+            "START",
+            time(NULL),
+            "-",
+            getSupplier()));
     return true;
 
 }
@@ -165,5 +171,29 @@ bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
+    GError*err;
+    char sprintf_buffer[50];
+    if(!gst_init_check(0,0,&err)){
+        sprintf(sprintf_buffer,"%s",err->message);
+        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), sprintf_buffer, getSupplier()));
+        return false;
+    }
+    gst_version(&major,&minor,&nano,&pico);
+    sprintf(sprintf_buffer,"Gstreamer version %d.%d.%d.%d",major,minor,nano,pico);
+    getSupplier()->send(new Log("Gstreamer Version", time(NULL), sprintf_buffer, getSupplier()));
+    if(!(mainLoop=g_main_loop_new(NULL,FALSE))){
+        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "g_main_loop_new fail", getSupplier()));
+        return false;
+
+    }
+    getSupplier()->send(new Log("MainLoop initialized", time(NULL), "-", getSupplier()));
+    if(!(pipeline=gst_pipeline_new("AlanDefaultRTSPClientSubSystem"))){
+        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "gst_pipeline_new fail", getSupplier()));
+        return false;
+    }
+    getSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getSupplier()));
+
+
+
     return true;
 }
