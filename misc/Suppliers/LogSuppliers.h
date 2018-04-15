@@ -66,6 +66,8 @@
         #define GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG    "Gstreamer:All required elements loaded"
     #define GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG             "Elements Linked"
         #define GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG    "Gstreamer:All required elements linked"
+    #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG          "Properies applied"
+        #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG "Gstreamer:All configured properties linked"
 
 
 

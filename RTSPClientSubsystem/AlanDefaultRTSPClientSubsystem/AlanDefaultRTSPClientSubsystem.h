@@ -52,6 +52,7 @@ private :
     bool _initializeFactories();
     bool _initializeElements();
     bool _initializeConnections();
+    bool _applyProperties();
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
 
 protected:

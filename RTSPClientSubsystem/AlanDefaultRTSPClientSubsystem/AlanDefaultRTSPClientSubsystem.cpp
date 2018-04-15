@@ -202,12 +202,15 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     getSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getSupplier()));
     /*Initialize elements*/
 
-    _utillLogHandler(_initializeFactories(),
-                     GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG);
-    _utillLogHandler(_initializeElements(),
-                     GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG);
-    _utillLogHandler(_initializeConnections(),
-                     GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG);
+    if(!_utillLogHandler(_initializeFactories(),
+                     GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_initializeElements(),
+                     GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_initializeConnections(),
+                     GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_applyProperties(),
+                     GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG,GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG))return false;
+
 
 
 
@@ -257,4 +260,13 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
 bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
     if(status)getSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg ,getSupplier()));
     return status;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
+    g_object_set(G_OBJECT(gstrtspsrc_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LOCATION).toString().toStdString().c_str());
+    g_object_set(G_OBJECT(ximagessink_elem),"sync",FALSE);
+    g_object_set(G_OBJECT(queue_elem),"max-size-bytes",30);
+    g_object_set(G_OBJECT(queue_elem),"max-size-buffers",2);
+    g_object_set(G_OBJECT(queue_elem),"max-size-time",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LATENCY).toInt());
+    return true;
 }
