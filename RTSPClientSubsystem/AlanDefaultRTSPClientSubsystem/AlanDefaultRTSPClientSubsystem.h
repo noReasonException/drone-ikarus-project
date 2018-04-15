@@ -8,6 +8,8 @@
 
 #include <QSettings>
 #include <gst/gstelementfactory.h>
+
+#include <gst/video/videooverlay.h>
 #include "../AbstractRTSPClientSubsystem.h"
 #include "qsettings.h"
 

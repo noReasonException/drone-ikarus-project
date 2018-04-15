@@ -274,6 +274,7 @@ bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
     g_object_set(G_OBJECT(queue_elem),"max-size-bytes",30);
     g_object_set(G_OBJECT(queue_elem),"max-size-buffers",2);
     g_object_set(G_OBJECT(queue_elem),"max-size-time",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LATENCY).toInt());
+    gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY(ximagessink_elem),windowHandle);
     return true;
 }
 

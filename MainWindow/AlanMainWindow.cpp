@@ -241,13 +241,13 @@ bool AlanMainWindow::initializeCentralWidget()  try{
 QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
     QDialog*retval=new QDialog();
     setCentralWidget(retval);
-    QHBoxLayout *main_lay;
-    retval->setLayout(main_lay=new QHBoxLayout());
+    QGridLayout *main_lay;
+    retval->setLayout(main_lay=new QGridLayout());
 
     try{
-        main_lay->addWidget(onGenerateLeftLayout(),0,Qt::AlignLeft);
-        main_lay->addWidget(onGenerateVideoArea(),0,Qt::AlignCenter);
-        main_lay->addWidget(onGenerateRightLayout(),0,Qt::AlignRight);
+        main_lay->addWidget(onGenerateLeftLayout(),0,0,1,6);
+        main_lay->addWidget(onGenerateVideoArea(),0,7,1,6);
+        main_lay->addWidget(onGenerateRightLayout(),0,14,1,6);
     }catch(std::exception&e){throw e;}
 
     return retval;
@@ -263,7 +263,7 @@ QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
-    return new QLabel("Telemetry + Data Area");
+    return new QListView();
 }
 /***
  * onGenerateVideoArea() does the real job of initializing and returning a QWidget
@@ -275,7 +275,8 @@ QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
-    QLabel *lbl = new QLabel();
+    QListView *lbl= new QListView;
+    lbl->setStyleSheet("QLabel { background:black;width:150%;height:150% } ");
     setWindowHandlerOfRTSPClientSubsystem(lbl->winId());
     return lbl;
 }
