@@ -69,7 +69,9 @@
     #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG          "Properies applied"
         #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG "Gstreamer:All configured properties linked"
     #define GSTREAMER_BUS_INIT_SUCCESS_LOG                      "GstBus Initialized"
-        #define GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG                 "The gstreamer's GstBus* object with its generic_handler is initialized"
+        #define GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG             "The gstreamer's GstBus* object with its generic_handler is initialized"
+    #define GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG            "Pad-added handlers init"
+        #define GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG   "Some elements of gstreamers has initialized his handlers on \"pad-added\" event"
 
 
 

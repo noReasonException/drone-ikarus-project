@@ -9,7 +9,8 @@
 #include "common.h"
 extern "C" gboolean     generic_initializer(const int flags, int num, ...);
 extern "C" gboolean     generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipeline);
-
+extern "C" void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpointer videoconvert);
+extern "C" void on_pad_added_rtspsrc_listener(GstElement*obj,GstPad*arg0,gpointer queue_element);
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
     if(isNullThenLog(option,
                      INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
@@ -136,17 +137,19 @@ bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
                 getSupplier()));
         return false;
     }
-    //g_main_loop_run(mainLoop);
     getSupplier()->send(new Log(
             "START",
             time(NULL),
             "-",
             getSupplier()));
+
     return true;
 
 }
 
 bool AlanDefaultRTSPClientSubsystem::onPlayStatusRequest() {
+    gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_PLAYING);
+    g_main_loop_run(mainLoop);
     getSupplier()->send(new Log(
             "PLAY",
             time(NULL),
@@ -212,8 +215,9 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     else if(!_utillLogHandler(_applyProperties(),
                      GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG,GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_initializeBus(),
-                              GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
-
+                     GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_initializePadAddedListeners(),
+                     GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
 
 
     return true;
@@ -276,4 +280,10 @@ bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
 bool AlanDefaultRTSPClientSubsystem::_initializeBus() {
     return (mainBus=gst_pipeline_get_bus(GST_PIPELINE(pipeline)))&&
             (bus_handler_watch_id=gst_bus_add_watch(mainBus,generic_bus_handler,NULL));
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
+    g_signal_connect(GST_ELEMENT(gstrtspsrc_elem),"pad-added",G_CALLBACK(on_pad_added_rtspsrc_listener),queue_elem);
+    g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
+    return true;
 }

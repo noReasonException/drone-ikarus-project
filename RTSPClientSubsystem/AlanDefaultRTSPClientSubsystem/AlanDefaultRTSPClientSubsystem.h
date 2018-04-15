@@ -54,6 +54,7 @@ private :
     bool _initializeConnections();
     bool _applyProperties();
     bool _initializeBus();
+    bool _initializePadAddedListeners();
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
 
 protected:
