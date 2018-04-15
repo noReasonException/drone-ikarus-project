@@ -177,10 +177,7 @@ void AlanMainWindow::operationNotSupportedSlot() {
  * This slot triggered in case of exit , it checks if any task is in progress and informs the user if really wants to exit ;)
  */
 void AlanMainWindow::closeSlot(){
-    if((isStreaming||isReTransmitting)&&QMessageBox::warning(this,"Are you sure?",
-                                                          "Are you sure you want to exit in middle of operations?",QMessageBox::Ok,QMessageBox::Cancel)==QMessageBox::Cancel){
-        return;
-    }
+    changeStatusOfRTSPClientSubsystem(Client_STOP);//release resources
     close();
 }
 /***
@@ -308,8 +305,11 @@ void AlanMainWindow::genericActionSlot() {
 
     if(preparedDialog)preparedDialog->show();
     else {
-        if(!strcmp(cstr,START_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
-        else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_STOP);
+        if(!strcmp(cstr,START_STREAMING_ACTION_NAME)){
+            changeStatusOfRTSPClientSubsystem(ClientStatus::Client_START);
+            changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
+        }
+        else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PAUSE);
         else{
             getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
             operationNotSupportedSlot();

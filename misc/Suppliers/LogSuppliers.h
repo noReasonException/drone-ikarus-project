@@ -55,6 +55,8 @@
     #define ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG                       "State change Failure"
         #define NONE_STATE_REQUESTED_DESC_LOG                                   "RTSP Client subsystem has received a request to change in status NONE,the request is invalid , and will be ignored"
         #define UNNKNOWN_STATE_REQUESTED_DESC_LOG                               "RTSP Client subsystem has received a request to unnknown status,the request is invalid , and will be ignored"
+        #define INVALID_CURRENT_STATE_TO_SWITCH_DESC_LOG                        "RTSP Client subsystem has received a request to switch in impossible state,the request is invalid , and will be ignored"
+        #define GSTREAMER_INIT_FAILED_DESC_LOG                                  "RTSP Client subsystem has received a request to switch in impossible state,the request is invalid , and will be ignored"
 
 
 

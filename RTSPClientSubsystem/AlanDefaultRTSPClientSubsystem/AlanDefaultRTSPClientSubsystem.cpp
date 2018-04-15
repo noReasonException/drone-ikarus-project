@@ -34,11 +34,15 @@ bool AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
                 getSupplier()));
         return false;
     }
-    isClientStatusDefined=true;
-    currentStatus =option->getStatus();
-    callProperStatusHandler();
+    ClientStatus  status = option->getStatus();
     delete option;
-    return true;
+    if(callProperStatusHandler(status)){
+        isClientStatusDefined=true;
+        currentStatus =status;
+        return true;
+
+    }
+    return false;
 
 }
 
@@ -85,9 +89,9 @@ bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,
 
 AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {}
 
-bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler() {
+bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status) {
     bool succeed;
-    switch(currentStatus){
+    switch(status){
         case Client_PAUSE   :succeed=onPauseStatusRequest();return succeed;
         case Client_START   :succeed=onStartStatusRequest();return succeed;
         case Client_PLAY    :succeed=onPlayStatusRequest() ;return succeed;
@@ -112,11 +116,23 @@ bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
-    getSupplier()->send(new Log(
-            "START",
-            time(NULL),
-            "-",
-            getSupplier()));
+    if(!(currentStatus==ClientStatus::Client_NONE||currentStatus==ClientStatus::Client_STOP)){
+        getSupplier()->send(new Log(
+                ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
+                time(NULL),
+                INVALID_CURRENT_STATE_TO_SWITCH_DESC_LOG,
+                getSupplier()));
+        return false;
+    }
+    if(!initializeGstreamer()){
+        getSupplier()->send(new Log(
+                ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
+                time(NULL),
+                GSTREAMER_INIT_FAILED_DESC_LOG,
+                getSupplier()));
+        return false;
+    }
+    //g_main_loop_run(mainLoop);
     return true;
 
 }
@@ -136,7 +152,7 @@ bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
             time(NULL),
             "-",
             getSupplier()));
-    return true;
+    return currentStatus==Client_PLAY;
 }
 
 bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
@@ -145,5 +161,9 @@ bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
             time(NULL),
             "-",
             getSupplier()));
+    return currentStatus==Client_PLAY;
+}
+
+bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     return true;
 }

@@ -12,17 +12,15 @@
 #include "qsettings.h"
 
 class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
+public:
+    AlanDefaultRTSPClientSubsystem();
 
 private :
     QSettings settings;
     bool isNullThenLog(void *ptr, const QString &onErrorMessage);
-    bool logSuccess(void *ptr, const QString &message);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
-public:
-    AlanDefaultRTSPClientSubsystem();
 
-private:
     ClientStatus currentStatus;
     int windowHandle;
     guint   major,
@@ -50,6 +48,8 @@ private:
     GMainLoop   *mainLoop;
     GstBus      *mainBus;
 
+    bool initializeGstreamer();
+
 protected:
     bool onLatencySettingChangedHandler(class LatencyOption *) override;
 
@@ -61,11 +61,12 @@ protected:
 
     bool onLocationSettingChangedHandler(class LocationOption *option) override;
 
-    virtual bool callProperStatusHandler();
+    virtual bool callProperStatusHandler(ClientStatus status);
     virtual bool onStartStatusRequest();
     virtual bool onPlayStatusRequest();
     virtual bool onPauseStatusRequest();
     virtual bool onStopStatusRequest();
+
 
 
 };
