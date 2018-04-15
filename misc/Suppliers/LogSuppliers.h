@@ -68,6 +68,8 @@
         #define GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG    "Gstreamer:All required elements linked"
     #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG          "Properies applied"
         #define GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG "Gstreamer:All configured properties linked"
+    #define GSTREAMER_BUS_INIT_SUCCESS_LOG                      "GstBus Initialized"
+        #define GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG                 "The gstreamer's GstBus* object with its generic_handler is initialized"
 
 
 

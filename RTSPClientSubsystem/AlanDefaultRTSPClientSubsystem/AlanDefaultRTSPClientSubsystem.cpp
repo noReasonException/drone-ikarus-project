@@ -7,7 +7,8 @@
 #include "../../InformationObject/Log/Log.h"
 #include "../../misc/Suppliers/LogSuppliers.h"
 #include "common.h"
-extern "C" gboolean generic_initializer(const int flags, int num, ...);
+extern "C" gboolean     generic_initializer(const int flags, int num, ...);
+extern "C" gboolean     generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipeline);
 
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
     if(isNullThenLog(option,
@@ -210,7 +211,8 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
                      GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_applyProperties(),
                      GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG,GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG))return false;
-
+    else if(!_utillLogHandler(_initializeBus(),
+                              GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
 
 
 
@@ -269,4 +271,9 @@ bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
     g_object_set(G_OBJECT(queue_elem),"max-size-buffers",2);
     g_object_set(G_OBJECT(queue_elem),"max-size-time",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LATENCY).toInt());
     return true;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializeBus() {
+    return (mainBus=gst_pipeline_get_bus(GST_PIPELINE(pipeline)))&&
+            (bus_handler_watch_id=gst_bus_add_watch(mainBus,generic_bus_handler,NULL));
 }
