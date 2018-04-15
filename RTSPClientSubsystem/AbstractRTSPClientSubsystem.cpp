@@ -13,6 +13,8 @@ OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName
 
 void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     Option*optionObject;
+    QString handlerName;
+    bool handlerStatus=false;
     if(!(optionObject= dynamic_cast<Option*>(info))){
         getSupplier()->send(new Log(
                 INVALID_ARG_IN_ACCEPT_LOG,
@@ -22,11 +24,11 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
         return;
     }
     switch(optionObject->getType()){
-        case OptionType::LatencyOption:      {onLatencySettingChangedHandler(dynamic_cast<class LatencyOption*>(optionObject));break;}
-        case OptionType::LocationOption:     {onLocationSettingChangedHandler(dynamic_cast<class LocationOption *>(info));break;}
-        case OptionType::ResolutionOption:   {onResolutionSettingChangedHandler(dynamic_cast<class ResolutionOption*>(optionObject));break;}
-        case OptionType::ClientStatusOption: {onClientStatusSettingChangedHandler(dynamic_cast<class ClientStatusOption*>(optionObject));break;}
-        case OptionType::WindowHandlerOption:{onWindowHandlerSettingChangedHandler(dynamic_cast<class WindowHandleOption*>(optionObject));break;}
+        case OptionType::LatencyOption:      {handlerStatus=onLatencySettingChangedHandler(dynamic_cast<class LatencyOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_LATENCYOPTION_DESC_LOG;break;}
+        case OptionType::LocationOption:     {handlerStatus=onLocationSettingChangedHandler(dynamic_cast<class LocationOption *>(info));handlerName=OPTION_CHANGED_SUCCESS_LOCATION_DESC_LOG;break;}
+        case OptionType::ResolutionOption:   {handlerStatus=onResolutionSettingChangedHandler(dynamic_cast<class ResolutionOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_RESOLUTIONOPTION_DESC_LOG;break;}
+        case OptionType::ClientStatusOption: {handlerStatus=onClientStatusSettingChangedHandler(dynamic_cast<class ClientStatusOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_CLIENTSTATUSOPTION_DESC_LOG;break;}
+        case OptionType::WindowHandlerOption:{handlerStatus=onWindowHandlerSettingChangedHandler(dynamic_cast<class WindowHandleOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_WINDOWHANDLEOPTION_DESC_LOG;break;}
         default:{
             getSupplier()->send(new Log(
                     INVALID_ARG_IN_ACCEPT_LOG,
@@ -34,6 +36,13 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
                     UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
                     getSupplier()));
         }
+    }
+    if(handlerStatus){
+        getSupplier()->send(new Log(
+                SUCCESS_IN_OPTION_CHANGE_LOG,
+                time(NULL),
+                handlerName,
+                getSupplier()));
     }
 
 }

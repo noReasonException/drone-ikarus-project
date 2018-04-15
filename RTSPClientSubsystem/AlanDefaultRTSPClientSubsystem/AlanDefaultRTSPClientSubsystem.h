@@ -15,7 +15,8 @@ class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
 
 private :
     QSettings settings;
-    bool isNull(void *ptr, const QString &onErrorMessage,const QString &onSuccessMessage);
+    bool isNullThenLog(void *ptr, const QString &onErrorMessage);
+    bool logSuccess(void *ptr, const QString &message);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
 public:
@@ -50,21 +51,21 @@ private:
     GstBus      *mainBus;
 
 protected:
-    void onLatencySettingChangedHandler(class LatencyOption *) override;
+    bool onLatencySettingChangedHandler(class LatencyOption *) override;
 
-    void onResolutionSettingChangedHandler(class ResolutionOption *) override;
+    bool onResolutionSettingChangedHandler(class ResolutionOption *) override;
 
-    void onClientStatusSettingChangedHandler(class ClientStatusOption *) override;
+    bool onClientStatusSettingChangedHandler(class ClientStatusOption *) override;
 
-    void onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
+    bool onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
 
-    void onLocationSettingChangedHandler(class LocationOption *option) override;
+    bool onLocationSettingChangedHandler(class LocationOption *option) override;
 
-    void callProperStatusHandler();
-    void onStartStatusRequest();
-    void onPlayStatusRequest();
-    void onPauseStatusRequest();
-    void onStopStatusRequest();
+    virtual bool callProperStatusHandler();
+    virtual bool onStartStatusRequest();
+    virtual bool onPlayStatusRequest();
+    virtual bool onPauseStatusRequest();
+    virtual bool onStopStatusRequest();
 
 
 };

@@ -30,11 +30,11 @@ public:
 protected:
 
     //@may be null
-    virtual void onLatencySettingChangedHandler(class LatencyOption*)=0;
-    virtual void onResolutionSettingChangedHandler(class ResolutionOption*)=0;
-    virtual void onClientStatusSettingChangedHandler(class ClientStatusOption*)=0;
-    virtual void onWindowHandlerSettingChangedHandler(class WindowHandleOption*)=0;
-    virtual void onLocationSettingChangedHandler(class LocationOption*)=0;
+    virtual bool onLatencySettingChangedHandler(class LatencyOption*)=0;
+    virtual bool onResolutionSettingChangedHandler(class ResolutionOption*)=0;
+    virtual bool onClientStatusSettingChangedHandler(class ClientStatusOption*)=0;
+    virtual bool onWindowHandlerSettingChangedHandler(class WindowHandleOption*)=0;
+    virtual bool onLocationSettingChangedHandler(class LocationOption*)=0;
     LogSupplier *getSupplier() const;
 
 
