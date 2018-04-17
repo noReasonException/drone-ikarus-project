@@ -2,6 +2,7 @@
 // Created by noreasonexception on 4/14/18.
 //
 
+#include <iostream>
 #include "AbstractRTSPClientSubsystem.h"
 #include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/AlanMainWindowMisc.h"
@@ -12,6 +13,7 @@ OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName
 }
 
 void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, InformationObject *info) {
+    QMutexLocker locker(consumerLocker);
     Option*optionObject;
     QString handlerName;
     bool handlerStatus=false;
@@ -44,6 +46,7 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
                 handlerName,
                 getSupplier()));
     }
+    delete info;
 
 }
 
@@ -52,5 +55,7 @@ LogSupplier *AbstractRTSPClientSubsystem::getSupplier() const {
 }
 
 AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
-        supplier(LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)) {}
+        supplier(LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)) {
+    consumerLocker=new QMutex();
+}
 

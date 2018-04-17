@@ -9,11 +9,11 @@
 #include "../Option.h"
 
 enum ClientStatus{
-    Client_NONE,            //Default state before first initialization...
-    Client_START,           //Initialization and GMainLoop* start
-    Client_PLAY,            //Pipeline to GST_STATE_PLAYING
-    Client_PAUSE,           //Pipeline to GST_STATE_PAUSED
-    Client_STOP             //Release resources(GST_STATE_NULL)
+    Client_NONE=1,            //Default state before first initialization...
+    Client_START=2,           //Initialization and GMainLoop* start
+    Client_PLAY=3,            //Pipeline to GST_STATE_PLAYING
+    Client_PAUSE=4,           //Pipeline to GST_STATE_PAUSED
+    Client_STOP=5             //Release resources(GST_STATE_NULL)
 
 };
 class ClientStatusOption: public Option {
@@ -25,9 +25,6 @@ public:
             status(status_value){}
     ~ClientStatusOption()override {}
 
-private:
-    ClientStatus status;
-public:
     ClientStatus getStatus() const {
         return status;
     }
@@ -36,6 +33,8 @@ public:
         ClientStatusOption::status = status;
         return this;
     }
+private:
+    ClientStatus status;
 };
 
 

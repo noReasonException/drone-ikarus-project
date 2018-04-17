@@ -6,6 +6,7 @@
 #define IKARUS_PROJECT_ABSTRACTRTSPCLIENTSUBSYSTEM_H
 
 
+#include <QMutex>
 #include "../Consumer/OptionConsumer/OptionConsumer.h"
 #include "../Interfaces/OptionSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
@@ -22,6 +23,8 @@ public:
 
 private:
     LogSupplier*supplier;
+    QMutex *consumerLocker;
+
 public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 

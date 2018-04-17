@@ -105,7 +105,8 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./Supplier/InformationObjectSupplier.h \
             ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
             ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
-            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h
 
 
 

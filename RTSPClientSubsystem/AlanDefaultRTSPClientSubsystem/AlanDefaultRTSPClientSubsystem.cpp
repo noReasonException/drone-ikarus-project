@@ -3,6 +3,7 @@
 //
 
 #include <gst/gst.h>
+#include <iostream>
 #include "AlanDefaultRTSPClientSubsystem.h"
 #include "../../InformationObject/Log/Log.h"
 #include "../../misc/Suppliers/LogSuppliers.h"
@@ -15,7 +16,6 @@ bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class Latenc
     if(isNullThenLog(option,
                      INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LATENCY,option->getLatency());
-    delete option;
     return true;
 }
 
@@ -24,7 +24,6 @@ bool AlanDefaultRTSPClientSubsystem::onResolutionSettingChangedHandler(class Res
                      INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_WIDTH,option->getWidth());
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_HEIGHT,option->getHeight());
-    delete option;
     return true;
 }
 
@@ -39,15 +38,14 @@ bool AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
                 getSupplier()));
         return false;
     }
-    ClientStatus  status = option->getStatus();
-    delete option;
-    if(callProperStatusHandler(status)){
+    if(callProperStatusHandler(option->getStatus())){
         isClientStatusDefined=true;
-        currentStatus =status;
+        this->currentStatus=option->getStatus();
         return true;
 
     }
     return false;
+
 
 }
 
@@ -65,7 +63,6 @@ bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
     }
     isWindowHandleDefined=true;
     windowHandle=option->getWindowHanle();
-    delete option;
     return true;
 }
 
@@ -73,7 +70,6 @@ bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
     if(isNullThenLog(option,
                      INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION,option->getIpLocation());
-    delete option;
     return true;
 
 
@@ -92,15 +88,18 @@ bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,
     return false;
 }
 
-AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {}
+AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {
+    mainLoopThread=new class MainLoopThread();
+
+}
 
 bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status) {
     bool succeed;
     switch(status){
-        case Client_PAUSE   :succeed=onPauseStatusRequest();return succeed;
-        case Client_START   :succeed=onStartStatusRequest();return succeed;
-        case Client_PLAY    :succeed=onPlayStatusRequest() ;return succeed;
-        case Client_STOP    :succeed=onStopStatusRequest() ;return succeed;
+        case Client_PAUSE   :succeed=onPauseStatusRequest();std::cout<<"PAUSE"<<succeed<<std::endl;return succeed;break;
+        case Client_START   :succeed=onStartStatusRequest();std::cout<<"START"<<succeed<<std::endl;return succeed;break;
+        case Client_PLAY    :succeed=onPlayStatusRequest() ;std::cout<<"PLAY"<<succeed<<std::endl;return succeed;break;
+        case Client_STOP    :succeed=onStopStatusRequest() ;std::cout<<"STOP"<<succeed<<std::endl;return succeed;break;
         case Client_NONE:{
             getSupplier()->send(new Log(
                     ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
@@ -121,14 +120,8 @@ bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status
 }
 
 bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
-    if(!(currentStatus==ClientStatus::Client_NONE||currentStatus==ClientStatus::Client_STOP)){
-        getSupplier()->send(new Log(
-                ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
-                time(NULL),
-                INVALID_CURRENT_STATE_TO_SWITCH_DESC_LOG,
-                getSupplier()));
-        return false;
-    }
+
+    if(currentStatus!=Client_NONE){ return false; }
     if(!initializeGstreamer()){
         getSupplier()->send(new Log(
                 ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
@@ -137,43 +130,35 @@ bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
                 getSupplier()));
         return false;
     }
-    getSupplier()->send(new Log(
-            "START",
-            time(NULL),
-            "-",
-            getSupplier()));
-
     return true;
 
 }
 
 bool AlanDefaultRTSPClientSubsystem::onPlayStatusRequest() {
+    if(currentStatus!=Client_START&&currentStatus!=Client_PAUSE) {
+        return false;
+    }
+    mainLoopThread->setLoop(mainLoop)->start();
     gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_PLAYING);
-    g_main_loop_run(mainLoop);
-    getSupplier()->send(new Log(
-            "PLAY",
-            time(NULL),
-            "-",
-            getSupplier()));
+    //g_main_loop_run(mainLoop);
+
     return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
-    getSupplier()->send(new Log(
-            "PAUSE",
-            time(NULL),
-            "-",
-            getSupplier()));
-    return currentStatus==Client_PLAY;
+
+    if(currentStatus!=Client_PLAY)
+        return false;
+    gst_element_set_state(pipeline,GST_STATE_PAUSED);
+    g_main_loop_quit(mainLoop);
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
-    getSupplier()->send(new Log(
-            "STOP",
-            time(NULL),
-            "-",
-            getSupplier()));
-    return currentStatus==Client_PLAY;
+    //if play , then pause first
+    std::cout<<"CURR STATUS IS"<<currentStatus<<std::endl;
+
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
@@ -254,7 +239,8 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
                      videoconvert_elem,         ///raw video
                      ximagessink_elem,NULL);  ///screen
     return gst_element_link_many(
-                    queue_elem,
+
+            queue_elem,
                     rtph264depayloader_elem,
                     decodebin_elem,NULL)&&
                                             ///decodebin -> videoconvert connection happens on on-pad event lisener

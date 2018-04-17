@@ -245,9 +245,9 @@ QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
     retval->setLayout(main_lay=new QGridLayout());
 
     try{
-        main_lay->addWidget(onGenerateLeftLayout(),0,0,1,6);
+        main_lay->addWidget(onGenerateLeftLayout(),0,0,1,4);
         main_lay->addWidget(onGenerateVideoArea(),0,7,1,6);
-        main_lay->addWidget(onGenerateRightLayout(),0,14,1,6);
+        main_lay->addWidget(onGenerateRightLayout(),0,14,1,4);
     }catch(std::exception&e){throw e;}
 
     return retval;

@@ -12,6 +12,8 @@
 #include <gst/video/videooverlay.h>
 #include "../AbstractRTSPClientSubsystem.h"
 #include "qsettings.h"
+#include "MainLoopThread.h"
+
 
 class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
 public:
@@ -48,7 +50,9 @@ private :
             *ximagessink_elem;
 
     GMainLoop   *mainLoop;
+    class MainLoopThread*mainLoopThread;
     GstBus      *mainBus;
+
 
     bool initializeGstreamer();
     bool _initializeFactories();
