@@ -17,6 +17,7 @@
 #include "../misc/Suppliers/LogSuppliers.h"
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
 #include "../misc/Suppliers/OptionSuppliers.h"
+#include "Panels/StreamPanel/DataPanel/DataPanel.h"
 
 /***
  * AlanMainWindowConstructor
@@ -263,7 +264,7 @@ QWidget* AlanMainWindow::onGenerateCentralWidget() throw(std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateLeftLayout() throw (std::exception){
-    return new QListView();
+    return DataPanel::getInstance();
 }
 /***
  * onGenerateVideoArea() does the real job of initializing and returning a QWidget

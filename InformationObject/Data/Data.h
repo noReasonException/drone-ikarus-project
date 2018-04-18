@@ -10,6 +10,17 @@
 
 class Data : public InformationObject{
 
+private:
+    int ID;
+public:
+    int getID() const;
+
+    void setID(int ID);
+    Data(int ID,long timestamp, InformationObjectSupplier *source);
+
+
+
+
 };
 
 

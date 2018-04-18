@@ -12,10 +12,11 @@
 #include "../../../../misc/errors/AlanPanelErrors.h"
 #include "LogWidget/LogWidget.h"
 #include "../../../../misc/Suppliers/LogSuppliers.h"
+#include "../../../../misc/generic_text/AlanMainWindowMisc.h"
 
 LogPanel* LogPanel::instance= nullptr;
 
-LogPanel::LogPanel(const QString &str) : StreamPanel(str) {
+LogPanel::LogPanel() : StreamPanel(LOGS_PANEL_TITLE) {
     log=new std::vector<Log*>();
     class_locker=new QMutex;
     self_supplier=createSupplier("Log panel");
@@ -48,7 +49,7 @@ LogSupplier *LogPanel::createSupplier(QString supplierName) {
 
 LogPanel *LogPanel::getInstance(QString title) {
     if(LogPanel::instance)return LogPanel::instance;
-    auto pnl=new LogPanel(title);
+    auto pnl=new LogPanel();
     if(!pnl->generic_initializer()){
         QMessageBox::warning(nullptr,GENERIC_INITIALIZATION_ERROR_DIALOG,ERR02_DETAILS);
         return nullptr;

@@ -43,7 +43,6 @@ class LogPanel:public StreamPanel,
     void onDataClicked(QListWidgetItem *item) override;
 
 public:
-    LogPanel(const QString &str);
 
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 
@@ -52,6 +51,8 @@ public:
     static LogPanel*getInstance(QString title);
 
 protected:
+    LogPanel();
+
     static LogPanel*instance;
     std::vector<Log*>*log;
     LogSupplier*self_supplier;
