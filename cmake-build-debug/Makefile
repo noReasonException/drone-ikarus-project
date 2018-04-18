@@ -123,6 +123,33 @@ Ikarus_project/fast:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/build
 .PHONY : Ikarus_project/fast
 
+Consumer/DataConsumer/DataConsumer.o: Consumer/DataConsumer/DataConsumer.cpp.o
+
+.PHONY : Consumer/DataConsumer/DataConsumer.o
+
+# target to build an object file
+Consumer/DataConsumer/DataConsumer.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o
+.PHONY : Consumer/DataConsumer/DataConsumer.cpp.o
+
+Consumer/DataConsumer/DataConsumer.i: Consumer/DataConsumer/DataConsumer.cpp.i
+
+.PHONY : Consumer/DataConsumer/DataConsumer.i
+
+# target to preprocess a source file
+Consumer/DataConsumer/DataConsumer.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.i
+.PHONY : Consumer/DataConsumer/DataConsumer.cpp.i
+
+Consumer/DataConsumer/DataConsumer.s: Consumer/DataConsumer/DataConsumer.cpp.s
+
+.PHONY : Consumer/DataConsumer/DataConsumer.s
+
+# target to generate assembly for a file
+Consumer/DataConsumer/DataConsumer.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.s
+.PHONY : Consumer/DataConsumer/DataConsumer.cpp.s
+
 Consumer/InformationObjectConsumer.o: Consumer/InformationObjectConsumer.cpp.o
 
 .PHONY : Consumer/InformationObjectConsumer.o
@@ -501,6 +528,33 @@ MainWindow/Panels/AlanPanel.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s
 .PHONY : MainWindow/Panels/AlanPanel.cpp.s
 
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.o: MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.o
+
+# target to build an object file
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o
+
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.i: MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.i
+
+# target to preprocess a source file
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i
+
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.s: MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.s
+
+# target to generate assembly for a file
+MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
+
 MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
 
 .PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o
@@ -717,6 +771,33 @@ RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s
 .PHONY : RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s
 
+Supplier/DataSupplier/DataSupplier.o: Supplier/DataSupplier/DataSupplier.cpp.o
+
+.PHONY : Supplier/DataSupplier/DataSupplier.o
+
+# target to build an object file
+Supplier/DataSupplier/DataSupplier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o
+.PHONY : Supplier/DataSupplier/DataSupplier.cpp.o
+
+Supplier/DataSupplier/DataSupplier.i: Supplier/DataSupplier/DataSupplier.cpp.i
+
+.PHONY : Supplier/DataSupplier/DataSupplier.i
+
+# target to preprocess a source file
+Supplier/DataSupplier/DataSupplier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.i
+.PHONY : Supplier/DataSupplier/DataSupplier.cpp.i
+
+Supplier/DataSupplier/DataSupplier.s: Supplier/DataSupplier/DataSupplier.cpp.s
+
+.PHONY : Supplier/DataSupplier/DataSupplier.s
+
+# target to generate assembly for a file
+Supplier/DataSupplier/DataSupplier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.s
+.PHONY : Supplier/DataSupplier/DataSupplier.cpp.s
+
 Supplier/InformationObjectSupplier.o: Supplier/InformationObjectSupplier.cpp.o
 
 .PHONY : Supplier/InformationObjectSupplier.o
@@ -834,6 +915,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ikarus_project"
+	@echo "... Consumer/DataConsumer/DataConsumer.o"
+	@echo "... Consumer/DataConsumer/DataConsumer.i"
+	@echo "... Consumer/DataConsumer/DataConsumer.s"
 	@echo "... Consumer/InformationObjectConsumer.o"
 	@echo "... Consumer/InformationObjectConsumer.i"
 	@echo "... Consumer/InformationObjectConsumer.s"
@@ -876,6 +960,9 @@ help:
 	@echo "... MainWindow/Panels/AlanPanel.o"
 	@echo "... MainWindow/Panels/AlanPanel.i"
 	@echo "... MainWindow/Panels/AlanPanel.s"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.o"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.i"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.s"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.i"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.s"
@@ -900,6 +987,9 @@ help:
 	@echo "... RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.o"
 	@echo "... RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.i"
 	@echo "... RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.s"
+	@echo "... Supplier/DataSupplier/DataSupplier.o"
+	@echo "... Supplier/DataSupplier/DataSupplier.i"
+	@echo "... Supplier/DataSupplier/DataSupplier.s"
 	@echo "... Supplier/InformationObjectSupplier.o"
 	@echo "... Supplier/InformationObjectSupplier.i"
 	@echo "... Supplier/InformationObjectSupplier.s"

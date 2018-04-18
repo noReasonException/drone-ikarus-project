@@ -22,42 +22,45 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += ./Supplier/InformationObjectSupplier.cpp \
-           ./Supplier/LogSupplier/LogSupplier.cpp \
-           ./Supplier/OptionSupplier/OptionSupplier.cpp \
-           ./Consumer/LogConsumer/LogConsumer.cpp \
-           ./Consumer/InformationObjectConsumer.cpp \
+SOURCES += ./InformationObject/InformationObject.cpp \
+           ./InformationObject/Data/Data.cpp \
+           ./InformationObject/Log/Log.cpp \
+           ./InformationObject/Option/Option.cpp \
            ./main.cpp \
            ./MainWindow/AlanMainWindow.cpp \
-           ./Factory/AbstractFactory.cpp \
-           ./Factory/AlanDefaultFactory/AlanDefaultFactory.cpp \
            ./MainWindow/Dialogs/AlanSingleOptionDialog.cpp \
            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp \
            ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp \
            ./MainWindow/Panels/AlanPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp \
            ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp \
-           ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp \
+           ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp\
            ./MainWindow/Panels/StreamPanel/StreamPanel.cpp \
            ./MainWindow/State/State.cpp \
-           ./InformationObject/InformationObject.cpp \
-           ./InformationObject/Data/Data.cpp \
-           ./InformationObject/Log/Log.cpp \
-           ./InformationObject/Option/Option.cpp \
            ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp \
            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp \
+           ./Factory/AlanDefaultFactory/AlanDefaultFactory.cpp \
+           ./Factory/AbstractFactory.cpp \
+           ./Supplier/InformationObjectSupplier.cpp \
+           ./Supplier/DataSupplier/DataSupplier.cpp \
+           ./Supplier/LogSupplier/LogSupplier.cpp \
+           ./Supplier/OptionSupplier/OptionSupplier.cpp \
            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c \
-           ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
+           ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c \
+	        ./Consumer/InformationObjectConsumer.cpp \
+            ./Consumer/LogConsumer/LogConsumer.cpp \
+            ./Consumer/DataConsumer/DataConsumer.cpp \
+            ./Consumer/OptionConsumer/OptionConsumer.cpp
 
-
-
-
-
-
-
-HEADERS +=  ./Consumer/InformationObjectConsumer.h \
+HEADERS +=  ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h \
+            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/qsettings.h \
+            ./Consumer/InformationObjectConsumer.h \
             ./Consumer/LogConsumer/LogConsumer.h \
-            ./Factory/AbstractFactory.h \
-            ./Factory/AlanDefaultFactory/AlanDefaultFactory.h \
+            ./Consumer/DataConsumer/DataConsumer.h \
+            ./Consumer/OptionConsumer/OptionConsumer.h \
             ./MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h \
@@ -67,6 +70,7 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.h \
             ./MainWindow/Dialogs/AlanSingleOptionDialog.h \
             ./MainWindow/Panels/AlanPanel.h \
+            ./MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.h \
             ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h \
             ./MainWindow/Panels/StreamPanel/StreamPanel.h \
@@ -89,24 +93,28 @@ HEADERS +=  ./Consumer/InformationObjectConsumer.h \
             ./InformationObject/Option/ChildOptions/ClientStatusOption.h \
             ./InformationObject/Option/Option.h \
             ./Interfaces/LogSupplierFactory.h \
-            ./Interfaces/StateRestorable.h \ \
+            ./Interfaces/DataSupplierFactory.h \
+            ./Interfaces/StateRestorable.h \
             ./Interfaces/InformationSupplierFactory.h \
+            ./Interfaces/OptionSupplierFactory.h \
             ./misc/states.h \
             ./misc/version.h \
             ./misc/Suppliers/LogSuppliers.h \
+            ./misc/Suppliers/OptionSuppliers.h \
             ./misc/img/generic_paths.h \
             ./misc/generic_text/AlanMainWindowMisc.h \
             ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h \
+            ./misc/generic_text/AlanMainWindowDialogs.h\
             ./misc/errors/AlanMainWindowErrors.h \
             ./misc/errors/AlanPanelErrors.h \
+            ./Supplier/DataSupplier/DataSupplier.h \
             ./Supplier/LogSupplier/LogSupplier.h \
             ./Supplier/OptionSupplier/OptionSupplier.h \
             ./Supplier/InformationObjectSupplier.h \
-            ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
-            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
-            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h \
-            ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h
+            ./Factory/AlanDefaultFactory/AlanDefaultFactory.h \
+            ./Factory/AbstractFactory.h
+
+
 
 
 

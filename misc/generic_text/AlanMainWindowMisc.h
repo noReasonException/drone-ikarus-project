@@ -1,8 +1,10 @@
 //
 // Created by noreasonexception on 4/8/18.
 //
-
+///TODO RENAME
 #ifndef IKARUS_PROJECT_ALANMAINWINDOWMISC_H
 #define IKARUS_PROJECT_ALANMAINWINDOWMISC_H
 #define LOGS_PANEL_TITLE "Logs"
+#define DATA_PANEL_TITLE "Data"
+
 #endif //IKARUS_PROJECT_MISC_H

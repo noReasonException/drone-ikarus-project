@@ -89,5 +89,5 @@ add_executable(Ikarus_project main.cpp
         ./Supplier/LogSupplier/LogSupplier.cpp
         ./Supplier/OptionSupplier/OptionSupplier.cpp
         InformationObject/Option/ChildOptions/LocationOption.h
-        RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h)
+        RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h Supplier/DataSupplier/DataSupplier.cpp Supplier/DataSupplier/DataSupplier.h Consumer/DataConsumer/DataConsumer.cpp Consumer/DataConsumer/DataConsumer.h Interfaces/DataSupplierFactory.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

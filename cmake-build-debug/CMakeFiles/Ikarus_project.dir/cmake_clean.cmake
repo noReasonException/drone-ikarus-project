@@ -25,6 +25,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
   "CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o"
   "CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )
