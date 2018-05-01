@@ -80,6 +80,7 @@ private :
     bool _de__initializeProbeListeners();
 
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
+    bool _utill_gst_object_unref_many(int i,...);
 
 protected:
     bool onLatencySettingChangedHandler(class LatencyOption *) override;

@@ -4,7 +4,7 @@
 
 #ifndef IKARUS_PROJECT_DATAPANEL_H
 #define IKARUS_PROJECT_DATAPANEL_H
-#define MAX_DATA_ON_PANEL 1000 ///TODO :move to specific *.h config file
+#define MAX_DATA_ON_PANEL 30 ///TODO :move to specific *.h config file
 
 #include <QtCore/QMutex>
 #include "../StreamPanel.h"

@@ -347,7 +347,23 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
-    return false;
+    gst_element_unlink_many(
+            gstrtspsrc_elem,
+            queue_elem,
+            rtph264depayloader_elem,
+            decodebin_elem,
+            videoconvert_elem,
+            ximagessink_elem);
+    gst_bin_remove_many(GST_BIN(pipeline),
+                     gstrtspsrc_elem,
+                     queue_elem,
+                     rtph264depayloader_elem,
+                     decodebin_elem,
+                     videoconvert_elem,
+                     ximagessink_elem,NULL);
+
+
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
@@ -381,4 +397,15 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
     g_free(_temp);
     return true;
 
+}
+
+bool AlanDefaultRTSPClientSubsystem::_utill_gst_object_unref_many(int i, ...) {
+    va_list args;
+    va_start(i,args);
+    GstObject*_tmp;
+    for (int j = i; j >0 ; --j) {
+        _tmp=va_arg(args,GstObject*);
+        gst_object_unref(_tmp);
+    }
+    return true;
 }

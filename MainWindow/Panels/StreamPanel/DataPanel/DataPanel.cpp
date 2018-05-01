@@ -30,7 +30,7 @@ void DataPanel::accept(InformationObjectSupplier *supplier, InformationObject *i
     }
     getListView()->addItem(QString::number(data->getID()));
     getListView()->scrollToBottom();
-
+    _prevent_SIGFAULT();
 
     delete data;
 }
@@ -56,7 +56,8 @@ DataPanel *DataPanel::getInstance() {
 }
 
 void DataPanel::_prevent_SIGFAULT() {
-    if(getListView()->count()>MAX_DATA_ON_PANEL)
-        getListView()->removeItemWidget(getListView()->item(0));
+    if(getListView()->count()>MAX_DATA_ON_PANEL){
+        delete getListView()->item(0);
+    }
 
 }
