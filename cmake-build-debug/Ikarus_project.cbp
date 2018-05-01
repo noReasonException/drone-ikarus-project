@@ -257,6 +257,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>

@@ -65,6 +65,16 @@ private :
     bool _initializeBus();
     bool _initializePadAddedListeners();
     bool _initializeProbeListeners();
+
+    bool de_initializeGstreamer();
+    bool _de_initializeFactories();
+    bool _de__initializeElements();
+    bool _de__initializeConnections();
+    bool _de__applyProperties();
+    bool _de__initializeBus();
+    bool _de__initializePadAddedListeners();
+    bool _de__initializeProbeListeners();
+
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
 
 protected:

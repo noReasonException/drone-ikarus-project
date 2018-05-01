@@ -49,7 +49,7 @@ bool StreamPanel::initializeListView() try {
  * ...is strictly forbidden (To maintain a elegant code)
  */
 QListWidget *StreamPanel::onGenerateListView() {
-    return new QListWidget;
+    return new QListWidget();
 }
 QListWidget *StreamPanel::getListView() const {
     return listView;

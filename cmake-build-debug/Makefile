@@ -555,6 +555,33 @@ MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
 .PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
 
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.o: MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.o
+
+# target to build an object file
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o
+
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.i: MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.i
+
+# target to preprocess a source file
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i
+
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.s: MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s
+
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.s
+
+# target to generate assembly for a file
+MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s
+.PHONY : MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s
+
 MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o: MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o
 
 .PHONY : MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o
@@ -963,6 +990,9 @@ help:
 	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.o"
 	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.i"
 	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataPanel.s"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.o"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.i"
+	@echo "... MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.s"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.o"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.i"
 	@echo "... MainWindow/Panels/StreamPanel/LogPanel/LogPanel.s"

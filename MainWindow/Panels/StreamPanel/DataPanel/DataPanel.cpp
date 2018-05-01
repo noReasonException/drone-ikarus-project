@@ -12,6 +12,7 @@
 #include "../LogPanel/LogPanel.h"
 #include "../../../../misc/errors/AlanPanelErrors.h"
 #include "../../../../misc/generic_text/generic_dialogs.h"
+#include "DataWidget/DataWidget.h"
 
 DataPanel::DataPanel() : StreamPanel(DATA_PANEL_TITLE),
                          dataPanelLogSupplier(LogPanel::getInstance()->createSupplier("DataPanelSupplier")) {
@@ -28,6 +29,9 @@ void DataPanel::accept(InformationObjectSupplier *supplier, InformationObject *i
         return;
     }
     getListView()->addItem(QString::number(data->getID()));
+    getListView()->scrollToBottom();
+
+
     delete data;
 }
 
@@ -37,7 +41,7 @@ DataSupplier *DataPanel::createSupplier(QString supplierName) {
 }
 
 void DataPanel::onDataClicked(QListWidgetItem *item) {
-    QMessageBox::warning(nullptr,"he","ho");
+
 }
 
 DataPanel *DataPanel::getInstance() {
@@ -49,4 +53,10 @@ DataPanel *DataPanel::getInstance() {
     }
     DataPanel::instance=pnl;
     return pnl;
+}
+
+void DataPanel::_prevent_SIGFAULT() {
+    if(getListView()->count()>MAX_DATA_ON_PANEL)
+        getListView()->removeItemWidget(getListView()->item(0));
+
 }
