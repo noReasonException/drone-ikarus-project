@@ -15,6 +15,7 @@
 #include "../InformationObject/Option/ChildOptions/ResolutionOption.h"
 #include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
 #include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
+#include "../Supplier/DataSupplier/DataSupplier.h"
 
 class AbstractRTSPClientSubsystem : public OptionConsumer,
                                     public OptionSupplierFactory{
@@ -23,12 +24,15 @@ public:
 
 private:
     LogSupplier*supplier;
+    DataSupplier*dataSupplier;
     QMutex *consumerLocker;
 
 public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 
     OptionSupplier *createSupplier(QString supplierName) override;
+    LogSupplier *getLogSupplier() const;
+    DataSupplier *getDataSupplier() const;
 
 protected:
 
@@ -38,7 +42,6 @@ protected:
     virtual bool onClientStatusSettingChangedHandler(class ClientStatusOption*)=0;
     virtual bool onWindowHandlerSettingChangedHandler(class WindowHandleOption*)=0;
     virtual bool onLocationSettingChangedHandler(class LocationOption*)=0;
-    LogSupplier *getSupplier() const;
 
 
 

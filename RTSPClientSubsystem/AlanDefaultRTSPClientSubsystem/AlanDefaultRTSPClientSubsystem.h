@@ -14,8 +14,11 @@
 #include "qsettings.h"
 #include "MainLoopThread.h"
 
+extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP);
 
 class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
+    friend int  trigger_new_frame (void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP);
+
 public:
     AlanDefaultRTSPClientSubsystem();
 

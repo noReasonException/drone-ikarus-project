@@ -8,6 +8,8 @@
 #include "../../InformationObject/Log/Log.h"
 #include "../../misc/Suppliers/LogSuppliers.h"
 #include "common.h"
+#include "../../InformationObject/Data/Data.h"
+
 extern "C" gboolean     generic_initializer(const int flags, int num, ...);
 extern "C" gboolean     generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipeline);
 extern "C" void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpointer videoconvert);
@@ -33,11 +35,11 @@ bool AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
     if(isNullThenLog(option,
                      INVALID_ARG_CLIENTSTATUSOPTION_EXPECTED_LOG))return false;
     if(!isWindowHandleDefined){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 UNABLE_TO_CHANGE_STATE_LOG,
                 time(NULL),
                 STATE_CHANGE_REQUEST_WITHOUT_WINDOWHANDLER_SET_DESC_LOG,
-                getSupplier()));
+                getLogSupplier()));
         return false;
     }
     if(callProperStatusHandler(option->getStatus())){
@@ -55,11 +57,11 @@ bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
     if(isNullThenLog(option,
                      INVALID_ARG_WINDOWHANDLEOPTION_EXPECTED_LOG))return false;
     if(isWindowHandleDefined){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 INVALID_HANDLER_CALL_LOG,
                 time(NULL),
                 WINDOWHANDLER_ALREADY_DEFINED_DESC_LOG,
-                getSupplier()
+                getLogSupplier()
         ));
         return false;
     }
@@ -80,11 +82,11 @@ bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
 bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,
                                                    const QString &onErrorMessage) {
     if(!ptr){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 INVALID_ARG_IN_ACCEPT_LOG,
                 time(NULL),
                 onErrorMessage,
-                getSupplier()));
+                getLogSupplier()));
         return true;
     }
     return false;
@@ -103,18 +105,18 @@ bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status
         case Client_PLAY    :succeed=onPlayStatusRequest() ;std::cout<<"PLAY"<<succeed<<std::endl;return succeed;break;
         case Client_STOP    :succeed=onStopStatusRequest() ;std::cout<<"STOP"<<succeed<<std::endl;return succeed;break;
         case Client_NONE:{
-            getSupplier()->send(new Log(
+            getLogSupplier()->send(new Log(
                     ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
                     time(NULL),
                     NONE_STATE_REQUESTED_DESC_LOG,
-                    getSupplier()));
+                    getLogSupplier()));
             return false;}
         default:{
-            getSupplier()->send(new Log(
+            getLogSupplier()->send(new Log(
                     ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
                     time(NULL),
                     UNNKNOWN_STATE_REQUESTED_DESC_LOG,
-                    getSupplier()));
+                    getLogSupplier()));
             return false;}
 
     }
@@ -125,11 +127,11 @@ bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
 
     if(currentStatus!=Client_NONE){ return false; }
     if(!initializeGstreamer()){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
                 time(NULL),
                 GSTREAMER_INIT_FAILED_DESC_LOG,
-                getSupplier()));
+                getLogSupplier()));
         return false;
     }
     return true;
@@ -170,27 +172,27 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     /*Initialization check of gstreamer*/
     if(!gst_init_check(0,0,&err)){
         sprintf(sprintf_buffer,"%s",err->message);
-        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), sprintf_buffer, getSupplier()));
+        getLogSupplier()->send(new Log("Gstreamer init fail", time(NULL), sprintf_buffer, getLogSupplier()));
         return false;
     }
     /*Print current version...*/
     gst_version(&major,&minor,&nano,&pico);
     sprintf(sprintf_buffer,"Gstreamer version %d.%d.%d.%d",major,minor,nano,pico);
-    getSupplier()->send(new Log("Gstreamer Version", time(NULL), sprintf_buffer, getSupplier()));
+    getLogSupplier()->send(new Log("Gstreamer Version", time(NULL), sprintf_buffer, getLogSupplier()));
 
     /*Initialize GMainLoop*/
     if(!(mainLoop=g_main_loop_new(NULL,FALSE))){
-        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "g_main_loop_new fail", getSupplier()));
+        getLogSupplier()->send(new Log("Gstreamer init fail", time(NULL), "g_main_loop_new fail", getLogSupplier()));
         return false;
 
     }
-    getSupplier()->send(new Log("MainLoop initialized", time(NULL), "-", getSupplier()));
+    getLogSupplier()->send(new Log("MainLoop initialized", time(NULL), "-", getLogSupplier()));
     /*Initialize Pipeline*/
     if(!(pipeline=gst_pipeline_new("AlanDefaultRTSPClientSubSystem"))){
-        getSupplier()->send(new Log("Gstreamer init fail", time(NULL), "gst_pipeline_new fail", getSupplier()));
+        getLogSupplier()->send(new Log("Gstreamer init fail", time(NULL), "gst_pipeline_new fail", getLogSupplier()));
         return false;
     }
-    getSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getSupplier()));
+    getLogSupplier()->send(new Log("Pipeline initialized", time(NULL), "-", getLogSupplier()));
     /*Initialize elements*/
 
     if(!_utillLogHandler(_initializeFactories(),
@@ -254,7 +256,7 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
-    if(status)getSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg ,getSupplier()));
+    if(status)getLogSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg , getLogSupplier()));
     return status;
 }
 
@@ -282,7 +284,14 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
 bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
     GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
     gst_pad_add_probe(_temp, GST_PAD_PROBE_TYPE_BUFFER,
-                      (GstPadProbeCallback) on_timestamp_export_probe_triggered, NULL, NULL);
+                      (GstPadProbeCallback) on_timestamp_export_probe_triggered, (void *)this, NULL);
 
+
+}
+extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
+    DataSupplier*_ref=(reinterpret_cast<AlanDefaultRTSPClientSubsystem*>(alanDefaultRTSPClientSubsystem_entity)
+            ->getDataSupplier());
+    _ref->send(new Data(ID,TIMESTAMP,_ref));
+    return true;
 }
 

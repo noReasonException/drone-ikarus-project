@@ -3,6 +3,7 @@
 //
 
 #include <QtWidgets/QMessageBox>
+#include <iostream>
 #include "DataPanel.h"
 #include "../../../../misc/generic_text/AlanMainWindowMisc.h"
 #include "../../../../InformationObject/Data/Data.h"
@@ -26,7 +27,8 @@ void DataPanel::accept(InformationObjectSupplier *supplier, InformationObject *i
                 INVALID_ARGS_IN_ACCEPT_DESC_LOG,dataPanelLogSupplier));
         return;
     }
-    getListView()->addItem(QString(data->getID()));
+    getListView()->addItem(QString::number(data->getID()));
+    delete data;
 }
 
 

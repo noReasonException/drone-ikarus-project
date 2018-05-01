@@ -7,6 +7,7 @@
 #include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../misc/generic_text/AlanMainWindowMisc.h"
 #include "../misc/Suppliers/LogSuppliers.h"
+#include "../MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h"
 
 OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName) {
     return new OptionSupplier(supplierName,this);
@@ -18,11 +19,11 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
     QString handlerName;
     bool handlerStatus=false;
     if(!(optionObject= dynamic_cast<Option*>(info))){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 INVALID_ARG_IN_ACCEPT_LOG,
                 time(NULL),
                 INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
-                getSupplier()));
+                getLogSupplier()));
         return;
     }
     switch(optionObject->getType()){
@@ -32,30 +33,34 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
         case OptionType::ClientStatusOption: {handlerStatus=onClientStatusSettingChangedHandler(dynamic_cast<class ClientStatusOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_CLIENTSTATUSOPTION_DESC_LOG;break;}
         case OptionType::WindowHandlerOption:{handlerStatus=onWindowHandlerSettingChangedHandler(dynamic_cast<class WindowHandleOption*>(optionObject));handlerName=OPTION_CHANGED_SUCCESS_WINDOWHANDLEOPTION_DESC_LOG;break;}
         default:{
-            getSupplier()->send(new Log(
+            getLogSupplier()->send(new Log(
                     INVALID_ARG_IN_ACCEPT_LOG,
                     time(NULL),
                     UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
-                    getSupplier()));
+                    getLogSupplier()));
         }
     }
     if(handlerStatus){
-        getSupplier()->send(new Log(
+        getLogSupplier()->send(new Log(
                 SUCCESS_IN_OPTION_CHANGE_LOG,
                 time(NULL),
                 handlerName,
-                getSupplier()));
+                getLogSupplier()));
     }
     delete info;
 
 }
 
-LogSupplier *AbstractRTSPClientSubsystem::getSupplier() const {
+LogSupplier *AbstractRTSPClientSubsystem::getLogSupplier() const {
     return supplier;
+}
+DataSupplier *AbstractRTSPClientSubsystem::getDataSupplier() const {
+    return dataSupplier;
 }
 
 AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
-        supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)) {
+        dataSupplier(DataPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)),
+        supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)){
     consumerLocker=new QMutex();
 }
 
