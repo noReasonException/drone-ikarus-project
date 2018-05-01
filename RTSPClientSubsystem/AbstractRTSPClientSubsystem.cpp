@@ -55,7 +55,7 @@ LogSupplier *AbstractRTSPClientSubsystem::getSupplier() const {
 }
 
 AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
-        supplier(LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)) {
+        supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)) {
     consumerLocker=new QMutex();
 }
 

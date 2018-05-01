@@ -47,7 +47,7 @@ LogSupplier *LogPanel::createSupplier(QString supplierName) {
 
 }
 
-LogPanel *LogPanel::getInstance(QString title) {
+LogPanel *LogPanel::getInstance() {
     if(LogPanel::instance)return LogPanel::instance;
     auto pnl=new LogPanel();
     if(!pnl->generic_initializer()){

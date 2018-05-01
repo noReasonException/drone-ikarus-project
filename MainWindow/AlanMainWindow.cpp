@@ -18,6 +18,7 @@
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
 #include "../misc/Suppliers/OptionSuppliers.h"
 #include "Panels/StreamPanel/DataPanel/DataPanel.h"
+#include "../InformationObject/Data/Data.h"
 
 /***
  * AlanMainWindowConstructor
@@ -27,7 +28,7 @@ AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
 
     isStreaming= false;
     isReTransmitting= false;
-    supplier=LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
+    supplier=LogPanel::getInstance()->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
     rtspClientOptionSupplier=factory->getRTSPSubsystem()->createSupplier(MAINWINDOW_OPTION_SUPPLIER);
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
@@ -291,7 +292,7 @@ QWidget *AlanMainWindow::onGenerateVideoArea() throw (std::exception){
  * ...is strictly forbidden (To maintain a elegant code and avoid bugs)
  */
 QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
-    LogPanel*pnl=LogPanel::getInstance(LOGS_PANEL_TITLE);
+    LogPanel*pnl=LogPanel::getInstance();
     return pnl;
 }
 

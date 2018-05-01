@@ -59,3 +59,22 @@ extern gboolean  generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipe
     g_print("%s\n?",err);
     recallMe;
 }
+GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeInfo *info,
+                                                      gpointer user_data) {
+    GstMapInfo map;
+    GstBuffer *buff = gst_buffer_make_writable(GST_PAD_PROBE_INFO_BUFFER(info));
+
+    if(gst_buffer_map(buff,&map,GST_MAP_READ)){
+        g_print("0x%08x with size %d and idx=%d\t",*(map.data+48),map.size,gst_buffer_n_memory(buff));
+        g_print("0x%08x with size %d and idx=%d\t",*(map.data+49),map.size,gst_buffer_n_memory(buff));
+        g_print("0x%08x with size %d and idx=%d\t",*(map.data+50),map.size,gst_buffer_n_memory(buff));
+        g_print("0x%08x with size %d and idx=%d\n",*(map.data+51),map.size,gst_buffer_n_memory(buff));
+
+        gst_buffer_unmap(buff,&map);
+    }
+    GST_PAD_PROBE_INFO_DATA (info) = buff;
+
+
+    return GST_PAD_PROBE_OK;
+
+}

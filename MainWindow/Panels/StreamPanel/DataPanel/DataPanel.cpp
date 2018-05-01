@@ -13,7 +13,7 @@
 #include "../../../../misc/generic_text/generic_dialogs.h"
 
 DataPanel::DataPanel() : StreamPanel(DATA_PANEL_TITLE),
-                         dataPanelLogSupplier(LogPanel::getInstance(LOGS_PANEL_TITLE)->createSupplier("DataPanelSupplier")) {
+                         dataPanelLogSupplier(LogPanel::getInstance()->createSupplier("DataPanelSupplier")) {
 
 }
 DataPanel* DataPanel::instance= nullptr;
@@ -35,7 +35,7 @@ DataSupplier *DataPanel::createSupplier(QString supplierName) {
 }
 
 void DataPanel::onDataClicked(QListWidgetItem *item) {
-
+    QMessageBox::warning(nullptr,"he","ho");
 }
 
 DataPanel *DataPanel::getInstance() {

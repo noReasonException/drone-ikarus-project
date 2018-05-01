@@ -48,7 +48,7 @@ public:
 
     LogSupplier *createSupplier(QString supplierName) override;
 
-    static LogPanel*getInstance(QString title);
+    static LogPanel*getInstance();
 
 protected:
     LogPanel();

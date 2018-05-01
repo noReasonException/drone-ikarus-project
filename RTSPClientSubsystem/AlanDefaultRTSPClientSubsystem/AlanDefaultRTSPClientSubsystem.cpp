@@ -274,3 +274,4 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
     g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
     return true;
 }
+
