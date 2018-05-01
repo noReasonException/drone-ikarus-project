@@ -355,6 +355,11 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
+    GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
+    gst_pad_remove_probe(_temp,on_timestamp_export_probe_triggered_probe_id);
+    on_timestamp_export_probe_triggered_probe_id=0;
+    g_free(_temp);
+    return true;
 
 }
 
