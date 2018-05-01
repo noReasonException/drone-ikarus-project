@@ -351,7 +351,13 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
-    return false;
+    //return everything in default state -> last updated : may 1 , 2018
+    g_object_set(G_OBJECT(gstrtspsrc_elem),"location",NULL);
+    g_object_set(G_OBJECT(ximagessink_elem),"sync",FALSE);
+    g_object_set(G_OBJECT(queue_elem),"max-size-bytes",10485760);
+    g_object_set(G_OBJECT(queue_elem),"max-size-buffers",200);
+    g_object_set(G_OBJECT(queue_elem),"max-size-time",1000000000);
+    gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY(ximagessink_elem),0);
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
