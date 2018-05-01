@@ -362,7 +362,12 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
                      videoconvert_elem,
                      ximagessink_elem,NULL);
 
-
+    _utill_gst_object_unref_many(6,gstrtspsrc_elem,
+                                   queue_elem,
+                                   rtph264depayloader_elem,
+                                   decodebin_elem,
+                                   videoconvert_elem,
+                                   ximagessink_elem);
     return true;
 }
 
