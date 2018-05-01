@@ -327,8 +327,6 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
     }
     g_main_loop_unref(mainLoop);
 
-    getLogSupplier()->send(new Log("MainLoop destructed", time(NULL), "-", getLogSupplier()));
-
 
     gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_NULL);
     g_free(pipeline);
@@ -345,6 +343,7 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeFactories() {
                                  decodebin_fact,
                                  videoconvert_fact,
                                  ximagesink_fact);
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
