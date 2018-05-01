@@ -306,20 +306,27 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
 
 
     if(!_utillLogHandler(_de__initializeProbeListeners(),
-                         GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
+                         GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_LOG,
+                         GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__initializePadAddedListeners(),
-                              GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_PAD_LISTENERS_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_PAD_LISTENERS_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__initializeBus(),
-                              GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_BUS_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_BUS_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__applyProperties(),
-                              GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG,GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_APPLY_PROPERTIES_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_APPLY_PROPERTIES_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__initializeConnections(),
-                              GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_ELEMENTS_LINK_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_ELEMENTS_LINK_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__initializeElements(),
-                              GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_ELEMENTS_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_ELEMENTS_DESCRUCT_SUCCESS_DESC_LOG))return false;
 
     else if(!_utillLogHandler(_de__initializeFactories(),
-                              GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_FACTORIES_DESCRUCT_SUCCESS_LOG,
+                              GSTREAMER_FACTORIES_DESCRUCT_SUCCESS_DESC_LOG))return false;
 
     //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
     if(g_main_loop_is_running(mainLoop)){
