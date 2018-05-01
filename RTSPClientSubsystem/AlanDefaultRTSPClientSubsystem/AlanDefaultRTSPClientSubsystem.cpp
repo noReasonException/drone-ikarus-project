@@ -339,11 +339,22 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeFactories() {
-    return false;
+    _utill_gst_object_unref_many(6,gstrtspsrc_fact,
+                                 queue_fact,
+                                 rtph264depayloader_fact,
+                                 decodebin_fact,
+                                 videoconvert_fact,
+                                 ximagesink_fact);
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
-    return false;
+    _utill_gst_object_unref_many(6,gstrtspsrc_elem,
+                                 queue_elem,
+                                 rtph264depayloader_elem,
+                                 decodebin_elem,
+                                 videoconvert_elem,
+                                 ximagessink_elem);
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
@@ -362,12 +373,6 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
                      videoconvert_elem,
                      ximagessink_elem,NULL);
 
-    _utill_gst_object_unref_many(6,gstrtspsrc_elem,
-                                   queue_elem,
-                                   rtph264depayloader_elem,
-                                   decodebin_elem,
-                                   videoconvert_elem,
-                                   ximagessink_elem);
     return true;
 }
 
@@ -406,7 +411,7 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
 
 bool AlanDefaultRTSPClientSubsystem::_utill_gst_object_unref_many(int i, ...) {
     va_list args;
-    va_start(i,args);
+    va_start(args,i);
     GstObject*_tmp;
     for (int j = i; j >0 ; --j) {
         _tmp=va_arg(args,GstObject*);
