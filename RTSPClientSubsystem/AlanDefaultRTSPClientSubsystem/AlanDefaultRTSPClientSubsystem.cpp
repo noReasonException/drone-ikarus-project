@@ -12,6 +12,8 @@ extern "C" gboolean     generic_initializer(const int flags, int num, ...);
 extern "C" gboolean     generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipeline);
 extern "C" void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpointer videoconvert);
 extern "C" void on_pad_added_rtspsrc_listener(GstElement*obj,GstPad*arg0,gpointer queue_element);
+extern "C" GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeInfo *info, gpointer user_data) ;
+
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
     if(isNullThenLog(option,
                      INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
@@ -203,6 +205,8 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
                      GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_initializePadAddedListeners(),
                      GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_initializeProbeListeners(),
+                              GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
 
 
     return true;
@@ -273,5 +277,12 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
     g_signal_connect(GST_ELEMENT(gstrtspsrc_elem),"pad-added",G_CALLBACK(on_pad_added_rtspsrc_listener),queue_elem);
     g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
     return true;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
+    GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
+    gst_pad_add_probe(_temp, GST_PAD_PROBE_TYPE_BUFFER,
+                      (GstPadProbeCallback) on_timestamp_export_probe_triggered, NULL, NULL);
+
 }
 

@@ -72,6 +72,8 @@
         #define GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG             "The gstreamer's GstBus* object with its generic_handler is initialized"
     #define GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG            "Pad-added handlers init"
         #define GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG   "Some elements of gstreamers has initialized his handlers on \"pad-added\" event"
+    #define GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_LOG            "Probe handlers init"
+        #define GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_DESC_LOG   "Some elements of gstreamers has initialized his handlers on \"pad-added\" event"
 
 
 
