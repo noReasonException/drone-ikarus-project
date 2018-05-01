@@ -355,7 +355,9 @@ bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
-    return false;
+    gst_bus_remove_watch(mainBus);
+    //! do not unref the mainBus , this responsibillity is taken from destruction of pipeline !
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
