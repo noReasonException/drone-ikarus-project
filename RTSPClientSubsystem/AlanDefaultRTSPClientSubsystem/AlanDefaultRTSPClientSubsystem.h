@@ -35,7 +35,10 @@ private :
             nano,
             pico,
             bus_handler_watch_id;
-    gulong  on_timestamp_export_probe_triggered_probe_id;
+    gulong  on_timestamp_export_probe_triggered_probe_id,
+            rtspsrc_pad_added_signal_id,
+            decodebin_pad_added_signal_id;
+
 
     GstElementFactory
             *gstrtspsrc_fact,

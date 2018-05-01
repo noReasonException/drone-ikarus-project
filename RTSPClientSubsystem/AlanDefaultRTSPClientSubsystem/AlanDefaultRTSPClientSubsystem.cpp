@@ -276,8 +276,8 @@ bool AlanDefaultRTSPClientSubsystem::_initializeBus() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
-    g_signal_connect(GST_ELEMENT(gstrtspsrc_elem),"pad-added",G_CALLBACK(on_pad_added_rtspsrc_listener),queue_elem);
-    g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
+    rtspsrc_pad_added_signal_id=g_signal_connect(GST_ELEMENT(gstrtspsrc_elem),"pad-added",G_CALLBACK(on_pad_added_rtspsrc_listener),queue_elem);
+    decodebin_pad_added_signal_id=g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
     return true;
 }
 
@@ -289,9 +289,17 @@ bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
                               (GstPadProbeCallback) on_timestamp_export_probe_triggered,
                               (void *)this,
                               NULL);
-    g_free(_temp);
+    gst_object_unref(_temp);
 
 
+}
+
+
+extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
+    DataSupplier*_ref=(reinterpret_cast<AlanDefaultRTSPClientSubsystem*>(alanDefaultRTSPClientSubsystem_entity)
+            ->getDataSupplier());
+    _ref->send(new Data(ID,TIMESTAMP,_ref));
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
@@ -311,7 +319,7 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
                               GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG))return false;
 
     else if(!_utillLogHandler(_de__initializeFactories(),
-                         GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG))return false;
+                              GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG))return false;
 
     //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
     if(g_main_loop_is_running(mainLoop)){
@@ -325,7 +333,7 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
     gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_NULL);
     g_free(pipeline);
     /*Initialize elements*/
-
+    return true;
 
 
 }
@@ -351,7 +359,11 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
-    return false;
+    g_signal_handler_disconnect(GST_ELEMENT(gstrtspsrc_elem),rtspsrc_pad_added_signal_id);
+    rtspsrc_pad_added_signal_id=0;
+    g_signal_handler_disconnect(GST_ELEMENT(decodebin_elem),decodebin_pad_added_signal_id);
+    decodebin_pad_added_signal_id=0;
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
@@ -361,12 +373,4 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
     g_free(_temp);
     return true;
 
-}
-
-
-extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
-    DataSupplier*_ref=(reinterpret_cast<AlanDefaultRTSPClientSubsystem*>(alanDefaultRTSPClientSubsystem_entity)
-            ->getDataSupplier());
-    _ref->send(new Data(ID,TIMESTAMP,_ref));
-    return true;
 }
