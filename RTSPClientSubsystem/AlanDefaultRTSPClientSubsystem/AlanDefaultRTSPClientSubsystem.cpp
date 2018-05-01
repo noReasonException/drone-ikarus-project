@@ -283,15 +283,85 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
 
 bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
     GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
-    gst_pad_add_probe(_temp, GST_PAD_PROBE_TYPE_BUFFER,
-                      (GstPadProbeCallback) on_timestamp_export_probe_triggered, (void *)this, NULL);
+    on_timestamp_export_probe_triggered_probe_id=
+            gst_pad_add_probe(_temp,
+                              GST_PAD_PROBE_TYPE_BUFFER,
+                              (GstPadProbeCallback) on_timestamp_export_probe_triggered,
+                              (void *)this,
+                              NULL);
+    g_free(_temp);
 
 
 }
+
+bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
+
+
+    if(!_utillLogHandler(_de__initializeProbeListeners(),
+                         GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_de__initializePadAddedListeners(),
+                              GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PAD_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_de__initializeBus(),
+                              GSTREAMER_BUS_INIT_SUCCESS_LOG,GSTREAMER_BUS_INIT_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_de__applyProperties(),
+                              GSTREAMER_APPLY_PROPERTIES_SUCCESS_LOG,GSTREAMER_APPLY_PROPERTIES_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_de__initializeConnections(),
+                              GSTREAMER_ELEMENTS_LINK_SUCCESS_LOG,GSTREAMER_ELEMENTS_LINK_SUCCESS_DESC_LOG))return false;
+    else if(!_utillLogHandler(_de__initializeElements(),
+                              GSTREAMER_ELEMENTS_INIT_SUCCESS_LOG,GSTREAMER_ELEMENTS_INIT_SUCCESS_DESC_LOG))return false;
+
+    else if(!_utillLogHandler(_de__initializeFactories(),
+                         GSTREAMER_FACTORIES_INIT_SUCCESS_LOG,GSTREAMER_FACTORIES_INIT_SUCCESS_DESC_LOG))return false;
+
+    //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
+    if(g_main_loop_is_running(mainLoop)){
+        g_main_loop_quit(mainLoop);
+    }
+    g_main_loop_unref(mainLoop);
+
+    getLogSupplier()->send(new Log("MainLoop destructed", time(NULL), "-", getLogSupplier()));
+
+
+    gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_NULL);
+    g_free(pipeline);
+    /*Initialize elements*/
+
+
+
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializeFactories() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
+    return false;
+}
+
+bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
+
+}
+
+
 extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
     DataSupplier*_ref=(reinterpret_cast<AlanDefaultRTSPClientSubsystem*>(alanDefaultRTSPClientSubsystem_entity)
             ->getDataSupplier());
     _ref->send(new Data(ID,TIMESTAMP,_ref));
     return true;
 }
-

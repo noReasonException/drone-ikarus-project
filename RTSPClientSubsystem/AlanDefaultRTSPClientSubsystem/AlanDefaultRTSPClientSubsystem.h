@@ -35,6 +35,7 @@ private :
             nano,
             pico,
             bus_handler_watch_id;
+    gulong  on_timestamp_export_probe_triggered_probe_id;
 
     GstElementFactory
             *gstrtspsrc_fact,
@@ -67,7 +68,7 @@ private :
     bool _initializeProbeListeners();
 
     bool de_initializeGstreamer();
-    bool _de_initializeFactories();
+    bool _de__initializeFactories();
     bool _de__initializeElements();
     bool _de__initializeConnections();
     bool _de__applyProperties();
