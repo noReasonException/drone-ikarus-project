@@ -7,7 +7,11 @@
 
 
 #include "../Option.h"
-
+/****
+ * class LatencyOption
+ * This object is used in RTSP Subsystem . Specifically it transfers messages about the stream latency from GUI-Space
+ *
+ */
 class LatencyOption : public Option{
 public:
     LatencyOption(int latency_value,long timestamp,InformationObjectSupplier *source) :

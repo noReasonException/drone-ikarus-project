@@ -7,7 +7,11 @@
 
 
 #include "../Option.h"
-
+/****
+ * class ResolutionOption
+ * This object is used in RTSP Subsystem . Specifically it transfers messages about the video resolution
+ *
+ */
 class ResolutionOption: public Option {
 public:
     ResolutionOption(int width_value,int height_value,long timestamp, InformationObjectSupplier *source) :

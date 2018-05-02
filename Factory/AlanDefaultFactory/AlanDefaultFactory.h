@@ -16,6 +16,7 @@ private:
 
 public:
     AlanDefaultFactory();
+    ~AlanDefaultFactory();
     QMainWindow *getMainWindow() override;
 
     QDialog *getResolutionDialog() override;

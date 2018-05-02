@@ -12,7 +12,11 @@
 
 
 /****
- * This is the interface for abstract gui factory of Alan
+ * class AbstractFactory
+ * This class is responsible for object-implementation abstraction . that means that we can
+ * implement a different Dialog, and just define the Factory to return this instead of default one
+ * without any modifications or recompile the whole project!
+ * The default implementation exist in Factory/AlanDefaultFactory/AlanDefaultFactory.h
  */
 class AbstractFactory {
 public:

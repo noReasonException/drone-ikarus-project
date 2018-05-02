@@ -16,6 +16,11 @@ enum ClientStatus{
     Client_STOP=5             //Release resources(GST_STATE_NULL)
 
 };
+/****
+ * class ClientStatusOption
+ * This object is used in RTSP Subsystem . Specifically it transfers messages about the state of this subsystem (STOP,PLAY,..)
+ *
+ */
 class ClientStatusOption: public Option {
 public:
     ClientStatusOption(ClientStatus status_value,long timestamp, InformationObjectSupplier *source) :

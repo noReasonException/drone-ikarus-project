@@ -11,8 +11,8 @@ class InformationObjectSupplier;
 /*****
  * class InformationObject
  * this class represents an object with abstract information about ...anything!
- * It used in Supplier-Consumers , in Panels Subsystem
- * @note i have used Fluent Interface getters-setters because.....why not!?
+ * It used in Supplier-Consumers ,
+ * @note i have used Fluent Interface getters-setters because ... why not!?
  *
  * */
 class InformationObject {

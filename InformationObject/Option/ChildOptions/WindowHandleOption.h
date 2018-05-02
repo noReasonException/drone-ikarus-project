@@ -7,7 +7,10 @@
 
 
 #include "../Option.h"
-
+/****
+ * class WindowHandleOption
+ * This object is used in RTSP Subsystem . Specifically it transfers messages about the X window handle to display video
+ */
 class WindowHandleOption: public Option {
 public:
     WindowHandleOption(int windowHandleValue,long timestamp, InformationObjectSupplier *source):

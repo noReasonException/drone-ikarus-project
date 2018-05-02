@@ -7,7 +7,11 @@
 
 
 #include "../Option.h"
-
+/****
+ * class LocationOption
+ * This object is used in RTSP Subsystem . Specifically it transfers messages about the ip address of server
+ *
+ */
 class LocationOption: public Option {
 public:
     LocationOption(QString ip, long timestamp, InformationObjectSupplier *source):

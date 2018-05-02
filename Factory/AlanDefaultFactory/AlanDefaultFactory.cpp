@@ -64,4 +64,9 @@ AbstractRTSPClientSubsystem *AlanDefaultFactory::getRTSPSubsystem() {
 
 }
 
+AlanDefaultFactory::~AlanDefaultFactory() {
+    delete rtspsystem;
+
+}
+
 
