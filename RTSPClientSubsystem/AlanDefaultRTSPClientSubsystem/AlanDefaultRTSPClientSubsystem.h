@@ -28,19 +28,20 @@ private :
     bool isNullThenLog(void *ptr, const QString &onErrorMessage);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
-
+    bool isGstreamerSubsystemInitialized=false;
     ClientStatus currentStatus;
     int windowHandle;
+    //Etc:
     guint   major,
             minor,
             nano,
-            pico,
-            bus_handler_watch_id;
+            pico;
+    //Handlers:
     gulong  on_timestamp_export_probe_triggered_probe_id,
             rtspsrc_pad_added_signal_id,
             decodebin_pad_added_signal_id;
 
-
+    //Factories
     GstElementFactory
             *gstrtspsrc_fact,
             *queue_fact,
@@ -48,6 +49,7 @@ private :
             *decodebin_fact,
             *videoconvert_fact,
             *ximagesink_fact;
+    ///Elements:
     GstElement
             *pipeline,
             *gstrtspsrc_elem,
@@ -56,7 +58,7 @@ private :
             *decodebin_elem,
             *videoconvert_elem,
             *ximagessink_elem;
-
+    //Functional :
     GMainLoop   *mainLoop;
     class MainLoopThread*mainLoopThread;
     GstBus      *mainBus;

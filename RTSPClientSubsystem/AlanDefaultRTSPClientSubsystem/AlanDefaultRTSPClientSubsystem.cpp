@@ -220,7 +220,7 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     else if(!_utillLogHandler(_initializeProbeListeners(),
                               GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_LOG,GSTREAMER_PROBE_LISTENERS_INIT_SUCCESS_DESC_LOG))return false;
 
-
+    isGstreamerSubsystemInitialized=true;
     return true;
 }
 
@@ -282,7 +282,7 @@ bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
 
 bool AlanDefaultRTSPClientSubsystem::_initializeBus() {
     return (mainBus=gst_pipeline_get_bus(GST_PIPELINE(pipeline)))&&
-            (bus_handler_watch_id=gst_bus_add_watch(mainBus,generic_bus_handler,NULL));
+            (gst_bus_add_watch(mainBus,generic_bus_handler,NULL));
 }
 
 bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
@@ -290,7 +290,12 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
     decodebin_pad_added_signal_id=g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
     return true;
 }
-
+/****
+ * _initializeProbeListeners ()
+ * this method submits the Gstreamer Probe Handler on decodebin element , this handler is used to
+ * extract the ID and the TIMESTAMP of every frame as buffer passed in stream
+ * @return true !
+ */
 bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
     GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
     on_timestamp_export_probe_triggered_probe_id=
@@ -300,19 +305,30 @@ bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
                               (void *)this,
                               NULL);
     gst_object_unref(_temp);
+    return true;
 
 
 }
 
-
+/***
+ * trigger_new_frame
+ * this C API function will called from gstreamer's probe when a new frame is arrived
+ * returns true if the call succeded and the frame information is stored !
+ */
 extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
     DataSupplier*_ref=(reinterpret_cast<AlanDefaultRTSPClientSubsystem*>(alanDefaultRTSPClientSubsystem_entity)
             ->getDataSupplier());
     _ref->send(new Data(ID,TIMESTAMP,_ref));
     return true;
 }
-
+/*****
+ * de_initializeGstreamer() ,reverse actions of initializeGstreamer() , free all pointers and destructs all Gstreamer
+ * Subsystem , use it only in destructor! .
+ * @return true if the destruction sequence is ok!
+ */
 bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
+    if(!isGstreamerSubsystemInitialized)
+        return true;
     //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
     g_main_loop_quit(mainLoop);
 
@@ -350,17 +366,28 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
 
 
 }
-
+/***
+ * _de__initializeFactories() , reverse actions of initializeFactories()
+ *
+ * this method unrefs every previous used Gstreamer factory.from now on ,every member inside "Factories:" section
+ * will contain INVALID pointers!(See AlanDefaultRTSPClient.h , Section "Factories")
+ * @return
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializeFactories() {
-    _utill_gst_object_unref_many(6,gstrtspsrc_fact,
+    return _utill_gst_object_unref_many(6,gstrtspsrc_fact,
                                  queue_fact,
                                  rtph264depayloader_fact,
                                  decodebin_fact,
                                  videoconvert_fact,
                                  ximagesink_fact);
-    return true;
-}
 
+}
+/****
+ * _de__initializeElements ,reverse actions of initializeElements()
+ * this method unrefs every previous used Gstreamer element.from now on , every member inside "Elements:" section
+ * will contain INVALID pointers!(See AlanDefaultRTSPClient.h , Section "Elements")
+ * @return true if everything went well
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
     _utill_gst_object_unref_many(6,gstrtspsrc_elem,
                                  queue_elem,
@@ -370,7 +397,11 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeElements() {
                                  ximagessink_elem);
     return true;
 }
-
+/****
+ * _de__initializeConnections ,reverse actions of initializeConnections()
+ * This method , unlinks everything , and removes all elements inside pipeline
+ * @return true if everything is ok!
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
     gst_element_unlink_many(
             gstrtspsrc_elem,
@@ -389,7 +420,12 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
 
     return true;
 }
-
+/****
+ * _de__applyProperties , reverse actions of applyProperties()
+ * Return every changed property to default values
+ * last updated : may 1 , 2018
+ * @return true if everything ok!
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
     //return everything in default state -> last updated : may 1 , 2018
     g_object_set(G_OBJECT(gstrtspsrc_elem),"location",NULL);
@@ -400,13 +436,21 @@ bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
     gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY(ximagessink_elem),0);
     return true;
 }
-
+/***
+ * _de__initializeBus , reverse actions of initializeBus()
+ * this utill will remove the bus message handler
+ * @return true if everything went well
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
     gst_bus_remove_watch(mainBus);
     //! do not unref the mainBus , this responsibillity is taken from destruction of pipeline !
     return true;
 }
-
+/****
+ * _de__initializePadAddedListeners , reverse actions of initializePadAddedListeners()
+ * Remove the Pad-Added handlers from rtspsrc and decodebin elements
+ * @return true if everything went well
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
     g_signal_handler_disconnect(GST_ELEMENT(gstrtspsrc_elem),rtspsrc_pad_added_signal_id);
     rtspsrc_pad_added_signal_id=0;
@@ -414,7 +458,11 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializePadAddedListeners() {
     decodebin_pad_added_signal_id=0;
     return true;
 }
-
+/****
+ * _de_initializeProbeListeners , reverse actions of initializeProbeListebers()
+ * Remove the Probe listener on decodebin elenemt , this Probe is used to extract the frame number.
+ * @return true if everything ok!
+ */
 bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
     GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
     gst_pad_remove_probe(_temp,on_timestamp_export_probe_triggered_probe_id);
@@ -423,7 +471,13 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
     return true;
 
 }
-
+/***
+ * _utill_gst_object_unref_many
+ * A simple utillity tool for mass-object unreferensing
+ * @param i the number of varargs
+ * @param ... the Objects of type GObject*
+ * @return true if everything went well
+ */
 bool AlanDefaultRTSPClientSubsystem::_utill_gst_object_unref_many(int i, ...) {
     va_list args;
     va_start(args,i);
