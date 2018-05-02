@@ -21,6 +21,7 @@ class AlanDefaultRTSPClientSubsystem: public AbstractRTSPClientSubsystem {
 
 public:
     AlanDefaultRTSPClientSubsystem();
+    ~AlanDefaultRTSPClientSubsystem() override ;
 
 private :
     QSettings settings;

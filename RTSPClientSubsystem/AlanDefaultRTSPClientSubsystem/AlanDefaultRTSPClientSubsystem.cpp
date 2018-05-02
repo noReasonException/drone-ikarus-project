@@ -16,6 +16,16 @@ extern "C" void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpoin
 extern "C" void on_pad_added_rtspsrc_listener(GstElement*obj,GstPad*arg0,gpointer queue_element);
 extern "C" GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeInfo *info, gpointer user_data) ;
 
+AlanDefaultRTSPClientSubsystem::~AlanDefaultRTSPClientSubsystem() {
+    if(!de_initializeGstreamer()){
+        getLogSupplier()->send(
+                new Log(GSTREAMER_DESTRUCT_FAIL_LOG,
+                time(NULL),
+                GSTREAMER_DESTRUCT_FAIL_DESC_LOG,getLogSupplier()));
+    }
+
+}
+
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
     if(isNullThenLog(option,
                      INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
@@ -303,12 +313,17 @@ extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,un
 }
 
 bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
+    //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
+    g_main_loop_quit(mainLoop);
+
+
+    gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_NULL);
 
 
     if(!_utillLogHandler(_de__initializeProbeListeners(),
                          GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_LOG,
                          GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_DESC_LOG))return false;
-    else if(!_utillLogHandler(_de__initializePadAddedListeners(),
+   else if(!_utillLogHandler(_de__initializePadAddedListeners(),
                               GSTREAMER_PAD_LISTENERS_DESCRUCT_SUCCESS_LOG,
                               GSTREAMER_PAD_LISTENERS_DESCRUCT_SUCCESS_DESC_LOG))return false;
     else if(!_utillLogHandler(_de__initializeBus(),
@@ -327,17 +342,10 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
     else if(!_utillLogHandler(_de__initializeFactories(),
                               GSTREAMER_FACTORIES_DESCRUCT_SUCCESS_LOG,
                               GSTREAMER_FACTORIES_DESCRUCT_SUCCESS_DESC_LOG))return false;
-
-    //if mainloop is running then stop , the MainLoopThread will emit the interruptedSignal and will be freed
-    if(g_main_loop_is_running(mainLoop)){
-        g_main_loop_quit(mainLoop);
-    }
     g_main_loop_unref(mainLoop);
+    gst_object_unref(pipeline);
 
 
-    gst_element_set_state(GST_ELEMENT(pipeline),GST_STATE_NULL);
-    g_free(pipeline);
-    /*Initialize elements*/
     return true;
 
 
@@ -370,7 +378,7 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeConnections() {
             rtph264depayloader_elem,
             decodebin_elem,
             videoconvert_elem,
-            ximagessink_elem);
+            ximagessink_elem,NULL);
     gst_bin_remove_many(GST_BIN(pipeline),
                      gstrtspsrc_elem,
                      queue_elem,
@@ -390,6 +398,7 @@ bool AlanDefaultRTSPClientSubsystem::_de__applyProperties() {
     g_object_set(G_OBJECT(queue_elem),"max-size-buffers",200);
     g_object_set(G_OBJECT(queue_elem),"max-size-time",1000000000);
     gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY(ximagessink_elem),0);
+    return true;
 }
 
 bool AlanDefaultRTSPClientSubsystem::_de__initializeBus() {
@@ -410,7 +419,7 @@ bool AlanDefaultRTSPClientSubsystem::_de__initializeProbeListeners() {
     GstPad*_temp=gst_element_get_static_pad(decodebin_elem,"sink");
     gst_pad_remove_probe(_temp,on_timestamp_export_probe_triggered_probe_id);
     on_timestamp_export_probe_triggered_probe_id=0;
-    g_free(_temp);
+    gst_object_unref(_temp);
     return true;
 
 }

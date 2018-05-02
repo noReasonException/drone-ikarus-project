@@ -21,6 +21,7 @@ class AbstractRTSPClientSubsystem : public OptionConsumer,
                                     public OptionSupplierFactory{
 public:
     AbstractRTSPClientSubsystem();
+    virtual ~AbstractRTSPClientSubsystem()= default;
 
 private:
     LogSupplier*supplier;

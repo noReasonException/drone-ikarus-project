@@ -179,7 +179,8 @@ void AlanMainWindow::operationNotSupportedSlot() {
  * This slot triggered in case of exit , it checks if any task is in progress and informs the user if really wants to exit ;)
  */
 void AlanMainWindow::closeSlot(){
-    changeStatusOfRTSPClientSubsystem(Client_STOP);//release resources
+    changeStatusOfRTSPClientSubsystem(Client_STOP);//release resource
+
     close();
 }
 /***
@@ -334,6 +335,7 @@ void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
             time(NULL),
             getRtspClientOptionSupplier()
     ));
+    if(status==Client_STOP)delete parentFactory->getRTSPSubsystem();
 
 }
 

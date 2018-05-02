@@ -90,6 +90,9 @@
     #define GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_LOG           "Probe handlers init"
         #define GSTREAMER_PROBE_LISTENERS_DESCRUCT_SUCCESS_DESC_LOG  "Gstreamer:Some elements of gstreamers has destructed his handlers on \"pad-added\" event"
 
+    #define GSTREAMER_DESTRUCT_FAIL_LOG           "Abnormal Destruction"
+        #define GSTREAMER_DESTRUCT_FAIL_DESC_LOG  "Gstreamer:The Destruction sequence for gstreamer is incomplete , may memory leaks occur"
+
 
 
 
