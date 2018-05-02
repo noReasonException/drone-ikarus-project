@@ -25,7 +25,7 @@ public:
 
 private :
     QSettings settings;
-    bool isNullThenLog(void *ptr, const QString &onErrorMessage);
+    bool _utill_isNullThenLog(void *ptr, const QString &onErrorMessage);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
     bool isGstreamerSubsystemInitialized=false;
@@ -94,7 +94,7 @@ protected:
 
     bool onWindowHandlerSettingChangedHandler(class WindowHandleOption *) override;
 
-    bool onLocationSettingChangedHandler(class LocationOption *option) override;
+    bool onLocationSettingChangedHandler(class LocationOption *obj) override;
 
     virtual bool callProperStatusHandler(ClientStatus status);
     virtual bool onStartStatusRequest();

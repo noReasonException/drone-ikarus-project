@@ -16,6 +16,11 @@ extern "C" void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpoin
 extern "C" void on_pad_added_rtspsrc_listener(GstElement*obj,GstPad*arg0,gpointer queue_element);
 extern "C" GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeInfo *info, gpointer user_data) ;
 
+AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {
+    mainLoopThread=new class MainLoopThread();
+
+}
+
 AlanDefaultRTSPClientSubsystem::~AlanDefaultRTSPClientSubsystem() {
     if(!de_initializeGstreamer()){
         getLogSupplier()->send(
@@ -25,25 +30,49 @@ AlanDefaultRTSPClientSubsystem::~AlanDefaultRTSPClientSubsystem() {
     }
 
 }
-
+/****
+* onLatencySettingChangedHandler
+* It is called automatically by parent class , in case of LatencyOption* request in .accept() base class method
+* @param obj the LatencyOption* object
+* @note IMPORTANT :
+*              This method is not responsible for deleting the @param obj pointer . base class has this responsibillity
+* TODO : maybe the handler will run in a different thread instead? ^^ think about pros/cos
+* @return true in case of successfully handled!
+*/
 bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class LatencyOption *option) {
-    if(isNullThenLog(option,
-                     INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
+    if(_utill_isNullThenLog(option,
+                            INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LATENCY,option->getLatency());
     return true;
 }
-
-bool AlanDefaultRTSPClientSubsystem::onResolutionSettingChangedHandler(class ResolutionOption *option) {
-    if(isNullThenLog(option,
-                     INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG))return false;
-    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_WIDTH,option->getWidth());
-    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_HEIGHT,option->getHeight());
+/****
+* onResolutionSettingChangedHandler
+* It is called automatically by parent class , in case of ResolutionOption* request in .accept() base class method
+* @param obj the ResolutionOption* object
+* @note IMPORTANT :
+*              This method is not responsible for deleting the @param obj pointer . base class has this responsibillity
+* TODO : maybe the handler will run in a different thread instead? ^^ think about pros/cos
+* @return true in case of successfully handled!
+*/
+bool AlanDefaultRTSPClientSubsystem::onResolutionSettingChangedHandler(class ResolutionOption *obj) {
+    if(_utill_isNullThenLog(obj,
+                            INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG))return false;
+    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_WIDTH,obj->getWidth());
+    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_HEIGHT,obj->getHeight());
     return true;
 }
-
+/****
+* onClientStatusSettingChangedHandler
+* It is called automatically by parent class , in case of ClientStatusOption* request in .accept() base class method
+* @param obj the ClientStatusOption* object
+* @note IMPORTANT :
+*              This method is not responsible for deleting the @param obj pointer . base class has this responsibillity
+* TODO : maybe the handler will run in a different thread instead? ^^ think about pros/cos
+* @return true in case of successfully handled!
+*/
 bool AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class ClientStatusOption *option) {
-    if(isNullThenLog(option,
-                     INVALID_ARG_CLIENTSTATUSOPTION_EXPECTED_LOG))return false;
+    if(_utill_isNullThenLog(option,
+                            INVALID_ARG_CLIENTSTATUSOPTION_EXPECTED_LOG))return false;
     if(!isWindowHandleDefined){
         getLogSupplier()->send(new Log(
                 UNABLE_TO_CHANGE_STATE_LOG,
@@ -62,10 +91,18 @@ bool AlanDefaultRTSPClientSubsystem::onClientStatusSettingChangedHandler(class C
 
 
 }
-
-bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class WindowHandleOption *option) {
-    if(isNullThenLog(option,
-                     INVALID_ARG_WINDOWHANDLEOPTION_EXPECTED_LOG))return false;
+/****
+* onWindowHandlerSettingChangedHandler
+* It is called automatically by parent class , in case of WindowHandleOption* request in .accept() base class method
+* @param obj the WindowHandleOption* object
+* @note IMPORTANT :
+*              This method is not responsible for deleting the @param obj pointer . base class has this responsibillity
+* TODO : maybe the handler will run in a different thread instead? ^^ think about pros/cos
+* @return true in case of successfully handled!
+*/
+bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class WindowHandleOption *obj) {
+    if(_utill_isNullThenLog(obj,
+                            INVALID_ARG_WINDOWHANDLEOPTION_EXPECTED_LOG))return false;
     if(isWindowHandleDefined){
         getLogSupplier()->send(new Log(
                 INVALID_HANDLER_CALL_LOG,
@@ -76,21 +113,36 @@ bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
         return false;
     }
     isWindowHandleDefined=true;
-    windowHandle=option->getWindowHanle();
+    windowHandle=obj->getWindowHanle();
     return true;
 }
-
-bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *option) {
-    if(isNullThenLog(option,
-                     INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
-    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION,option->getIpLocation());
+/****
+ * onLocationSettingChangedHandler
+ * It is called automatically by parent class , in case of LocationOption* request in .accept() base class method
+ * @param obj the LocationOption* object
+ * @note IMPORTANT :
+ *              This method is not responsible for deleting the @param obj pointer . base class has this responsibillity
+ * //TODO : maybe the handler will run in a different thread instead? ^^ think about pros/cos
+ * @return true in case of successfully handled!
+*/
+bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *obj) {
+    if(_utill_isNullThenLog(obj,
+                            INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
+    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION,obj->getIpLocation());
     return true;
 
 
 }
-
-bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,
-                                                   const QString &onErrorMessage) {
+/****
+ * _utill_isNullThenLog
+ * simple utillity method to log a specific error if the @param ptr is NULL
+ * @note why not nullptr? , to be backwards compatible with C 89 :)
+ * @param ptr  the parameter to check
+ * @param onErrorMessage in case of @param ptr==null , the text will be logged
+ * @return true if ptr==NULL
+ */
+bool AlanDefaultRTSPClientSubsystem::_utill_isNullThenLog(void *ptr,
+                                                          const QString &onErrorMessage) {
     if(!ptr){
         getLogSupplier()->send(new Log(
                 INVALID_ARG_IN_ACCEPT_LOG,
@@ -102,11 +154,17 @@ bool AlanDefaultRTSPClientSubsystem::isNullThenLog(void *ptr,
     return false;
 }
 
-AlanDefaultRTSPClientSubsystem::AlanDefaultRTSPClientSubsystem() : currentStatus(Client_NONE) {
-    mainLoopThread=new class MainLoopThread();
 
-}
 
+/***
+ * callProperStatusHandler()
+ * is called automatically from AbstractRTSPClientSubsystem in case of any ClientStatusOption* request from GUI-Space
+ * it is responsible to call the proper handler for each Request
+ * //TODO :what about dynamic handlers (Lambdas) sometime in future? ^^
+ *
+ * @note it is invalid-call safe .
+ *
+ */
 bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status) {
     bool succeed;
     switch(status){
@@ -132,7 +190,18 @@ bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status
     }
 
 }
-
+/***
+ * onStartStatusRequest
+ * is called automatically from AbstractRTSPClientSubsystem in case of START request from GUI-Space
+ * after START request , every pointer is initialized , but the main GMainLoop object is not running,
+ * also the main pipeline is set to GST_STATE_PAUSED
+ * if you need to start , you just need to send the PLAY request using OptionSupplier :)
+ * @return true on success! , in case of returning false , you need to log the reason of fail . in case of success .
+ * you have no responsibillity to log anything! it is done automatically from parent class
+ *
+ * @note it is Status-Invalid safe .
+ *
+ */
 bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
 
     if(currentStatus!=Client_NONE){ return false; }
