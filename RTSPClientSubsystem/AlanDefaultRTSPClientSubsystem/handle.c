@@ -8,11 +8,18 @@
 #include <gst/gstelement.h>
 #include <gst/gstmemory.h>
 #include "handle.h"
-
+/**The c++ api */
 int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP);
 
 #define recallMe return TRUE
-
+/*****
+ * on_pad_added_rtspsrc_listener
+ * this listener will called when the rtssrc will emit the "pad-added" signal.this signal is emmited when
+ * a new stream of data is detected in incoming buffer (audio/video e.t.c)
+ * @param obj
+ * @param arg0
+ * @param videoconvert
+ */
 extern void on_pad_added_rtspsrc_listener(GstElement*obj, GstPad*arg0, gpointer queue_element){
     g_print("RTSPSRC LISTENER CALLED");
     GstElement*queue_ref=GST_ELEMENT(queue_element);
@@ -25,6 +32,14 @@ extern void on_pad_added_rtspsrc_listener(GstElement*obj, GstPad*arg0, gpointer 
 
 
 }
+/*****
+ * on_pad_added_decodebin_listener
+ * this listener will called when the decodebin will emit the "pad-added" signal.this signal is emmited when
+ * a new stream of data is detected in incoming buffer (audio/video e.t.c)
+ * @param obj
+ * @param arg0
+ * @param videoconvert
+ */
 extern void on_pad_added_decodebin_listener(GstElement*obj,GstPad*arg0,gpointer videoconvert){
     g_print("DECODEBIN LISTENER CALLED");
 
@@ -64,6 +79,15 @@ extern gboolean  generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipe
     g_print("%s\n?",err);
     recallMe;
 }
+/****
+ * on_timestamp_export_probe_triggered
+ * this probe listener will emited in every video frame , exporting ID and possibly a timestamp
+ * @param pad  the pad that the signal is emmited
+ * @param info GstPadProbeInfo pointer
+ * @param class_ptr the pointer that myst be passed in trigger_new_frame routine , this API will pass the metadata to C++
+ *
+ * @return a  GstPadProbeReturn value (GST_PAD_PROBE_OK) in case of success
+ */
 GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeInfo *info,
                                                       gpointer class_ptr) {
     GstMapInfo map;

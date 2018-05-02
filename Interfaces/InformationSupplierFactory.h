@@ -9,7 +9,10 @@
 #include <QString>
 #include "../Supplier/InformationObjectSupplier.h"
 /****
- * Represents a class that can provide a Supplier Object (To send @see InformationObject objects)
+ * What is a supplier?
+ * A supplier is an object witch can supply some object with data
+ * For example . SetLatencyDialog class has a OptionSupplier(Derives from this class), And supplies
+ * with information of type LatencyOption* the AbstractRTSPClient subsystem .
  */
 class InformationSupplierFactory{
 public:

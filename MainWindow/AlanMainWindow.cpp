@@ -335,7 +335,6 @@ void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
             time(NULL),
             getRtspClientOptionSupplier()
     ));
-    if(status==Client_STOP)delete parentFactory->getRTSPSubsystem();
 
 }
 

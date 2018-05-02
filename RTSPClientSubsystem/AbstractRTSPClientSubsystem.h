@@ -17,7 +17,7 @@
 #include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
 #include "../Supplier/DataSupplier/DataSupplier.h"
 /*****
- * The AbstractRTSPClientSubsystem?
+ * The AbstractRTSPClientSubsystem
  * This subsystems handles all the data , the metadata , the streaming , the video drawing .. everything!
  * This subsystem follow some rules to communicate with outside world (GUI-Space mostly)
  * @Note : for the future maintainer . DONT VIOLATE THE RULES .It is very common the "Quick and dirty code"
@@ -35,7 +35,7 @@
  *                      3) LocationOption     , to set the server address and port
  *                      4) ResolutionOption   , to set the width and the height of video ( has some problems //TODO )
  *                      5) WindowHandleOption , to set the X window handle ID for video .
- * The consept of states...
+ * The concept of states...
  * The RTSP Subsystem works with the concept of States , just like gstreamer . After initialize the
  * pointer, you need to #START the subsystem . so to initialize itself , after that ,you can #PLAY or #PAUSE
  * and in deletion of pointer , the destruction sequence is started under the #STOP state
@@ -49,7 +49,8 @@
  *  GST_STATE_PLAYING    #PLAY
  *
  * Although the default implementation uses gstreamer ,the OOP hierarchy ensures that any library can be used easily!
- *
+ *@Note why so much complexity ? I future releases , i hope to write async handlers for this , to ensure the
+ * minimum latency possible , so this design is nesessary for this
  */
 class AbstractRTSPClientSubsystem : public OptionConsumer,
                                     public OptionSupplierFactory{

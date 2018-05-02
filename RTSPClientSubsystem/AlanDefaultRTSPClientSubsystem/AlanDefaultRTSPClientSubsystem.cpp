@@ -270,9 +270,7 @@ bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
  *
  */
 bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
-    //if play , then pause first
-    std::cout<<"CURR STATUS IS"<<currentStatus<<std::endl;
-
+    de_initializeGstreamer();
     return true;
 }
 /****
