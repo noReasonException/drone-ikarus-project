@@ -8,7 +8,11 @@
 
 #include <QThread>
 #include <glib.h>
-
+/*****
+ * Class MainLoopThread
+ * This Thread will run the GMainLoop main looper .
+ * The code is self-explanatory i think  :P
+ */
 class MainLoopThread : public QThread{
     GMainLoop*loop;
 public:

@@ -9,10 +9,30 @@
 #include "../misc/Suppliers/LogSuppliers.h"
 #include "../MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h"
 
+AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
+        dataSupplier(DataPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)),
+        supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)){
+    consumerLocker=new QMutex();
+}
+
 OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName) {
     return new OptionSupplier(supplierName,this);
 }
-
+/****
+ * This accept is called by every submitted OptionSupplier .
+ * @param supplier the supplier that submits this information
+ * @param info      The info* pointer accepts one of the following object types
+ *                  class LatencyOption*       (InformationObject/Option/ChildOptions/LatencyOption.h)
+ *                      #This object provides the video-latency option to subsystem
+ *                  class LocationOption*      (InformationObject/Option/ChildOptions/LocationOption.h)
+ *                      #This object provides the Ip address of Streaming Server
+ *                  class ResolutionOption*    (InformationObject/Option/ChildOptions/ResolutionOption.h)
+ *                      #This object provides the Resolution(width/height) of streaming server
+ *                  class ClientStatusOption*  (InformationObject/Option/ChildOptions/ClientStatusOption.h)
+ *                      #This object provides from GUI-Space the subsystem status @see AbstractRTSPClientSubsystem.h
+ *                  class WindowHandlerOption* (InformationObject/Option/ChildOptions/WindowHandleOption.h)
+ *                      #This object provides the window handle , used by library to detect the Qt Window!
+ */
 void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     QMutexLocker locker(consumerLocker);
     Option*optionObject;
@@ -58,9 +78,5 @@ DataSupplier *AbstractRTSPClientSubsystem::getDataSupplier() const {
     return dataSupplier;
 }
 
-AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
-        dataSupplier(DataPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)),
-        supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)){
-    consumerLocker=new QMutex();
-}
+
 

@@ -63,7 +63,7 @@ private :
     class MainLoopThread*mainLoopThread;
     GstBus      *mainBus;
 
-
+    //Initialization:
     bool initializeGstreamer();
     bool _initializeFactories();
     bool _initializeElements();
@@ -72,7 +72,7 @@ private :
     bool _initializeBus();
     bool _initializePadAddedListeners();
     bool _initializeProbeListeners();
-
+    //Destruction Sequence:
     bool de_initializeGstreamer();
     bool _de__initializeFactories();
     bool _de__initializeElements();
@@ -81,11 +81,14 @@ private :
     bool _de__initializeBus();
     bool _de__initializePadAddedListeners();
     bool _de__initializeProbeListeners();
-
+    //Utills:
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
     bool _utill_gst_object_unref_many(int i,...);
 
 protected:
+
+    virtual bool callProperStatusHandler(ClientStatus status);
+    //Option Latency Handlers:
     bool onLatencySettingChangedHandler(class LatencyOption *) override;
 
     bool onResolutionSettingChangedHandler(class ResolutionOption *) override;
@@ -96,7 +99,7 @@ protected:
 
     bool onLocationSettingChangedHandler(class LocationOption *obj) override;
 
-    virtual bool callProperStatusHandler(ClientStatus status);
+    //Status handlers
     virtual bool onStartStatusRequest();
     virtual bool onPlayStatusRequest();
     virtual bool onPauseStatusRequest();
