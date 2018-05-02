@@ -147,7 +147,19 @@ bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
     return true;
 
 }
-
+/***
+ * onPlayStatusRequest
+ * is called automatically from AbstractRTSPClientSubsystem in case of PAUSE request from GUI-Space
+ * after PAUSE request , every pointer is still valid , but the main GMainLoop object is not running,
+ * also the main pipeline is set to GST_STATE_PAUSED
+ * if you need to re-start , you just need to send the PLAY request using OptionSupplier :)
+ * @return true on success! , in case of returning false , you need to log the reason of fail . in case of success .
+ * you have no responsibillity to log anything! it is done automatically from parent class
+ *
+ * @note it is Status-Invalid safe : that means that if you be in START state (only initialized but not ever run ,
+ * that this call will simply return false
+ *
+ */
 bool AlanDefaultRTSPClientSubsystem::onPlayStatusRequest() {
     if(currentStatus!=Client_START&&currentStatus!=Client_PAUSE) {
         return false;
@@ -158,7 +170,19 @@ bool AlanDefaultRTSPClientSubsystem::onPlayStatusRequest() {
 
     return true;
 }
-
+/***
+ * onPauseStatusRequest
+ * is called automatically from AbstractRTSPClientSubsystem in case of PAUSE request from GUI-Space
+ * after PAUSE request , every pointer is still valid , but the main GMainLoop object is not running,
+ * also the main pipeline is set to GST_STATE_PAUSED
+ * if you need to re-start , you just need to send the PLAY request using OptionSupplier :)
+ * @return true on success! , in case of returning false , you need to log the reason of fail . in case of success .
+ * you have no responsibillity to log anything! it is done automatically from parent class
+ *
+ * @note it is Status-Invalid safe : that means that if you be in START state (only initialized but not ever run ,
+ * that this call will simply return false
+ *
+ */
 bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
 
     if(currentStatus!=Client_PLAY)
@@ -167,14 +191,26 @@ bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
     g_main_loop_quit(mainLoop);
     return true;
 }
-
+/***
+ * onStopStatusRequest
+ * is called automatically from AbstractRTSPClientSubsystem in case of STOP request from GUI-Space
+ * after Stop request , every pointer is invalid , and it is expected to terminate
+ * in case of future add on , remember that you need to re-call _initializeGstreamer() to avoid segmentation faults!
+ * @return true on success! , in case of returning false , you need to log the reason of fail . in case of success .
+ * you have no responsibillity to log anything! it is done automatically from parent class
+ *
+ */
 bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
     //if play , then pause first
     std::cout<<"CURR STATUS IS"<<currentStatus<<std::endl;
 
     return true;
 }
-
+/****
+ * initializeGstreamer
+ * this method initialize the Gstreamer Subsystem , always use as pair with _de_initializeGsteamer to avoid memory leaks!
+ * @return true on success!
+ */
 bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     GError*err;
     char sprintf_buffer[50];
@@ -235,7 +271,14 @@ bool AlanDefaultRTSPClientSubsystem::_initializeFactories() {
                              &ximagesink_fact,g_strdup("ximagesink"));
 
 }
-
+/****
+ * _initializeElements
+ * this member initializes all Gstreamer Elements
+ * @note we assume that the member _initializeFactories is called first
+ * to initialize the factories
+ * @see ./utill.c for further info about generic_initializer
+ * @return true on succress
+ */
 bool AlanDefaultRTSPClientSubsystem::_initializeElements() {
     return(generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_ELEMENT), 6,
                              gstrtspsrc_fact, &gstrtspsrc_elem, g_strdup("rtsp-src"),
@@ -245,7 +288,12 @@ bool AlanDefaultRTSPClientSubsystem::_initializeElements() {
                              videoconvert_fact,&videoconvert_elem,g_strdup("videoconvert-element"),
                              ximagesink_fact,&ximagessink_elem,g_strdup("ximagesink-elem")));
 }
-
+/****
+ * _initializeConnections
+ * this member connects the static-pad part of Gstreamer pipeline elements
+ * @note we assume that members _initializeElements() has called first
+ * @return true on success
+ */
 bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
     gst_bin_add_many(GST_BIN(pipeline),
                      gstrtspsrc_elem,           ///packets from network under RTSP
@@ -254,22 +302,21 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
                      decodebin_elem,            ///convert h264 to video
                      videoconvert_elem,         ///raw video
                      ximagessink_elem,NULL);  ///screen
-    return gst_element_link_many(
-
-            queue_elem,
+    return gst_element_link_many(queue_elem,
                     rtph264depayloader_elem,
                     decodebin_elem,NULL)&&
-                                            ///decodebin -> videoconvert connection happens on on-pad event lisener
+                                            ///decodebin -> videoconvert connection happens on on-pad event listener
                     gst_element_link(
                      videoconvert_elem,
                      ximagessink_elem);
 }
 
-bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
-    if(status)getLogSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg , getLogSupplier()));
-    return status;
-}
-
+/***
+ * _applyProperties
+ * this method sets the gstreamer elements members.
+ * @note we assume that _initializeConnections() has been called first
+ * @return true on success
+ */
 bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
     g_object_set(G_OBJECT(gstrtspsrc_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LOCATION).toString().toStdString().c_str());
     g_object_set(G_OBJECT(ximagessink_elem),"sync",FALSE);
@@ -279,12 +326,24 @@ bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
     gst_video_overlay_set_window_handle (GST_VIDEO_OVERLAY(ximagessink_elem),windowHandle);
     return true;
 }
-
+/****
+ * _initializeBus()
+ * this method submits the generic bus handler on main pipeline of gstreamer
+ * @return true
+ */
 bool AlanDefaultRTSPClientSubsystem::_initializeBus() {
     return (mainBus=gst_pipeline_get_bus(GST_PIPELINE(pipeline)))&&
             (gst_bus_add_watch(mainBus,generic_bus_handler,NULL));
 }
-
+/****\
+ * _initializePadAddedListeners
+ * this method submits the handlers on signal "pad-added" on elements
+ *  1) rtspsrc
+ *  2) decodebin
+ * this handlers will help the pipeline to correctly linked its elements .
+ * @note we assume that _initializeConnections() has been called first
+ * @return true on success
+ */
 bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
     rtspsrc_pad_added_signal_id=g_signal_connect(GST_ELEMENT(gstrtspsrc_elem),"pad-added",G_CALLBACK(on_pad_added_rtspsrc_listener),queue_elem);
     decodebin_pad_added_signal_id=g_signal_connect(GST_ELEMENT(decodebin_elem),"pad-added",G_CALLBACK(on_pad_added_decodebin_listener),videoconvert_elem);
@@ -294,6 +353,7 @@ bool AlanDefaultRTSPClientSubsystem::_initializePadAddedListeners() {
  * _initializeProbeListeners ()
  * this method submits the Gstreamer Probe Handler on decodebin element , this handler is used to
  * extract the ID and the TIMESTAMP of every frame as buffer passed in stream
+ * @note we assume that _initializeConnections() has been called first
  * @return true !
  */
 bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
@@ -313,6 +373,7 @@ bool AlanDefaultRTSPClientSubsystem::_initializeProbeListeners() {
 /***
  * trigger_new_frame
  * this C API function will called from gstreamer's probe when a new frame is arrived
+ * @note we assume that _initializeGstreamer() has been called first
  * returns true if the call succeded and the frame information is stored !
  */
 extern "C" int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP){
@@ -366,6 +427,12 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
 
 
 }
+/**
+ * A big note here...
+ * Every initialization step has his reverse step of destruction ,
+ * some initialization steps assume that other initialization steps has been completed before
+ * the same principle goes here!
+ */
 /***
  * _de__initializeFactories() , reverse actions of initializeFactories()
  *
@@ -487,4 +554,16 @@ bool AlanDefaultRTSPClientSubsystem::_utill_gst_object_unref_many(int i, ...) {
         gst_object_unref(_tmp);
     }
     return true;
+}
+/****
+ * _utillLogHandler
+ * This utiil submits the appropiate log in case of success initialization step.
+ * @param status                the _* member (belong to initialization proccess) result
+ * @param onSuccessTitle        the success title log
+ * @param onSuccessMsg          the success describe log
+ * @return                      the @param status value
+ */
+bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
+    if(status)getLogSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg , getLogSupplier()));
+    return status;
 }
