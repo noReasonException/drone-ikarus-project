@@ -18,20 +18,25 @@ DataExporter::DataExporter():InformationExporter(LogPanel::getInstance()->create
                 time(NULL),
                 NO_FILE_LOCATION_CONFIG_FOUND_DESC_LOG,
                 getLogSupplier()));
+        hasSetTheFileLocation= false;
+        return ;
     }
+    hasSetTheFileLocation= true;
+
 }
 
 void DataExporter::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     Data*dataptr;
     Option*optionptr;
-    if (optionptr= dynamic_cast<Option*>(info)) acceptOption(supplier,optionptr);
-    else if(dataptr= dynamic_cast<Data*>(info)) acceptData(supplier,dataptr);
+    if ((optionptr= dynamic_cast<Option*>(info)) && acceptOption(supplier,optionptr));
+    else if((dataptr= dynamic_cast<Data*>(info)) &&acceptData(supplier,dataptr));
     else{
         getLogSupplier()->send(new Log(
                 INVALID_ARG_IN_DATA_ACCEPT_LOG,
                 time(NULL),
                 INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
                 getLogSupplier()));
+        return;
     }
 
     return;
@@ -40,11 +45,20 @@ void DataExporter::accept(InformationObjectSupplier *supplier, InformationObject
 
 }
 
-void DataExporter::acceptData(InformationObjectSupplier *supplier, Data *data) {
-    addMeta(0,data->getID(),data->getTimestamp());
+bool DataExporter::acceptData(InformationObjectSupplier *supplier, Data *data) {
+    static bool hasLogFileError=false;
+    if(!addMeta(0,data->getID(),data->getTimestamp()) && !hasLogFileError){
+        hasLogFileError=true;
+        getLogSupplier()->send(new Log(
+                FILE_ERROR_LOG,
+                time(NULL),
+                FILE_ERROR_DESC_LOG,
+                getLogSupplier()));
+
+    }
 }
 
-void DataExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
+bool DataExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
     class LocationOption*option = dynamic_cast<class LocationOption*>(data);
     if(!option){
         getLogSupplier()->send(new Log(
@@ -53,16 +67,22 @@ void DataExporter::acceptOption(InformationObjectSupplier *supplier, Option *dat
                 INVALID_LOCATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG,
                 getLogSupplier()));
     }
+    std::cout<<option->getLocation().toStdString();
     getSettings().setValue(DATA_EXPORTER_QSETTINGS_PREFIX DATA_EXPORTER_QSETTINGS_FILE_LOCATION, option->getLocation());
 }
 
-void DataExporter::addMeta(int flags, int ID, int TIMESTAMP) {
-    static std::ofstream file("meta.txt");
+bool DataExporter::addMeta(int flags, int ID, int TIMESTAMP) {
+
+    static std::ofstream file(hasSetTheFileLocation?
+    getSettings().value(DATA_EXPORTER_QSETTINGS_PREFIX DATA_EXPORTER_QSETTINGS_FILE_LOCATION).toString().toStdString():
+                        DATA_EXPORTER_DEFAULT_FILE_LOCATION);
+    file.exceptions();
     if (flags) {
         file.close();
-        return;
+        return true;
     }
     file << "{" << ID << "," << TIMESTAMP << "}";
+    return (bool)file;
 }
 
 DataExporter *DataExporter::getInstance() {

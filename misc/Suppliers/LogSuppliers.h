@@ -100,6 +100,8 @@
         #define INVALID_ARG_IN_DATA_ACCEPT_LOG                                   "Invalid args in .accept() call"
             #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG   "In DataExporterSupplier , in .accept() call , object of type Data* or Option* excepted at arg 2 , but something else provided"
             #define INVALID_LOCATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG      "In DataExporterSupplier , in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
+        #define FILE_ERROR_LOG                           "DataExporter File Error"
+            #define FILE_ERROR_DESC_LOG   "DataExporter Sunsystem states that something wrong happened to Data File? <br> Permissions maybe?"
 
 #define LOG_EXPORTER_SUPPLIER                                               "LogExporterSupplier"
 

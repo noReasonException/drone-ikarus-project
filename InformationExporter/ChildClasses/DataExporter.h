@@ -13,6 +13,7 @@
 
 #define DATA_EXPORTER_QSETTINGS_PREFIX          "DATAEXPORTER/"
 #define DATA_EXPORTER_QSETTINGS_FILE_LOCATION   "FILELOCATION/"
+#define DATA_EXPORTER_DEFAULT_FILE_LOCATION     "dat.txt"
 class DataExporter : public InformationExporter{
 public:
     DataExporter();
@@ -20,12 +21,13 @@ public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 
 protected:
-    void acceptData(InformationObjectSupplier*supplier,Data*data);
-    void acceptOption(InformationObjectSupplier*supplier,Option*data);
-    void addMeta(int flags,int ID,int TIMESTAMP);
+    bool acceptData(InformationObjectSupplier*supplier,Data*data);
+    bool acceptOption(InformationObjectSupplier*supplier,Option*data);
+    bool addMeta(int flags,int ID,int TIMESTAMP);
 
 private:
     static DataExporter*ptr;
+    bool hasSetTheFileLocation= false;
 
 };
 
