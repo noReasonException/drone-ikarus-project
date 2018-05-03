@@ -2,6 +2,7 @@
 // Created by noreasonexception on 4/5/18.
 //
 
+#include <QFileDialog>
 #include "AlanDefaultFactory.h"
 #include "../../MainWindow/AlanMainWindow.h"
 #include "../../MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialog.h"
@@ -34,12 +35,15 @@ QDialog *AlanDefaultFactory::getLatencyDialog() {
             getRTSPSubsystem()->createSupplier(LATENCY_OPTION_SUPPLIER)))->prepare();
 }
 
-QDialog *AlanDefaultFactory::getDataFileDialog() {
-    return nullptr;
+QString AlanDefaultFactory::getDataFileDialog() {
+    return QFileDialog::getOpenFileName(NULL,
+                                         "Select Data File", "/home/", "Text Files (*.txt)");
+
 }
 
-QDialog *AlanDefaultFactory::getErrorFileDialog() {
-    return nullptr;
+QString AlanDefaultFactory::getErrorFileDialog() {
+    return QFileDialog::getOpenFileName(NULL,
+                                        "Select Log File", "/home/", "Text Files (*.txt)");
 }
 
 QDialog *AlanDefaultFactory::getDroneAddrDialog() {

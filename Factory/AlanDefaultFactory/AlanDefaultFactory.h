@@ -23,9 +23,9 @@ public:
 
     QDialog *getLatencyDialog() override;
 
-    QDialog *getDataFileDialog() override;
+    QString getDataFileDialog() override;
 
-    QDialog *getErrorFileDialog() override;
+    QString getErrorFileDialog() override;
 
     QDialog *getDroneAddrDialog() override;
 
