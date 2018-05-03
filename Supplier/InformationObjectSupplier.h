@@ -23,9 +23,10 @@
 class InformationObjectConsumer;
 class InformationObject;
 class InformationObjectSupplier {
-    friend class InformationSupplierFactory;
 public:
-
+    InformationObjectSupplier(const QString &supplierName,InformationObjectConsumer*target) :
+            supplierName(supplierName),
+            targetConsumer(target) {}
 
     const QString &getSupplierName() const;
 
@@ -40,9 +41,7 @@ public:
 
     void send(InformationObject*info);
 protected:
-    InformationObjectSupplier(const QString &supplierName,InformationObjectConsumer*target) :
-            supplierName(supplierName),
-            targetConsumer(target) {}
+
     QString supplierName;
     InformationObjectConsumer*targetConsumer;
 };

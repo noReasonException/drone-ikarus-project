@@ -20,7 +20,7 @@ private:
     QSettings settings;
 protected:
 public:
-    void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
+    void accept(InformationObjectSupplier *supplier, InformationObject *info) override=0;
 
     InformationObjectSupplier *createSupplier(QString supplierName) override;
 

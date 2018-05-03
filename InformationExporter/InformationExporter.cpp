@@ -10,10 +10,6 @@ const QSettings &InformationExporter::getSettings() const {
 
 InformationExporter::InformationExporter() : settings(new QSettings) {}
 
-void InformationExporter::accept(InformationObjectSupplier *supplier, InformationObject *info) {
-
-}
-
 InformationObjectSupplier *InformationExporter::createSupplier(QString supplierName) {
-    return new class InformationObjectSupplier(supplierName,this);
+    return new InformationObjectSupplier(supplierName,this);
 }
