@@ -68,6 +68,7 @@ private :
     AbstractFactory*parentFactory;
     LogSupplier*supplier;
     OptionSupplier*rtspClientOptionSupplier;
+    InformationObjectSupplier*dataExporterSupplier;
 
 
 private:
@@ -98,6 +99,7 @@ protected:
     QWidget*                            onGenerateRightLayout()throw(std::exception);
     LogSupplier                         *getSupplier() const;
     OptionSupplier                      *getRtspClientOptionSupplier() const;
+    void                                locationNotifierDataExport(QString location);
 
 
 

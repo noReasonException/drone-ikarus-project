@@ -26,7 +26,7 @@ int main(int argc,char *argv[]) {
     AbstractFactory*aa=new AlanDefaultFactory();
 
     aa->getMainWindow()->show();
-    aa->getDataFileDialog();
+    aa->getErrorFileDialog();
 
     return application.exec();
 }

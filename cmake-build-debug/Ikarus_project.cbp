@@ -383,6 +383,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/InformationObjectSupplier.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/LogSuppliers.h">
 			<Option target="Ikarus_project"/>
 		</Unit>

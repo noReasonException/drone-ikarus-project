@@ -18,7 +18,9 @@
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
 #include "../misc/Suppliers/OptionSuppliers.h"
 #include "Panels/StreamPanel/DataPanel/DataPanel.h"
+#include "../InformationExporter/ChildClasses/DataExporter.h"
 #include "../InformationObject/Data/Data.h"
+#include "../misc/Suppliers/InformationObjectSupplier.h"
 
 /***
  * AlanMainWindowConstructor
@@ -30,6 +32,7 @@ AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
     isReTransmitting= false;
     supplier=LogPanel::getInstance()->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
     rtspClientOptionSupplier=factory->getRTSPSubsystem()->createSupplier(MAINWINDOW_OPTION_SUPPLIER);
+    dataExporterSupplier=DataExporter::getInstance()->createSupplier(MAINWINDOW_DATAEXPORTER_SUPPLIER);
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
@@ -318,6 +321,8 @@ void AlanMainWindow::genericActionSlot() {
             changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
         }
         else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PAUSE);
+        else if (!strcmp(cstr,ERROR_FILE_ACTION_NAME)){}
+        else if (!strcmp(cstr,DATA_FILE_ACTION_NAME)){locationNotifierDataExport(parentFactory->getDataFileDialog());}
         else{
             getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
             operationNotSupportedSlot();
@@ -357,5 +362,14 @@ void AlanMainWindow::setWindowHandlerOfRTSPClientSubsystem(const WId handle) {
             handle,
             time(NULL),
             getRtspClientOptionSupplier()));
+
+}
+
+void AlanMainWindow::locationNotifierDataExport(QString location) {
+    dataExporterSupplier->send(new class LocationOption(
+            location,
+            time(NULL),
+            dataExporterSupplier
+    ));
 
 }
