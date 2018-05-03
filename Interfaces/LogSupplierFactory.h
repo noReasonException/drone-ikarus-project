@@ -7,8 +7,11 @@
 
 #include "InformationSupplierFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
-/****
- * Represents a class that can provide a Supplier Object (To send @see Log objects)
+/***
+ * class LogSupplierFactory
+ * This interface will implemented by every subsystem wants to accept data of type Log* from other subsystems
+ * @see Consumer/InformationObjectConsumer.h
+ * For example , the LogPanel ^^
  */
 class LogSupplierFactory:public InformationSupplierFactory{
 public:

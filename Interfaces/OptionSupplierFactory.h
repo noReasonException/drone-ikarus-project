@@ -8,7 +8,12 @@
 
 #include "InformationSupplierFactory.h"
 #include "../Supplier/OptionSupplier/OptionSupplier.h"
-
+/***
+ * class DataSupplierFactory
+ * This interface will implemented by every subsystem wants to accept data of type Option* from other subsystems
+ * @see Consumer/InformationObjectConsumer.h
+ * For example , the RTSP Subsystem ^^
+ */
 class OptionSupplierFactory: public InformationSupplierFactory {
 public:
     OptionSupplier *createSupplier(QString supplierName) override =0;

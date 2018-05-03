@@ -10,7 +10,7 @@
 #include "../Supplier/InformationObjectSupplier.h"
 /****
  * What is a supplier?
- * A supplier is an object witch can supply some object with data
+ * A supplier is an object witch can supply some other object with data
  * For example . SetLatencyDialog class has a OptionSupplier(Derives from this class), And supplies
  * with information of type LatencyOption* the AbstractRTSPClient subsystem .
  */

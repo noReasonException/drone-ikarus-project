@@ -6,7 +6,7 @@
 #define IKARUS_PROJECT_STATERESTORABLE_H
 
 #include "../MainWindow/State/State.h"
-
+//TODO Remove
 class StateRestorable{
 public:
     StateRestorable()= delete;
