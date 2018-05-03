@@ -14,6 +14,8 @@
 #define DATA_EXPORTER_QSETTINGS_PREFIX          "DATAEXPORTER/"
 #define DATA_EXPORTER_QSETTINGS_FILE_LOCATION   "FILELOCATION/"
 #define DATA_EXPORTER_DEFAULT_FILE_LOCATION     "dat.txt"
+//TODO: Move LogExporter and DataExporter common functionality in common parent class
+
 class DataExporter : public InformationExporter{
 public:
     DataExporter();

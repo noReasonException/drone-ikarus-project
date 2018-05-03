@@ -7,13 +7,27 @@
 
 
 #include "../InformationExporter.h"
-
+#include "../../InformationObject/Log/Log.h"
+#include "../../InformationObject/Option/Option.h"
+#include <iostream>
+#include <fstream>
+#define LOG_EXPORTER_QSETTINGS_PREFIX          "LOGEXPORTER/"
+#define LOG_EXPORTER_QSETTINGS_FILE_LOCATION   "FILELOCATION/"
+#define LOG_EXPORTER_DEFAULT_FILE_LOCATION     "log.txt"
+//TODO: Move LogExporter and DataExporter common functionality in common parent class
 class LogExporter : public InformationExporter{
 public:
     LogExporter();
-
-public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
+
+protected:
+    bool acceptLog(InformationObjectSupplier*supplier,Log*data);
+    bool acceptOption(InformationObjectSupplier*supplier,Option*data);
+    bool addMeta(int flags, QString source,QString type,QString desc, unsigned long timestamp);
+
+private:
+    static LogExporter*ptr;
+    bool hasSetTheFileLocation= false;
 };
 
 

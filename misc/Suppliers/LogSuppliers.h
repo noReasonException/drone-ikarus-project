@@ -98,12 +98,15 @@
         #define NO_FILE_LOCATION_CONFIG_FOUND_DESC_LOG                       "The DataExporter subsystem states that you must define a file to send the data <br> Please click on Options menu the Data Save Location menu  <br> Untill Then , the default dat.txt will be used (located in your executables root folder) "
 
     #define INVALID_ARG_IN_DATA_ACCEPT_LOG                                   "Invalid args in .accept() call"
-        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG   "In DataExporterSupplier , in .accept() call , object of type Data* or Option* excepted at arg 2 , but something else provided"
-        #define INVALID_LOCATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG      "In DataExporterSupplier , in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
+        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG   "In DataExporter , in .accept() call , object of type Data* or Option* excepted at arg 2 , but something else provided"
+        #define INVALID_LOCATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG      "In DataExporter, in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
     #define FILE_ERROR_LOG                           "DataExporter File Error"
         #define FILE_ERROR_DESC_LOG   "DataExporter Sunsystem states that something wrong happened to Data File? <br> Permissions maybe?"
 
 #define LOG_EXPORTER_SUPPLIER "DataExporterSupplier"
+    #define INVALID_ARG_IN_LOG_ACCEPT_LOG                                   "Invalid args in .accept() call"
+        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG   "In LogExporter , in .accept() call , object of type Data* or Log* excepted at arg 2 , but something else provided"
+        #define INVALID_LOCATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG      "In DataExporterSupplier , in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
 
 #define LOG_EXPORTER_SUPPLIER                                               "LogExporterSupplier"
 

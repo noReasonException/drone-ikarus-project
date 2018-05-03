@@ -47,7 +47,8 @@ void DataExporter::accept(InformationObjectSupplier *supplier, InformationObject
 
 bool DataExporter::acceptData(InformationObjectSupplier *supplier, Data *data) {
     static bool hasLogFileError=false;
-    if(!addMeta(0,data->getID(),data->getTimestamp()) && !hasLogFileError){
+    bool retval;
+    if(!(retval=addMeta(0,data->getID(),data->getTimestamp()) && !hasLogFileError)){
         hasLogFileError=true;
         getLogSupplier()->send(new Log(
                 FILE_ERROR_LOG,
@@ -56,6 +57,7 @@ bool DataExporter::acceptData(InformationObjectSupplier *supplier, Data *data) {
                 getLogSupplier()));
 
     }
+    return retval;
 }
 
 bool DataExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
@@ -69,6 +71,8 @@ bool DataExporter::acceptOption(InformationObjectSupplier *supplier, Option *dat
     }
     std::cout<<option->getLocation().toStdString();
     getSettings().setValue(DATA_EXPORTER_QSETTINGS_PREFIX DATA_EXPORTER_QSETTINGS_FILE_LOCATION, option->getLocation());
+    delete option;
+    return true;
 }
 
 bool DataExporter::addMeta(int flags, int ID, int TIMESTAMP) {
