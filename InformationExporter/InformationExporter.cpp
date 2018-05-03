@@ -3,13 +3,23 @@
 //
 
 #include "InformationExporter.h"
+#include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
+#include "../misc/Suppliers/LogSuppliers.h"
 
-const QSettings &InformationExporter::getSettings() const {
+QSettings &InformationExporter::getSettings() {
     return settings;
 }
 
-InformationExporter::InformationExporter() : settings(new QSettings) {}
+InformationExporter::InformationExporter(LogSupplier*_supl) : settings(new QSettings),supplier(_supl){}
 
 InformationObjectSupplier *InformationExporter::createSupplier(QString supplierName) {
     return new InformationObjectSupplier(supplierName,this);
+}
+
+LogSupplier *InformationExporter::getLogSupplier() const {
+    return supplier;
+}
+
+InformationExporter::~InformationExporter() {
+    delete supplier;
 }

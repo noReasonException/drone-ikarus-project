@@ -9,6 +9,8 @@
 #include "../Consumer/InformationObjectConsumer.h"
 #include "../Interfaces/InformationSupplierFactory.h"
 #include "../Supplier/InformationObjectSupplier.h"
+#include "../Supplier/LogSupplier/LogSupplier.h"
+
 /****
  * class InformationExporter
  * This class represents a generar information transaction to files
@@ -17,17 +19,20 @@
 class InformationExporter: public InformationObjectConsumer,
                             public InformationSupplierFactory{
 private:
-    QSettings settings;
+    QSettings   settings;
+    LogSupplier*supplier;
 protected:
 public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override=0;
 
     InformationObjectSupplier *createSupplier(QString supplierName) override;
 
-    InformationExporter();
+    explicit InformationExporter(LogSupplier*);
+    ~InformationExporter();
 
 protected:
-    const QSettings &getSettings() const;
+    QSettings   &getSettings() ;
+    LogSupplier *getLogSupplier() const;
 };
 
 

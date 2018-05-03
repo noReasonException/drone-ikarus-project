@@ -285,6 +285,60 @@ Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
 .PHONY : Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
 
+InformationExporter/ChildClasses/DataExporter.o: InformationExporter/ChildClasses/DataExporter.cpp.o
+
+.PHONY : InformationExporter/ChildClasses/DataExporter.o
+
+# target to build an object file
+InformationExporter/ChildClasses/DataExporter.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o
+.PHONY : InformationExporter/ChildClasses/DataExporter.cpp.o
+
+InformationExporter/ChildClasses/DataExporter.i: InformationExporter/ChildClasses/DataExporter.cpp.i
+
+.PHONY : InformationExporter/ChildClasses/DataExporter.i
+
+# target to preprocess a source file
+InformationExporter/ChildClasses/DataExporter.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.i
+.PHONY : InformationExporter/ChildClasses/DataExporter.cpp.i
+
+InformationExporter/ChildClasses/DataExporter.s: InformationExporter/ChildClasses/DataExporter.cpp.s
+
+.PHONY : InformationExporter/ChildClasses/DataExporter.s
+
+# target to generate assembly for a file
+InformationExporter/ChildClasses/DataExporter.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.s
+.PHONY : InformationExporter/ChildClasses/DataExporter.cpp.s
+
+InformationExporter/ChildClasses/LogExporter.o: InformationExporter/ChildClasses/LogExporter.cpp.o
+
+.PHONY : InformationExporter/ChildClasses/LogExporter.o
+
+# target to build an object file
+InformationExporter/ChildClasses/LogExporter.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o
+.PHONY : InformationExporter/ChildClasses/LogExporter.cpp.o
+
+InformationExporter/ChildClasses/LogExporter.i: InformationExporter/ChildClasses/LogExporter.cpp.i
+
+.PHONY : InformationExporter/ChildClasses/LogExporter.i
+
+# target to preprocess a source file
+InformationExporter/ChildClasses/LogExporter.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.i
+.PHONY : InformationExporter/ChildClasses/LogExporter.cpp.i
+
+InformationExporter/ChildClasses/LogExporter.s: InformationExporter/ChildClasses/LogExporter.cpp.s
+
+.PHONY : InformationExporter/ChildClasses/LogExporter.s
+
+# target to generate assembly for a file
+InformationExporter/ChildClasses/LogExporter.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.s
+.PHONY : InformationExporter/ChildClasses/LogExporter.cpp.s
+
 InformationExporter/InformationExporter.o: InformationExporter/InformationExporter.cpp.o
 
 .PHONY : InformationExporter/InformationExporter.o
@@ -987,6 +1041,12 @@ help:
 	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.o"
 	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.i"
 	@echo "... Factory/AlanDefaultFactory/AlanDefaultFactory.s"
+	@echo "... InformationExporter/ChildClasses/DataExporter.o"
+	@echo "... InformationExporter/ChildClasses/DataExporter.i"
+	@echo "... InformationExporter/ChildClasses/DataExporter.s"
+	@echo "... InformationExporter/ChildClasses/LogExporter.o"
+	@echo "... InformationExporter/ChildClasses/LogExporter.i"
+	@echo "... InformationExporter/ChildClasses/LogExporter.s"
 	@echo "... InformationExporter/InformationExporter.o"
 	@echo "... InformationExporter/InformationExporter.i"
 	@echo "... InformationExporter/InformationExporter.s"

@@ -128,7 +128,7 @@ bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
 bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *obj) {
     if(_utill_isNullThenLog(obj,
                             INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
-    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION,obj->getIpLocation());
+    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION, obj->getLocation());
     return true;
 
 

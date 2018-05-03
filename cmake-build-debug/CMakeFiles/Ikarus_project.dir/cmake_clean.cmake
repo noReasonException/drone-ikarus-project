@@ -30,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o"
   "CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o"
   "Ikarus_project.pdb"
   "Ikarus_project"
 )

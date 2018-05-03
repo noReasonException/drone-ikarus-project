@@ -17,7 +17,7 @@ public:
     LocationOption(QString ip, long timestamp, InformationObjectSupplier *source):
             Option(OptionType::LocationOption, timestamp, source),ipLocation(ip){}
     ~LocationOption()override {}
-    const QString &getIpLocation() const { return ipLocation; }
+    const QString &getLocation() const { return ipLocation; }
 
 private:
     QString ipLocation;
