@@ -6,8 +6,14 @@
 #define IKARUS_PROJECT_LOGEXPORTER_H
 
 
-class LogExporter {
+#include "../InformationExporter.h"
 
+class LogExporter : public InformationExporter{
+public:
+    LogExporter();
+
+public:
+    void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 };
 
 

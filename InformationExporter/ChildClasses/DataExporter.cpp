@@ -38,7 +38,7 @@ void DataExporter::accept(InformationObjectSupplier *supplier, InformationObject
                 getLogSupplier()));
         return;
     }
-
+   // delete info;
     return;
 
 
