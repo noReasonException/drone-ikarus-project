@@ -152,6 +152,12 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationExporter/InformationExporter.cpp">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationExporter/InformationExporter.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
