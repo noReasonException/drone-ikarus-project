@@ -19,9 +19,41 @@
 #include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"
 #include "../InformationObject/Option/ChildOptions/WindowHandleOption.h"
 
-/***
+/*****
  * AlanMainWindow
- * This window is the main window of Alan Streamer , inherits from QMainWindow
+ * This QMainWindow is the main GUI window of AlanStreamer
+ * @Note . For the future maintainer . if you want to add something . there is the steps you need to make
+ * 1) if it is something like "GUI small change" , then just work on current methods as..
+ *                  onGenerateMenu();
+ *                  onGenerateToolBar();
+ *                  onGenerateLeftLayout();
+ *                  onGenerateVideoArea();
+ *                  onGenerateRightLayout();
+ *      in case of any error , just throw an exception , everything else is take care of the layered-error-controlling
+ *      design of AlanMainWindow
+ * 2) if you want to add new stuff (another panel maybe?) you must follow this layered-error-controlling design
+ *    the method genericInitializer is a generic function , called by constructor . this function calls every other
+ *    sub-initilizer for every distinct part of this window..
+ *    for example , the video area is created by a call to onGenerateVideoArea() from initializeCentralWidget() who is called
+ *    by genericInitializer()
+ *    ==============================================Why ?========================================================
+ *
+ *    AlanMainWindow(Just like any other visual element in this programm) is created using a layered-error-checking technuque
+ *    in this technique , we have the genericInitializer , who is responsible for the whole initialization , the
+ *    per-window-part initializer , who is responsible to take the part and fit in inside MainWindow . and the part-constructor
+ *    who creates the actual part
+ *    ============================================Give me an example!!===========================================
+ *    Okay then ! whow the menu is initialized ?
+ *    The call chain is ...
+ *                      genericInitializer()->initializeMenu()->onGenerateMenu()
+ *    The genericInitializer calls all sub-part initializer's the initializeMenu() is responsible for any error happened on
+ *    onGenerateMenu() . this method returns a vector with menu's! . the initializeMenu() takes the ready Menus and
+ *    fit in MainWindow ^^
+ *
+ *    =====================================The reason?===========================================================
+ *    if you want to change completely some part , just extend this class and override any of sub-part method.
+ *    the only thing you need to do , is to return the new part. it is not essential to read and re-understand the
+ *    whole code . ^^
  *
  */
 class AlanMainWindow : public QMainWindow{

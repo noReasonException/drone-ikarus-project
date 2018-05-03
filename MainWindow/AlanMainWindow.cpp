@@ -296,7 +296,11 @@ QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
     LogPanel*pnl=LogPanel::getInstance();
     return pnl;
 }
-
+/****
+ * genericActionSlot()
+ * this slot is called by EVERY clicable element . it determines what happened next
+ * if the button represents an action who is not implemented yet , just call operationNotSupportedSlot();
+ */
 void AlanMainWindow::genericActionSlot() {
     QDialog * preparedDialog = nullptr;
     std::string str=reinterpret_cast<QAction*>(QObject::sender())->text().toStdString();
@@ -328,7 +332,10 @@ void AlanMainWindow::genericActionSlot() {
 LogSupplier *AlanMainWindow::getSupplier() const {
     return supplier;
 }
-
+/*
+ * changeStatusOfRTSPClientSubsystem(status)
+ * This simple wrapper over the RTSP Subsystem's OptionSupplier* changes the status of the subsystem
+ * As an example , the Play button sends a START (to initialize) and PLAY(Play) status to RTSP subsystem ^^ */
 void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
     getRtspClientOptionSupplier()->send(new class ClientStatusOption(
             status,
@@ -341,7 +348,10 @@ void AlanMainWindow::changeStatusOfRTSPClientSubsystem(ClientStatus status) {
 OptionSupplier *AlanMainWindow::getRtspClientOptionSupplier() const {
     return rtspClientOptionSupplier;
 }
-
+/*
+ * setWindowHandlerOfRTSPClientSubsystem(handle)
+ * This simple wrapper over the RTSP Subsystem's OptionSupplier* changes the window id who determines the
+ * window destination for the playable video ^^  */
 void AlanMainWindow::setWindowHandlerOfRTSPClientSubsystem(const WId handle) {
     getRtspClientOptionSupplier()->send(new class WindowHandleOption(
             handle,
