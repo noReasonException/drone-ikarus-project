@@ -90,11 +90,11 @@ bool DataExporter::addMeta(int flags, int ID, int TIMESTAMP) {
 }
 
 DataExporter *DataExporter::getInstance() {
-    if(!ptr){
-        ptr=new DataExporter();
+    if(!DataExporter::ptr){
+        DataExporter::ptr=new DataExporter();
 
     }
-    return ptr;
+    return DataExporter::ptr;
 }
 DataExporter*DataExporter::ptr= nullptr;
 

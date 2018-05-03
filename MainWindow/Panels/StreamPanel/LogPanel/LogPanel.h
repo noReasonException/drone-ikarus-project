@@ -56,6 +56,7 @@ protected:
     static LogPanel*instance;
     std::vector<Log*>*log;
     LogSupplier*self_supplier;
+    InformationObjectSupplier*logExporterSupplier;
     QMutex *class_locker;
 
 

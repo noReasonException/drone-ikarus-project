@@ -13,6 +13,7 @@
 #include "LogWidget/LogWidget.h"
 #include "../../../../misc/Suppliers/LogSuppliers.h"
 #include "../../../../misc/generic_text/AlanMainWindowMisc.h"
+#include "../../../../InformationExporter/ChildClasses/LogExporter.h"
 
 LogPanel* LogPanel::instance= nullptr;
 
@@ -20,12 +21,16 @@ LogPanel::LogPanel() : StreamPanel(LOGS_PANEL_TITLE) {
     log=new std::vector<Log*>();
     class_locker=new QMutex;
     self_supplier=createSupplier("Log panel");
+    logExporterSupplier=LogExporter::getInstance()->createSupplier("Bla!");
+
 }
 ////Revision at : 5/4/2018 , Thread-safe accept;
 ///TODO , InformationObjectSupplier , not safe in case we use other class than LogSupplier , fix that
 void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *info) {
+    LogExporter::getInstance();
+    QMutexLocker *lock= nullptr;
     if(supplier!=self_supplier){
-        QMutexLocker locker(class_locker);
+        lock=new QMutexLocker(class_locker);
     }
     Log *l= dynamic_cast<Log*>(info);
     if(!l){
@@ -37,10 +42,11 @@ void LogPanel::accept(InformationObjectSupplier *supplier, InformationObject *in
     }
     log->push_back(l);
     getListView()->addItem(l->getLogType());
+
+    logExporterSupplier->send(l);
+    if(lock)delete lock;
+
 }
-
-
-
 LogSupplier *LogPanel::createSupplier(QString supplierName) {
     LogSupplier*supplier=new LogSupplier(supplierName,this);
     return supplier;

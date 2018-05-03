@@ -31,10 +31,11 @@ AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
 
     isStreaming= false;
     isReTransmitting= false;
+     logExporterSupplier=LogExporter::getInstance()->createSupplier(MAINWINDOW_LOGEXPORTER_SUPPLIER);
     supplier=LogPanel::getInstance()->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
     rtspClientOptionSupplier=factory->getRTSPSubsystem()->createSupplier(MAINWINDOW_OPTION_SUPPLIER);
     dataExporterSupplier=DataExporter::getInstance()->createSupplier(MAINWINDOW_DATAEXPORTER_SUPPLIER);
-    logExporterSupplier=LogExporter::getInstance()->createSupplier(MAINWINDOW_LOGEXPORTER_SUPPLIER);
+
 
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);

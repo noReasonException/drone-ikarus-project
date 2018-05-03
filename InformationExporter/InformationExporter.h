@@ -21,7 +21,6 @@ class InformationExporter: public InformationObjectConsumer,
 private:
     QSettings   settings;
     LogSupplier*supplier;
-protected:
 public:
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override=0;
 

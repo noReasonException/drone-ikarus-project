@@ -7,57 +7,37 @@
 #include "../../misc/Suppliers/LogSuppliers.h"
 #include "../../InformationObject/Option/ChildOptions/LocationOption.h"
 
-LogExporter::LogExporter() : InformationExporter(LogPanel::getInstance()->createSupplier(LOG_EXPORTER_SUPPLIER)),hasSetTheFileLocation(true){
-    if(!getSettings().contains(LOG_EXPORTER_QSETTINGS_PREFIX LOG_EXPORTER_QSETTINGS_FILE_LOCATION)){
-        hasSetTheFileLocation= false;
-        getLogSupplier()->send(new Log(
-                NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_LOG,
-                time(NULL),
-                NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_DESC_LOG,
-                getLogSupplier()));
+LogExporter::LogExporter() : InformationExporter(nullptr),
+                             hasSetTheFileLocation(false){
+    if(getSettings().contains(LOG_EXPORTER_QSETTINGS_PREFIX LOG_EXPORTER_QSETTINGS_FILE_LOCATION)){
+        hasSetTheFileLocation=true;
+
     }
+    ///LogExporter is not allowed to have LogSupplier?
+    /// Huston , we have circular constructor depedency problem ,
+    //TODO : use Depedency injection to fix this ... <3
+    ///P.S -> sorry. :P
+
 }
 void LogExporter::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     Log*dataptr;
     Option*optionptr;
     if ((optionptr= dynamic_cast<Option*>(info)) && acceptOption(supplier,optionptr));
     else if((dataptr= dynamic_cast<Log*>(info)) &&acceptLog(supplier,dataptr));
-    else{
-        getLogSupplier()->send(new Log(
-                INVALID_ARG_IN_LOG_ACCEPT_LOG,
-                time(NULL),
-                INVALID_INFORMATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG,
-                getLogSupplier()));
-        return;
-    }
-    // delete info;
     return;
 }
 
 bool LogExporter::acceptLog(InformationObjectSupplier *supplier, Log *log) {
-    static bool hasLogFileError=false;
-    bool retval;
-    if(!(retval=addMeta(0,log->getSource()->getSupplierName(),log->getLogType(),log->getLogDesc(),log->getTimestamp())) && !hasLogFileError){
-        hasLogFileError=true;
-        getLogSupplier()->send(new Log(
-                FILE_ERROR_LOG_EXPORTER_LOG,
-                time(NULL),
-                FILE_ERROR_LOG_EXPORTER_DESC_LOG,
-                getLogSupplier()));
-    }
-    return retval;
+    return addMeta(0,log->getSource()->getSupplierName(),log->getLogType(),log->getLogDesc(),log->getTimestamp());
+
 }
 
 bool LogExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
     class LocationOption *opt =dynamic_cast<class LocationOption*>(data);
     if(!opt){
-        getLogSupplier()->send(new Log(
-                INVALID_ARG_IN_LOG_ACCEPT_LOG,
-                time(NULL),
-                INVALID_LOCATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG,
-                getLogSupplier()));
+        return false;
     }
-
+    getSettings().setValue(LOG_EXPORTER_QSETTINGS_PREFIX LOG_EXPORTER_QSETTINGS_FILE_LOCATION,opt->getLocation());
 
     delete opt;
     return true;
@@ -76,13 +56,14 @@ bool LogExporter::addMeta(int flags, QString source,QString type,QString desc, u
         return true;
     }
     file << "{" << source.toStdString() << "," << type.toStdString()<<","<<desc.toStdString()<<","<<timestamp << "}"<<std::endl;
+    file.flush(); //it is expected that very few calls will be emitted , in future , consider remove per-call-flush //TODO
     return (bool)file;
 }
-LogExporter*LogExporter::ptr= nullptr;
 
 LogExporter *LogExporter::getInstance() {
-    if(!ptr){
-        ptr=new LogExporter();
+    if(LogExporter::ptr== nullptr){
+        LogExporter::ptr=new LogExporter();
     }
-    return ptr;
+    return LogExporter::ptr;
 }
+LogExporter*LogExporter::ptr= nullptr;

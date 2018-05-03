@@ -20,6 +20,7 @@ public:
     LogExporter();
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
     static LogExporter*getInstance();
+    static LogExporter*ptr;
 
 
 
@@ -29,7 +30,6 @@ protected:
     bool addMeta(int flags, QString source,QString type,QString desc, unsigned long timestamp);
 
 private:
-    static LogExporter*ptr;
     bool hasSetTheFileLocation= false;
 };
 
