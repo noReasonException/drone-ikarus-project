@@ -27,8 +27,18 @@ void LogExporter::accept(InformationObjectSupplier *supplier, InformationObject 
     return;
 }
 
-bool LogExporter::acceptLog(InformationObjectSupplier *supplier, Log *data) {
-    return false;
+bool LogExporter::acceptLog(InformationObjectSupplier *supplier, Log *log) {
+    static bool hasLogFileError=false;
+    bool retval;
+    if(!(retval=addMeta(0,log->getSource()->getSupplierName(),log->getLogType(),log->getLogDesc(),log->getTimestamp())) && !hasLogFileError){
+        hasLogFileError=true;
+        getLogSupplier()->send(new Log(
+                FILE_ERROR_LOG_EXPORTER_LOG,
+                time(NULL),
+                FILE_ERROR_LOG_EXPORTER_DESC_LOG,
+                getLogSupplier()));
+    }
+    return retval;
 }
 
 bool LogExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
@@ -52,6 +62,6 @@ bool LogExporter::addMeta(int flags, QString source,QString type,QString desc, u
         file.close();
         return true;
     }
-    file << "{" << source.toStdString() << "," << type.toStdString()<<","<<desc.toStdString()<<","<<timestamp << "}";
+    file << "{" << source.toStdString() << "," << type.toStdString()<<","<<desc.toStdString()<<","<<timestamp << "}"<<std::endl;
     return (bool)file;
 }

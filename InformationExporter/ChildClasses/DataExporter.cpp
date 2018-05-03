@@ -51,9 +51,9 @@ bool DataExporter::acceptData(InformationObjectSupplier *supplier, Data *data) {
     if(!(retval=addMeta(0,data->getID(),data->getTimestamp()) && !hasLogFileError)){
         hasLogFileError=true;
         getLogSupplier()->send(new Log(
-                FILE_ERROR_LOG,
+                FILE_ERROR_DATA_EXPORTER_LOG,
                 time(NULL),
-                FILE_ERROR_DESC_LOG,
+                FILE_ERROR_DATA_EXPORTER_DESC_LOG,
                 getLogSupplier()));
 
     }
