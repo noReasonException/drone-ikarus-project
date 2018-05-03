@@ -13,9 +13,11 @@
 #include "../../../../misc/errors/AlanPanelErrors.h"
 #include "../../../../misc/generic_text/generic_dialogs.h"
 #include "DataWidget/DataWidget.h"
+#include "../../../../InformationExporter/ChildClasses/DataExporter.h"
 
 DataPanel::DataPanel() : StreamPanel(DATA_PANEL_TITLE),
-                         dataPanelLogSupplier(LogPanel::getInstance()->createSupplier("DataPanelSupplier")) {
+                         dataPanelLogSupplier(LogPanel::getInstance()->createSupplier("DataPanelSupplier")),
+                         dataExporterSupplier(DataExporter::getInstance()->createSupplier("DataPanelSuppllier")){
 
 }
 DataPanel* DataPanel::instance= nullptr;
@@ -31,7 +33,7 @@ void DataPanel::accept(InformationObjectSupplier *supplier, InformationObject *i
     getListView()->addItem(QString::number(data->getID()));
     getListView()->scrollToBottom();
     _prevent_SIGFAULT();
-
+    dataExporterSupplier->send(data);
     delete data;
 }
 

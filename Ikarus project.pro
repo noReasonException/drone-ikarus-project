@@ -51,7 +51,8 @@ SOURCES += ./InformationObject/InformationObject.cpp \
             ./Consumer/LogConsumer/LogConsumer.cpp \
             ./Consumer/DataConsumer/DataConsumer.cpp \
             ./Consumer/OptionConsumer/OptionConsumer.cpp \
-            ./InformationExporter/InformationExporter.cpp
+            ./InformationExporter/InformationExporter.cpp \
+            InformationExporter/ChildClasses/DataExporter.cpp
 
 HEADERS +=  ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
             ./RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h \
@@ -114,7 +115,8 @@ HEADERS +=  ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
             ./Supplier/InformationObjectSupplier.h \
             ./Factory/AlanDefaultFactory/AlanDefaultFactory.h \
             ./Factory/AbstractFactory.h \
-            ./InformationExporter/InformationExporter.h
+            ./InformationExporter/InformationExporter.h \
+            InformationExporter/ChildClasses/DataExporter.h
 
 
 

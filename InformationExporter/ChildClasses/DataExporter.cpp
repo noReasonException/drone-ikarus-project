@@ -65,3 +65,12 @@ void DataExporter::addMeta(int flags, int ID, int TIMESTAMP) {
     file << "{" << ID << "," << TIMESTAMP << "}";
 }
 
+DataExporter *DataExporter::getInstance() {
+    if(!ptr){
+        ptr=new DataExporter();
+
+    }
+    return ptr;
+}
+DataExporter*DataExporter::ptr= nullptr;
+

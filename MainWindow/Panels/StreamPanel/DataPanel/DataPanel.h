@@ -20,6 +20,7 @@ class DataPanel : public StreamPanel,
 protected:
     static DataPanel*instance;
     LogSupplier*dataPanelLogSupplier;
+    InformationObjectSupplier*dataExporterSupplier;
     QMutex *accept_locker;
 
 

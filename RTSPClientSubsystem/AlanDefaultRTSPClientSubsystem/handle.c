@@ -95,7 +95,7 @@ GstPadProbeReturn on_timestamp_export_probe_triggered(GstPad *pad, GstPadProbeIn
     GstBuffer *buff = gst_buffer_make_writable(GST_PAD_PROBE_INFO_BUFFER(info));
 
     if(gst_buffer_map(buff,&map,GST_MAP_READ)){
-        trigger_new_frame(class_ptr,OFFSET_TO_ID,GST_BUFFER_DTS(buff));
+        trigger_new_frame(class_ptr,OFFSET_TO_ID,time(NULL));
         gst_buffer_unmap(buff,&map);
     }
 

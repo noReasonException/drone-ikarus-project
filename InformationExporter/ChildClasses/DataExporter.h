@@ -16,14 +16,16 @@
 class DataExporter : public InformationExporter{
 public:
     DataExporter();
-
-public:
+    static DataExporter*getInstance();
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
 
 protected:
     void acceptData(InformationObjectSupplier*supplier,Data*data);
     void acceptOption(InformationObjectSupplier*supplier,Option*data);
     void addMeta(int flags,int ID,int TIMESTAMP);
+
+private:
+    static DataExporter*ptr;
 
 };
 
