@@ -7,8 +7,15 @@
 #include "../../misc/Suppliers/LogSuppliers.h"
 #include "../../InformationObject/Option/ChildOptions/LocationOption.h"
 
-LogExporter::LogExporter() : InformationExporter(LogPanel::getInstance()->createSupplier(LOG_EXPORTER_SUPPLIER)){
-
+LogExporter::LogExporter() : InformationExporter(LogPanel::getInstance()->createSupplier(LOG_EXPORTER_SUPPLIER)),hasSetTheFileLocation(true){
+    if(!getSettings().contains(LOG_EXPORTER_QSETTINGS_PREFIX LOG_EXPORTER_QSETTINGS_FILE_LOCATION)){
+        hasSetTheFileLocation= false;
+        getLogSupplier()->send(new Log(
+                NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_LOG,
+                time(NULL),
+                NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_DESC_LOG,
+                getLogSupplier()));
+    }
 }
 void LogExporter::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     Log*dataptr;
@@ -43,7 +50,13 @@ bool LogExporter::acceptLog(InformationObjectSupplier *supplier, Log *log) {
 
 bool LogExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
     class LocationOption *opt =dynamic_cast<LocationOption*>(data);
-
+    if(!opt){
+        getLogSupplier()->send(new Log(
+                INVALID_ARG_IN_LOG_ACCEPT_LOG,
+                time(NULL),
+                INVALID_LOCATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG,
+                getLogSupplier()));
+    }
 
 
     delete opt;

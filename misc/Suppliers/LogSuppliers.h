@@ -94,8 +94,8 @@
         #define GSTREAMER_DESTRUCT_FAIL_DESC_LOG                                "Gstreamer:The Destruction sequence for gstreamer is incomplete , may memory leaks occur"
 
 #define DATA_EXPORTER_SUPPLIER                                                  "DataExporterSupplier"
-    #define NO_FILE_LOCATION_CONFIG_FOUND_LOG                                   "Undefined Data File"
-        #define NO_FILE_LOCATION_CONFIG_FOUND_DESC_LOG                          "The DataExporter subsystem states that you must define a file to send the data <br> Please click on Options menu the Data Save Location menu  <br> Untill Then , the default dat.txt will be used (located in your executables root folder) "
+    #define NO_FILE_LOCATION_CONFIG_DATA_EXPORTER_FOUND_LOG                      "Undefined Data File"
+        #define NO_FILE_LOCATION_CONFIG_DATA_EXPORTER_FOUND_DESC_LOG             "The DataExporter subsystem states that you must define a file to send the data <br> Please click on Options menu the Data Save Location menu  <br> Untill Then , the default dat.txt will be used (located in your executables root folder) "
 
     #define INVALID_ARG_IN_DATA_ACCEPT_LOG                                      "Invalid args in .accept() call"
         #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG     "In DataExporter , in .accept() call , object of type Data* or Option* excepted at arg 2 , but something else provided"
@@ -109,6 +109,8 @@
         #define INVALID_LOCATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG            "In DataExporterSupplier , in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
     #define FILE_ERROR_LOG_EXPORTER_LOG                                                         "LogExporter File Error"
         #define FILE_ERROR_LOG_EXPORTER_DESC_LOG                                                "LogExporter Subsystem states that something wrong happened to Log File? <br> Permissions maybe?"
+    #define NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_LOG                                      "Undefined Data File"
+        #define NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_DESC_LOG                             "The LogExporter subsystem states that you must define a file to send the data <br> Please click on Options menu the Log Save Location menu  <br> Untill Then , the default log.txt will be used (located in your executables root folder) "
 
 
 

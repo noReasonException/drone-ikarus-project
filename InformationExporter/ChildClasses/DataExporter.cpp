@@ -14,9 +14,9 @@
 DataExporter::DataExporter():InformationExporter(LogPanel::getInstance()->createSupplier(DATA_EXPORTER_SUPPLIER)) {
     if(!getSettings().contains(DATA_EXPORTER_QSETTINGS_PREFIX DATA_EXPORTER_QSETTINGS_FILE_LOCATION)){
         getLogSupplier()->send(new Log(
-                NO_FILE_LOCATION_CONFIG_FOUND_LOG,
+                NO_FILE_LOCATION_CONFIG_DATA_EXPORTER_FOUND_LOG,
                 time(NULL),
-                NO_FILE_LOCATION_CONFIG_FOUND_DESC_LOG,
+                NO_FILE_LOCATION_CONFIG_DATA_EXPORTER_FOUND_DESC_LOG,
                 getLogSupplier()));
         hasSetTheFileLocation= false;
         return ;
