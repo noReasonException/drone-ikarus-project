@@ -70,7 +70,6 @@ public:
     /***
      * The actual QSettings!
      * @note why not static? QSettings has some problems when declared with static lifetime
-     * //TODO : find why!
      */
     QSettings *settings;
 

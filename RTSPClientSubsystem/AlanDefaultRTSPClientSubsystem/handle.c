@@ -79,6 +79,7 @@ extern gboolean  generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipe
     g_print("%s\n?",err);
     recallMe;
 }
+static int indx=0;
 /****
  * on_timestamp_export_probe_triggered
  * this probe listener will emited in every video frame , exporting ID and possibly a timestamp

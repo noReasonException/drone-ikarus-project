@@ -10,7 +10,6 @@
 #include <QObject>
 #include <QListView>
 #include <QListWidget>
-
 class StreamPanel : public AlanPanel{
     Q_OBJECT
 protected:

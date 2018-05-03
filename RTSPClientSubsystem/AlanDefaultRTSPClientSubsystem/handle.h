@@ -13,10 +13,7 @@
  * so , instead of injecting the ID and extract from the other side , we take raw numbers from known locations
  * as ID . so we have a cpu-load-free way of getting a random number .Nice uh?  :P
  */
-#define OFFSET_TO_ID    *(map.data+48)+\
-                        *(map.data+49)+\
-                        *(map.data+50)+\
-                        *(map.data+51)+\
-                        *(map.data+52)+\
-                        *(map.data+53)
+
+#define OFFSET_TO_ID    (*(map.data+10)+(indx+=1))
+
 #endif //IKARUS_PROJECT_HANDLE_H
