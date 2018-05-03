@@ -49,7 +49,7 @@ bool LogExporter::acceptLog(InformationObjectSupplier *supplier, Log *log) {
 }
 
 bool LogExporter::acceptOption(InformationObjectSupplier *supplier, Option *data) {
-    class LocationOption *opt =dynamic_cast<LocationOption*>(data);
+    class LocationOption *opt =dynamic_cast<class LocationOption*>(data);
     if(!opt){
         getLogSupplier()->send(new Log(
                 INVALID_ARG_IN_LOG_ACCEPT_LOG,
@@ -77,4 +77,12 @@ bool LogExporter::addMeta(int flags, QString source,QString type,QString desc, u
     }
     file << "{" << source.toStdString() << "," << type.toStdString()<<","<<desc.toStdString()<<","<<timestamp << "}"<<std::endl;
     return (bool)file;
+}
+LogExporter*LogExporter::ptr= nullptr;
+
+LogExporter *LogExporter::getInstance() {
+    if(!ptr){
+        ptr=new LogExporter();
+    }
+    return ptr;
 }

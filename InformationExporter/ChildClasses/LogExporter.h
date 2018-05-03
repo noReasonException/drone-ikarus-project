@@ -19,6 +19,9 @@ class LogExporter : public InformationExporter{
 public:
     LogExporter();
     void accept(InformationObjectSupplier *supplier, InformationObject *info) override;
+    static LogExporter*getInstance();
+
+
 
 protected:
     bool acceptLog(InformationObjectSupplier*supplier,Log*data);

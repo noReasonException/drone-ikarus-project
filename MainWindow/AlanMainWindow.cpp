@@ -21,6 +21,7 @@
 #include "../InformationExporter/ChildClasses/DataExporter.h"
 #include "../InformationObject/Data/Data.h"
 #include "../misc/Suppliers/InformationObjectSupplier.h"
+#include "../InformationExporter/ChildClasses/LogExporter.h"
 
 /***
  * AlanMainWindowConstructor
@@ -33,6 +34,8 @@ AlanMainWindow::AlanMainWindow(AbstractFactory*factory):parentFactory(factory) {
     supplier=LogPanel::getInstance()->createSupplier(ALAN_MAIN_WINDOW_SUPPLIER);
     rtspClientOptionSupplier=factory->getRTSPSubsystem()->createSupplier(MAINWINDOW_OPTION_SUPPLIER);
     dataExporterSupplier=DataExporter::getInstance()->createSupplier(MAINWINDOW_DATAEXPORTER_SUPPLIER);
+    logExporterSupplier=LogExporter::getInstance()->createSupplier(MAINWINDOW_LOGEXPORTER_SUPPLIER);
+
     if(!genericInitializer()){
         QMessageBox::critical(this,GENERIC_INITIALIZATION_ERROR_DIALOG ERR01_DETAILS);
         closeSlot();
@@ -321,8 +324,12 @@ void AlanMainWindow::genericActionSlot() {
             changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PLAY);
         }
         else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PAUSE);
-        else if (!strcmp(cstr,ERROR_FILE_ACTION_NAME)){}
-        else if (!strcmp(cstr,DATA_FILE_ACTION_NAME)){locationNotifierDataExport(parentFactory->getDataFileDialog());}
+        else if (!strcmp(cstr,ERROR_FILE_ACTION_NAME)) {
+            exporterSubsystemsLocationNotifier(logExporterSupplier, parentFactory->getErrorFileDialog());
+        }
+        else if (!strcmp(cstr,DATA_FILE_ACTION_NAME)){
+            exporterSubsystemsLocationNotifier(dataExporterSupplier,parentFactory->getDataFileDialog());
+        }
         else{
             getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
             operationNotSupportedSlot();
@@ -365,8 +372,8 @@ void AlanMainWindow::setWindowHandlerOfRTSPClientSubsystem(const WId handle) {
 
 }
 
-void AlanMainWindow::locationNotifierDataExport(QString location) {
-    dataExporterSupplier->send(new class LocationOption(
+void AlanMainWindow::exporterSubsystemsLocationNotifier(InformationObjectSupplier*subsystemSuppplier,QString location) {
+    subsystemSuppplier->send(new class LocationOption(
             location,
             time(NULL),
             dataExporterSupplier
