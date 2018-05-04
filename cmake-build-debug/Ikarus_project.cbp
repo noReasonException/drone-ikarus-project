@@ -383,6 +383,9 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/Suppliers/DataSuppliers.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/Suppliers/InformationObjectSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
@@ -444,6 +447,9 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/img/generic_paths.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/misc.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/states.h">

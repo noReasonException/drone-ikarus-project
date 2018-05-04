@@ -14,6 +14,7 @@
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h"
 #include "../../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h"
 #include "../../res/Suppliers/OptionSuppliers.h"
+#include "../../res/misc.h"
 
 AlanDefaultFactory::AlanDefaultFactory():rtspsystem(nullptr){}
 QMainWindow *AlanDefaultFactory::getMainWindow() {
@@ -34,14 +35,17 @@ QDialog *AlanDefaultFactory::getLatencyDialog() {
 }
 
 QString AlanDefaultFactory::getDataFileDialog() {
-    return QFileDialog::getOpenFileName(NULL,
-                                         "Select Data File", "/home/", "Text Files (*.txt)");
+    return QFileDialog::getOpenFileName(NULL,DATA_FILE_DIALOG_TITLE,
+                                        DATA_FILE_DIALOG_INITIAL_DIRECTORY,
+                                        DATA_FILE_DIALOG_FILE_TYPES_ACCEPTED);
 
 }
 
 QString AlanDefaultFactory::getErrorFileDialog() {
     return QFileDialog::getOpenFileName(NULL,
-                                        "Select Log File", "/home/", "Text Files (*.txt)");
+                                        LOG_FILE_DIALOG_TITLE,
+                                        LOG_FILE_DIALOG_INITIAL_DIRECTORY,
+                                        LOG_FILE_DIALOG_FILE_TYPES_ACCEPTED);
 }
 
 QDialog *AlanDefaultFactory::getDroneAddrDialog() {

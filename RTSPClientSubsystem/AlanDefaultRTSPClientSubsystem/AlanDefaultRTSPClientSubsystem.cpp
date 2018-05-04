@@ -397,11 +397,11 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
 
     GstPad*req_pad=gst_element_get_request_pad(tee_elem,"src_%u");    //connect video to file
     GstPad*queue_to_save_sink_pad=gst_element_get_static_pad(save_sink_queue_elem,"sink");
-    std::cout<<"tee->queue_to_save is nosched"<<(gst_pad_link(req_pad,queue_to_save_sink_pad)==GST_PAD_LINK_REFUSED)<<std::endl;
+    std::cout<<"tee->queue_to_save is negotiated "<<(gst_pad_link(req_pad,queue_to_save_sink_pad)==GST_PAD_LINK_OK)<<std::endl;
 
     GstPad*req_pad_to_window=gst_element_get_request_pad(tee_elem,"src_%u");//connect video to screen
     GstPad*pad_to_screen_queue_elem=gst_element_get_static_pad(to_screen_queue_elem,"sink");
-    std::cout<<"tee->avdec is nosched"<<(gst_pad_link(req_pad_to_window,pad_to_screen_queue_elem)==GST_PAD_LINK_REFUSED)<<std::endl;
+    std::cout<<"tee->avdec is is negotiated"<<(gst_pad_link(req_pad_to_window,pad_to_screen_queue_elem)==GST_PAD_LINK_OK)<<std::endl;
 
     return true;
 }
