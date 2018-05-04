@@ -50,15 +50,15 @@ add_executable(Ikarus_project main.cpp
         ./Interfaces/StateRestorable.h
         ./Interfaces/InformationSupplierFactory.h
         ./Interfaces/OptionSupplierFactory.h
-        ./misc/states.h
-        ./misc/version.h
-        ./misc/Suppliers/LogSuppliers.h
-        ./misc/Suppliers/OptionSuppliers.h
-        ./misc/img/generic_paths.h
-        ./misc/generic_text/generic_dialogs.h
-        misc/generic_text/AlanMainWindowText.h
-        ./misc/errors/AlanMainWindowErrors.h
-        ./misc/errors/AlanPanelErrors.h
+        ./res/states.h
+        ./res/version.h
+        ./res/Suppliers/LogSuppliers.h
+        ./res/Suppliers/OptionSuppliers.h
+        ./res/img/generic_paths.h
+        ./res/generic_text/generic_dialogs.h
+        ./res/generic_text/AlanMainWindowText.h
+        ./res/errors/AlanMainWindowErrors.h
+        ./res/errors/AlanPanelErrors.h
         ./Supplier/LogSupplier/LogSupplier.h
         ./Supplier/OptionSupplier/OptionSupplier.h
         ./Supplier/InformationObjectSupplier.h
@@ -88,5 +88,5 @@ add_executable(Ikarus_project main.cpp
         ./Supplier/LogSupplier/LogSupplier.cpp
         ./Supplier/OptionSupplier/OptionSupplier.cpp
         InformationObject/Option/ChildOptions/LocationOption.h
-        RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h Supplier/DataSupplier/DataSupplier.cpp Supplier/DataSupplier/DataSupplier.h Consumer/DataConsumer/DataConsumer.cpp Consumer/DataConsumer/DataConsumer.h Interfaces/DataSupplierFactory.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.h MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.h InformationExporter/InformationExporter.cpp InformationExporter/InformationExporter.h InformationExporter/ChildClasses/DataExporter.cpp InformationExporter/ChildClasses/DataExporter.h InformationExporter/ChildClasses/LogExporter.cpp InformationExporter/ChildClasses/LogExporter.h misc/Suppliers/InformationObjectSupplier.h misc/generic_text/Dialogs/AlanSingleOptionDialogText.h misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h misc/generic_text/Panels/AlanPanelText.h misc/generic_text/Panels/StreamPanel/StreamPanelText.h misc/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h misc/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h misc/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h)
+        RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/common.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/MainLoopThread.h MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h Supplier/DataSupplier/DataSupplier.cpp Supplier/DataSupplier/DataSupplier.h Consumer/DataConsumer/DataConsumer.cpp Consumer/DataConsumer/DataConsumer.h Interfaces/DataSupplierFactory.h RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.h MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.h InformationExporter/InformationExporter.cpp InformationExporter/InformationExporter.h InformationExporter/ChildClasses/DataExporter.cpp InformationExporter/ChildClasses/DataExporter.h InformationExporter/ChildClasses/LogExporter.cpp InformationExporter/ChildClasses/LogExporter.h ./res/Suppliers/InformationObjectSupplier.h ./res/generic_text/Dialogs/AlanSingleOptionDialogText.h ./res/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h ./res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h ./res/generic_text/Panels/AlanPanelText.h ./res/generic_text/Panels/StreamPanel/StreamPanelText.h ./res/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h ./res/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h ./res/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h)
 target_link_libraries(Ikarus_project Qt5::Widgets Qt5::Multimedia)

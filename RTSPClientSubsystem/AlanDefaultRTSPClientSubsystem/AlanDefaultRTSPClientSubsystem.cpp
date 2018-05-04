@@ -6,7 +6,7 @@
 #include <iostream>
 #include "AlanDefaultRTSPClientSubsystem.h"
 #include "../../InformationObject/Log/Log.h"
-#include "../../misc/Suppliers/LogSuppliers.h"
+#include "../../res/Suppliers/LogSuppliers.h"
 #include "common.h"
 #include "../../InformationObject/Data/Data.h"
 
@@ -43,6 +43,8 @@ bool AlanDefaultRTSPClientSubsystem::onLatencySettingChangedHandler(class Latenc
     if(_utill_isNullThenLog(option,
                             INVALID_ARG_LATENCYOPTION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LATENCY,option->getLatency());
+    std::cout<<"CHANGED";
+    propertyChangedHandler();
     return true;
 }
 /****
@@ -59,6 +61,7 @@ bool AlanDefaultRTSPClientSubsystem::onResolutionSettingChangedHandler(class Res
                             INVALID_ARG_RESOLUTIONOPTION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_WIDTH,obj->getWidth());
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_RESOLUTION_HEIGHT,obj->getHeight());
+    propertyChangedHandler();
     return true;
 }
 /****
@@ -129,6 +132,7 @@ bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
     if(_utill_isNullThenLog(obj,
                             INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
     settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION, obj->getLocation());
+    propertyChangedHandler();
     return true;
 
 
@@ -204,7 +208,7 @@ bool AlanDefaultRTSPClientSubsystem::callProperStatusHandler(ClientStatus status
  */
 bool AlanDefaultRTSPClientSubsystem::onStartStatusRequest() {
 
-    if(currentStatus!=Client_NONE){ return false; }
+    if(currentStatus!=Client_NONE && currentStatus!=Client_STOP){ return false; }
     if(!initializeGstreamer()){
         getLogSupplier()->send(new Log(
                 ABSTRACT_RTSP_CLIENT_STATE_CHANGE_FAILURE_LOG,
@@ -270,8 +274,9 @@ bool AlanDefaultRTSPClientSubsystem::onPauseStatusRequest() {
  *
  */
 bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
-    de_initializeGstreamer();
-    return true;
+
+    return de_initializeGstreamer();
+
 }
 /****
  * initializeGstreamer
@@ -281,7 +286,7 @@ bool AlanDefaultRTSPClientSubsystem::onStopStatusRequest() {
 bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
     GError*err;
     char sprintf_buffer[50];
-
+    if(isGstreamerSubsystemInitialized)return true;
     /*Initialization check of gstreamer*/
     if(!gst_init_check(0,0,&err)){
         sprintf(sprintf_buffer,"%s",err->message);
@@ -489,7 +494,7 @@ bool AlanDefaultRTSPClientSubsystem::de_initializeGstreamer() {
     g_main_loop_unref(mainLoop);
     gst_object_unref(pipeline);
 
-
+    isGstreamerSubsystemInitialized=false;
     return true;
 
 
@@ -633,4 +638,24 @@ bool AlanDefaultRTSPClientSubsystem::_utill_gst_object_unref_many(int i, ...) {
 bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString &onSuccessTitle, const QString &onSuccessMsg) {
     if(status)getLogSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg , getLogSupplier()));
     return status;
+}
+
+bool AlanDefaultRTSPClientSubsystem::propertyChangedHandler() {
+    ClientStatus prev=currentStatus;
+    if(currentStatus>=Client_PLAY){
+        getSelf_supplier()->send(new class ClientStatusOption(Client_PAUSE,
+                                                              time(NULL),
+                                                              getSelf_supplier()));
+        getSelf_supplier()->send(new class ClientStatusOption(Client_STOP,
+                                                              time(NULL),
+                                                              getSelf_supplier()));
+        getSelf_supplier()->send(new class ClientStatusOption(Client_START,
+                                                              time(NULL),
+                                                              getSelf_supplier()));
+        getSelf_supplier()->send(new class ClientStatusOption(prev,
+                                                              time(NULL),
+                                                              getSelf_supplier()));
+    }
+    std::cout<<"RESTARTING..."<<std::endl;
+    return true;
 }

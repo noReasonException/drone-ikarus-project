@@ -3,11 +3,9 @@
 //
 
 #include "StreamPanel.h"
-#include "../../../misc/generic_text/generic_dialogs.h"
-#include "../../../misc/errors/AlanPanelErrors.h"
-#include <QLayout>
-#include <QMessageBox>
-#include <QListWidget>
+#include "../../../res/generic_text/generic_dialogs.h"
+#include "../../../res/errors/AlanPanelErrors.h"
+
 
 StreamPanel::StreamPanel(const QString &title) : AlanPanel(title){
 

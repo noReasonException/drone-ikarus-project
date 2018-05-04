@@ -3,15 +3,11 @@
 //
 
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 #include <QLabel>
 #include <QDialog>
-#include <QIcon>
-#include <QWindow>
 #include <QWindow>
 #include <iostream>
 #include "AlanSingleOptionDialog.h"
-#include "../../res/img/generic_paths.h"
 
 AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState* Currstate,const QString &title,const QString&icon):
         titleArea(title),

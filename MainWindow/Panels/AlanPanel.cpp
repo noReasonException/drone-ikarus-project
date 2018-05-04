@@ -6,8 +6,8 @@
 #include <QString>
 #include <QVBoxLayout>
 #include "AlanPanel.h"
-#include "../../misc/errors/AlanPanelErrors.h"
-#include "../../misc/generic_text/generic_dialogs.h"
+#include "../../res/errors/AlanPanelErrors.h"
+#include "../../res/generic_text/generic_dialogs.h"
 AlanPanel::AlanPanel(QString str) : QWidget(nullptr),title(str) {}
 
 /***

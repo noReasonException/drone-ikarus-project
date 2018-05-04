@@ -6,14 +6,14 @@
 #include <iostream>
 #include "DataPanel.h"
 #include "../../../../InformationObject/Data/Data.h"
-#include "../../../../misc/Suppliers/LogSuppliers.h"
+#include "../../../../res/Suppliers/LogSuppliers.h"
 #include "../../../../InformationObject/Log/Log.h"
 #include "../LogPanel/LogPanel.h"
-#include "../../../../misc/errors/AlanPanelErrors.h"
-#include "../../../../misc/generic_text/generic_dialogs.h"
+#include "../../../../res/errors/AlanPanelErrors.h"
+#include "../../../../res/generic_text/generic_dialogs.h"
 #include "DataWidget/DataWidget.h"
 #include "../../../../InformationExporter/ChildClasses/DataExporter.h"
-#include "../../../../misc/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h"
+#include "../../../../res/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h"
 
 DataPanel::DataPanel() : StreamPanel(DATA_PANEL_TITLE),
                          dataPanelLogSupplier(LogPanel::getInstance()->createSupplier("DataPanelSupplier")),

@@ -4,7 +4,7 @@
 
 #include "InformationExporter.h"
 #include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
-#include "../misc/Suppliers/LogSuppliers.h"
+#include "../res/Suppliers/LogSuppliers.h"
 
 QSettings &InformationExporter::getSettings() {
     return settings;

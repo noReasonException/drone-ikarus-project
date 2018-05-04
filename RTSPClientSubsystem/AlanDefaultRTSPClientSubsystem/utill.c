@@ -4,12 +4,6 @@
 #include <stdarg.h>
 #include <gst/gst.h>
 #include "common.h"
-#include <glib.h>
-#include <gst/rtsp-server/rtsp-server.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <zconf.h>
-
 
 /***
  * generic_initializer

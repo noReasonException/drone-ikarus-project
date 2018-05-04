@@ -5,14 +5,14 @@
 #include <iostream>
 #include "AbstractRTSPClientSubsystem.h"
 #include "../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
-#include "../misc/generic_text/AlanMainWindowMisc.h"
-#include "../misc/Suppliers/LogSuppliers.h"
+#include "../res/Suppliers/LogSuppliers.h"
 #include "../MainWindow/Panels/StreamPanel/DataPanel/DataPanel.h"
 
 AbstractRTSPClientSubsystem::AbstractRTSPClientSubsystem() :
         dataSupplier(DataPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)),
         supplier(LogPanel::getInstance()->createSupplier(ABSTRACT_RTSP_CLIENT_SUPPLIER)){
     consumerLocker=new QMutex();
+    self_supplier= nullptr;
 }
 
 OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName) {
@@ -34,7 +34,9 @@ OptionSupplier *AbstractRTSPClientSubsystem::createSupplier(QString supplierName
  *                      #This object provides the window handle , used by library to detect the Qt Window!
  */
 void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, InformationObject *info) {
-    QMutexLocker locker(consumerLocker);
+    QMutexLocker *locker= nullptr;
+    if(supplier!=getSelf_supplier())
+        locker=new QMutexLocker(consumerLocker);
     Option*optionObject;
     QString handlerName;
     bool handlerStatus=false;
@@ -68,6 +70,7 @@ void AbstractRTSPClientSubsystem::accept(InformationObjectSupplier *supplier, In
                 getLogSupplier()));
     }
     delete info;
+    if(locker)delete locker;
 
 }
 
@@ -76,6 +79,11 @@ LogSupplier *AbstractRTSPClientSubsystem::getLogSupplier() const {
 }
 DataSupplier *AbstractRTSPClientSubsystem::getDataSupplier() const {
     return dataSupplier;
+}
+
+OptionSupplier *AbstractRTSPClientSubsystem::getSelf_supplier() {
+    if(!self_supplier)self_supplier=createSupplier("AbstractRTSPClientSelfSupplier");
+    return self_supplier;
 }
 
 

@@ -10,8 +10,6 @@
 #include "../../MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialog.h"
 #include "../../MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h"
 #include "../../MainWindow/Dialogs/ChildDialogs/AlanAboutDialog.h"
-#include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
-#include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetDroneAddrDialogState.h"
 #include "../../MainWindow/State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/ChildStates/SetServersAddrDialogState.h"
 #include "../../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.h"

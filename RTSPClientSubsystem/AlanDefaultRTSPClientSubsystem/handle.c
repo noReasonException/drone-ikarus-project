@@ -3,10 +3,7 @@
 //
 
 #include <glib.h>
-#include <glib/gtypes.h>
 #include <gst/gstpad.h>
-#include <gst/gstelement.h>
-#include <gst/gstmemory.h>
 #include "handle.h"
 /**The c++ api */
 int  trigger_new_frame(void *alanDefaultRTSPClientSubsystem_entity,unsigned long ID,unsigned long TIMESTAMP);

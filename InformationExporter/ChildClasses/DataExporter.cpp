@@ -6,7 +6,7 @@
 #include "DataExporter.h"
 #include "../../InformationObject/Data/Data.h"
 #include "../../InformationObject/Option/Option.h"
-#include "../../misc/Suppliers/LogSuppliers.h"
+#include "../../res/Suppliers/LogSuppliers.h"
 #include "../../InformationObject/Log/Log.h"
 #include "../../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.h"
 #include "../../InformationObject/Option/ChildOptions/LocationOption.h"

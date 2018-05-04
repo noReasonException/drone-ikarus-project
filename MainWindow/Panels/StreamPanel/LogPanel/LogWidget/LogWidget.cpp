@@ -5,7 +5,7 @@
     #include <QGridLayout>
 #include <QLabel>
 #include "LogWidget.h"
-#include "../../../../../misc/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h"
+#include "../../../../../res/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h"
 
 LogWidget::LogWidget(Log*l) : QDialog(nullptr),log(l) {
     ////TODO: proper exception handling

@@ -383,73 +383,73 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/main.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/InformationObjectSupplier.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/Suppliers/InformationObjectSupplier.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/LogSuppliers.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/Suppliers/LogSuppliers.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/Suppliers/OptionSuppliers.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/Suppliers/OptionSuppliers.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanMainWindowErrors.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/errors/AlanMainWindowErrors.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanPanelErrors.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/errors/AlanPanelErrors.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/AlanMainWindowText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanSingleOptionDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanSingleOptionDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/AlanPanelText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Panels/AlanPanelText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/StreamPanelText.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/Panels/StreamPanel/StreamPanelText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/generic_dialogs.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/generic_text/generic_dialogs.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/img/generic_paths.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/img/generic_paths.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/states.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/states.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/version.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/res/version.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/CMakeLists.txt">

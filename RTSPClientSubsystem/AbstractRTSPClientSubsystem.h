@@ -61,6 +61,10 @@ public:
 private:
     LogSupplier*supplier;
     DataSupplier*dataSupplier;
+    OptionSupplier*self_supplier;
+
+
+private:
     QMutex *consumerLocker;
 
 public:
@@ -69,7 +73,7 @@ public:
     OptionSupplier *createSupplier(QString supplierName) override;
     LogSupplier *getLogSupplier() const;
     DataSupplier *getDataSupplier() const;
-
+    OptionSupplier *getSelf_supplier();
 protected:
 
     //@may be null

@@ -84,11 +84,13 @@ private :
     //Utills:
     bool _utillLogHandler(bool status,const QString &onSuccessTitle,const QString &onSuccessMsg);
     bool _utill_gst_object_unref_many(int i,...);
+    //Etc:
+    virtual bool propertyChangedHandler();
 
 protected:
 
     virtual bool callProperStatusHandler(ClientStatus status);
-    //Option Latency Handlers:
+    //Property Handlers:
     bool onLatencySettingChangedHandler(class LatencyOption *) override;
 
     bool onResolutionSettingChangedHandler(class ResolutionOption *) override;
@@ -104,7 +106,6 @@ protected:
     virtual bool onPlayStatusRequest();
     virtual bool onPauseStatusRequest();
     virtual bool onStopStatusRequest();
-
 
 
 };

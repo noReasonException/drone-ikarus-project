@@ -8,12 +8,12 @@
 #include <iostream>
 #include <QtCore/QMutexLocker>
 #include "LogPanel.h"
-#include "../../../../misc/generic_text/generic_dialogs.h"
-#include "../../../../misc/errors/AlanPanelErrors.h"
+#include "../../../../res/generic_text/generic_dialogs.h"
+#include "../../../../res/errors/AlanPanelErrors.h"
 #include "LogWidget/LogWidget.h"
-#include "../../../../misc/Suppliers/LogSuppliers.h"
+#include "../../../../res/Suppliers/LogSuppliers.h"
 #include "../../../../InformationExporter/ChildClasses/LogExporter.h"
-#include "../../../../misc/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h"
+#include "../../../../res/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h"
 
 LogPanel* LogPanel::instance= nullptr;
 
