@@ -5,11 +5,12 @@
     #include <QGridLayout>
 #include <QLabel>
 #include "LogWidget.h"
+#include "../../../../../misc/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h"
 
 LogWidget::LogWidget(Log*l) : QDialog(nullptr),log(l) {
     ////TODO: proper exception handling
     generic_initializer();
-    setWindowTitle("Log Details");
+    setWindowTitle(LOG_WIDGET_WINDOW_TITLE);
 }
 
 bool LogWidget::generic_initializer() {
@@ -33,10 +34,10 @@ bool LogWidget::migrateLogData()try{
 }catch (std::exception&e){ return false;}
 
 void LogWidget::onMigrateLogData() {
-    main_lay->addWidget(new QLabel("Source"),0,0);
-    main_lay->addWidget(new QLabel("Type"),0,1);
-    main_lay->addWidget(new QLabel("Time"),0,2);
-    main_lay->addWidget(new QLabel("Description"),0,3);
+    main_lay->addWidget(new QLabel(LOG_WIDGET_SOURCE_QLABEL),0,0);
+    main_lay->addWidget(new QLabel(LOG_WIDGET_TIME_QLABEL),0,1);
+    main_lay->addWidget(new QLabel(LOG_WIDGET_TYPE_QLABEL),0,2);
+    main_lay->addWidget(new QLabel(LOG_WIDGET_DESTINATION_QLABEL),0,3);
     main_lay->addWidget(new QLabel(log->getSource()->getSupplierName()),1,0);
     main_lay->addWidget(new QLabel(log->getLogType()),1,1);
     main_lay->addWidget(new QLabel(QString::number(log->getTimestamp())),1,2);

@@ -8,6 +8,8 @@
 
 #include "../../../../State/WindowStates/AlanSingleOptionDialogState.h"
 #include "../AlanMultipleChoiceDialog.h"
+#include "../../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h"
+
 class OptionSupplier;
 class SetServersAddrDialog : public AlanMultipleChoiceDialog{
 private:
@@ -15,7 +17,7 @@ private:
 
 public:
     SetServersAddrDialog(AlanMultipleChoiceDialogState *state,OptionSupplier*supplier) :
-            AlanMultipleChoiceDialog(state, SERVER_ADDR_DIALOG_TITLE, SERVER_ADDR_ICON, "+"),
+            AlanMultipleChoiceDialog(state, SERVER_ADDR_DIALOG_TITLE, SERVER_ADDR_ICON, SET_SERVER_ADDR_DIALOG_ADD_BTN),
             rtspClientOptionSupplier(supplier){
 
     }

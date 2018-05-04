@@ -428,6 +428,21 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/AlanPanelText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/DataPanel/DataPanelText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/LogPanel/LogWidget/LogWidgetText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Panels/StreamPanel/StreamPanelText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/generic_dialogs.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
