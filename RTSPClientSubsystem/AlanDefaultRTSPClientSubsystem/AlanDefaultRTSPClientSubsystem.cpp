@@ -356,10 +356,14 @@ bool AlanDefaultRTSPClientSubsystem::_initializeFactories() {
  * @return true on succress
  */
 bool AlanDefaultRTSPClientSubsystem::_initializeElements() {
-    return(generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_ELEMENT), 6,
+    return(generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_ELEMENT), 10,
                              gstrtspsrc_fact, &gstrtspsrc_elem, g_strdup("rtsp-src"),
                              queue_fact,&queue_elem,g_strdup("buffer-queue-eleme"),
                              rtph264depayloader_fact,&rtph264depayloader_elem,g_strdup("depay-elem"),
+                             tee_fact,&tee_elem,g_strdup("tee-splitter"),
+                                    save_sink_queue_fact,&save_sink_queue_elem,g_strdup("queue-to-file"),
+                                    filesink_fact,&filesink_elem,g_strdup("filesink"),
+                             to_screen_queue_fact,&to_screen_queue_elem,g_strdup("to-video-queue"),
                              decodebin_fact,&decodebin_elem,g_strdup("decodebin-element"),
                              videoconvert_fact,&videoconvert_elem,g_strdup("videoconvert-element"),
                              ximagesink_fact,&ximagessink_elem,g_strdup("ximagesink-elem")));
