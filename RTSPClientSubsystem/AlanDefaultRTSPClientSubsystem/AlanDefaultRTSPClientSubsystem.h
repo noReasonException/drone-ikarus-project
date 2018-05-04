@@ -28,6 +28,9 @@ private :
     bool _utill_isNullThenLog(void *ptr, const QString &onErrorMessage);
     bool isWindowHandleDefined=false;
     bool isClientStatusDefined=false;
+    bool isFileSinkLocationDefined=true;
+    bool isgstrtspsrcLocationDefined=true;
+    bool isqueueLatencyDefined=true;
     bool isGstreamerSubsystemInitialized=false;
     ClientStatus currentStatus;
     int windowHandle;

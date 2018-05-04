@@ -33,8 +33,13 @@
     #define INVALID_ARGS_IN_ACCEPT_DESC_LOG                                     "accept() method called with InformationObject* instead of Log* Object"
 
 #define ABSTRACT_RTSP_CLIENT_SUPPLIER                                           "AbstractRtspClientSupplier"
+    #define NO_FILE_LOCATION_CONFIG_RTSP_LOG                                        "Undefined File"
+        #define NO_VIDEO_FILE_LOCATION_FOUND_DESC_LOG                               "The Rtsp subsystem states that you must define a file to send the video <br> Please click on Options menu the Video Save Location menu  <br> Untill Then , the default sample.h264 will be used (located in your executables root folder) "
+        #define NO_SERVER_URL_LOCATION_FOUND_DESC_LOG                               "The Rtsp subsystem states that you must define a file to send the video <br> Please click on Options menu the Video Save Location menu  <br> Untill Then , the default sample.h264 will be used (located in your executables root folder) "
+    #define NO_LATENCY_CONFIG_RTSP_LOG                                          "Undefined property"
+    #define NO_LATENCY_CONFIG_FOUND_DESC_LOG                                    "The Rtsp subsystem states that you must define a latency <br> Please click on Options menu the Latency menu  <br> Untill Then , the default value \"0\" will be used"
 
-    #define INVALID_ARG_IN_ACCEPT_LOG                                           "Invalid args in .accept() call"
+#define INVALID_ARG_IN_ACCEPT_LOG                                           "Invalid args in .accept() call"
         #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG         "In AbstractRTSPClientSubsystem , in .accept() call , object of type Option* excepted at arg 2 , but something else provided"
         #define UNKNOWN_DERIVED_TYPE_OF_OPTION_PROVIDED_IN_ACCEPT_CALL_DESC_LOG "Unknown object of type Option* is provided , AbstractRTSPClientSubsystem is unable to handle the request"
         #define INVALID_ARG_LATENCYOPTION_EXPECTED_LOG                          ".onLatencySettingChangedHandler() handler call , LatencyOption* object expected"
