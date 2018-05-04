@@ -4,5 +4,5 @@
 
 #include "DataSupplier.h"
 
-DataSupplier::DataSupplier(const QString &supplierName, InformationObjectConsumer *target) : InformationObjectSupplier(
-        supplierName, target) {}
+DataSupplier::DataSupplier(const QString _supplierName, InformationObjectConsumer *target) : InformationObjectSupplier(
+        _supplierName, target) {}

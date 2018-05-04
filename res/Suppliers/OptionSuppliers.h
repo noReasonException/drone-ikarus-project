@@ -7,6 +7,6 @@
 #define LATENCY_OPTION_SUPPLIER         "LatencyOptionSupplier"
 #define RESOLUTION_OPTION_SUPPLIER      "ResolutionOptionSupplier"
 #define SETDRONEADDR_OPTION_SUPPLIER    "SetDroneAddrOptionSupplier"
-#define SETSERVERADDR_OPTION_SUPPLIER   "SetDroneAddrOptionSupplier"
-#define MAINWINDOW_OPTION_SUPPLIER      "SetDroneAddrOptionSupplier"
+#define SETSERVERADDR_OPTION_SUPPLIER   "SetServerAddrOptionSupplier"
+#define MAINWINDOW_OPTION_SUPPLIER      "MainWindowOptionSupplier"
 #endif //IKARUS_PROJECT_OPTIONSUPPLIERS_H

@@ -10,7 +10,7 @@
 
 class DataSupplier : public InformationObjectSupplier{
 public:
-    DataSupplier(const QString &supplierName, InformationObjectConsumer *target);
+    DataSupplier(const QString _supplierName, InformationObjectConsumer *target);
 
 
 };

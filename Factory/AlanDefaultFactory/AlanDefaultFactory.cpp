@@ -47,7 +47,12 @@ QString AlanDefaultFactory::getErrorFileDialog() {
                                         LOG_FILE_DIALOG_INITIAL_DIRECTORY,
                                         LOG_FILE_DIALOG_FILE_TYPES_ACCEPTED);
 }
-
+QString AlanDefaultFactory::getVideoFileDialog() {
+    return QFileDialog::getOpenFileName(NULL,
+                                        VIDEO_FILE_DIALOG_TITLE,
+                                        VIDEO_FILE_DIALOG_INITIAL_DIRECTORY,
+                                        VIDEO_FILE_DIALOG_FILE_TYPES_ACCEPTED);
+}
 QDialog *AlanDefaultFactory::getDroneAddrDialog() {
     return (new SetDroneAddrDialog(
             new SetDroneAddrDialogState(),

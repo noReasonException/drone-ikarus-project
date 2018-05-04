@@ -4,5 +4,5 @@
 
 #include "OptionSupplier.h"
 
-OptionSupplier::OptionSupplier(const QString &supplierName, InformationObjectConsumer *target)
-        : InformationObjectSupplier(supplierName, target) {}
+OptionSupplier::OptionSupplier(const QString _supplierName, InformationObjectConsumer *target)
+        : InformationObjectSupplier(_supplierName, target) {}

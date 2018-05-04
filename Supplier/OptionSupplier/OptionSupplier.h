@@ -10,7 +10,7 @@
 
 class OptionSupplier: public InformationObjectSupplier {
 public:
-    OptionSupplier(const QString &supplierName, InformationObjectConsumer *target);
+    OptionSupplier(const QString _supplierName, InformationObjectConsumer *target);
 
 };
 

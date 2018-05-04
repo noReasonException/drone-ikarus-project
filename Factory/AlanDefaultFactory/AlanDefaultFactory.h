@@ -1,3 +1,5 @@
+
+
 //
 // Created by noreasonexception on 4/5/18.
 //
@@ -34,6 +36,8 @@ public:
     QDialog *getAboutDialog() override;
 
     AbstractRTSPClientSubsystem *getRTSPSubsystem() override;
+
+    QString getVideoFileDialog() override;
 };
 
 

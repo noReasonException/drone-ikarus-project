@@ -26,6 +26,7 @@ public:
     virtual QDialog                     *getLatencyDialog()     =0;
     virtual QString                      getDataFileDialog()    =0;
     virtual QString                      getErrorFileDialog()   =0;
+    virtual QString                      getVideoFileDialog()   =0;
     virtual QDialog                     *getDroneAddrDialog()   =0;
     virtual QDialog                     *getServerAddrDialog()  =0;
     virtual QDialog                     *getAboutDialog()       =0;

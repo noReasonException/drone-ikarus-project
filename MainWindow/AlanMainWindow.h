@@ -100,7 +100,7 @@ protected:
     QWidget*                            onGenerateRightLayout()throw(std::exception);
     LogSupplier                         *getSupplier() const;
     OptionSupplier                      *getRtspClientOptionSupplier() const;
-    void                                exporterSubsystemsLocationNotifier(InformationObjectSupplier*subsystemSuppplier,QString location);
+    void                                _utill_locationNotifier(InformationObjectSupplier *subsystemSuppplier, QString location);
 
 
 

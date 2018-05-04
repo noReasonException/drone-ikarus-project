@@ -5,7 +5,7 @@
 #include <iostream>
 #include "InformationObjectSupplier.h"
 
-const QString &InformationObjectSupplier::getSupplierName() const {
+const QString InformationObjectSupplier::getSupplierName() const {
     return supplierName;
 }
 

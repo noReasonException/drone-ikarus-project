@@ -98,6 +98,10 @@ std::vector<QMenu*>* AlanMainWindow::onGenerateMenu(QMenuBar *bar) throw (std::e
                 new QAction(DATA_FILE_ACTION_NAME),
                 DATA_FILE_ICON,
                 SLOT(genericActionSlot())));
+        tmp->addAction(initializeQAction(
+                new QAction(VIDEO_FILE_ACTION_NAME),
+                VIDEO_FILE_ICON,
+                SLOT(genericActionSlot())));
 
         tmp->addSeparator();
         tmp->addAction(initializeQAction(
@@ -302,6 +306,8 @@ QWidget *AlanMainWindow::onGenerateRightLayout() throw(std::exception){
  * genericActionSlot()
  * this slot is called by EVERY clicable element . it determines what happened next
  * if the button represents an action who is not implemented yet , just call operationNotSupportedSlot();
+ * @note why strcmp? simply , its faster :)
+ *
  */
 void AlanMainWindow::genericActionSlot() {
     QDialog * preparedDialog = nullptr;
@@ -321,10 +327,13 @@ void AlanMainWindow::genericActionSlot() {
         }
         else if(!strcmp(cstr,STOP_STREAMING_ACTION_NAME))changeStatusOfRTSPClientSubsystem(ClientStatus::Client_PAUSE);
         else if (!strcmp(cstr,ERROR_FILE_ACTION_NAME)) {
-            exporterSubsystemsLocationNotifier(logExporterSupplier, parentFactory->getErrorFileDialog());
+            _utill_locationNotifier(logExporterSupplier, parentFactory->getErrorFileDialog());
         }
         else if (!strcmp(cstr,DATA_FILE_ACTION_NAME)){
-            exporterSubsystemsLocationNotifier(dataExporterSupplier,parentFactory->getDataFileDialog());
+            _utill_locationNotifier(dataExporterSupplier, parentFactory->getDataFileDialog());
+        }
+        else if(!strcmp(cstr,VIDEO_FILE_ACTION_NAME)){
+            parentFactory->getVideoFileDialog();
         }
         else{
             getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
@@ -368,7 +377,8 @@ void AlanMainWindow::setWindowHandlerOfRTSPClientSubsystem(const WId handle) {
 
 }
 
-void AlanMainWindow::exporterSubsystemsLocationNotifier(InformationObjectSupplier*subsystemSuppplier,QString location) {
+void AlanMainWindow::_utill_locationNotifier(InformationObjectSupplier *subsystemSuppplier,
+                                             QString location) {
     subsystemSuppplier->send(new class LocationOption(
             location,
             time(NULL),

@@ -24,11 +24,11 @@ class InformationObjectConsumer;
 class InformationObject;
 class InformationObjectSupplier {
 public:
-    InformationObjectSupplier(const QString &supplierName,InformationObjectConsumer*target) :
-            supplierName(supplierName),
+    InformationObjectSupplier(const QString _supplierName,InformationObjectConsumer*target) :
+            supplierName(_supplierName),
             targetConsumer(target) {}
 
-    const QString &getSupplierName() const;
+    const QString getSupplierName() const;
 
 
     InformationObjectConsumer *getTargetConsumer() const;

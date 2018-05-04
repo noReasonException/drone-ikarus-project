@@ -9,6 +9,7 @@
 #include "../../res/Suppliers/LogSuppliers.h"
 #include "common.h"
 #include "../../InformationObject/Data/Data.h"
+#include "../../res/Suppliers/OptionSuppliers.h"
 
 extern "C" gboolean     generic_initializer(const int flags, int num, ...);
 extern "C" gboolean     generic_bus_handler(GstBus *bus, GstMessage *msg, gpointer pipeline);
@@ -131,7 +132,30 @@ bool AlanDefaultRTSPClientSubsystem::onWindowHandlerSettingChangedHandler(class 
 bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class LocationOption *obj) {
     if(_utill_isNullThenLog(obj,
                             INVALID_ARG_LOCATION_EXPECTED_LOG))return false;
-    settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_LOCATION, obj->getLocation());
+    /***
+     * We know that
+     * The AlanMainWindow sends the video location with a LocationOption
+     * The SetServerAddrDialog sends the server location with a LocationOption
+     * We can compare the names of suppliers and know what to do in each call! so elegant and flexible right? ^^
+     */
+
+    std::string o=obj->getSource()->getSupplierName().toStdString();
+    const char *cstr=o.c_str();
+    if(!strcmp(cstr,MAINWINDOW_OPTION_SUPPLIER)){
+        settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_VIDEO_FILE_LOCATION, obj->getLocation());
+    }
+    else if(!strcmp(cstr,SETDRONEADDR_OPTION_SUPPLIER)){
+        settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_SERVER_LOCATION, obj->getLocation());
+
+    }
+    else {
+        getLogSupplier()->send(new Log(
+                INVALID_ARG_IN_ACCEPT_LOG,
+                time(NULL),
+                UNKNOWN_SOURCE_IN_LOCATION_OPTION_HANDLER,
+                getLogSupplier()
+        ));
+    }
     propertyChangedHandler();
     return true;
 
@@ -413,7 +437,7 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
  * @return true on success
  */
 bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
-    g_object_set(G_OBJECT(gstrtspsrc_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_LOCATION).toString().toStdString().c_str());
+    g_object_set(G_OBJECT(gstrtspsrc_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_SERVER_LOCATION).toString().toStdString().c_str());
     g_object_set(G_OBJECT(ximagessink_elem),"sync",FALSE);
     g_object_set(G_OBJECT(queue_elem),"max-size-bytes",30);
     g_object_set(G_OBJECT(queue_elem),"max-size-buffers",2);

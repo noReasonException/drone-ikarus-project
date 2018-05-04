@@ -14,7 +14,7 @@
  */
 class LogSupplier : public InformationObjectSupplier {
 public:
-    LogSupplier(const QString &supplierName,InformationObjectConsumer*target);
+    LogSupplier(const QString _supplierName,InformationObjectConsumer*target);
 
 };
 

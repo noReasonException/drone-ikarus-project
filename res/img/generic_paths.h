@@ -10,6 +10,7 @@
 #define LATENCY_ICON        "img/menu/latency.png"
 #define ERROR_FILE_ICON     "img/menu/errorfile.png"
 #define DATA_FILE_ICON      "img/menu/datafile.png"
+#define VIDEO_FILE_ICON      "img/menu/video.png"
 #define EXIT_ICON           "img/menu/exit.png"
 
 //Source Actions

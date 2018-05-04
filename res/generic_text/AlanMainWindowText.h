@@ -18,8 +18,10 @@
     #define RESOLUTION_DIALOG_TITLE "Set Video Resolution"
     #define LATENCY_ACTION_NAME             "Latency Settings"
 #define LATENCY_DIALOG_TITLE "Set Latency in ms"
-    #define ERROR_FILE_ACTION_NAME          "Error Save Location"
-    #define DATA_FILE_ACTION_NAME           "Data Save Location"
+    #define ERROR_FILE_ACTION_NAME          "Error File Location"
+    #define DATA_FILE_ACTION_NAME           "Data File Location"
+    #define VIDEO_FILE_ACTION_NAME          "Video File Location"
+
     #define EXIT_ACTION_NAME                "Exit"
 //Source exposed text
 #define SOURCE_MENU_NAME                "Source"
