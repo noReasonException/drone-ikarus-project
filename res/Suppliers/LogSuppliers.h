@@ -102,7 +102,7 @@
         #define INVALID_LOCATION_OBJECT_PROVIDED_IN_ACCEPT_CALL_DESC_LOG        "In DataExporter, in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
     #define FILE_ERROR_DATA_EXPORTER_LOG                                        "DataExporter File Error"
         #define FILE_ERROR_DATA_EXPORTER_DESC_LOG                               "DataExporter Subsystem states that something wrong happened to Data File? <br> Permissions maybe?"
-
+#define LOG_PANEL_SELF_SUPPLIER                                                 "LogPanelSupplier"
 
 
 #endif //IKARUS_PROJECT_LOGSUPPLIERS_H

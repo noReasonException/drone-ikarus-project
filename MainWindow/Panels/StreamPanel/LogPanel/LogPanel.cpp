@@ -14,14 +14,15 @@
 #include "../../../../res/Suppliers/LogSuppliers.h"
 #include "../../../../InformationExporter/ChildClasses/LogExporter.h"
 #include "../../../../res/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h"
+#include "../../../../res/Suppliers/InformationObjectSupplier.h"
 
 LogPanel* LogPanel::instance= nullptr;
 
 LogPanel::LogPanel() : StreamPanel(LOGS_PANEL_TITLE) {
     log=new std::vector<Log*>();
     class_locker=new QMutex;
-    self_supplier=createSupplier("Log panel");
-    logExporterSupplier=LogExporter::getInstance()->createSupplier("Bla!");
+    self_supplier=createSupplier(LOG_PANEL_SELF_SUPPLIER);
+    logExporterSupplier=LogExporter::getInstance()->createSupplier(LOGPANEL_LOGEXPORTER_SUPPLIER);
 
 }
 ////Revision at : 5/4/2018 , Thread-safe accept;
