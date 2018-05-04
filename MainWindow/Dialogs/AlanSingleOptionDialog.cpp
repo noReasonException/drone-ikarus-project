@@ -11,7 +11,7 @@
 #include <QWindow>
 #include <iostream>
 #include "AlanSingleOptionDialog.h"
-#include "../../misc/img/generic_paths.h"
+#include "../../res/img/generic_paths.h"
 
 AlanSingleOptionDialog::AlanSingleOptionDialog(AlanSingleOptionDialogState* Currstate,const QString &title,const QString&icon):
         titleArea(title),

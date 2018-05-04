@@ -12,8 +12,8 @@
 #include "../../../../misc/errors/AlanPanelErrors.h"
 #include "LogWidget/LogWidget.h"
 #include "../../../../misc/Suppliers/LogSuppliers.h"
-#include "../../../../misc/generic_text/AlanMainWindowMisc.h"
 #include "../../../../InformationExporter/ChildClasses/LogExporter.h"
+#include "../../../../misc/generic_text/Panels/StreamPanel/LogPanel/LogPanelText.h"
 
 LogPanel* LogPanel::instance= nullptr;
 

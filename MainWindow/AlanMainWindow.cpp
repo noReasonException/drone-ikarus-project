@@ -9,18 +9,17 @@
 #include <QLabel>
 #include <iostream>
 #include "AlanMainWindow.h"
-#include "../misc/img/generic_paths.h"
+#include "../res/img/generic_paths.h"
 #include "Panels/StreamPanel/LogPanel/LogPanel.h"
-#include "../misc/generic_text/generic_dialogs.h"
+#include "../res/generic_text/generic_dialogs.h"
 #include "../InformationObject/Log/Log.h"
-#include "../misc/generic_text/AlanMainWindowMisc.h"
-#include "../misc/Suppliers/LogSuppliers.h"
+#include "../res/Suppliers/LogSuppliers.h"
 #include "State/WindowStates/AlanTwoButtonsDialogState/AlanMultipleChoiceDialogState/AlanMultipleChoiceDialogState.h"
-#include "../misc/Suppliers/OptionSuppliers.h"
+#include "../res/Suppliers/OptionSuppliers.h"
 #include "Panels/StreamPanel/DataPanel/DataPanel.h"
 #include "../InformationExporter/ChildClasses/DataExporter.h"
 #include "../InformationObject/Data/Data.h"
-#include "../misc/Suppliers/InformationObjectSupplier.h"
+#include "../res/Suppliers/InformationObjectSupplier.h"
 #include "../InformationExporter/ChildClasses/LogExporter.h"
 
 /***

@@ -100,16 +100,15 @@ HEADERS +=  ./RTSPClientSubsystem/AbstractRTSPClientSubsystem.h \
             ./Interfaces/StateRestorable.h \
             ./Interfaces/InformationSupplierFactory.h \
             ./Interfaces/OptionSupplierFactory.h \
-            ./misc/states.h \
-            ./misc/version.h \
-            ./misc/Suppliers/LogSuppliers.h \
-            ./misc/Suppliers/OptionSuppliers.h \
-            ./misc/img/generic_paths.h \
-            ./misc/generic_text/AlanMainWindowMisc.h \
-            ./misc/generic_text/generic_dialogs.h \
-            ./misc/generic_text/AlanMainWindowDialogs.h\
-            ./misc/errors/AlanMainWindowErrors.h \
-            ./misc/errors/AlanPanelErrors.h \
+            ./res/states.h \
+            ./res/version.h \
+            ./res/Suppliers/LogSuppliers.h \
+            ./res/Suppliers/OptionSuppliers.h \
+            ./res/img/generic_paths.h \
+            ./res/generic_text/generic_dialogs.h \
+            ./res/generic_text/AlanMainWindowText.h\
+            ./res/errors/AlanMainWindowErrors.h \
+            ./res/errors/AlanPanelErrors.h \
             ./Supplier/DataSupplier/DataSupplier.h \
             ./Supplier/LogSupplier/LogSupplier.h \
             ./Supplier/OptionSupplier/OptionSupplier.h \

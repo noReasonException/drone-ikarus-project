@@ -8,7 +8,7 @@
 #include "../State.h"
 #include "../../../Supplier/LogSupplier/LogSupplier.h"
 #include "../../Panels/StreamPanel/LogPanel/LogPanel.h"
-#include "../../../misc/states.h"
+#include "../../../res/states.h"
 #include <iostream>
 
 class AlanSingleOptionDialogState: public State{

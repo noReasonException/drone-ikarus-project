@@ -10,8 +10,7 @@
 #include <QtWidgets/QDialog>
 #include <iostream>
 #include "../Panels/StreamPanel/LogPanel/LogPanel.h"
-#include "../../misc/generic_text/AlanMainWindowMisc.h"
-#include "../../misc/Suppliers/LogSuppliers.h"
+#include "../../res/Suppliers/LogSuppliers.h"
 /***
  * State class
  * Every dialog saves its internal state in one of his State-derived object , this parallel hierarchy restores

@@ -10,10 +10,10 @@
 
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-#include "../misc/errors/AlanMainWindowErrors.h"
-#include "../misc/version.h"
-#include "../misc/generic_text/AlanMainWindowDialogs.h"
-#include "../misc/img/generic_paths.h"
+#include "../res/errors/AlanMainWindowErrors.h"
+#include "../res/version.h"
+#include "../res/generic_text/AlanMainWindowText.h"
+#include "../res/img/generic_paths.h"
 #include "../Factory/AbstractFactory.h"
 #include "../Supplier/LogSupplier/LogSupplier.h"
 #include "../InformationObject/Option/ChildOptions/ClientStatusOption.h"

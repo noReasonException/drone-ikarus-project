@@ -7,8 +7,8 @@
 
 
 #include "../AlanSingleOptionDialog.h"
-#include "../../../misc/img/generic_paths.h"
-#include "../../../misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h"
+#include "../../../res/img/generic_paths.h"
+#include "../../../res/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h"
 #include <QPushButton>
 
 class AlanAboutDialog : public AlanSingleOptionDialog {

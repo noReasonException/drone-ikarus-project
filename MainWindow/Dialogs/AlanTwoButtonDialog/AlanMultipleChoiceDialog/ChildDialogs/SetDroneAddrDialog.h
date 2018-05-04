@@ -7,10 +7,10 @@
 
 
 #include "../AlanMultipleChoiceDialog.h"
-#include "../../../../../misc/generic_text/AlanMainWindowDialogs.h"
+#include "../../../../../res/generic_text/AlanMainWindowText.h"
 #include "../../../../../Supplier/OptionSupplier/OptionSupplier.h"
 #include "../../../../../InformationObject/Option/ChildOptions/LocationOption.h"
-#include "../../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h"
+#include "../../../../../res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h"
 
 class SetDroneAddrDialog : public AlanMultipleChoiceDialog{
 public:

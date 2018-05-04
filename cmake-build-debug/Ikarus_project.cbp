@@ -248,10 +248,10 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h">
@@ -398,10 +398,7 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/errors/AlanPanelErrors.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowDialogs.h">
-			<Option target="Ikarus_project"/>
-		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowMisc.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanSingleOptionDialogText.h">

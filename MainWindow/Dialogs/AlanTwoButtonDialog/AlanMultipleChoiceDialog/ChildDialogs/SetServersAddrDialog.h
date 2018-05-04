@@ -8,7 +8,7 @@
 
 #include "../../../../State/WindowStates/AlanSingleOptionDialogState.h"
 #include "../AlanMultipleChoiceDialog.h"
-#include "../../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h"
+#include "../../../../../res/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h"
 
 class OptionSupplier;
 class SetServersAddrDialog : public AlanMultipleChoiceDialog{

@@ -10,12 +10,12 @@
 #include <QLineEdit>
 #include <QGridLayout>
 #include "../AlanTwoButtonDialog.h"
-#include "../../../../misc/img/generic_paths.h"
+#include "../../../../res/img/generic_paths.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
 #include "../../../../Supplier/OptionSupplier/OptionSupplier.h"
-#include "../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h"
+#include "../../../../res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h"
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:

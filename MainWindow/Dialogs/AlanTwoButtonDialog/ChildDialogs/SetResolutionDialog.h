@@ -8,10 +8,10 @@
 
 #include <QtWidgets/QMessageBox>
 #include "../AlanTwoButtonDialog.h"
-#include "../../../../misc/img/generic_paths.h"
+#include "../../../../res/img/generic_paths.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
-#include "../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h"
+#include "../../../../res/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h"
 
 class SetResolutionDialog : public AlanTwoButtonDialog {
 public:

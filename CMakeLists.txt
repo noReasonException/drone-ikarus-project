@@ -55,9 +55,8 @@ add_executable(Ikarus_project main.cpp
         ./misc/Suppliers/LogSuppliers.h
         ./misc/Suppliers/OptionSuppliers.h
         ./misc/img/generic_paths.h
-        ./misc/generic_text/AlanMainWindowMisc.h
         ./misc/generic_text/generic_dialogs.h
-        ./misc/generic_text/AlanMainWindowDialogs.h
+        misc/generic_text/AlanMainWindowText.h
         ./misc/errors/AlanMainWindowErrors.h
         ./misc/errors/AlanPanelErrors.h
         ./Supplier/LogSupplier/LogSupplier.h
@@ -72,7 +71,7 @@ add_executable(Ikarus_project main.cpp
         ./MainWindow/AlanMainWindow.cpp
         ./MainWindow/Dialogs/AlanSingleOptionDialog.cpp
         ./MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
-        MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp
+        MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
         ./MainWindow/Panels/AlanPanel.cpp
         ./MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
         ./MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
