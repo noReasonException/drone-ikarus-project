@@ -334,13 +334,17 @@ bool AlanDefaultRTSPClientSubsystem::initializeGstreamer() {
 
 bool AlanDefaultRTSPClientSubsystem::_initializeFactories() {
     /*Initialize Factories...*/
-    return generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_FACTORY), 6,
-                             &gstrtspsrc_fact, g_strdup("rtspsrc"),
-                             &queue_fact,g_strdup("queue"),
-                             &rtph264depayloader_fact,g_strdup("rtph264depay"),
-                             &decodebin_fact,g_strdup("decodebin"),
-                             &videoconvert_fact,g_strdup("videoconvert"),
-                             &ximagesink_fact,g_strdup("ximagesink"));
+    return generic_initializer((GIN_FREE_STRING_AFTER | GIN_INITIALIZE_TYPE_FACTORY), 10,
+                               &gstrtspsrc_fact, g_strdup("rtspsrc"),
+                               &queue_fact,g_strdup("queue"),
+                               &rtph264depayloader_fact,g_strdup("rtph264depay"),
+                               &tee_fact,g_strdup("tee"),
+                                    &save_sink_queue_fact,g_strdup("queue"),
+                                    &filesink_fact,g_strdup("filesink"),
+                               &to_screen_queue_fact,g_strdup("queue"),
+                               &decodebin_fact,g_strdup("decodebin"),
+                               &videoconvert_fact,g_strdup("videoconvert"),
+                               &ximagesink_fact,g_strdup("ximagesink"));
 
 }
 /****

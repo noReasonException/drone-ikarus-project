@@ -46,18 +46,26 @@ private :
             *gstrtspsrc_fact,
             *queue_fact,
             *rtph264depayloader_fact,
-            *decodebin_fact,
-            *videoconvert_fact,
-            *ximagesink_fact;
+            *tee_fact,
+                    *save_sink_queue_fact,  //branch to save stream into file
+                    *filesink_fact,
+                *to_screen_queue_fact,      //branch to show video on screen
+                *decodebin_fact,
+                *videoconvert_fact,
+                *ximagesink_fact;
     ///Elements:
     GstElement
             *pipeline,
             *gstrtspsrc_elem,
             *queue_elem,
             *rtph264depayloader_elem,
-            *decodebin_elem,
-            *videoconvert_elem,
-            *ximagessink_elem;
+            *tee_elem,
+                    *save_sink_queue_elem,
+                    *filesink_elem,
+                *to_screen_queue_elem,
+                *decodebin_elem,
+                *videoconvert_elem,
+                *ximagessink_elem;
     //Functional :
     GMainLoop   *mainLoop;
     class MainLoopThread*mainLoopThread;
