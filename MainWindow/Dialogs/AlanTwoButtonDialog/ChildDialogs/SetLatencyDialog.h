@@ -15,6 +15,7 @@
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetLatencyDialogState.h"
 #include "../../../../Supplier/OptionSupplier/OptionSupplier.h"
+#include "../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h"
 
 class SetLatencyDialog : public AlanTwoButtonDialog{
 public:
@@ -33,7 +34,7 @@ private:
         QHBoxLayout*lay;
         widget->setLayout(lay=new QHBoxLayout);
         lay->addWidget(input=new QLineEdit);
-        lay->addWidget(new QLabel("ms"));
+        lay->addWidget(new QLabel(SET_LATENCY_DIALOG_MEASUREMENT_UNIT_QLABEL));
         return widget;
 
     }

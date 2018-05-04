@@ -11,6 +11,7 @@
 #include "../../../../misc/img/generic_paths.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
 #include "../../../State/WindowStates/AlanTwoButtonsDialogState/ChildStates/SetResolutionDialogState.h"
+#include "../../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h"
 
 class SetResolutionDialog : public AlanTwoButtonDialog {
 public:
@@ -29,8 +30,8 @@ private:
         QWidget*widget=new QWidget;
         QGridLayout*lay;
         widget->setLayout(lay=new QGridLayout);
-        lay->addWidget(new QLabel("Width:"),0,0);
-        lay->addWidget(new QLabel("Height:"),1,0);
+        lay->addWidget(new QLabel(SET_RESOLUTION_DIALOG_WIDTH_QLABEL),0,0);
+        lay->addWidget(new QLabel(SET_RESOLUTION_DIALOG_HEIGHT_QLABEL),1,0);
         lay->addWidget(width=new QLineEdit,0,1);
         lay->addWidget(height=new QLineEdit,1,1);
         return widget;

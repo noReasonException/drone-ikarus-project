@@ -36,8 +36,6 @@
 #define TOOLS_MENU_NAME                 "Tools"
 #define HELP_MENU_NAME                  "Help"
     #define ABOUT_ACTION_NAME                 "About"
-    #define ABOUT_DIALOG_TITLE                "About"
-//MediaBar exposed Text
 
 
 #endif //IKARUS_PROJECT_ALANMAINWINDOWDIALOGS_H

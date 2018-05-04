@@ -10,6 +10,7 @@
 #include <iostream>
 #include "../../../misc/img/generic_paths.h"
 #include "../../State/WindowStates/AlanTwoButtonsDialogState/AlanTwoButtonsDialogState.h"
+#include "../../../misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h"
 
 AlanTwoButtonDialog::AlanTwoButtonDialog(AlanTwoButtonsDialogState* state,const QString &titleArea,const QString &iconArea) : AlanSingleOptionDialog(state,titleArea,iconArea){
 }
@@ -18,8 +19,8 @@ QWidget *AlanTwoButtonDialog::onGenerateButtonsArea() throw (std::exception) {
     QWidget *dia = new QWidget;
     QLayout *mainLay;
     dia->setLayout(mainLay=new QHBoxLayout);
-    mainLay->addWidget(cancelBtn=new QPushButton("Cancel"));
-    mainLay->addWidget(okBtn=new QPushButton("OK"));
+    mainLay->addWidget(cancelBtn=new QPushButton(ALAN_TWO_BUTTON_DIALOG_BTN1));
+    mainLay->addWidget(okBtn=new QPushButton(ALAN_TWO_BUTTON_DIALOG_BTN2));
     return dia;
 }
 

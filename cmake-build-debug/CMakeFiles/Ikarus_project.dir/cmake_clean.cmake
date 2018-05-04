@@ -7,7 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o"
-  "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o"
+  "CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o"
   "CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o"

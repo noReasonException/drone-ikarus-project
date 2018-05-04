@@ -8,6 +8,7 @@
 
 #include "../AlanSingleOptionDialog.h"
 #include "../../../misc/img/generic_paths.h"
+#include "../../../misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h"
 #include <QPushButton>
 
 class AlanAboutDialog : public AlanSingleOptionDialog {
@@ -19,11 +20,11 @@ public:
 
 protected:
     QWidget *onGenerateConfigArea() throw(std::exception)override {
-        return new QLabel("Alan is a RTSP Client...<br> It is specialized in real-time streaming for drones, this is a test version(0.0.1)<br>By noReasonException(Stefanos Stefanou) :) ");
+        return new QLabel(ABOUT_DIALOG);
     }
 
     QWidget *onGenerateButtonsArea()throw(std::exception) override {
-        return goBackBtn=new QPushButton("Go Back");
+        return goBackBtn=new QPushButton(ABOUT_DIALOG_BTN);
     }
 
     bool connectionInitializer(){

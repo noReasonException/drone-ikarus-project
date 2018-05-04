@@ -248,10 +248,10 @@
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
-		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.h">
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialog.h">
@@ -402,6 +402,30 @@
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/AlanMainWindowMisc.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanSingleOptionDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetDroneAddrDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/ChildDialogs/SetServersAddrDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetLatencyDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/AlanTwoButtonDialog/ChildDialogs/SetResolutionDialogText.h">
+			<Option target="Ikarus_project"/>
+		</Unit>
+		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/Dialogs/ChildDialogs/AlanAboutDialogText.h">
 			<Option target="Ikarus_project"/>
 		</Unit>
 		<Unit filename="/home/noreasonexception/Desktop/Ikarus project/misc/generic_text/generic_dialogs.h">

@@ -103,16 +103,6 @@
     #define FILE_ERROR_DATA_EXPORTER_LOG                                        "DataExporter File Error"
         #define FILE_ERROR_DATA_EXPORTER_DESC_LOG                               "DataExporter Subsystem states that something wrong happened to Data File? <br> Permissions maybe?"
 
-#define LOG_EXPORTER_SUPPLIER                                                   "DataExporterSupplier"
-    #define INVALID_ARG_IN_LOG_ACCEPT_LOG                                       "Invalid args in .accept() call"
-        #define INVALID_INFORMATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG         "In LogExporter , in .accept() call , object of type Data* or Log* excepted at arg 2 , but something else provided"
-        #define INVALID_LOCATION_OBJECT_PROVIDED_IN_LOGEXPORTER_ACCEPT_CALL_DESC_LOG            "In DataExporterSupplier , in .accept() call , object of type LocationOption* excepted at arg 2 , but something else provided"
-    #define FILE_ERROR_LOG_EXPORTER_LOG                                                         "LogExporter File Error"
-        #define FILE_ERROR_LOG_EXPORTER_DESC_LOG                                                "LogExporter Subsystem states that something wrong happened to Log File? <br> Permissions maybe?"
-    #define NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_LOG                                      "Undefined Log File"
-        #define NO_FILE_LOCATION_CONFIG_LOG_EXPORTER_FOUND_DESC_LOG                             "The LogExporter subsystem states that you must define a file to send the logs <br> Please click on Options menu the Log Save Location menu  <br> Untill Then , the default log.txt will be used (located in your executables root folder) "
-
-
 
 
 #endif //IKARUS_PROJECT_LOGSUPPLIERS_H

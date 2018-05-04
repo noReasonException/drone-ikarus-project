@@ -555,32 +555,32 @@ MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoi
 	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s
 .PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s
 
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.o: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.o
 
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.o
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.o
 
 # target to build an object file
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.o:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.o
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.o
 
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.i: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.i: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.i
 
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.i
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.i
 
 # target to preprocess a source file
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.i:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.i
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.i
 
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.s: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.s: MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.s
 
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.s
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.s
 
 # target to generate assembly for a file
-MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s:
-	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
-.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
+MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.s:
+	$(MAKE) -f CMakeFiles/Ikarus_project.dir/build.make CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.s
+.PHONY : MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.cpp.s
 
 MainWindow/Panels/AlanPanel.o: MainWindow/Panels/AlanPanel.cpp.o
 
@@ -1071,9 +1071,9 @@ help:
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.o"
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.i"
 	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.s"
-	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.o"
-	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.i"
-	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.s"
+	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.o"
+	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.i"
+	@echo "... MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialogText.s"
 	@echo "... MainWindow/Panels/AlanPanel.o"
 	@echo "... MainWindow/Panels/AlanPanel.i"
 	@echo "... MainWindow/Panels/AlanPanel.s"
