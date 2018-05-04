@@ -146,7 +146,6 @@ bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
     }
     else if(!strcmp(cstr,SETDRONEADDR_OPTION_SUPPLIER)){
         settings.setValue(ALAN_DEFAULT_RTSP_QSETTING_SERVER_LOCATION, obj->getLocation());
-
     }
     else {
         getLogSupplier()->send(new Log(
@@ -156,10 +155,9 @@ bool AlanDefaultRTSPClientSubsystem::onLocationSettingChangedHandler(class Locat
                 getLogSupplier()
         ));
     }
+    std::cout<<cstr;
     propertyChangedHandler();
     return true;
-
-
 }
 /****
  * _utill_isNullThenLog
@@ -415,10 +413,6 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
     gst_element_link_many(videoconvert_elem, ximagessink_elem,NULL);//branch to screen (decodebin -> videoconvert is happened through pad-added handler subscribed below
     gst_element_link_many(save_sink_queue_elem,filesink_elem,NULL); //branch to file
 
-    //TODO : remove to properties , just for debbuging
-    g_object_set(G_OBJECT(filesink_elem),"location","sample.mp4");
-
-
     GstPad*req_pad=gst_element_get_request_pad(tee_elem,"src_%u");    //connect video to file
     GstPad*queue_to_save_sink_pad=gst_element_get_static_pad(save_sink_queue_elem,"sink");
     std::cout<<"tee->queue_to_save is negotiated "<<(gst_pad_link(req_pad,queue_to_save_sink_pad)==GST_PAD_LINK_OK)<<std::endl;
@@ -437,6 +431,8 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
  * @return true on success
  */
 bool AlanDefaultRTSPClientSubsystem::_applyProperties() {
+
+    g_object_set(G_OBJECT(filesink_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_VIDEO_FILE_LOCATION).toString().toStdString().c_str());
     g_object_set(G_OBJECT(gstrtspsrc_elem),"location",settings.value(ALAN_DEFAULT_RTSP_QSETTING_SERVER_LOCATION).toString().toStdString().c_str());
     g_object_set(G_OBJECT(ximagessink_elem),"sync",FALSE);
     g_object_set(G_OBJECT(queue_elem),"max-size-bytes",30);

@@ -333,7 +333,7 @@ void AlanMainWindow::genericActionSlot() {
             _utill_locationNotifier(dataExporterSupplier, parentFactory->getDataFileDialog());
         }
         else if(!strcmp(cstr,VIDEO_FILE_ACTION_NAME)){
-            parentFactory->getVideoFileDialog();
+            _utill_locationNotifier(rtspClientOptionSupplier, parentFactory->getVideoFileDialog());
         }
         else{
             getSupplier()->send(new Log(OPERATION_NOT_FOUND_TITLE_LOG,time(nullptr),OPERATION_NOT_FOUND_DESC_LOG,getSupplier()));
@@ -382,7 +382,7 @@ void AlanMainWindow::_utill_locationNotifier(InformationObjectSupplier *subsyste
     subsystemSuppplier->send(new class LocationOption(
             location,
             time(NULL),
-            dataExporterSupplier
+            subsystemSuppplier
     ));
 
 }
