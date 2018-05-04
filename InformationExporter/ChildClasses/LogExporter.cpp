@@ -13,11 +13,6 @@ LogExporter::LogExporter() : InformationExporter(nullptr),
         hasSetTheFileLocation=true;
 
     }
-    ///LogExporter is not allowed to have LogSupplier?
-    /// Huston , we have circular constructor depedency problem ,
-    //TODO : use Depedency injection to fix this ... <3
-    ///P.S -> sorry. :P
-
 }
 void LogExporter::accept(InformationObjectSupplier *supplier, InformationObject *info) {
     Log*dataptr;

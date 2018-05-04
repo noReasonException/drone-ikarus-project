@@ -15,6 +15,17 @@
 #define LOG_EXPORTER_QSETTINGS_FILE_LOCATION   "FILELOCATION/"
 #define LOG_EXPORTER_DEFAULT_FILE_LOCATION     "log.txt"
 //TODO: Move LogExporter and DataExporter common functionality in common parent class
+
+/*****
+ * class LogExporter
+ * this class has the responsibility to export the Log Object to files
+ * this class is InformationObjectConsumer , and it accepts the following object types
+ *          1) Log*                 -> and exports this object to the selected file
+ *          2) LocationOption*      -> to define the file to export
+ * @note Because of circular dependency problem , The LogExporter class is not allowed (temporarily) to have LogSupplier
+ * //TODO fix using D.I
+ *
+ */
 class LogExporter : public InformationExporter{
 public:
     LogExporter();

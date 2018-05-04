@@ -5,6 +5,7 @@
 #include <QHBoxLayout>
 #include <QToolBar>
 #include <QMainWindow>
+#include <QtCore/QSettings>
 #include "MainWindow/AlanMainWindow.h"
 #include "Factory/AlanDefaultFactory/AlanDefaultFactory.h"
 
@@ -14,6 +15,9 @@ int main(int argc,char *argv[]) {
     gst_init(&argc,&argv);
 
     QApplication application(argc,argv);
+    QSettings set;
+    set.clear();
+
     application.setOrganizationName("noReasonException");
     application.setOrganizationDomain("com.noreasonException");
     application.setApplicationName("Alan");

@@ -712,7 +712,13 @@ bool AlanDefaultRTSPClientSubsystem::_utillLogHandler(bool status, const QString
     if(status)getLogSupplier()->send(new Log(onSuccessTitle, time(NULL), onSuccessMsg , getLogSupplier()));
     return status;
 }
-
+/****
+ * propertyChangedHandler
+ * this method is called every time a property is changed .
+ * When we change something , is it essensial to re-initialize the gstreamer library and re-start
+ * the client . We accomplish that by send the PAUSE,STOP,START,(PLAY|PAUSE) status handlers.
+ * @return true on success
+ */
 bool AlanDefaultRTSPClientSubsystem::propertyChangedHandler() {
     ClientStatus prev=currentStatus;
     if(currentStatus>=Client_PLAY){
@@ -729,6 +735,5 @@ bool AlanDefaultRTSPClientSubsystem::propertyChangedHandler() {
                                                               time(NULL),
                                                               getSelf_supplier()));
     }
-    std::cout<<"RESTARTING..."<<std::endl;
     return true;
 }

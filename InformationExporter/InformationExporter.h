@@ -13,7 +13,8 @@
 
 /****
  * class InformationExporter
- * This class represents a generar information transaction to files
+ * This class represents a general passing information subsystem to any destination
+ *
  *
  */
 class InformationExporter: public InformationObjectConsumer,
