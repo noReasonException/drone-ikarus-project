@@ -379,16 +379,31 @@ bool AlanDefaultRTSPClientSubsystem::_initializeConnections() {
                      gstrtspsrc_elem,           ///packets from network under RTSP
                      queue_elem,                ///Buffer
                      rtph264depayloader_elem,         ///depayloader to data
+                     tee_elem,
+                        save_sink_queue_elem,
+                        filesink_elem,
+                     to_screen_queue_elem,
                      decodebin_elem,            ///convert h264 to video
                      videoconvert_elem,         ///raw video
                      ximagessink_elem,NULL);  ///screen
-    return gst_element_link_many(queue_elem,
-                    rtph264depayloader_elem,
-                    decodebin_elem,NULL)&&
-                                            ///decodebin -> videoconvert connection happens on on-pad event listener
-                    gst_element_link(
-                     videoconvert_elem,
-                     ximagessink_elem);
+    gst_element_link_many(queue_elem, rtph264depayloader_elem, tee_elem,NULL); //main-branch
+    gst_element_link_many(to_screen_queue_elem,decodebin_elem,NULL);
+    gst_element_link_many(videoconvert_elem, ximagessink_elem,NULL);//branch to screen (decodebin -> videoconvert is happened through pad-added handler subscribed below
+    gst_element_link_many(save_sink_queue_elem,filesink_elem,NULL); //branch to file
+
+    //TODO : remove to properties , just for debbuging
+    g_object_set(G_OBJECT(filesink_elem),"location","sample.mp4");
+
+
+    GstPad*req_pad=gst_element_get_request_pad(tee_elem,"src_%u");    //connect video to file
+    GstPad*queue_to_save_sink_pad=gst_element_get_static_pad(save_sink_queue_elem,"sink");
+    std::cout<<"tee->queue_to_save is nosched"<<(gst_pad_link(req_pad,queue_to_save_sink_pad)==GST_PAD_LINK_REFUSED)<<std::endl;
+
+    GstPad*req_pad_to_window=gst_element_get_request_pad(tee_elem,"src_%u");//connect video to screen
+    GstPad*pad_to_screen_queue_elem=gst_element_get_static_pad(to_screen_queue_elem,"sink");
+    std::cout<<"tee->avdec is nosched"<<(gst_pad_link(req_pad_to_window,pad_to_screen_queue_elem)==GST_PAD_LINK_REFUSED)<<std::endl;
+
+    return true;
 }
 
 /***
