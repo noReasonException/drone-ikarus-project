@@ -43,10 +43,10 @@ RM = /home/noreasonexception/Editors/clion-2017.3.4/bin/cmake/bin/cmake -E remov
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/noreasonexception/Desktop/Ikarus project"
+CMAKE_SOURCE_DIR = /home/noreasonexception/ikarus/drone-ikarus-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Ikarus_project.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Ikarus_project.dir/flags.make
 
 CMakeFiles/Ikarus_project.dir/main.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ikarus_project.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/main.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ikarus_project.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/main.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/main.cpp
 
 CMakeFiles/Ikarus_project.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/main.cpp" > CMakeFiles/Ikarus_project.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/main.cpp > CMakeFiles/Ikarus_project.dir/main.cpp.i
 
 CMakeFiles/Ikarus_project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/main.cpp" -o CMakeFiles/Ikarus_project.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/main.cpp -o CMakeFiles/Ikarus_project.dir/main.cpp.s
 
 CMakeFiles/Ikarus_project.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Ikarus_project.dir/main.cpp.o.provides.build: CMakeFiles/Ikarus_proje
 
 CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o: ../InformationObject/InformationObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/InformationObject.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/InformationObject.cpp > CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/InformationObject.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/InformationObject.cpp -o CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/Ikarus_project.dir/InformationObject/InformationObject.cpp.o.provides
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o: ../InformationObject/Data/Data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Data/Data.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Data/Data.cpp > CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Data/Data.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Data/Data.cpp -o CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/Ikarus_project.dir/InformationObject/Data/Data.cpp.o.provides.build: 
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o: ../InformationObject/Log/Log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Log/Log.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Log/Log.cpp > CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Log/Log.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Log/Log.cpp -o CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/Ikarus_project.dir/InformationObject/Log/Log.cpp.o.provides.build: CM
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o: ../InformationObject/Option/Option.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Option/Option.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.cpp" > CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Option/Option.cpp > CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationObject/Option/Option.cpp" -o CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationObject/Option/Option.cpp -o CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/Ikarus_project.dir/InformationObject/Option/Option.cpp.o.provides.bui
 
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o: ../MainWindow/AlanMainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/AlanMainWindow.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/AlanMainWindow.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/AlanMainWindow.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/AlanMainWindow.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/AlanMainWindow.cpp.o.provides.build: CM
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o: ../MainWindow/Dialogs/AlanSingleOptionDialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanSingleOptionDialog.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanSingleOptionDialog.cpp.o.pr
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o: ../MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipleChoiceDialog/AlanMultipleChoiceDialog.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanMultipl
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o: ../MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButtonDialog.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Dialogs/AlanTwoButtonDialog/AlanTwoButt
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o: ../MainWindow/Panels/AlanPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/AlanPanel.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/AlanPanel.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/AlanPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/AlanPanel.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/AlanPanel.cpp.o.provides.build: 
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o: ../MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/LogWidget.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogWidget/L
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o: ../MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/LogPanel/LogPanel.cp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o: ../MainWindow/Panels/StreamPanel/StreamPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/StreamPanel.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/StreamPanel.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/StreamPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/StreamPanel.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/StreamPanel.cpp.o.pr
 
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o: ../MainWindow/State/State.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/State/State.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/State/State.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/State/State.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/State/State.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/State/State.cpp.o.provides.build: CMake
 
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o: ../Consumer/LogConsumer/LogConsumer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/LogConsumer/LogConsumer.cpp
 
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp" > CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/LogConsumer/LogConsumer.cpp > CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Consumer/LogConsumer/LogConsumer.cpp" -o CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/LogConsumer/LogConsumer.cpp -o CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/Ikarus_project.dir/Consumer/LogConsumer/LogConsumer.cpp.o.provides.bu
 
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o: ../Consumer/InformationObjectConsumer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/InformationObjectConsumer.cpp
 
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp" > CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/InformationObjectConsumer.cpp > CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Consumer/InformationObjectConsumer.cpp" -o CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/InformationObjectConsumer.cpp -o CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/Ikarus_project.dir/Consumer/InformationObjectConsumer.cpp.o.provides.
 
 CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o: ../Consumer/OptionConsumer/OptionConsumer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Consumer/OptionConsumer/OptionConsumer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/OptionConsumer/OptionConsumer.cpp
 
 CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Consumer/OptionConsumer/OptionConsumer.cpp" > CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/OptionConsumer/OptionConsumer.cpp > CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Consumer/OptionConsumer/OptionConsumer.cpp" -o CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/OptionConsumer/OptionConsumer.cpp -o CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/Ikarus_project.dir/Consumer/OptionConsumer/OptionConsumer.cpp.o.provi
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o: ../RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp" > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.i
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp" -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.s
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cpp.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AbstractRTSPClientSubsystem.cp
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o: ../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp" > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.i
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp" -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.s
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/AlanDefaultRTSPClientSubsystem.cpp.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem
 
 CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o: ../Factory/AlanDefaultFactory/AlanDefaultFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp
 
 CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp" > CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp > CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp" -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp -o CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/Ikarus_project.dir/Factory/AlanDefaultFactory/AlanDefaultFactory.cpp.
 
 CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o: ../Factory/AbstractFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AbstractFactory.cpp
 
 CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp" > CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AbstractFactory.cpp > CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Factory/AbstractFactory.cpp" -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Factory/AbstractFactory.cpp -o CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/Ikarus_project.dir/Factory/AbstractFactory.cpp.o.provides.build: CMak
 
 CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o: ../Supplier/InformationObjectSupplier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/InformationObjectSupplier.cpp
 
 CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp" > CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/InformationObjectSupplier.cpp > CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Supplier/InformationObjectSupplier.cpp" -o CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/InformationObjectSupplier.cpp -o CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/Ikarus_project.dir/Supplier/InformationObjectSupplier.cpp.o.provides.
 
 CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o: ../Supplier/LogSupplier/LogSupplier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/LogSupplier/LogSupplier.cpp
 
 CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.cpp" > CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/LogSupplier/LogSupplier.cpp > CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Supplier/LogSupplier/LogSupplier.cpp" -o CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/LogSupplier/LogSupplier.cpp -o CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/Ikarus_project.dir/Supplier/LogSupplier/LogSupplier.cpp.o.provides.bu
 
 CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o: ../Supplier/OptionSupplier/OptionSupplier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/OptionSupplier/OptionSupplier.cpp
 
 CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp" > CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/OptionSupplier/OptionSupplier.cpp > CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Supplier/OptionSupplier/OptionSupplier.cpp" -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/OptionSupplier/OptionSupplier.cpp -o CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/Ikarus_project.dir/Supplier/OptionSupplier/OptionSupplier.cpp.o.provi
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o: ../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o   -c "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o   -c /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c" > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.i
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c" -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.s
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/utill.c.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o: ../RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o   -c "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o   -c /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c" > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c > CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.i
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c" -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c -o CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.s
 
 CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem/handle.c.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/Ikarus_project.dir/RTSPClientSubsystem/AlanDefaultRTSPClientSubsystem
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o: ../MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.cpp.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataPanel.
 
 CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o: ../Supplier/DataSupplier/DataSupplier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Supplier/DataSupplier/DataSupplier.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/DataSupplier/DataSupplier.cpp
 
 CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Supplier/DataSupplier/DataSupplier.cpp" > CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/DataSupplier/DataSupplier.cpp > CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Supplier/DataSupplier/DataSupplier.cpp" -o CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Supplier/DataSupplier/DataSupplier.cpp -o CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o.requires:
 
@@ -731,16 +731,16 @@ CMakeFiles/Ikarus_project.dir/Supplier/DataSupplier/DataSupplier.cpp.o.provides.
 
 CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o: ../Consumer/DataConsumer/DataConsumer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/Consumer/DataConsumer/DataConsumer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/DataConsumer/DataConsumer.cpp
 
 CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/Consumer/DataConsumer/DataConsumer.cpp" > CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/DataConsumer/DataConsumer.cpp > CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.i
 
 CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/Consumer/DataConsumer/DataConsumer.cpp" -o CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/Consumer/DataConsumer/DataConsumer.cpp -o CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.s
 
 CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o.requires:
 
@@ -755,16 +755,16 @@ CMakeFiles/Ikarus_project.dir/Consumer/DataConsumer/DataConsumer.cpp.o.provides.
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o: ../MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp" > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp > CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.i
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp" -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp -o CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.s
 
 CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget/DataWidget.cpp.o.requires:
 
@@ -779,16 +779,16 @@ CMakeFiles/Ikarus_project.dir/MainWindow/Panels/StreamPanel/DataPanel/DataWidget
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o: ../InformationExporter/InformationExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/InformationExporter.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/InformationExporter.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/InformationExporter.cpp" > CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/InformationExporter.cpp > CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/InformationExporter.cpp" -o CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/InformationExporter.cpp -o CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o.requires:
 
@@ -803,16 +803,16 @@ CMakeFiles/Ikarus_project.dir/InformationExporter/InformationExporter.cpp.o.prov
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o: ../InformationExporter/ChildClasses/DataExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/DataExporter.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/DataExporter.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/DataExporter.cpp" > CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/DataExporter.cpp > CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/DataExporter.cpp" -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/DataExporter.cpp -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.o.requires:
 
@@ -827,16 +827,16 @@ CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/DataExporter.cpp.
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o: CMakeFiles/Ikarus_project.dir/flags.make
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o: ../InformationExporter/ChildClasses/LogExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o -c "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/LogExporter.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o -c /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/LogExporter.cpp
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/LogExporter.cpp" > CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/LogExporter.cpp > CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.i
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/noreasonexception/Desktop/Ikarus project/InformationExporter/ChildClasses/LogExporter.cpp" -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noreasonexception/ikarus/drone-ikarus-project/InformationExporter/ChildClasses/LogExporter.cpp -o CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.s
 
 CMakeFiles/Ikarus_project.dir/InformationExporter/ChildClasses/LogExporter.cpp.o.requires:
 
@@ -928,7 +928,7 @@ Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.1
 Ikarus_project: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1
 Ikarus_project: CMakeFiles/Ikarus_project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX executable Ikarus_project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX executable Ikarus_project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ikarus_project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -977,6 +977,6 @@ CMakeFiles/Ikarus_project.dir/clean:
 .PHONY : CMakeFiles/Ikarus_project.dir/clean
 
 CMakeFiles/Ikarus_project.dir/depend:
-	cd "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/noreasonexception/Desktop/Ikarus project" "/home/noreasonexception/Desktop/Ikarus project" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug" "/home/noreasonexception/Desktop/Ikarus project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/noreasonexception/ikarus/drone-ikarus-project /home/noreasonexception/ikarus/drone-ikarus-project /home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug /home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug /home/noreasonexception/ikarus/drone-ikarus-project/cmake-build-debug/CMakeFiles/Ikarus_project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Ikarus_project.dir/depend
 
